@@ -1,0 +1,761 @@
+ERROR - 2024-08-12 02:24:25 --> mysqli_sql_exception: Table 'rombak-bakpia.type' doesn't exist in C:\wamp64\www\pitek_coba\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\pitek_coba\system\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO log...', 0)
+#1 C:\wamp64\www\pitek_coba\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO log...')
+#2 C:\wamp64\www\pitek_coba\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO log...')
+#3 C:\wamp64\www\pitek_coba\app\Controllers\Admin\Confirmation.php(195): CodeIgniter\Database\BaseConnection->query('INSERT INTO log...')
+#4 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+#5 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+#6 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\pitek_coba\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\pitek_coba\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\pitek_coba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-08-12 02:24:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'rombak-bakpia.type' doesn't exist
+[Method: POST, Route: admin/confirmation/confirm]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(195): CodeIgniter\Database\BaseConnection->query('INSERT INTO log_stock (
+            log_stock_product_id,
+            log_stock_product_name,
+            log_stock_status,
+            log_stock_quantity,
+            log_stock_variant_id,
+            log_stock_variant_name,
+            log_stock_category_id,
+            log_stock_category_name,
+            log_stock_box_id,
+            log_stock_box_value,
+            log_stock_date
+            )
+            SELECT \'21\', \'Griya Bakpia Premium\', \'sold\', \'5\', variant_id, \'Coklat\', category_id, \'Kering\', box_id, \'15\', NOW()
+            FROM product, category, `type`, `value`
+            WHERE product_name = \'Griya Bakpia Premium\' AND variant_name = \'Coklat\' AND category_name = \'Kering\' AND box_value = \'15\'')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-12 02:24:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'rombak-bakpia.type' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO log_stock (
+            log_stock_product_id,
+            log_stock_product_name,
+            log_stock_status,
+            log_stock_quantity,
+            log_stock_variant_id,
+            log_stock_variant_name,
+            log_stock_category_id,
+            log_stock_category_name,
+            log_stock_box_id,
+            log_stock_box_value,
+            log_stock_date
+            )
+            SELECT \'21\', \'Griya Bakpia Premium\', \'sold\', \'5\', variant_id, \'Coklat\', category_id, \'Kering\', box_id, \'15\', NOW()
+            FROM product, category, `type`, `value`
+            WHERE product_name = \'Griya Bakpia Premium\' AND variant_name = \'Coklat\' AND category_name = \'Kering\' AND box_value = \'15\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO log_stock (
+            log_stock_product_id,
+            log_stock_product_name,
+            log_stock_status,
+            log_stock_quantity,
+            log_stock_variant_id,
+            log_stock_variant_name,
+            log_stock_category_id,
+            log_stock_category_name,
+            log_stock_box_id,
+            log_stock_box_value,
+            log_stock_date
+            )
+            SELECT \'21\', \'Griya Bakpia Premium\', \'sold\', \'5\', variant_id, \'Coklat\', category_id, \'Kering\', box_id, \'15\', NOW()
+            FROM product, category, `type`, `value`
+            WHERE product_name = \'Griya Bakpia Premium\' AND variant_name = \'Coklat\' AND category_name = \'Kering\' AND box_value = \'15\'')
+ 3 APPPATH\Controllers\Admin\Confirmation.php(195): CodeIgniter\Database\BaseConnection->query('INSERT INTO log_stock (
+            log_stock_product_id,
+            log_stock_product_name,
+            log_stock_status,
+            log_stock_quantity,
+            log_stock_variant_id,
+            log_stock_variant_name,
+            log_stock_category_id,
+            log_stock_category_name,
+            log_stock_box_id,
+            log_stock_box_value,
+            log_stock_date
+            )
+            SELECT \'21\', \'Griya Bakpia Premium\', \'sold\', \'5\', variant_id, \'Coklat\', category_id, \'Kering\', box_id, \'15\', NOW()
+            FROM product, category, `type`, `value`
+            WHERE product_name = \'Griya Bakpia Premium\' AND variant_name = \'Coklat\' AND category_name = \'Kering\' AND box_value = \'15\'')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-12 02:24:25 --> [Caused by] mysqli_sql_exception: Table 'rombak-bakpia.type' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO log_stock (
+            log_stock_product_id,
+            log_stock_product_name,
+            log_stock_status,
+            log_stock_quantity,
+            log_stock_variant_id,
+            log_stock_variant_name,
+            log_stock_category_id,
+            log_stock_category_name,
+            log_stock_box_id,
+            log_stock_box_value,
+            log_stock_date
+            )
+            SELECT \'21\', \'Griya Bakpia Premium\', \'sold\', \'5\', variant_id, \'Coklat\', category_id, \'Kering\', box_id, \'15\', NOW()
+            FROM product, category, `type`, `value`
+            WHERE product_name = \'Griya Bakpia Premium\' AND variant_name = \'Coklat\' AND category_name = \'Kering\' AND box_value = \'15\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO log_stock (
+            log_stock_product_id,
+            log_stock_product_name,
+            log_stock_status,
+            log_stock_quantity,
+            log_stock_variant_id,
+            log_stock_variant_name,
+            log_stock_category_id,
+            log_stock_category_name,
+            log_stock_box_id,
+            log_stock_box_value,
+            log_stock_date
+            )
+            SELECT \'21\', \'Griya Bakpia Premium\', \'sold\', \'5\', variant_id, \'Coklat\', category_id, \'Kering\', box_id, \'15\', NOW()
+            FROM product, category, `type`, `value`
+            WHERE product_name = \'Griya Bakpia Premium\' AND variant_name = \'Coklat\' AND category_name = \'Kering\' AND box_value = \'15\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO log_stock (
+            log_stock_product_id,
+            log_stock_product_name,
+            log_stock_status,
+            log_stock_quantity,
+            log_stock_variant_id,
+            log_stock_variant_name,
+            log_stock_category_id,
+            log_stock_category_name,
+            log_stock_box_id,
+            log_stock_box_value,
+            log_stock_date
+            )
+            SELECT \'21\', \'Griya Bakpia Premium\', \'sold\', \'5\', variant_id, \'Coklat\', category_id, \'Kering\', box_id, \'15\', NOW()
+            FROM product, category, `type`, `value`
+            WHERE product_name = \'Griya Bakpia Premium\' AND variant_name = \'Coklat\' AND category_name = \'Kering\' AND box_value = \'15\'')
+ 4 APPPATH\Controllers\Admin\Confirmation.php(195): CodeIgniter\Database\BaseConnection->query('INSERT INTO log_stock (
+            log_stock_product_id,
+            log_stock_product_name,
+            log_stock_status,
+            log_stock_quantity,
+            log_stock_variant_id,
+            log_stock_variant_name,
+            log_stock_category_id,
+            log_stock_category_name,
+            log_stock_box_id,
+            log_stock_box_value,
+            log_stock_date
+            )
+            SELECT \'21\', \'Griya Bakpia Premium\', \'sold\', \'5\', variant_id, \'Coklat\', category_id, \'Kering\', box_id, \'15\', NOW()
+            FROM product, category, `type`, `value`
+            WHERE product_name = \'Griya Bakpia Premium\' AND variant_name = \'Coklat\' AND category_name = \'Kering\' AND box_value = \'15\'')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-08-12 02:24:30 --> mysqli_sql_exception: Table 'rombak-bakpia.type' doesn't exist in C:\wamp64\www\pitek_coba\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\pitek_coba\system\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO log...', 0)
+#1 C:\wamp64\www\pitek_coba\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO log...')
+#2 C:\wamp64\www\pitek_coba\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO log...')
+#3 C:\wamp64\www\pitek_coba\app\Controllers\Admin\Confirmation.php(195): CodeIgniter\Database\BaseConnection->query('INSERT INTO log...')
+#4 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+#5 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+#6 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\pitek_coba\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\pitek_coba\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\pitek_coba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-08-12 02:24:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'rombak-bakpia.type' doesn't exist
+[Method: POST, Route: admin/confirmation/confirm]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(195): CodeIgniter\Database\BaseConnection->query('INSERT INTO log_stock (
+            log_stock_product_id,
+            log_stock_product_name,
+            log_stock_status,
+            log_stock_quantity,
+            log_stock_variant_id,
+            log_stock_variant_name,
+            log_stock_category_id,
+            log_stock_category_name,
+            log_stock_box_id,
+            log_stock_box_value,
+            log_stock_date
+            )
+            SELECT \'21\', \'Griya Bakpia Premium\', \'sold\', \'5\', variant_id, \'Coklat\', category_id, \'Kering\', box_id, \'15\', NOW()
+            FROM product, category, `type`, `value`
+            WHERE product_name = \'Griya Bakpia Premium\' AND variant_name = \'Coklat\' AND category_name = \'Kering\' AND box_value = \'15\'')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-12 02:24:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'rombak-bakpia.type' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO log_stock (
+            log_stock_product_id,
+            log_stock_product_name,
+            log_stock_status,
+            log_stock_quantity,
+            log_stock_variant_id,
+            log_stock_variant_name,
+            log_stock_category_id,
+            log_stock_category_name,
+            log_stock_box_id,
+            log_stock_box_value,
+            log_stock_date
+            )
+            SELECT \'21\', \'Griya Bakpia Premium\', \'sold\', \'5\', variant_id, \'Coklat\', category_id, \'Kering\', box_id, \'15\', NOW()
+            FROM product, category, `type`, `value`
+            WHERE product_name = \'Griya Bakpia Premium\' AND variant_name = \'Coklat\' AND category_name = \'Kering\' AND box_value = \'15\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO log_stock (
+            log_stock_product_id,
+            log_stock_product_name,
+            log_stock_status,
+            log_stock_quantity,
+            log_stock_variant_id,
+            log_stock_variant_name,
+            log_stock_category_id,
+            log_stock_category_name,
+            log_stock_box_id,
+            log_stock_box_value,
+            log_stock_date
+            )
+            SELECT \'21\', \'Griya Bakpia Premium\', \'sold\', \'5\', variant_id, \'Coklat\', category_id, \'Kering\', box_id, \'15\', NOW()
+            FROM product, category, `type`, `value`
+            WHERE product_name = \'Griya Bakpia Premium\' AND variant_name = \'Coklat\' AND category_name = \'Kering\' AND box_value = \'15\'')
+ 3 APPPATH\Controllers\Admin\Confirmation.php(195): CodeIgniter\Database\BaseConnection->query('INSERT INTO log_stock (
+            log_stock_product_id,
+            log_stock_product_name,
+            log_stock_status,
+            log_stock_quantity,
+            log_stock_variant_id,
+            log_stock_variant_name,
+            log_stock_category_id,
+            log_stock_category_name,
+            log_stock_box_id,
+            log_stock_box_value,
+            log_stock_date
+            )
+            SELECT \'21\', \'Griya Bakpia Premium\', \'sold\', \'5\', variant_id, \'Coklat\', category_id, \'Kering\', box_id, \'15\', NOW()
+            FROM product, category, `type`, `value`
+            WHERE product_name = \'Griya Bakpia Premium\' AND variant_name = \'Coklat\' AND category_name = \'Kering\' AND box_value = \'15\'')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-12 02:24:30 --> [Caused by] mysqli_sql_exception: Table 'rombak-bakpia.type' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO log_stock (
+            log_stock_product_id,
+            log_stock_product_name,
+            log_stock_status,
+            log_stock_quantity,
+            log_stock_variant_id,
+            log_stock_variant_name,
+            log_stock_category_id,
+            log_stock_category_name,
+            log_stock_box_id,
+            log_stock_box_value,
+            log_stock_date
+            )
+            SELECT \'21\', \'Griya Bakpia Premium\', \'sold\', \'5\', variant_id, \'Coklat\', category_id, \'Kering\', box_id, \'15\', NOW()
+            FROM product, category, `type`, `value`
+            WHERE product_name = \'Griya Bakpia Premium\' AND variant_name = \'Coklat\' AND category_name = \'Kering\' AND box_value = \'15\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO log_stock (
+            log_stock_product_id,
+            log_stock_product_name,
+            log_stock_status,
+            log_stock_quantity,
+            log_stock_variant_id,
+            log_stock_variant_name,
+            log_stock_category_id,
+            log_stock_category_name,
+            log_stock_box_id,
+            log_stock_box_value,
+            log_stock_date
+            )
+            SELECT \'21\', \'Griya Bakpia Premium\', \'sold\', \'5\', variant_id, \'Coklat\', category_id, \'Kering\', box_id, \'15\', NOW()
+            FROM product, category, `type`, `value`
+            WHERE product_name = \'Griya Bakpia Premium\' AND variant_name = \'Coklat\' AND category_name = \'Kering\' AND box_value = \'15\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO log_stock (
+            log_stock_product_id,
+            log_stock_product_name,
+            log_stock_status,
+            log_stock_quantity,
+            log_stock_variant_id,
+            log_stock_variant_name,
+            log_stock_category_id,
+            log_stock_category_name,
+            log_stock_box_id,
+            log_stock_box_value,
+            log_stock_date
+            )
+            SELECT \'21\', \'Griya Bakpia Premium\', \'sold\', \'5\', variant_id, \'Coklat\', category_id, \'Kering\', box_id, \'15\', NOW()
+            FROM product, category, `type`, `value`
+            WHERE product_name = \'Griya Bakpia Premium\' AND variant_name = \'Coklat\' AND category_name = \'Kering\' AND box_value = \'15\'')
+ 4 APPPATH\Controllers\Admin\Confirmation.php(195): CodeIgniter\Database\BaseConnection->query('INSERT INTO log_stock (
+            log_stock_product_id,
+            log_stock_product_name,
+            log_stock_status,
+            log_stock_quantity,
+            log_stock_variant_id,
+            log_stock_variant_name,
+            log_stock_category_id,
+            log_stock_category_name,
+            log_stock_box_id,
+            log_stock_box_value,
+            log_stock_date
+            )
+            SELECT \'21\', \'Griya Bakpia Premium\', \'sold\', \'5\', variant_id, \'Coklat\', category_id, \'Kering\', box_id, \'15\', NOW()
+            FROM product, category, `type`, `value`
+            WHERE product_name = \'Griya Bakpia Premium\' AND variant_name = \'Coklat\' AND category_name = \'Kering\' AND box_value = \'15\'')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-08-12 02:24:49 --> mysqli_sql_exception: Table 'rombak-bakpia.value' doesn't exist in C:\wamp64\www\pitek_coba\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\pitek_coba\system\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO log...', 0)
+#1 C:\wamp64\www\pitek_coba\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO log...')
+#2 C:\wamp64\www\pitek_coba\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO log...')
+#3 C:\wamp64\www\pitek_coba\app\Controllers\Admin\Confirmation.php(195): CodeIgniter\Database\BaseConnection->query('INSERT INTO log...')
+#4 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+#5 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+#6 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\pitek_coba\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\pitek_coba\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\pitek_coba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-08-12 02:24:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'rombak-bakpia.value' doesn't exist
+[Method: POST, Route: admin/confirmation/confirm]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(195): CodeIgniter\Database\BaseConnection->query('INSERT INTO log_stock (
+            log_stock_product_id,
+            log_stock_product_name,
+            log_stock_status,
+            log_stock_quantity,
+            log_stock_variant_id,
+            log_stock_variant_name,
+            log_stock_category_id,
+            log_stock_category_name,
+            log_stock_box_id,
+            log_stock_box_value,
+            log_stock_date
+            )
+            SELECT \'21\', \'Griya Bakpia Premium\', \'sold\', \'5\', variant_id, \'Coklat\', category_id, \'Kering\', box_id, \'15\', NOW()
+            FROM product, category, `variant`, `value`
+            WHERE product_name = \'Griya Bakpia Premium\' AND variant_name = \'Coklat\' AND category_name = \'Kering\' AND box_value = \'15\'')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-12 02:24:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'rombak-bakpia.value' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO log_stock (
+            log_stock_product_id,
+            log_stock_product_name,
+            log_stock_status,
+            log_stock_quantity,
+            log_stock_variant_id,
+            log_stock_variant_name,
+            log_stock_category_id,
+            log_stock_category_name,
+            log_stock_box_id,
+            log_stock_box_value,
+            log_stock_date
+            )
+            SELECT \'21\', \'Griya Bakpia Premium\', \'sold\', \'5\', variant_id, \'Coklat\', category_id, \'Kering\', box_id, \'15\', NOW()
+            FROM product, category, `variant`, `value`
+            WHERE product_name = \'Griya Bakpia Premium\' AND variant_name = \'Coklat\' AND category_name = \'Kering\' AND box_value = \'15\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO log_stock (
+            log_stock_product_id,
+            log_stock_product_name,
+            log_stock_status,
+            log_stock_quantity,
+            log_stock_variant_id,
+            log_stock_variant_name,
+            log_stock_category_id,
+            log_stock_category_name,
+            log_stock_box_id,
+            log_stock_box_value,
+            log_stock_date
+            )
+            SELECT \'21\', \'Griya Bakpia Premium\', \'sold\', \'5\', variant_id, \'Coklat\', category_id, \'Kering\', box_id, \'15\', NOW()
+            FROM product, category, `variant`, `value`
+            WHERE product_name = \'Griya Bakpia Premium\' AND variant_name = \'Coklat\' AND category_name = \'Kering\' AND box_value = \'15\'')
+ 3 APPPATH\Controllers\Admin\Confirmation.php(195): CodeIgniter\Database\BaseConnection->query('INSERT INTO log_stock (
+            log_stock_product_id,
+            log_stock_product_name,
+            log_stock_status,
+            log_stock_quantity,
+            log_stock_variant_id,
+            log_stock_variant_name,
+            log_stock_category_id,
+            log_stock_category_name,
+            log_stock_box_id,
+            log_stock_box_value,
+            log_stock_date
+            )
+            SELECT \'21\', \'Griya Bakpia Premium\', \'sold\', \'5\', variant_id, \'Coklat\', category_id, \'Kering\', box_id, \'15\', NOW()
+            FROM product, category, `variant`, `value`
+            WHERE product_name = \'Griya Bakpia Premium\' AND variant_name = \'Coklat\' AND category_name = \'Kering\' AND box_value = \'15\'')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-12 02:24:49 --> [Caused by] mysqli_sql_exception: Table 'rombak-bakpia.value' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO log_stock (
+            log_stock_product_id,
+            log_stock_product_name,
+            log_stock_status,
+            log_stock_quantity,
+            log_stock_variant_id,
+            log_stock_variant_name,
+            log_stock_category_id,
+            log_stock_category_name,
+            log_stock_box_id,
+            log_stock_box_value,
+            log_stock_date
+            )
+            SELECT \'21\', \'Griya Bakpia Premium\', \'sold\', \'5\', variant_id, \'Coklat\', category_id, \'Kering\', box_id, \'15\', NOW()
+            FROM product, category, `variant`, `value`
+            WHERE product_name = \'Griya Bakpia Premium\' AND variant_name = \'Coklat\' AND category_name = \'Kering\' AND box_value = \'15\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO log_stock (
+            log_stock_product_id,
+            log_stock_product_name,
+            log_stock_status,
+            log_stock_quantity,
+            log_stock_variant_id,
+            log_stock_variant_name,
+            log_stock_category_id,
+            log_stock_category_name,
+            log_stock_box_id,
+            log_stock_box_value,
+            log_stock_date
+            )
+            SELECT \'21\', \'Griya Bakpia Premium\', \'sold\', \'5\', variant_id, \'Coklat\', category_id, \'Kering\', box_id, \'15\', NOW()
+            FROM product, category, `variant`, `value`
+            WHERE product_name = \'Griya Bakpia Premium\' AND variant_name = \'Coklat\' AND category_name = \'Kering\' AND box_value = \'15\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO log_stock (
+            log_stock_product_id,
+            log_stock_product_name,
+            log_stock_status,
+            log_stock_quantity,
+            log_stock_variant_id,
+            log_stock_variant_name,
+            log_stock_category_id,
+            log_stock_category_name,
+            log_stock_box_id,
+            log_stock_box_value,
+            log_stock_date
+            )
+            SELECT \'21\', \'Griya Bakpia Premium\', \'sold\', \'5\', variant_id, \'Coklat\', category_id, \'Kering\', box_id, \'15\', NOW()
+            FROM product, category, `variant`, `value`
+            WHERE product_name = \'Griya Bakpia Premium\' AND variant_name = \'Coklat\' AND category_name = \'Kering\' AND box_value = \'15\'')
+ 4 APPPATH\Controllers\Admin\Confirmation.php(195): CodeIgniter\Database\BaseConnection->query('INSERT INTO log_stock (
+            log_stock_product_id,
+            log_stock_product_name,
+            log_stock_status,
+            log_stock_quantity,
+            log_stock_variant_id,
+            log_stock_variant_name,
+            log_stock_category_id,
+            log_stock_category_name,
+            log_stock_box_id,
+            log_stock_box_value,
+            log_stock_date
+            )
+            SELECT \'21\', \'Griya Bakpia Premium\', \'sold\', \'5\', variant_id, \'Coklat\', category_id, \'Kering\', box_id, \'15\', NOW()
+            FROM product, category, `variant`, `value`
+            WHERE product_name = \'Griya Bakpia Premium\' AND variant_name = \'Coklat\' AND category_name = \'Kering\' AND box_value = \'15\'')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-12 02:29:18 --> ErrorException: Undefined array key "status"
+[Method: POST, Route: admin/confirmation/confirm]
+in APPPATH\Controllers\Admin\Confirmation.php on line 160.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(160): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 160)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-12 02:29:19 --> ErrorException: Undefined array key "status"
+[Method: POST, Route: admin/confirmation/confirm]
+in APPPATH\Controllers\Admin\Confirmation.php on line 160.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(160): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 160)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-12 02:30:32 --> ErrorException: Undefined variable $data_confirm_order
+[Method: POST, Route: admin/confirmation/confirm]
+in APPPATH\Controllers\Admin\Confirmation.php on line 163.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(163): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_confirm_order', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 163)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-12 02:30:33 --> ErrorException: Undefined variable $data_confirm_order
+[Method: POST, Route: admin/confirmation/confirm]
+in APPPATH\Controllers\Admin\Confirmation.php on line 163.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(163): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_confirm_order', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 163)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-12 02:39:47 --> ErrorException: Undefined array key "id"
+[Method: POST, Route: admin/confirmation/cancel]
+in APPPATH\Controllers\Admin\Confirmation.php on line 274.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(274): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 274)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->cancel()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-12 02:49:26 --> Error: Cannot use object of type stdClass as array
+[Method: POST, Route: admin/confirmation/cancel]
+in APPPATH\Controllers\Admin\Confirmation.php on line 340.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->cancel()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-12 02:49:28 --> Error: Cannot use object of type stdClass as array
+[Method: POST, Route: admin/confirmation/cancel]
+in APPPATH\Controllers\Admin\Confirmation.php on line 340.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->cancel()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-12 02:49:28 --> Error: Cannot use object of type stdClass as array
+[Method: POST, Route: admin/confirmation/cancel]
+in APPPATH\Controllers\Admin\Confirmation.php on line 340.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->cancel()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-08-12 02:50:00 --> mysqli_sql_exception: Unknown column 'product_stock_stock_out' in 'field list' in C:\wamp64\www\pitek_coba\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\pitek_coba\system\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE product_...', 0)
+#1 C:\wamp64\www\pitek_coba\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product_...')
+#2 C:\wamp64\www\pitek_coba\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product_...')
+#3 C:\wamp64\www\pitek_coba\app\Controllers\Admin\Confirmation.php(344): CodeIgniter\Database\BaseConnection->query('UPDATE product_...')
+#4 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->cancel()
+#5 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+#6 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\pitek_coba\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\pitek_coba\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\pitek_coba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-08-12 02:50:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product_stock_stock_out' in 'field list'
+[Method: POST, Route: admin/confirmation/cancel]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(344): CodeIgniter\Database\BaseConnection->query('UPDATE product_stock SET product_stock_stock = product_stock_stock + 5, product_stock_stock_out = product_stock_stock_out - 5 WHERE product_stock_product_name = \'Griya Bakpia Premium\' AND product_stock_product_id = \'8\'')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->cancel()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-12 02:50:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product_stock_stock_out' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product_stock SET product_stock_stock = product_stock_stock + 5, product_stock_stock_out = product_stock_stock_out - 5 WHERE product_stock_product_name = \'Griya Bakpia Premium\' AND product_stock_product_id = \'8\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product_stock SET product_stock_stock = product_stock_stock + 5, product_stock_stock_out = product_stock_stock_out - 5 WHERE product_stock_product_name = \'Griya Bakpia Premium\' AND product_stock_product_id = \'8\'')
+ 3 APPPATH\Controllers\Admin\Confirmation.php(344): CodeIgniter\Database\BaseConnection->query('UPDATE product_stock SET product_stock_stock = product_stock_stock + 5, product_stock_stock_out = product_stock_stock_out - 5 WHERE product_stock_product_name = \'Griya Bakpia Premium\' AND product_stock_product_id = \'8\'')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->cancel()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-12 02:50:00 --> [Caused by] mysqli_sql_exception: Unknown column 'product_stock_stock_out' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE product_stock SET product_stock_stock = product_stock_stock + 5, product_stock_stock_out = product_stock_stock_out - 5 WHERE product_stock_product_name = \'Griya Bakpia Premium\' AND product_stock_product_id = \'8\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product_stock SET product_stock_stock = product_stock_stock + 5, product_stock_stock_out = product_stock_stock_out - 5 WHERE product_stock_product_name = \'Griya Bakpia Premium\' AND product_stock_product_id = \'8\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product_stock SET product_stock_stock = product_stock_stock + 5, product_stock_stock_out = product_stock_stock_out - 5 WHERE product_stock_product_name = \'Griya Bakpia Premium\' AND product_stock_product_id = \'8\'')
+ 4 APPPATH\Controllers\Admin\Confirmation.php(344): CodeIgniter\Database\BaseConnection->query('UPDATE product_stock SET product_stock_stock = product_stock_stock + 5, product_stock_stock_out = product_stock_stock_out - 5 WHERE product_stock_product_name = \'Griya Bakpia Premium\' AND product_stock_product_id = \'8\'')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->cancel()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-08-12 02:50:03 --> mysqli_sql_exception: Unknown column 'product_stock_stock_out' in 'field list' in C:\wamp64\www\pitek_coba\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\pitek_coba\system\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE product_...', 0)
+#1 C:\wamp64\www\pitek_coba\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product_...')
+#2 C:\wamp64\www\pitek_coba\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product_...')
+#3 C:\wamp64\www\pitek_coba\app\Controllers\Admin\Confirmation.php(344): CodeIgniter\Database\BaseConnection->query('UPDATE product_...')
+#4 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->cancel()
+#5 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+#6 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\pitek_coba\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\pitek_coba\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\pitek_coba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-08-12 02:50:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product_stock_stock_out' in 'field list'
+[Method: POST, Route: admin/confirmation/cancel]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(344): CodeIgniter\Database\BaseConnection->query('UPDATE product_stock SET product_stock_stock = product_stock_stock + 5, product_stock_stock_out = product_stock_stock_out - 5 WHERE product_stock_product_name = \'Griya Bakpia Premium\' AND product_stock_product_id = \'8\'')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->cancel()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-12 02:50:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'product_stock_stock_out' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product_stock SET product_stock_stock = product_stock_stock + 5, product_stock_stock_out = product_stock_stock_out - 5 WHERE product_stock_product_name = \'Griya Bakpia Premium\' AND product_stock_product_id = \'8\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product_stock SET product_stock_stock = product_stock_stock + 5, product_stock_stock_out = product_stock_stock_out - 5 WHERE product_stock_product_name = \'Griya Bakpia Premium\' AND product_stock_product_id = \'8\'')
+ 3 APPPATH\Controllers\Admin\Confirmation.php(344): CodeIgniter\Database\BaseConnection->query('UPDATE product_stock SET product_stock_stock = product_stock_stock + 5, product_stock_stock_out = product_stock_stock_out - 5 WHERE product_stock_product_name = \'Griya Bakpia Premium\' AND product_stock_product_id = \'8\'')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->cancel()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-12 02:50:03 --> [Caused by] mysqli_sql_exception: Unknown column 'product_stock_stock_out' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE product_stock SET product_stock_stock = product_stock_stock + 5, product_stock_stock_out = product_stock_stock_out - 5 WHERE product_stock_product_name = \'Griya Bakpia Premium\' AND product_stock_product_id = \'8\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product_stock SET product_stock_stock = product_stock_stock + 5, product_stock_stock_out = product_stock_stock_out - 5 WHERE product_stock_product_name = \'Griya Bakpia Premium\' AND product_stock_product_id = \'8\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product_stock SET product_stock_stock = product_stock_stock + 5, product_stock_stock_out = product_stock_stock_out - 5 WHERE product_stock_product_name = \'Griya Bakpia Premium\' AND product_stock_product_id = \'8\'')
+ 4 APPPATH\Controllers\Admin\Confirmation.php(344): CodeIgniter\Database\BaseConnection->query('UPDATE product_stock SET product_stock_stock = product_stock_stock + 5, product_stock_stock_out = product_stock_stock_out - 5 WHERE product_stock_product_name = \'Griya Bakpia Premium\' AND product_stock_product_id = \'8\'')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->cancel()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-12 04:20:10 --> ErrorException: Undefined array key "box"
+[Method: POST, Route: admin/product/insert]
+in APPPATH\Controllers\Admin\Product.php on line 88.
+ 1 APPPATH\Controllers\Admin\Product.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "box"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Product.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->insert()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-12 04:20:46 --> ErrorException: Undefined array key "box"
+[Method: POST, Route: admin/product/insert]
+in APPPATH\Controllers\Admin\Product.php on line 88.
+ 1 APPPATH\Controllers\Admin\Product.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "box"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Product.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->insert()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-12 06:35:07 --> ErrorException: Undefined array key "variant"
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 164.
+ 1 APPPATH\Controllers\Admin\Product.php(164): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "variant"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Product.php', 164)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-12 06:35:42 --> ErrorException: Undefined array key "variant"
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 164.
+ 1 APPPATH\Controllers\Admin\Product.php(164): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "variant"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Product.php', 164)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-12 06:36:29 --> ErrorException: Undefined array key "variant"
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 164.
+ 1 APPPATH\Controllers\Admin\Product.php(164): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "variant"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Product.php', 164)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-12 06:54:48 --> ErrorException: Undefined array key "Token"
+[Method: GET, Route: admin/stock/list-stock]
+in APPPATH\Controllers\Core\AuthController.php on line 26.
+ 1 APPPATH\Controllers\Core\AuthController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Core\\AuthController.php', 26)
+ 2 APPPATH\Controllers\Admin\Stock.php(13): App\Controllers\Core\AuthController->before([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Stock->list_stock()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Stock))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-12 06:54:54 --> ErrorException: Undefined array key "Token"
+[Method: GET, Route: admin/stock/list-stock]
+in APPPATH\Controllers\Core\AuthController.php on line 26.
+ 1 APPPATH\Controllers\Core\AuthController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Core\\AuthController.php', 26)
+ 2 APPPATH\Controllers\Admin\Stock.php(13): App\Controllers\Core\AuthController->before([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Stock->list_stock()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Stock))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-12 06:54:56 --> ErrorException: Undefined array key "Token"
+[Method: GET, Route: admin/stock/list-stock]
+in APPPATH\Controllers\Core\AuthController.php on line 26.
+ 1 APPPATH\Controllers\Core\AuthController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Core\\AuthController.php', 26)
+ 2 APPPATH\Controllers\Admin\Stock.php(13): App\Controllers\Core\AuthController->before([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Stock->list_stock()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Stock))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-12 06:54:56 --> ErrorException: Undefined array key "Token"
+[Method: GET, Route: admin/stock/list-stock]
+in APPPATH\Controllers\Core\AuthController.php on line 26.
+ 1 APPPATH\Controllers\Core\AuthController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Core\\AuthController.php', 26)
+ 2 APPPATH\Controllers\Admin\Stock.php(13): App\Controllers\Core\AuthController->before([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Stock->list_stock()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Stock))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

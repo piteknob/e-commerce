@@ -1,0 +1,1418 @@
+CRITICAL - 2024-08-15 02:12:19 --> ErrorException: Undefined array key "variant"
+[Method: POST, Route: admin/variant/update]
+in APPPATH\Controllers\Admin\Variant.php on line 102.
+ 1 APPPATH\Controllers\Admin\Variant.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "variant"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Variant.php', 102)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Variant->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Variant))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:23:20 --> ErrorException: Undefined variable $data_array
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 64.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_array', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:25:45 --> ErrorException: Undefined variable $data_array
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 64.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_array', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:25:45 --> ErrorException: Undefined variable $data_array
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 64.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_array', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:25:45 --> ErrorException: Undefined variable $data_array
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 64.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_array', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:25:46 --> ErrorException: Undefined variable $data_array
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 64.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_array', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:28:23 --> ErrorException: Undefined variable $data_array
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 64.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_array', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:28:37 --> ErrorException: Undefined variable $data_array
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 64.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_array', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:30:29 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:30:32 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:30:32 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:30:33 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:31:26 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:31:27 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:31:27 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:31:28 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:31:28 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:31:28 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:31:29 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:31:29 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:31:29 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:31:29 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:31:29 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:31:30 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:31:30 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:31:30 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:31:30 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:31:40 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:31:40 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:31:41 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:31:41 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:31:41 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:31:42 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:34:44 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:34:44 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:34:45 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:34:45 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:34:45 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:36:15 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:36:16 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:36:16 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:38:15 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:38:16 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:38:16 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:38:16 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:38:47 --> ErrorException: Undefined array key "proof"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 40.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "proof"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:38:48 --> ErrorException: Undefined array key "proof"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 40.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "proof"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:39:27 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 40.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:39:28 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 40.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:39:29 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 40.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:39:29 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 40.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:39:30 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 40.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:39:47 --> ErrorException: Undefined array key "proof"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 40.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "proof"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:39:48 --> ErrorException: Undefined array key "proof"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 40.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "proof"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:39:48 --> ErrorException: Undefined array key "proof"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 40.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "proof"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:40:01 --> ErrorException: Undefined array key "pagination"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 67.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pagination"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 67)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:40:02 --> ErrorException: Undefined array key "pagination"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 67.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pagination"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 67)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:40:03 --> ErrorException: Undefined array key "pagination"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 67.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pagination"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 67)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:40:04 --> ErrorException: Undefined array key "pagination"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 67.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pagination"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 67)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:40:04 --> ErrorException: Undefined array key "pagination"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 67.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pagination"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 67)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:40:05 --> ErrorException: Undefined array key "pagination"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 67.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pagination"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 67)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:41:17 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:41:17 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:41:18 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:41:18 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:41:19 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:41:20 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:41:28 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:41:48 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 40.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:41:49 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 40.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:43:10 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 41.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 41)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:43:12 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 41.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 41)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:43:12 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 41.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 41)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:43:49 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:44:09 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:44:10 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:44:11 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:50:56 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:50:57 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:50:57 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:50:57 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:52:27 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:52:28 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 02:52:28 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 03:16:38 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 03:16:39 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 03:16:40 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 03:16:49 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 03:16:49 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 03:16:49 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 03:16:50 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 03:16:50 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 03:17:08 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 03:17:08 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 03:17:08 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 03:17:09 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 03:17:09 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 03:18:30 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 03:18:30 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 03:18:31 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 03:18:31 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 03:18:31 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 03:18:32 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 03:18:32 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 03:18:32 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 03:19:39 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 03:19:39 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 03:19:39 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 39.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(39): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 39)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->list_transaction()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 04:34:38 --> ErrorException: Undefined array key "Token"
+[Method: GET, Route: admin/user/list-user]
+in APPPATH\Controllers\Core\AuthController.php on line 26.
+ 1 APPPATH\Controllers\Core\AuthController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Core\\AuthController.php', 26)
+ 2 APPPATH\Controllers\Admin\User.php(13): App\Controllers\Core\AuthController->before([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->list_user()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-08-15 04:56:23 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '==' at line 1 in C:\wamp64\www\pitek_coba\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\pitek_coba\system\Database\MySQLi\Connection.php(310): mysqli->query('SELECT auth_use...', 0)
+#1 C:\wamp64\www\pitek_coba\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_use...')
+#2 C:\wamp64\www\pitek_coba\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_use...')
+#3 C:\wamp64\www\pitek_coba\app\Helpers\query_helper.php(50): CodeIgniter\Database\BaseConnection->query('SELECT auth_use...')
+#4 C:\wamp64\www\pitek_coba\app\Controllers\Login.php(139): generateDetailData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(933): App\Controllers\Login->log_out()
+#6 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#7 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\pitek_coba\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\pitek_coba\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\wamp64\www\pitek_coba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-08-15 04:56:23 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '==' at line 1
+[Method: POST, Route: login/log-out]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Helpers\query_helper.php(50): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_id AS id, auth_user_user_id AS user_id, auth_user_username AS username, auth_user_token AS token, auth_user_date_login AS date_login, auth_user_date_expired AS date_expired FROM `auth_user` WHERE auth_user_token = YmFrcGlhMjEyMzQ1Ng==')
+ 2 APPPATH\Controllers\Login.php(139): generateDetailData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->log_out()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 04:56:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '==' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_id AS id, auth_user_user_id AS user_id, auth_user_username AS username, auth_user_token AS token, auth_user_date_login AS date_login, auth_user_date_expired AS date_expired FROM `auth_user` WHERE auth_user_token = YmFrcGlhMjEyMzQ1Ng==')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_id AS id, auth_user_user_id AS user_id, auth_user_username AS username, auth_user_token AS token, auth_user_date_login AS date_login, auth_user_date_expired AS date_expired FROM `auth_user` WHERE auth_user_token = YmFrcGlhMjEyMzQ1Ng==')
+ 3 APPPATH\Helpers\query_helper.php(50): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_id AS id, auth_user_user_id AS user_id, auth_user_username AS username, auth_user_token AS token, auth_user_date_login AS date_login, auth_user_date_expired AS date_expired FROM `auth_user` WHERE auth_user_token = YmFrcGlhMjEyMzQ1Ng==')
+ 4 APPPATH\Controllers\Login.php(139): generateDetailData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->log_out()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 04:56:23 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '==' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('SELECT auth_user_id AS id, auth_user_user_id AS user_id, auth_user_username AS username, auth_user_token AS token, auth_user_date_login AS date_login, auth_user_date_expired AS date_expired FROM `auth_user` WHERE auth_user_token = YmFrcGlhMjEyMzQ1Ng==', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_id AS id, auth_user_user_id AS user_id, auth_user_username AS username, auth_user_token AS token, auth_user_date_login AS date_login, auth_user_date_expired AS date_expired FROM `auth_user` WHERE auth_user_token = YmFrcGlhMjEyMzQ1Ng==')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_id AS id, auth_user_user_id AS user_id, auth_user_username AS username, auth_user_token AS token, auth_user_date_login AS date_login, auth_user_date_expired AS date_expired FROM `auth_user` WHERE auth_user_token = YmFrcGlhMjEyMzQ1Ng==')
+ 4 APPPATH\Helpers\query_helper.php(50): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_id AS id, auth_user_user_id AS user_id, auth_user_username AS username, auth_user_token AS token, auth_user_date_login AS date_login, auth_user_date_expired AS date_expired FROM `auth_user` WHERE auth_user_token = YmFrcGlhMjEyMzQ1Ng==')
+ 5 APPPATH\Controllers\Login.php(139): generateDetailData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->log_out()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-08-15 04:56:24 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '==' at line 1 in C:\wamp64\www\pitek_coba\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\pitek_coba\system\Database\MySQLi\Connection.php(310): mysqli->query('SELECT auth_use...', 0)
+#1 C:\wamp64\www\pitek_coba\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_use...')
+#2 C:\wamp64\www\pitek_coba\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_use...')
+#3 C:\wamp64\www\pitek_coba\app\Helpers\query_helper.php(50): CodeIgniter\Database\BaseConnection->query('SELECT auth_use...')
+#4 C:\wamp64\www\pitek_coba\app\Controllers\Login.php(139): generateDetailData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(933): App\Controllers\Login->log_out()
+#6 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#7 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\pitek_coba\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\pitek_coba\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\wamp64\www\pitek_coba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-08-15 04:56:24 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '==' at line 1
+[Method: POST, Route: login/log-out]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Helpers\query_helper.php(50): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_id AS id, auth_user_user_id AS user_id, auth_user_username AS username, auth_user_token AS token, auth_user_date_login AS date_login, auth_user_date_expired AS date_expired FROM `auth_user` WHERE auth_user_token = YmFrcGlhMjEyMzQ1Ng==')
+ 2 APPPATH\Controllers\Login.php(139): generateDetailData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->log_out()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 04:56:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '==' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_id AS id, auth_user_user_id AS user_id, auth_user_username AS username, auth_user_token AS token, auth_user_date_login AS date_login, auth_user_date_expired AS date_expired FROM `auth_user` WHERE auth_user_token = YmFrcGlhMjEyMzQ1Ng==')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_id AS id, auth_user_user_id AS user_id, auth_user_username AS username, auth_user_token AS token, auth_user_date_login AS date_login, auth_user_date_expired AS date_expired FROM `auth_user` WHERE auth_user_token = YmFrcGlhMjEyMzQ1Ng==')
+ 3 APPPATH\Helpers\query_helper.php(50): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_id AS id, auth_user_user_id AS user_id, auth_user_username AS username, auth_user_token AS token, auth_user_date_login AS date_login, auth_user_date_expired AS date_expired FROM `auth_user` WHERE auth_user_token = YmFrcGlhMjEyMzQ1Ng==')
+ 4 APPPATH\Controllers\Login.php(139): generateDetailData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->log_out()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 04:56:24 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '==' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('SELECT auth_user_id AS id, auth_user_user_id AS user_id, auth_user_username AS username, auth_user_token AS token, auth_user_date_login AS date_login, auth_user_date_expired AS date_expired FROM `auth_user` WHERE auth_user_token = YmFrcGlhMjEyMzQ1Ng==', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT auth_user_id AS id, auth_user_user_id AS user_id, auth_user_username AS username, auth_user_token AS token, auth_user_date_login AS date_login, auth_user_date_expired AS date_expired FROM `auth_user` WHERE auth_user_token = YmFrcGlhMjEyMzQ1Ng==')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT auth_user_id AS id, auth_user_user_id AS user_id, auth_user_username AS username, auth_user_token AS token, auth_user_date_login AS date_login, auth_user_date_expired AS date_expired FROM `auth_user` WHERE auth_user_token = YmFrcGlhMjEyMzQ1Ng==')
+ 4 APPPATH\Helpers\query_helper.php(50): CodeIgniter\Database\BaseConnection->query('SELECT auth_user_id AS id, auth_user_user_id AS user_id, auth_user_username AS username, auth_user_token AS token, auth_user_date_login AS date_login, auth_user_date_expired AS date_expired FROM `auth_user` WHERE auth_user_token = YmFrcGlhMjEyMzQ1Ng==')
+ 5 APPPATH\Controllers\Login.php(139): generateDetailData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->log_out()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-08-15 04:59:12 --> mysqli_sql_exception: Unknown column 'auth_user' in 'where clause' in C:\wamp64\www\pitek_coba\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\pitek_coba\system\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE auth_use...', 0)
+#1 C:\wamp64\www\pitek_coba\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE auth_use...')
+#2 C:\wamp64\www\pitek_coba\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE auth_use...')
+#3 C:\wamp64\www\pitek_coba\app\Controllers\Login.php(142): CodeIgniter\Database\BaseConnection->query('UPDATE auth_use...')
+#4 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(933): App\Controllers\Login->log_out()
+#5 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#6 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\pitek_coba\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\pitek_coba\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\pitek_coba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-08-15 04:59:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'auth_user' in 'where clause'
+[Method: POST, Route: login/log-out]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Controllers\Login.php(142): CodeIgniter\Database\BaseConnection->query('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->log_out()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 04:59:12 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'auth_user' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 3 APPPATH\Controllers\Login.php(142): CodeIgniter\Database\BaseConnection->query('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->log_out()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 04:59:12 --> [Caused by] mysqli_sql_exception: Unknown column 'auth_user' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 4 APPPATH\Controllers\Login.php(142): CodeIgniter\Database\BaseConnection->query('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->log_out()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-08-15 04:59:14 --> mysqli_sql_exception: Unknown column 'auth_user' in 'where clause' in C:\wamp64\www\pitek_coba\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\pitek_coba\system\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE auth_use...', 0)
+#1 C:\wamp64\www\pitek_coba\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE auth_use...')
+#2 C:\wamp64\www\pitek_coba\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE auth_use...')
+#3 C:\wamp64\www\pitek_coba\app\Controllers\Login.php(142): CodeIgniter\Database\BaseConnection->query('UPDATE auth_use...')
+#4 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(933): App\Controllers\Login->log_out()
+#5 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#6 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\pitek_coba\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\pitek_coba\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\pitek_coba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-08-15 04:59:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'auth_user' in 'where clause'
+[Method: POST, Route: login/log-out]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Controllers\Login.php(142): CodeIgniter\Database\BaseConnection->query('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->log_out()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 04:59:14 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'auth_user' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 3 APPPATH\Controllers\Login.php(142): CodeIgniter\Database\BaseConnection->query('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->log_out()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 04:59:14 --> [Caused by] mysqli_sql_exception: Unknown column 'auth_user' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 4 APPPATH\Controllers\Login.php(142): CodeIgniter\Database\BaseConnection->query('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->log_out()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-08-15 04:59:23 --> mysqli_sql_exception: Unknown column 'auth_user' in 'where clause' in C:\wamp64\www\pitek_coba\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\pitek_coba\system\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE auth_use...', 0)
+#1 C:\wamp64\www\pitek_coba\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE auth_use...')
+#2 C:\wamp64\www\pitek_coba\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE auth_use...')
+#3 C:\wamp64\www\pitek_coba\app\Controllers\Login.php(142): CodeIgniter\Database\BaseConnection->query('UPDATE auth_use...')
+#4 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(933): App\Controllers\Login->log_out()
+#5 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#6 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\pitek_coba\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\pitek_coba\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\pitek_coba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-08-15 04:59:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'auth_user' in 'where clause'
+[Method: POST, Route: login/log-out]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Controllers\Login.php(142): CodeIgniter\Database\BaseConnection->query('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->log_out()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 04:59:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'auth_user' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 3 APPPATH\Controllers\Login.php(142): CodeIgniter\Database\BaseConnection->query('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->log_out()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 04:59:23 --> [Caused by] mysqli_sql_exception: Unknown column 'auth_user' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 4 APPPATH\Controllers\Login.php(142): CodeIgniter\Database\BaseConnection->query('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->log_out()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-08-15 04:59:24 --> mysqli_sql_exception: Unknown column 'auth_user' in 'where clause' in C:\wamp64\www\pitek_coba\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\pitek_coba\system\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE auth_use...', 0)
+#1 C:\wamp64\www\pitek_coba\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE auth_use...')
+#2 C:\wamp64\www\pitek_coba\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE auth_use...')
+#3 C:\wamp64\www\pitek_coba\app\Controllers\Login.php(142): CodeIgniter\Database\BaseConnection->query('UPDATE auth_use...')
+#4 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(933): App\Controllers\Login->log_out()
+#5 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#6 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\pitek_coba\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\pitek_coba\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\pitek_coba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-08-15 04:59:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'auth_user' in 'where clause'
+[Method: POST, Route: login/log-out]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Controllers\Login.php(142): CodeIgniter\Database\BaseConnection->query('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->log_out()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 04:59:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'auth_user' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 3 APPPATH\Controllers\Login.php(142): CodeIgniter\Database\BaseConnection->query('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->log_out()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 04:59:24 --> [Caused by] mysqli_sql_exception: Unknown column 'auth_user' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 4 APPPATH\Controllers\Login.php(142): CodeIgniter\Database\BaseConnection->query('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->log_out()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-08-15 04:59:25 --> mysqli_sql_exception: Unknown column 'auth_user' in 'where clause' in C:\wamp64\www\pitek_coba\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\pitek_coba\system\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE auth_use...', 0)
+#1 C:\wamp64\www\pitek_coba\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE auth_use...')
+#2 C:\wamp64\www\pitek_coba\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE auth_use...')
+#3 C:\wamp64\www\pitek_coba\app\Controllers\Login.php(142): CodeIgniter\Database\BaseConnection->query('UPDATE auth_use...')
+#4 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(933): App\Controllers\Login->log_out()
+#5 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#6 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\pitek_coba\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\pitek_coba\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\pitek_coba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-08-15 04:59:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'auth_user' in 'where clause'
+[Method: POST, Route: login/log-out]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Controllers\Login.php(142): CodeIgniter\Database\BaseConnection->query('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->log_out()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 04:59:25 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'auth_user' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 3 APPPATH\Controllers\Login.php(142): CodeIgniter\Database\BaseConnection->query('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->log_out()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-15 04:59:25 --> [Caused by] mysqli_sql_exception: Unknown column 'auth_user' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 4 APPPATH\Controllers\Login.php(142): CodeIgniter\Database\BaseConnection->query('UPDATE auth_user SET auth_user_token = null WHERE auth_user = \'YmFrcGlhMjEyMzQ1Ng==\'')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Login->log_out()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

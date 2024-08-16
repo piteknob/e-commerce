@@ -1,0 +1,210 @@
+CRITICAL - 2024-08-13 02:56:07 --> ErrorException: Undefined array key "data"
+[Method: POST, Route: admin/confirmation/confirm]
+in APPPATH\Controllers\Admin\Confirmation.php on line 157.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 157)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-13 02:56:08 --> ErrorException: Undefined array key "data"
+[Method: POST, Route: admin/confirmation/confirm]
+in APPPATH\Controllers\Admin\Confirmation.php on line 157.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\pitek_coba\\app\\Controllers\\Admin\\Confirmation.php', 157)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-08-13 03:02:46 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '35'', ''Griya Bakpia Premium'', 'sold', ''5'', variant_id, ''Coklat'', category_' at line 14 in C:\wamp64\www\pitek_coba\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\pitek_coba\system\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO log...', 0)
+#1 C:\wamp64\www\pitek_coba\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO log...')
+#2 C:\wamp64\www\pitek_coba\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO log...')
+#3 C:\wamp64\www\pitek_coba\app\Controllers\Admin\Confirmation.php(218): CodeIgniter\Database\BaseConnection->query('INSERT INTO log...')
+#4 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+#5 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+#6 C:\wamp64\www\pitek_coba\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\pitek_coba\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\pitek_coba\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\pitek_coba\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-08-13 03:02:46 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '35'', ''Griya Bakpia Premium'', 'sold', ''5'', variant_id, ''Coklat'', category_' at line 14
+[Method: POST, Route: admin/confirmation/confirm]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(218): CodeIgniter\Database\BaseConnection->query('INSERT INTO log_stock (
+                log_stock_product_id,
+                log_stock_product_name,
+                log_stock_status,
+                log_stock_quantity,
+                log_stock_variant_id,
+                log_stock_variant_name,
+                log_stock_category_id,
+                log_stock_category_name,
+                log_stock_box_id,
+                log_stock_box_value,
+                log_stock_date
+            )
+            SELECT \'\'35\'\', \'\'Griya Bakpia Premium\'\', \'sold\', \'\'5\'\', variant_id, \'\'Coklat\'\', category_id, \'\'Kering\'\', box_id, \'\'15\'\', NOW()
+            FROM product, category, `variant`, `box`
+            WHERE product_name = \'\'Griya Bakpia Premium\'\' 
+                AND variant_name = \'\'Coklat\'\' 
+                AND category_name = \'\'Kering\'\' 
+                AND box_value = \'\'15\'\'')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-13 03:02:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '35'', ''Griya Bakpia Premium'', 'sold', ''5'', variant_id, ''Coklat'', category_' at line 14
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO log_stock (
+                log_stock_product_id,
+                log_stock_product_name,
+                log_stock_status,
+                log_stock_quantity,
+                log_stock_variant_id,
+                log_stock_variant_name,
+                log_stock_category_id,
+                log_stock_category_name,
+                log_stock_box_id,
+                log_stock_box_value,
+                log_stock_date
+            )
+            SELECT \'\'35\'\', \'\'Griya Bakpia Premium\'\', \'sold\', \'\'5\'\', variant_id, \'\'Coklat\'\', category_id, \'\'Kering\'\', box_id, \'\'15\'\', NOW()
+            FROM product, category, `variant`, `box`
+            WHERE product_name = \'\'Griya Bakpia Premium\'\' 
+                AND variant_name = \'\'Coklat\'\' 
+                AND category_name = \'\'Kering\'\' 
+                AND box_value = \'\'15\'\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO log_stock (
+                log_stock_product_id,
+                log_stock_product_name,
+                log_stock_status,
+                log_stock_quantity,
+                log_stock_variant_id,
+                log_stock_variant_name,
+                log_stock_category_id,
+                log_stock_category_name,
+                log_stock_box_id,
+                log_stock_box_value,
+                log_stock_date
+            )
+            SELECT \'\'35\'\', \'\'Griya Bakpia Premium\'\', \'sold\', \'\'5\'\', variant_id, \'\'Coklat\'\', category_id, \'\'Kering\'\', box_id, \'\'15\'\', NOW()
+            FROM product, category, `variant`, `box`
+            WHERE product_name = \'\'Griya Bakpia Premium\'\' 
+                AND variant_name = \'\'Coklat\'\' 
+                AND category_name = \'\'Kering\'\' 
+                AND box_value = \'\'15\'\'')
+ 3 APPPATH\Controllers\Admin\Confirmation.php(218): CodeIgniter\Database\BaseConnection->query('INSERT INTO log_stock (
+                log_stock_product_id,
+                log_stock_product_name,
+                log_stock_status,
+                log_stock_quantity,
+                log_stock_variant_id,
+                log_stock_variant_name,
+                log_stock_category_id,
+                log_stock_category_name,
+                log_stock_box_id,
+                log_stock_box_value,
+                log_stock_date
+            )
+            SELECT \'\'35\'\', \'\'Griya Bakpia Premium\'\', \'sold\', \'\'5\'\', variant_id, \'\'Coklat\'\', category_id, \'\'Kering\'\', box_id, \'\'15\'\', NOW()
+            FROM product, category, `variant`, `box`
+            WHERE product_name = \'\'Griya Bakpia Premium\'\' 
+                AND variant_name = \'\'Coklat\'\' 
+                AND category_name = \'\'Kering\'\' 
+                AND box_value = \'\'15\'\'')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-13 03:02:46 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '35'', ''Griya Bakpia Premium'', 'sold', ''5'', variant_id, ''Coklat'', category_' at line 14
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO log_stock (
+                log_stock_product_id,
+                log_stock_product_name,
+                log_stock_status,
+                log_stock_quantity,
+                log_stock_variant_id,
+                log_stock_variant_name,
+                log_stock_category_id,
+                log_stock_category_name,
+                log_stock_box_id,
+                log_stock_box_value,
+                log_stock_date
+            )
+            SELECT \'\'35\'\', \'\'Griya Bakpia Premium\'\', \'sold\', \'\'5\'\', variant_id, \'\'Coklat\'\', category_id, \'\'Kering\'\', box_id, \'\'15\'\', NOW()
+            FROM product, category, `variant`, `box`
+            WHERE product_name = \'\'Griya Bakpia Premium\'\' 
+                AND variant_name = \'\'Coklat\'\' 
+                AND category_name = \'\'Kering\'\' 
+                AND box_value = \'\'15\'\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO log_stock (
+                log_stock_product_id,
+                log_stock_product_name,
+                log_stock_status,
+                log_stock_quantity,
+                log_stock_variant_id,
+                log_stock_variant_name,
+                log_stock_category_id,
+                log_stock_category_name,
+                log_stock_box_id,
+                log_stock_box_value,
+                log_stock_date
+            )
+            SELECT \'\'35\'\', \'\'Griya Bakpia Premium\'\', \'sold\', \'\'5\'\', variant_id, \'\'Coklat\'\', category_id, \'\'Kering\'\', box_id, \'\'15\'\', NOW()
+            FROM product, category, `variant`, `box`
+            WHERE product_name = \'\'Griya Bakpia Premium\'\' 
+                AND variant_name = \'\'Coklat\'\' 
+                AND category_name = \'\'Kering\'\' 
+                AND box_value = \'\'15\'\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO log_stock (
+                log_stock_product_id,
+                log_stock_product_name,
+                log_stock_status,
+                log_stock_quantity,
+                log_stock_variant_id,
+                log_stock_variant_name,
+                log_stock_category_id,
+                log_stock_category_name,
+                log_stock_box_id,
+                log_stock_box_value,
+                log_stock_date
+            )
+            SELECT \'\'35\'\', \'\'Griya Bakpia Premium\'\', \'sold\', \'\'5\'\', variant_id, \'\'Coklat\'\', category_id, \'\'Kering\'\', box_id, \'\'15\'\', NOW()
+            FROM product, category, `variant`, `box`
+            WHERE product_name = \'\'Griya Bakpia Premium\'\' 
+                AND variant_name = \'\'Coklat\'\' 
+                AND category_name = \'\'Kering\'\' 
+                AND box_value = \'\'15\'\'')
+ 4 APPPATH\Controllers\Admin\Confirmation.php(218): CodeIgniter\Database\BaseConnection->query('INSERT INTO log_stock (
+                log_stock_product_id,
+                log_stock_product_name,
+                log_stock_status,
+                log_stock_quantity,
+                log_stock_variant_id,
+                log_stock_variant_name,
+                log_stock_category_id,
+                log_stock_category_name,
+                log_stock_box_id,
+                log_stock_box_value,
+                log_stock_date
+            )
+            SELECT \'\'35\'\', \'\'Griya Bakpia Premium\'\', \'sold\', \'\'5\'\', variant_id, \'\'Coklat\'\', category_id, \'\'Kering\'\', box_id, \'\'15\'\', NOW()
+            FROM product, category, `variant`, `box`
+            WHERE product_name = \'\'Griya Bakpia Premium\'\' 
+                AND variant_name = \'\'Coklat\'\' 
+                AND category_name = \'\'Kering\'\' 
+                AND box_value = \'\'15\'\'')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
