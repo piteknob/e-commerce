@@ -11,7 +11,7 @@ class Login extends DataController
     {
         $post = $this->request->getPost();
         $db = db_connect();
-
+        
         $rules = [
             'username' => 'required',
             'password' => 'required',
@@ -94,8 +94,12 @@ class Login extends DataController
             // generate detail user
             $query['data'] = ['user'];
             $query['select'] = [
-                '`user`.user_id' => 'user_id',
+                '`user`.user_id' => 'id',
                 '`user`.user_username' => 'username',
+                '`user`.user_name' => 'name',
+                '`user`.user_email' => 'email',
+                '`user`.user_no_handphone' => 'no_handphone',
+                '`user`.user_role' => 'role',
                 '`user`.user_created_at' => 'created_at',
                 '`user`.user_updated_at' => 'updated_at',
                 'auth_user.auth_user_date_login' => 'date_login',

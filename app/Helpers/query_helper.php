@@ -479,8 +479,9 @@ if (!function_exists('filterBetween')) {
 if (!function_exists('joinTable')) {
     function joinTable($data)
     {
+        $join = '';
         foreach ($data as $key => $row) {
-            $join = " JOIN {$key} ON {$row}";
+            $join .= " JOIN {$key} ON {$row}";
         }
         return $join;
     }

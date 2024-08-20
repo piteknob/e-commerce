@@ -17,23 +17,23 @@ class Product extends AuthController
 
         $query['data'] = ['product'];
         $query['select'] = [
-            'product_id' => 'id',
-            'product_name' => 'name',
-            'product_price' => 'price',
-            'product_variant_id' => 'variant_id',
-            'product_variant_name' => 'variant_name',
-            'product_category_id' => 'category_id',
-            'product_category_name' => 'category_name',
-            'product_box_id' => 'box_id',
-            'product_box_value' => 'box_value',
-            'product_created_at' => 'created_at',
-            'product_updated_at' => 'updated_at',
+            'product.product_id' => 'id',
+            'product.product_name' => 'name',
+            'product.product_price' => 'price',
+            'product.product_category_id' => 'category_id',
+            'product.product_category_name' => 'category_name',
+            'variant.variant_id' => 'variant_id',
+            'variant.variant_name' => 'variant_name',
+            'product.product_description' => 'description',
             'product_stock.product_stock_stock' => 'stock_stock',
             'product_stock.product_stock_in' => 'stock_in',
             'product_stock.product_stock_out' => 'stock_out',
+            'product.product_created_at' => 'created_at',
+            'product.product_updated_at' => 'updated_at',
         ];
         $query['join'] = [
-            'product_stock' => 'product.product_id = product_stock.product_stock_product_id'
+            'product_stock' => 'product.product_id = product_stock.product_stock_product_id',
+            'variant' => 'product.product_id = variant.variant_product_id',
         ];
 
         $data = generateListData($this->request->getGet(), $query, $this->db);
@@ -51,23 +51,23 @@ class Product extends AuthController
 
         $query['data'] = ['product'];
         $query['select'] = [
-            'product_id' => 'id',
-            'product_name' => 'name',
-            'product_price' => 'price',
-            'product_variant_id' => 'variant_id',
-            'product_variant_name' => 'variant_name',
-            'product_category_id' => 'category_id',
-            'product_category_name' => 'category_name',
-            'product_box_id' => 'box_id',
-            'product_box_value' => 'box_value',
-            'product_created_at' => 'created_at',
-            'product_updated_at' => 'updated_at',
-            'product_stock.product_stock_stock' => 'stock',
+            'product.product_id' => 'id',
+            'product.product_name' => 'name',
+            'product.product_price' => 'price',
+            'product.product_category_id' => 'category_id',
+            'product.product_category_name' => 'category_name',
+            'variant.variant_id' => 'variant_id',
+            'variant.variant_name' => 'variant_name',
+            'product.product_description' => 'description',
+            'product_stock.product_stock_stock' => 'stock_stock',
             'product_stock.product_stock_in' => 'stock_in',
             'product_stock.product_stock_out' => 'stock_out',
+            'product.product_created_at' => 'created_at',
+            'product.product_updated_at' => 'updated_at',
         ];
         $query['join'] = [
-            'product_stock' => 'product.product_id = product_stock.product_stock_product_id'
+            'product_stock' => 'product.product_id = product_stock.product_stock_product_id',
+            'variant' => 'product.product_id = variant.variant_product_id',
         ];
         $query['where_detail'] = [
             "WHERE product_id = $id"
@@ -91,65 +91,78 @@ class Product extends AuthController
         $product = htmlspecialchars($post['name']);
         $variant = htmlspecialchars($post['variant']);
         $category = htmlspecialchars($post['category']);
-        $box = htmlspecialchars($post['box']);
         $price = htmlspecialchars($post['price']);
         $stock = htmlspecialchars($post['stock']);
+        $desc = htmlspecialchars($post['description']);
         $sql = "INSERT INTO 
-        product(product_name,
-                product_price,
-                product_variant_id,
-                product_variant_name,
-                product_category_id,
-                product_category_name,
-                product_box_id,
-                product_box_value,
-                product_created_at,
-                product_updated_at)
-        SELECT '{$product}', '{$price}', '{$variant}', variant_name, '{$category}', category_name, '{$box}', box_value, NOW(), NULL
-        FROM variant, category, `box`
-        WHERE variant_id = '{$variant}' AND category_id = '{$category}' AND box_id = '{$box}'
+        product
+        (
+        product_name,
+        product_price,
+        product_category_id,
+        product_category_name,
+        product_description,
+        product_created_at,
+        product_updated_at
+        )
+        SELECT '{$product}', '{$price}', '{$category}', category_name, '{$desc}', NOW(), NULL
+        FROM category
+        WHERE category_id = '{$category}'
         ";
 
         $this->db->query($sql);
         // Get Inserted Id
-        $id = $this->db->insertID();
+        $id_product = $this->db->insertID();
+
+        $sql_variant = "INSERT INTO variant(
+        variant_product_id,
+        variant_name,
+        variant_created_at,
+        variant_updated_at,
+        variant_deleted_at
+        )
+        VALUES ('{$id_product}', '{$variant}', NOW(), NULL, NULL)";
+
+        $this->db->query($sql_variant);
+        $id_variant = $this->db->insertID();
 
         $sql_stock = "INSERT INTO product_stock
         (
         product_stock_product_id,
-        product_stock_product_name,
-        product_stock_stock,
-        product_stock_in,
-        product_stock_out
+        product_stock_variant_id,
+        product_stock_category_id,
+        product_stock_stock
         )
-        VALUES('{$id}', '{$product}', '{$stock}', '{$stock}', 0)
+        VALUES('{$id_product}', '{$id_variant}', '{$category}', '{$stock}')
         ";
         $this->db->query($sql_stock);
 
 
         $query['data'] = ['product'];
         $query['select'] = [
-            'product_id' => 'id',
-            'product_name' => 'name',
-            'product_price' => 'price',
-            'product_variant_id' => 'variant_id',
-            'product_variant_name' => 'variant_name',
-            'product_category_id' => 'category_id',
-            'product_category_name' => 'category_name',
-            'product_box_id' => 'box_id',
-            'product_box_value' => 'box_value',
-            'product_created_at' => 'created_at',
-            'product_updated_at' => 'updated_at',
-            'product_stock.product_stock_stock' => 'stock'
+            'product.product_id' => 'id',
+            'product.product_name' => 'name',
+            'product.product_price' => 'price',
+            'product.product_category_id' => 'category_id',
+            'product.product_category_name' => 'category_name',
+            'variant.variant_id' => 'variant_id',
+            'variant.variant_name' => 'variant_name',
+            'product.product_description' => 'description',
+            'product_stock.product_stock_stock' => 'stock_stock',
+            'product_stock.product_stock_in' => 'stock_in',
+            'product_stock.product_stock_out' => 'stock_out',
+            'product.product_created_at' => 'created_at',
+            'product.product_updated_at' => 'updated_at',
         ];
         $query['join'] = [
-            'product_stock' => 'product.product_id = product_stock.product_stock_product_id'
+            'product_stock' => 'product.product_id = product_stock.product_stock_product_id',
+            'variant' => 'product.product_id = variant.variant_product_id',
         ];
         $query['where_detail'] = [
-            "WHERE product_id = {$id}"
+            "WHERE product_stock_product_id = '{$id_product}' AND product_stock_variant_id = '{$id_variant}' AND product_stock_category_id = '{$category}'"
         ];
 
-        $data = generateDetailData($this->request->getPost(), $query, $this->db);
+        $data = generateListData($this->request->getGet(), $query, $this->db);
         return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Added', $data);
     }
 
@@ -166,58 +179,61 @@ class Product extends AuthController
         foreach ($id as $key => $value) {
             $id = $value; // ID product
         }
-        $product = htmlspecialchars($post['product']);
+        
+        $product = htmlspecialchars($post['name']);
         $variant = htmlspecialchars($post['variant']);
         $category = htmlspecialchars($post['category']);
-        $box = htmlspecialchars($post['box']);
         $price = htmlspecialchars($post['price']);
         $stock = htmlspecialchars($post['stock']);
+        $desc = htmlspecialchars($post['description']);
 
         $sql = "UPDATE product 
             SET
             product_name = '{$product}',
             product_price = '{$price}',
-            product_variant_id = '{$variant}',
-            product_variant_name = (SELECT variant_name FROM `variant` WHERE variant_id = '{$variant}'),
             product_category_id = '{$category}',
             product_category_name = (SELECT category_name FROM `category` WHERE category_id = '{$category}'),
-            product_box_id = '{$box}',
-            product_box_value = (SELECT box_value FROM `box` WHERE box_id = '{$box}'),
+            product_description = '{$desc}',
             product_updated_at = NOW()
             WHERE product_id = {$id}
             ";
         $this->db->query($sql);
 
         $sql_stock = "UPDATE product_stock
-        SET product_stock_product_name = '{$product}',
-            product_stock_stock = {$stock}
+        SET product_stock_stock = {$stock}
             WHERE product_stock_product_id = {$id}
             ";
         $this->db->query($sql_stock);
 
+        $sql_variant = "UPDATE variant
+        SET variant_name = '{$variant}'
+            WHERE variant_product_id = {$id}
+            ";
+        $this->db->query($sql_variant);
+
         // Get Data Updated
         $query['data'] = ['product'];
         $query['select'] = [
-            'product_id' => 'id',
-            'product_name' => 'name',
-            'product_price' => 'price',
-            'product_variant_id' => 'variant_id',
-            'product_variant_name' => 'variant_name',
-            'product_category_id' => 'category_id',
-            'product_category_name' => 'category_name',
-            'product_box_id' => 'box_id',
-            'product_box_value' => 'box_value',
-            'product_created_at' => 'created_at',
-            'product_updated_at' => 'updated_at',
+            'product.product_id' => 'id',
+            'product.product_name' => 'name',
+            'product.product_price' => 'price',
+            'product.product_category_id' => 'category_id',
+            'product.product_category_name' => 'category_name',
+            'variant.variant_id' => 'variant_id',
+            'variant.variant_name' => 'variant_name',
+            'product.product_description' => 'description',
             'product_stock.product_stock_stock' => 'stock_stock',
             'product_stock.product_stock_in' => 'stock_in',
             'product_stock.product_stock_out' => 'stock_out',
+            'product.product_created_at' => 'created_at',
+            'product.product_updated_at' => 'updated_at',
         ];
         $query['join'] = [
-            'product_stock' => 'product.product_id = product_stock.product_stock_product_id'
+            'product_stock' => 'product.product_id = product_stock.product_stock_product_id',
+            'variant' => 'product.product_id = variant.variant_product_id',
         ];
         $query['where_detail'] = [
-            "WHERE product_id = {$id}"
+            "WHERE product_id = $id"
         ];
 
         $data = generateDetailData($this->request->getPost(), $query, $this->db);
@@ -238,39 +254,37 @@ class Product extends AuthController
             $id = $value;
         }
 
-        $query['data'] = ['product'];
-
+        $query['data'] = ['product'];   
         $query['select'] = [
-            'product_id' => 'id',
-            'product_name' => 'name',
-            'product_price' => 'price',
-            'product_variant_id' => 'variant_id',
-            'product_variant_name' => 'variant_name',
-            'product_category_id' => 'category_id',
-            'product_category_name' => 'category_name',
-            'product_box_id' => 'box_id',
-            'product_box_value' => 'box_value',
-            'product_created_at' => 'created_at',
-            'product_updated_at' => 'updated_at',
+            'product.product_name' => 'name',
+            'product.product_price' => 'price',
+            'product.product_category_id' => 'category_id',
+            'product.product_category_name' => 'category_name',
+            'variant.variant_id' => 'variant_id',
+            'variant.variant_name' => 'variant_name',
+            'product.product_description' => 'description',
             'product_stock.product_stock_stock' => 'stock_stock',
             'product_stock.product_stock_in' => 'stock_in',
             'product_stock.product_stock_out' => 'stock_out',
+            'product.product_created_at' => 'created_at',
+            'product.product_updated_at' => 'updated_at',
         ];
-
         $query['join'] = [
-            'product_stock' => 'product.product_id = product_stock.product_stock_product_id'
+            'product_stock' => 'product.product_id = product_stock.product_stock_product_id',
+            'variant' => 'product.product_id = variant.variant_product_id',
         ];
-
         $query['where_detail'] = [
             "WHERE product_id = {$id}"
         ];
 
         $data = generateDetailData($this->request->getVar(), $query, $this->db);
-
+        
         // delete action
         $sql = "DELETE FROM product WHERE product_id = {$id}";
-        $this->db->query($sql);
+        $sql_variant = "DELETE FROM variant WHERE variant_product_id = {$id}";
         $sql_stock = "DELETE FROM product_stock WHERE product_stock_product_id = {$id}";
+        $this->db->query($sql);
+        $this->db->query($sql_variant);
         $this->db->query($sql_stock);
 
         return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Deleted', $data);

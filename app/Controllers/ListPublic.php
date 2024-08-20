@@ -77,20 +77,4 @@ class ListPublic extends AuthController
         return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List Data Variant', $data);
     }
 
-    public function box()
-    {
-        $query['data'] = ['box'];
-        $query['select'] = [
-            'box_id' => 'id',
-            'box_value' => 'value',
-        ];
-        $query['where_detail'] = [
-            "WHERE box_deleted_at is null"
-        ];
-
-        $data = generateListData($this->request->getGet(), $query, $this->db);
-
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List Data Box', $data);
-    }
-
 }
