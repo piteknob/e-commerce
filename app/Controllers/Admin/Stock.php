@@ -17,18 +17,15 @@ class Stock extends AuthController
 
         $query['data'] = ['product'];
         $query['select'] = [
+            'product_stock.product_stock_id' => 'id',
             'product.product_name' => 'name',
-            'product.product_price' => 'price',
             'product.product_category_id' => 'category_id',
             'product.product_category_name' => 'category_name',
             'variant.variant_id' => 'variant_id',
             'variant.variant_name' => 'variant_name',
-            'product.product_description' => 'description',
             'product_stock.product_stock_stock' => 'stock_stock',
             'product_stock.product_stock_in' => 'stock_in',
             'product_stock.product_stock_out' => 'stock_out',
-            'product.product_created_at' => 'created_at',
-            'product.product_updated_at' => 'updated_at',
         ];
         $query['join'] = [
             'product_stock' => 'product.product_id = product_stock.product_stock_product_id',
@@ -41,6 +38,42 @@ class Stock extends AuthController
         $data = generateListData($this->request->getVar(), $query, $this->db);
 
         return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List Stock', $data);
+    }
+
+    public function detail_stock()
+    {
+        // Authorization Token
+        $token = $this->before(getallheaders());
+        if (!empty($token)) {
+            return $token;
+        }
+        $id = $this->request->getVar('id');
+
+        $query['data'] = ['product'];
+        $query['select'] = [
+            'product_stock.product_stock_id' => 'id',
+            'product.product_name' => 'name',
+            'product.product_price' => 'price',
+            'product.product_category_id' => 'category_id',
+            'product.product_category_name' => 'category_name',
+            'variant.variant_id' => 'variant_id',
+            'variant.variant_name' => 'variant_name',
+            'product_stock.product_stock_stock' => 'stock_stock',
+            'product_stock.product_stock_in' => 'stock_in',
+            'product_stock.product_stock_out' => 'stock_out',
+
+        ];
+        $query['join'] = [
+            'product_stock' => 'product.product_id = product_stock.product_stock_product_id',
+            'variant' => 'product.product_id = variant.variant_product_id',
+        ];
+        $query['where_detail'] = [
+            "WHERE product_stock_id = $id"
+        ];
+
+        $data = generateDetailData($this->request->getVar(), $query, $this->db);
+
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Detail Data', $data);
     }
 
     public function reduce()
@@ -115,10 +148,11 @@ class Stock extends AuthController
         foreach ($data2 as $key => $value) {
             $data2 = $value[0];
         }
-        $data = ['data' => [
-            'before' => $data1,
-            'after' => $data2,
-        ]
+        $data = [
+            'data' => [
+                'before' => $data1,
+                'after' => $data2,
+            ]
         ];
 
         return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Reduced', $data);
@@ -194,12 +228,52 @@ class Stock extends AuthController
         foreach ($data2 as $key => $value) {
             $data2 = $value[0];
         }
-        $data = ['data' => [
-            'before' => $data1,
-            'after' => $data2,
-        ]
+        $data = [
+            'data' => [
+                'before' => $data1,
+                'after' => $data2,
+            ]
         ];
 
         return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Added', $data);
+    }
+
+    public function update()
+    {
+        // Authorization Token
+        $token = $this->before(getallheaders());
+        if (!empty($token)) {
+            return $token;
+        }
+
+        $id = $this->request->getGet('id');
+        $post = $this->request->getPost();
+
+        $stock = htmlspecialchars($post['stock']);
+
+        $sql = "UPDATE product_stock SET product_stock_stock = '{$stock}' WHERE product_stock_id = {$id}";
+        $this->db->query($sql);
+
+        $query['data'] = ['product_stock'];
+        $query['select'] = [
+            'product_stock.product_stock_id' => 'id',
+            'product.product_name' => 'name',
+            'product.product_category_id' => 'category_id',
+            'product.product_category_name' => 'category_name',
+            'variant.variant_id' => 'variant_id',
+            'variant.variant_name' => 'variant_name',
+            'product_stock.product_stock_stock' => 'stock_stock',
+            'product_stock.product_stock_in' => 'stock_in',
+            'product_stock.product_stock_out' => 'stock_out',
+
+        ];
+        $query['join'] = [
+            'product' => 'product.product_id = product_stock.product_stock_product_id',
+            'variant' => 'product.product_id = variant.variant_product_id',
+        ];
+        $query['where_detail'] = ["WHERE product_stock_id = $id"];
+        $data = generateDetailData($this->request->getVar(), $query, $this->db);
+
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Updated', $data);
     }
 }

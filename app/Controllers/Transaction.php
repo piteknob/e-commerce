@@ -142,22 +142,22 @@ class Transaction extends AuthController
             'sales_product_product_name' => 'product_name',
             'sales_product_product_variant' => 'product_variant',
             'sales_product_product_category' => 'product_category',
-            'sales_product_product_box' => 'product_box',
             'sales_product_quantity' => 'quantity',
             'sales_product_price' => 'price',
             'sales_product_order_id' => 'order_id',
             'sales_product_customer_id' => 'customer_id',
         ];
         $product_pending['where_detail'] = [
-            "WHERE sales_product_customer_id = $id_customer"
+            "WHERE sales_product_customer_id = $id_customer AND sales_product_status = 'pending'"
         ];
         $product_pending = generateDetailData($this->request->getGet(), $product_pending, $this->db);
+        // print_r($product_pending); die;
         foreach ($product_pending as $key => $value) {
             $product_pending = $value;
         }
 
         $comeplete = (object) [];
-        $comeplete->customer_order_detail = [
+        $comeplete->customer_data = [
             $gas
         ];
         $comeplete->product = [
@@ -242,22 +242,28 @@ class Transaction extends AuthController
         foreach ($product as $key => $value) {
             $detail_data['data'] = ['product'];
             $detail_data['select'] = [
-                'product_id' => 'id',
-                'product_name' => 'name',
-                'product_price' => 'price',
-                'product_variant_id' => 'variant_id',
-                'product_variant_name' => 'variant_name',
-                'product_category_id' => 'category_id',
-                'product_category_name' => 'category_name',
-                'product_box_id' => 'box_id',
-                'product_box_value' => 'box_value',
-                'product_created_at' => 'created_at',
-                'product_updated_at' => 'updated_at',
+                'product_stock.product_stock_id' => 'id',
+                'product.product_id' => 'product_id',
+                'product.product_name' => 'name',
+                'product.product_price' => 'price',
+                'product.product_category_id' => 'category_id',
+                'product.product_category_name' => 'category_name',
+                'variant.variant_id' => 'variant_id',
+                'variant.variant_name' => 'variant_name',
+                'product_stock.product_stock_stock' => 'stock_stock',
+                'product_stock.product_stock_in' => 'stock_in',
+                'product_stock.product_stock_out' => 'stock_out',
+
+            ];
+            $detail_data['join'] = [
+                'product_stock' => 'product.product_id = product_stock.product_stock_product_id',
+                'variant' => 'product.product_id = variant.variant_product_id',
             ];
             $detail_data['where_detail'] = [
                 "WHERE product_id = $key"
             ];
             $data = generateDetailData($this->request->getPost(), $detail_data, $this->db);
+            // print_r($data); die;
             foreach ($data as $key => $value) {
                 // from post
                 $id = $json->product_id;
@@ -266,25 +272,25 @@ class Transaction extends AuthController
                 $product_detail = $value[0]['name'];
                 $category_detail = $value[0]['category_name'];
                 $variant_detail = $value[0]['variant_name'];
-                $box_detail = $value[0]['box_value'];
                 $price_detail = $value[0]['price'];
+                $product_id = $value[0]['product_id'];
 
                 $query_insert_sales_product = "INSERT INTO sales_product (
                 sales_product_status,
+                sales_product_product_id,
                 sales_product_product_name,
                 sales_product_product_category,
                 sales_product_product_variant,
-                sales_product_product_box,
                 sales_product_quantity,
                 sales_product_price,
                 sales_product_order_id,
                 sales_product_customer_id
                     ) VALUES (  
                         'pending',
+                        '{$product_id}',
                         '{$product_detail}',
                         '{$category_detail}',
                         '{$variant_detail}',
-                        '{$box_detail}',
                         '{$quantity}',
                         '{$price_detail}',
                         '{$id_order}',
@@ -319,7 +325,6 @@ class Transaction extends AuthController
             'sales_product_product_name' => 'product_name',
             'sales_product_product_variant' => 'product_variant',
             'sales_product_product_category' => 'product_category',
-            'sales_product_product_box' => 'product_box',
             'sales_product_quantity' => 'quantity',
             'sales_product_price' => 'price',
             'sales_product_order_id' => 'order_id',
@@ -416,8 +421,8 @@ class Transaction extends AuthController
         $sql = "SELECT sales_product_status FROM sales_product WHERE sales_product_order_id = {$id}";
         $data_product = $db->query($sql);
         $data_product = $data_product->getResultArray();
-        
-        $data_check_real = 'payed'; 
+
+        $data_check_real = 'payed';
         $data_product_real = 'payed';
         foreach ($data_check as $key => $value) {
             $data_check = $value['sales_order_status'];
@@ -511,15 +516,16 @@ class Transaction extends AuthController
             "WHERE sales_order_id = '{$id}'"
         ];
         $check_payed = (array) generateDetailData($this->request->getVar(), $check_payed, $this->db);
+        print_R($check_payed); die;
 
         foreach ($check_payed as $key => $value) {
             $status_payed = $value[0];
         }
 
-        if($status_payed['status'] === 'payed'){
+        if ($status_payed['status'] === 'payed') {
             return $this->responseFail(ResponseInterface::HTTP_OK, 'You Can Not Cancel This Order, Contact Admin To Cancel This Order', '', $status_payed);
         }
-        if($status_payed['status'] === 'confirmed'){
+        if ($status_payed['status'] === 'confirmed') {
             return $this->responseFail(ResponseInterface::HTTP_OK, 'You Can Not Cancel This Order, Contact Admin To Cancel This Order', '', $status_payed);
         }
 
@@ -551,11 +557,11 @@ class Transaction extends AuthController
         $data_product['data'] = ['sales_product'];
         $data_product['select'] = [
             'sales_product_id' => 'id',
+            'sales_product_product_id' => 'product_id',
             'sales_product_status' => 'status',
             'sales_product_product_name' => 'product_name',
             'sales_product_product_variant' => 'product_variant',
             'sales_product_product_category' => 'product_category',
-            'sales_product_product_box' => 'product_box',
             'sales_product_quantity' => 'quantity',
             'sales_product_price' => 'price',
             'sales_product_order_id' => 'order_id',
@@ -577,22 +583,9 @@ class Transaction extends AuthController
         // ------------------ RESTORE STOCK --------------- //
         foreach ($data_product as $value) {
             $quantity_stock = $value['quantity'];
-            $product_product_name = $value['product_name'];
-            $product_category = $value['product_category'];
-            $product_box = $value['product_box'];
-            $product_variant = $value['product_variant'];
+            $product_id = $value['product_id'];
 
-            $query_get_id['data'] = ['product'];
-            $query_get_id['select'] = [
-                'product_id' => 'id',
-            ];
-            $query_get_id['where_detail'] = [
-                "WHERE product_name = '{$product_product_name}' AND product_category_name = '{$product_category}' AND product_variant_name = '{$product_variant}' AND product_box_value = '{$product_box}'"
-            ];
-            $data_query_get_id = (array) generateDetailData($this->request->getVar(), $query_get_id, $this->db);
-            $id_product = $data_query_get_id['data'][0]['id'];
-
-            $sql_stock = "UPDATE product_stock SET product_stock_stock = product_stock_stock + {$quantity_stock}, product_stock_out = product_stock_out - {$quantity_stock} WHERE product_stock_product_id = {$id_product}";
+            $sql_stock = "UPDATE product_stock SET product_stock_stock = product_stock_stock + {$quantity_stock}, product_stock_out = product_stock_out - {$quantity_stock} WHERE product_stock_product_id = {$product_id}";
             $this->db->query($sql_stock);
         }
 

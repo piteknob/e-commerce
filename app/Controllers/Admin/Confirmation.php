@@ -96,7 +96,6 @@ class Confirmation extends AuthController
             'sales_product_product_name' => 'product_name',
             'sales_product_product_variant' => 'product_variant',
             'sales_product_product_category' => 'product_category',
-            'sales_product_product_box' => 'product_box',
             'sales_product_quantity' => 'quantity',
             'sales_product_price' => 'price',
             'sales_product_order_id' => 'order_id',
@@ -140,6 +139,31 @@ class Confirmation extends AuthController
         $data_order = (array) generateListData($this->request->getVar(), $query_order, $this->db);
         $result = [];
 
+        $id = $data_order['data'][0]['id'];
+        $query_product['data'] = ['sales_product'];
+        $query_product['select'] = [
+            'sales_product_id' => 'id',
+            'sales_product_status' => 'status',
+            'sales_product_product_name' => 'product_name',
+            'sales_product_product_variant' => 'product_variant',
+            'sales_product_product_category' => 'product_category',
+            'sales_product_quantity' => 'quantity',
+            'sales_product_price' => 'price',
+            'sales_product_order_id' => 'order_id',
+            'sales_product_customer_id' => 'customer_id',
+        ];
+        $query_product['where_detail'] = [
+            "WHERE sales_product_order_id = '{$id}'"
+        ];
+        $data_product = (array) generateListData($this->request->getVar(), $query_product, $this->db);
+
+        // ----------------- GET TOTAL QUANTITY ------------------ //
+        $total_quantity = 0;
+        foreach ($data_product['data'] as $key => $value) {
+            $total_quantity = $total_quantity + $value['quantity'];
+        }
+
+        // ----------------- MAKE RESPONSE RETURN ------------------- //
         foreach ($data_order['data'] as $key => $value) {
             $id = $value['id'];
 
@@ -150,20 +174,21 @@ class Confirmation extends AuthController
                 'sales_product_product_name' => 'product_name',
                 'sales_product_product_variant' => 'product_variant',
                 'sales_product_product_category' => 'product_category',
-                'sales_product_product_box' => 'product_box',
                 'sales_product_quantity' => 'quantity',
                 'sales_product_price' => 'price',
+                'sales_product_price * sales_product_quantity' => 'total_price',
                 'sales_product_order_id' => 'order_id',
                 'sales_product_customer_id' => 'customer_id',
             ];
             $query_product['where_detail'] = [
                 "WHERE sales_product_order_id = '{$id}'"
             ];
-
             $data_product = (array) generateListData($this->request->getVar(), $query_product, $this->db);
+
+            // ------------- HITUNG TOTAL BOX -------------- //
             $photo = $value['proof'];
             if (empty($photo)) {
-                $photo = 'upload/default/default.jpg';
+                $photo = 'Belum di Bayar';
             } else {
                 $photo = 'upload/photo/' . $photo . '';
             }
@@ -185,8 +210,9 @@ class Confirmation extends AuthController
                     'customer_name' => $customer_name,
                     'customer_address' => $customer_address,
                     'customer_no_handphone' => $customer_no_handphone,
+                    'total_quantity' => (string) $total_quantity,
                     'date' => $date,
-                    'proof' => $photo
+                    'proof' => $photo,
                 ],
                 'product' => $data_product['data']
             ];
@@ -267,7 +293,6 @@ class Confirmation extends AuthController
             'sales_product_product_name' => 'product_name',
             'sales_product_product_variant' => 'product_variant',
             'sales_product_product_category' => 'product_category',
-            'sales_product_product_box' => 'product_box',
             'sales_product_quantity' => 'quantity',
             'sales_product_price' => 'price',
             'sales_product_order_id' => 'order_id',
@@ -364,7 +389,6 @@ class Confirmation extends AuthController
             'sales_product_product_name' => 'product_name',
             'sales_product_product_variant' => 'product_variant',
             'sales_product_product_category' => 'product_category',
-            'sales_product_product_box' => 'product_box',
             'sales_product_quantity' => 'quantity',
             'sales_product_price' => 'price',
             'sales_product_order_id' => 'order_id',
@@ -424,7 +448,6 @@ class Confirmation extends AuthController
             'sales_product_product_name' => 'product_name',
             'sales_product_product_variant' => 'product_variant',
             'sales_product_product_category' => 'product_category',
-            'sales_product_product_box' => 'product_box',
             'sales_product_quantity' => 'quantity',
             'sales_product_price' => 'price',
             'sales_product_order_id' => 'order_id',
@@ -487,7 +510,6 @@ class Confirmation extends AuthController
             'sales_product_product_name' => 'product_name',
             'sales_product_product_variant' => 'product_variant',
             'sales_product_product_category' => 'product_category',
-            'sales_product_product_box' => 'product_box',
             'sales_product_quantity' => 'quantity',
             'sales_product_price' => 'price',
             'sales_product_order_id' => 'order_id',
