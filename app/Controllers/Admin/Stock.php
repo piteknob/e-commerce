@@ -17,23 +17,22 @@ class Stock extends AuthController
 
         $query['data'] = ['product'];
         $query['select'] = [
-            'product.product_id' => 'id',
             'product.product_name' => 'name',
             'product.product_price' => 'price',
-            'product.product_variant_id' => 'variant_id',
-            'product.product_variant_name' => 'variant_name',
             'product.product_category_id' => 'category_id',
             'product.product_category_name' => 'category_name',
-            'product.product_box_id' => 'box_id',
-            'product.product_box_value' => 'box_value',
+            'variant.variant_id' => 'variant_id',
+            'variant.variant_name' => 'variant_name',
+            'product.product_description' => 'description',
+            'product_stock.product_stock_stock' => 'stock_stock',
+            'product_stock.product_stock_in' => 'stock_in',
+            'product_stock.product_stock_out' => 'stock_out',
             'product.product_created_at' => 'created_at',
             'product.product_updated_at' => 'updated_at',
-            'product_stock_stock' => 'stock',
-            'product_stock_in' => '`in`',
-            'product_stock_out' => '`out`',
         ];
         $query['join'] = [
-            'product_stock' => 'product.product_id = product_stock.product_stock_product_id'
+            'product_stock' => 'product.product_id = product_stock.product_stock_product_id',
+            'variant' => 'product.product_id = variant.variant_product_id',
         ];
         $query['pagination'] = [
             'pagination' => true

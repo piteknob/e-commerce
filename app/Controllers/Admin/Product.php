@@ -263,14 +263,10 @@ class Product extends AuthController
             'variant.variant_id' => 'variant_id',
             'variant.variant_name' => 'variant_name',
             'product.product_description' => 'description',
-            'product_stock.product_stock_stock' => 'stock_stock',
-            'product_stock.product_stock_in' => 'stock_in',
-            'product_stock.product_stock_out' => 'stock_out',
             'product.product_created_at' => 'created_at',
             'product.product_updated_at' => 'updated_at',
         ];
         $query['join'] = [
-            'product_stock' => 'product.product_id = product_stock.product_stock_product_id',
             'variant' => 'product.product_id = variant.variant_product_id',
         ];
         $query['where_detail'] = [
