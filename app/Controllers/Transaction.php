@@ -516,8 +516,7 @@ class Transaction extends AuthController
             "WHERE sales_order_id = '{$id}'"
         ];
         $check_payed = (array) generateDetailData($this->request->getVar(), $check_payed, $this->db);
-        print_R($check_payed); die;
-
+        
         foreach ($check_payed as $key => $value) {
             $status_payed = $value[0];
         }

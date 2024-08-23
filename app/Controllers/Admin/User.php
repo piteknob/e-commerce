@@ -174,6 +174,26 @@ class User extends AuthController
             return $token;
         }
 
+        // GET ID ADMIN
+        $token = $this->request->getHeaderLine('Token');
+        $query_user['data'] = ['auth_user'];
+        $query_user['select'] = ['auth_user_user_id' => 'id'];
+        $query_user['where_detail'] = ["WHERE auth_user_token = '$token'"];
+        $data_id_admin = (array) generateDetailData($this->request->getVar(), $query_user, $this->db);
+        $data_id_admin = $data_id_admin['data'][0]['id'];
+        
+        // GET ADMIN ROLE
+        $query_admin['data'] = ['user'];
+        $query_admin['select'] = ['user_role' => 'role'];
+        $query_admin['where_detail'] = ["WHERE user_id = '$data_id_admin'"];
+        $data_admin = (array) generateDetailData($this->request->getVar(), $query_admin, $this->db);
+        $data_admin = $data_admin['data'][0]['role'];
+
+        if ($data_admin == 'admin') {
+            return $this->responseSuccess(ResponseInterface::HTTP_OK, "You're Not Super User", ['data' => []], "Access Denied");
+        } 
+        
+
         $token = $this->request->getHeaderLine('Token');
         $query['data'] = ['auth_user'];
         $query['select'] = [
@@ -242,6 +262,7 @@ class User extends AuthController
             }
 
             $sql = "UPDATE `user` SET
+            user_username = 'break_username',
             user_email = 'break@gmail.com', 
             user_no_handphone = NULL
             WHERE user_id = '{$id}' AND user_role = 'admin'";
