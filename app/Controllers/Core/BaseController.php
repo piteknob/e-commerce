@@ -57,7 +57,7 @@ abstract class BaseController extends Controller
         // E.g.: $this->session = \Config\Services::session();
     }
 
-    
+
     public function responseErrorValidation($statusCode = ResponseInterface::HTTP_PRECONDITION_FAILED, $errorCode = 'error validation', $data = [])
     {
         $message = '';
@@ -69,7 +69,9 @@ abstract class BaseController extends Controller
             'status' => $statusCode,
             'message' => $message,
             'error' => $errorCode,
-            'result' => $data
+            'result' => [
+                'data' => $data
+            ]
         ];
 
         return $this->response->setJSON($response);
@@ -87,7 +89,7 @@ abstract class BaseController extends Controller
         return $this->response->setJSON($response);
     }
 
-    public function responsePagination($statusCode = ResponseInterface::HTTP_OK, $message = '', $data = [],$pagination = [], $error = '')
+    public function responsePagination($statusCode = ResponseInterface::HTTP_OK, $message = '', $data = [], $pagination = [], $error = '')
     {
         $response = [
             'status' => $statusCode,
@@ -110,5 +112,3 @@ abstract class BaseController extends Controller
         return $this->response->setJSON($response);
     }
 }
-
-

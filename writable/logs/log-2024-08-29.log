@@ -1,0 +1,602 @@
+CRITICAL - 2024-08-29 02:49:10 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/user/register]
+in APPPATH\Controllers\Admin\User.php on line 124.
+ 1 APPPATH\Controllers\Admin\User.php(124): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 124)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->register()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 02:55:49 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/user/delete]
+in APPPATH\Controllers\Admin\User.php on line 530.
+ 1 APPPATH\Controllers\Admin\User.php(530): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 530)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 02:57:22 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/user/register]
+in APPPATH\Controllers\Admin\User.php on line 124.
+ 1 APPPATH\Controllers\Admin\User.php(124): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 124)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->register()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 03:00:49 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/user/register]
+in APPPATH\Controllers\Admin\User.php on line 124.
+ 1 APPPATH\Controllers\Admin\User.php(124): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 124)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->register()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 03:02:10 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/user/register]
+in APPPATH\Controllers\Admin\User.php on line 124.
+ 1 APPPATH\Controllers\Admin\User.php(124): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 124)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->register()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 03:02:35 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/user/register]
+in APPPATH\Controllers\Admin\User.php on line 124.
+ 1 APPPATH\Controllers\Admin\User.php(124): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 124)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->register()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 03:35:21 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/register]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(96): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->register()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 03:35:25 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/register]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(96): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->register()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 03:35:47 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/register]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(96): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->register()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 03:35:57 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/register]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(96): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->register()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 03:36:27 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/register]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(96): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->register()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 03:36:29 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/register]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(96): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->register()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 03:36:34 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/register]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(96): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->register()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 03:37:02 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/register]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(96): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->register()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 03:38:13 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/register]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(98): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->register()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 03:38:14 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/register]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(98): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->register()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 03:38:15 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/register]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(98): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->register()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 03:39:18 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/register]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(98): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->register()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 03:39:19 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/register]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(98): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->register()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 03:40:14 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/register]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(98): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->register()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 03:40:15 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/register]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(98): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->register()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 03:40:16 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/register]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(98): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->register()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 03:41:59 --> ErrorException: Undefined variable $response
+[Method: POST, Route: admin/user/register]
+in APPPATH\Controllers\Admin\User.php on line 98.
+ 1 APPPATH\Controllers\Admin\User.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $response', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->register()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 03:42:00 --> ErrorException: Undefined variable $response
+[Method: POST, Route: admin/user/register]
+in APPPATH\Controllers\Admin\User.php on line 98.
+ 1 APPPATH\Controllers\Admin\User.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $response', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->register()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 03:42:01 --> ErrorException: Undefined variable $response
+[Method: POST, Route: admin/user/register]
+in APPPATH\Controllers\Admin\User.php on line 98.
+ 1 APPPATH\Controllers\Admin\User.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $response', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->register()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 03:42:04 --> ErrorException: Undefined variable $response
+[Method: POST, Route: admin/user/register]
+in APPPATH\Controllers\Admin\User.php on line 98.
+ 1 APPPATH\Controllers\Admin\User.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $response', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->register()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 03:42:05 --> ErrorException: Undefined variable $response
+[Method: POST, Route: admin/user/register]
+in APPPATH\Controllers\Admin\User.php on line 98.
+ 1 APPPATH\Controllers\Admin\User.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $response', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->register()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 03:42:06 --> ErrorException: Undefined variable $response
+[Method: POST, Route: admin/user/register]
+in APPPATH\Controllers\Admin\User.php on line 98.
+ 1 APPPATH\Controllers\Admin\User.php(98): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $response', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 98)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->register()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 03:44:04 --> ParseError: syntax error, unexpected token ";", expecting "]"
+[Method: POST, Route: admin/user/register]
+in APPPATH\Controllers\Core\BaseController.php on line 75.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\BaseController')
+ 3 APPPATH\Controllers\Core\DataController.php(11): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\BaseController')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\DataController.php')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\DataController.php')
+ 6 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\DataController')
+ 7 APPPATH\Controllers\Core\AuthController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\DataController')
+ 8 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\AuthController.php')
+ 9 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\AuthController.php')
+10 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\AuthController')
+11 APPPATH\Controllers\Admin\User.php(8): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\AuthController')
+12 SYSTEMPATH\Router\AutoRouter.php(147): include_once('C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php')
+13 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('admin/user/register', 'POST')
+14 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('admin/user/register')
+15 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('admin/user/register')
+16 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+17 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+20 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 03:44:05 --> ParseError: syntax error, unexpected token ";", expecting "]"
+[Method: POST, Route: admin/user/register]
+in APPPATH\Controllers\Core\BaseController.php on line 75.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\BaseController')
+ 3 APPPATH\Controllers\Core\DataController.php(11): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\BaseController')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\DataController.php')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\DataController.php')
+ 6 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\DataController')
+ 7 APPPATH\Controllers\Core\AuthController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\DataController')
+ 8 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\AuthController.php')
+ 9 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\AuthController.php')
+10 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\AuthController')
+11 APPPATH\Controllers\Admin\User.php(8): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\AuthController')
+12 SYSTEMPATH\Router\AutoRouter.php(147): include_once('C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php')
+13 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('admin/user/register', 'POST')
+14 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('admin/user/register')
+15 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('admin/user/register')
+16 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+17 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+20 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 03:44:05 --> ParseError: syntax error, unexpected token ";", expecting "]"
+[Method: POST, Route: admin/user/register]
+in APPPATH\Controllers\Core\BaseController.php on line 75.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\BaseController')
+ 3 APPPATH\Controllers\Core\DataController.php(11): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\BaseController')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\DataController.php')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\DataController.php')
+ 6 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\DataController')
+ 7 APPPATH\Controllers\Core\AuthController.php(13): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\DataController')
+ 8 SYSTEMPATH\Autoloader\Autoloader.php(317): include_once('C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\AuthController.php')
+ 9 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\AuthController.php')
+10 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\AuthController')
+11 APPPATH\Controllers\Admin\User.php(8): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\AuthController')
+12 SYSTEMPATH\Router\AutoRouter.php(147): include_once('C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php')
+13 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('admin/user/register', 'POST')
+14 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('admin/user/register')
+15 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('admin/user/register')
+16 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+17 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+20 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 07:04:18 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Admin\User.php on line 437.
+ 1 APPPATH\Controllers\Admin\User.php(437): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 437)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 07:04:40 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Admin\User.php on line 437.
+ 1 APPPATH\Controllers\Admin\User.php(437): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 437)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 07:06:28 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Admin\User.php on line 437.
+ 1 APPPATH\Controllers\Admin\User.php(437): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 437)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 07:06:43 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Admin\User.php on line 437.
+ 1 APPPATH\Controllers\Admin\User.php(437): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 437)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 07:06:55 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Admin\User.php on line 437.
+ 1 APPPATH\Controllers\Admin\User.php(437): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 437)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 07:07:51 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Admin\User.php on line 437.
+ 1 APPPATH\Controllers\Admin\User.php(437): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 437)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 07:08:11 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Admin\User.php on line 437.
+ 1 APPPATH\Controllers\Admin\User.php(437): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 437)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 07:11:27 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Admin\User.php on line 396.
+ 1 APPPATH\Controllers\Admin\User.php(396): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 396)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 07:11:28 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Admin\User.php on line 396.
+ 1 APPPATH\Controllers\Admin\User.php(396): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 396)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 07:11:29 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Admin\User.php on line 396.
+ 1 APPPATH\Controllers\Admin\User.php(396): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 396)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 07:11:35 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Admin\User.php on line 396.
+ 1 APPPATH\Controllers\Admin\User.php(396): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 396)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 07:11:36 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Admin\User.php on line 396.
+ 1 APPPATH\Controllers\Admin\User.php(396): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 396)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 07:11:36 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Admin\User.php on line 396.
+ 1 APPPATH\Controllers\Admin\User.php(396): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 396)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 07:11:37 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Admin\User.php on line 396.
+ 1 APPPATH\Controllers\Admin\User.php(396): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 396)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 07:11:37 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Admin\User.php on line 396.
+ 1 APPPATH\Controllers\Admin\User.php(396): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 396)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 07:11:38 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Admin\User.php on line 396.
+ 1 APPPATH\Controllers\Admin\User.php(396): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 396)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 07:12:53 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Admin\User.php on line 438.
+ 1 APPPATH\Controllers\Admin\User.php(438): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 438)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 07:12:55 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Admin\User.php on line 438.
+ 1 APPPATH\Controllers\Admin\User.php(438): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 438)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 07:12:55 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Admin\User.php on line 438.
+ 1 APPPATH\Controllers\Admin\User.php(438): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 438)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 07:17:50 --> Error: Cannot use object of type stdClass as array
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Admin\User.php on line 474.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 07:17:51 --> Error: Cannot use object of type stdClass as array
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Admin\User.php on line 474.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 07:17:51 --> Error: Cannot use object of type stdClass as array
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Admin\User.php on line 474.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 07:22:54 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/user/delete]
+in APPPATH\Controllers\Admin\User.php on line 531.
+ 1 APPPATH\Controllers\Admin\User.php(531): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 531)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-08-29 07:26:56 --> ErrorException: Undefined variable $username
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Admin\User.php on line 408.
+ 1 APPPATH\Controllers\Admin\User.php(408): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $username', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 408)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

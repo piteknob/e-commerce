@@ -82,6 +82,8 @@ class User extends AuthController
         if ($role == 'super_user') {
             $post = $this->request->getPost();
 
+
+            // -------------------------- VALIDATION -------------------------- //
             $rules = [
                 'username' => 'required|is_unique[user.user_username]',
                 'password' => 'required|min_length[5]',
@@ -93,6 +95,8 @@ class User extends AuthController
             if (!$this->validate($rules)) {
                 return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
             }
+            // -------------------------- END VALIDATION -------------------------- //
+
 
             $username = htmlspecialchars($post['username']);
             $password = htmlspecialchars($post['password']);
@@ -103,6 +107,7 @@ class User extends AuthController
             $insert = "INSERT INTO user VALUES('', '{$username}', '{$password}', '{$name}', '{$email}', '{$no_handphone}', 'admin', NOW(), NULL)";
 
             $this->db->query($insert);
+            $id = $this->db->insertID();
 
             $query['data'] = ['user'];
             $query['select'] = [
@@ -116,18 +121,12 @@ class User extends AuthController
                 'user_updated_at' => 'updated_at',
             ];
             $query['where_detail'] = [
-                "WHERE user_username = '$username'AND user_name = '{$name}' AND user_email = '{$email}' AND user_no_handphone = '{$no_handphone}' AND user_role = 'admin'"
+                "WHERE user_id = '$id'"
             ];
 
             $data = generateDetailData($this->request->getGet(), $query, $this->db);
-            foreach ($data as $key => $value) {
-                $data = $value[0];
-            }
-            $response = [
-                'data' => $data
-            ];
 
-            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Account Successfully Registered', $response);
+            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Account Successfully Registered', $data);
         } else {
             return $this->responseSuccess(ResponseInterface::HTTP_UNAUTHORIZED, "You Don't Have Permission To Do This Action", [], 'Access Denied');
         }
@@ -181,18 +180,29 @@ class User extends AuthController
         $query_user['where_detail'] = ["WHERE auth_user_token = '$token'"];
         $data_id_admin = (array) generateDetailData($this->request->getVar(), $query_user, $this->db);
         $data_id_admin = $data_id_admin['data'][0]['id'];
-        
+
         // GET ADMIN ROLE
         $query_admin['data'] = ['user'];
-        $query_admin['select'] = ['user_role' => 'role'];
+        $query_admin['select'] = [
+            'user_id' => 'id',
+            'user_username' => 'username',
+            'user_password' => 'password',
+            'user_name' => 'name',
+            'user_email' => 'email',
+            'user_no_handphone' => 'no_handphone',
+            'user_role' => 'role',
+            'user_created_at' => 'created_at',
+            'user_updated_at' => 'updated_at',
+        ];
         $query_admin['where_detail'] = ["WHERE user_id = '$data_id_admin'"];
         $data_admin = (array) generateDetailData($this->request->getVar(), $query_admin, $this->db);
-        $data_admin = $data_admin['data'][0]['role'];
+        $data_admin_role = $data_admin['data'][0]['role'];
 
-        if ($data_admin == 'admin') {
-            return $this->responseSuccess(ResponseInterface::HTTP_OK, "You're Not Super User", ['data' => []], "Access Denied");
-        } 
-        
+
+        if ($data_admin_role == 'admin') {
+            return $this->responseSuccess(ResponseInterface::HTTP_OK, "Detail Admin Account", $data_admin,);
+        }
+
 
         $token = $this->request->getHeaderLine('Token');
         $query['data'] = ['auth_user'];
@@ -204,7 +214,7 @@ class User extends AuthController
         ];
         $data_id = (array) generateDetailData($this->request->getVar(), $query, $this->db);
         $data_id = $data_id['data'][0]['id'];
-        
+
         $detail['data'] = ['user'];
         $detail['select'] = [
             'user_id' => 'id',
@@ -222,7 +232,7 @@ class User extends AuthController
         ];
         $data = generateDetailData($this->request->getVar(), $detail, $this->db);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Detail User Account', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Detail Super User Account', $data);
     }
 
     public function update()
@@ -242,52 +252,73 @@ class User extends AuthController
             "WHERE auth_user_token = '{$token}'"
         ];
         $data = (array) generateDetailData($this->request->getVar(), $check, $this->db);
-        $id_user = $data['data'][0]['id'];
+        $id = $data['data'][0]['id'];
 
-        $role['data'] = ['user'];
-        $role['select'] = [
-            'user_role' => 'role',
+        $post = $this->request->getPost();
+        $username = htmlspecialchars($post['username']);
+        $password = htmlspecialchars($post['password']);
+        $name = htmlspecialchars($post['name']);
+        $email = htmlspecialchars($post['email']);
+        $no_handphone = htmlspecialchars($post['no_handphone']);
+
+        // get data array from post
+        $array1 = [
+            'username' => $username,
+            'password' => $password,
+            'name' => $name,
+            'email' => $email,
+            'no_handphone' => $no_handphone,
         ];
-        $role['where_detail'] = [
-            "WHERE user_id = '{$id_user}'"
+
+        // get data array from database
+        $data_2['data'] = ['user'];
+        $data_2['select'] = [
+            'user_username' => 'username',
+            'user_password' => 'password',
+            'user_name' => 'name',
+            'user_email' => 'email',
+            'user_no_handphone' => 'no_handphone',
         ];
-        $role = (array) generateDetailData($this->request->getVar(), $role, $this->db);
-        $role = $role['data'][0]['role'];
+        $data_2['where_detail'] = [
+            "WHERE user_id = $id"
+        ];
+        $array2 = (array) generateDetailData($this->request->getVar(), $data_2, $this->db);
+        $result = array_diff($array1, $array2['data'][0]);
 
-        if ($role == 'super_user') {
-            $getID = $this->request->getGet();
 
-            foreach ($getID as $key => $value) {
-                $id = $value;
-            }
+        // VALIDATION
+        $rules = [
+            'password' => 'required|min_length[5]',
+            'email' => 'required|valid_email',
+            'no_handphone' => 'required',
+        ];
 
-            $sql = "UPDATE `user` SET
-            user_username = 'break_username',
-            user_email = 'break@gmail.com', 
-            user_no_handphone = NULL
-            WHERE user_id = '{$id}' AND user_role = 'admin'";
-            $this->db->query($sql);
+        if (!$this->validate($rules)) {
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
+        }
+        // END VALIDATION
 
-            $rules = [
-                'username' => 'required|is_unique[user.user_username]',
-                'password' => 'required|min_length[5]',
-                'email' => 'required|valid_email|is_unique[user.user_email]',
-                'no_handphone' => 'required|is_unique[user.user_no_handphone]',
+        // VALIDATION FOR USERNAME
+        if (!empty($result['username'])) {
+            $username_data = $result['username'];
+            $check_username['data'] = ['user'];
+            $check_username['select'] = [
+                'user_username' => 'username'
             ];
+            $check_username['where_detail'] = [
+                "WHERE user_username = '$username_data'"
+            ];
+            $data_check_username = (array) generateDetailData($this->request->getVar(), $check_username, $this->db);
+            $data_check_username = $data_check_username['data'];
+        }
+        // print_r($data_check_username); die;
+        if (!empty($data_check_username)) {
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', ['username' => 'The username field must contain a unique value.']);
+        }
+        // END VALIDATION FOR USERNAME
 
-            if (!$this->validate($rules)) {
-                return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
-            }
-
-            $post = $this->request->getPost();
-            $username = htmlspecialchars($post['username']);
-            $password = htmlspecialchars($post['password']);
-            $name = htmlspecialchars($post['name']);
-            $email = htmlspecialchars($post['email']);
-            $no_handphone = htmlspecialchars($post['no_handphone']);
-
-            // update user
-            $sql = "UPDATE user 
+        // update user
+        $sql = "UPDATE user 
             SET user_username = '{$username}',
                 user_password = '{$password}',
                 user_name = '{$name}',
@@ -295,47 +326,216 @@ class User extends AuthController
                 user_no_handphone = '{$no_handphone}',
                 user_updated_at = NOW()
             WHERE user_id = {$id}";
-            $this->db->query($sql);
+        $this->db->query($sql);
 
-            // generate TOKEN
-            $auth = $username;
-            $auth .= $password;
+        // generate TOKEN
+        $auth = $username;
+        $auth .= $password;
 
-            $auth = base64_encode($auth);
+        $auth = base64_encode($auth);
 
-            // update auth_user
-            $authSql = "UPDATE auth_user 
+        // update auth_user
+        $authSql = "UPDATE auth_user 
                 SET auth_user_username = '{$username}',
                     auth_user_token = '{$auth}'
     
             WHERE auth_user_user_id = '{$id}'";
 
-            $this->db->query($authSql);
+        $this->db->query($authSql);
 
 
-            // generate detail user
-            $query['data'] = ['user'];
-            $query['select'] = [
-                'user_id' => 'id',
-                'user_username' => 'username',
-                'user_password' => 'password',
-                'user_name' => 'name',
-                'user_email' => 'email',
-                'user_no_handphone' => 'no_handphone',
-                'user_role' => 'role',
-                'user_created_at' => 'created_at',
-                'user_updated_at' => 'updated_at',
-            ];
-            $query['where_detail'] = [
-                "WHERE user_id = $id"
-            ];
+        // generate detail user
+        $query['data'] = ['user'];
+        $query['select'] = [
+            'user_id' => 'id',
+            'user_username' => 'username',
+            'user_password' => 'password',
+            'user_name' => 'name',
+            'user_email' => 'email',
+            'user_no_handphone' => 'no_handphone',
+            'user_role' => 'role',
+            'user_created_at' => 'created_at',
+            'user_updated_at' => 'updated_at',
+            'auth_user.auth_user_token' => 'token',
+        ];
+        $query['where_detail'] = [
+            "WHERE user_id = $id"
+        ];
+        $query['join'] = [
+            'auth_user' => 'user.user_id = auth_user.auth_user_user_id'
+        ];
 
-            $data = generateDetailData(ResponseInterface::HTTP_OK, $query, $this->db);
+        $data = generateDetailData(ResponseInterface::HTTP_OK, $query, $this->db);
 
-            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Account Successfully Updated', $data);
-        } else {
-            return $this->responseFail(ResponseInterface::HTTP_UNAUTHORIZED, "Yout Don't Have Permission To Do This Action", 'Access Denied', ['data' => '']);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Account Successfully Updated', $data);
+    }
+
+    public function update_admin()
+    {
+        // Authorization Token
+        $token = $this->before(getallheaders());
+        if (!empty($token)) {
+            return $token;
         }
+
+        $token = $this->request->getHeaderLine('Token');
+
+        $query_auth['data'] = ['auth_user'];
+        $query_auth['select'] = ['auth_user_user_id' => 'id'];
+        $query_auth['where_detail'] = [
+            "WHERE auth_user_token = '$token'"
+        ];
+
+        $id = (array) generateDetailData($this->request->getVar(), $query_auth, $this->db);
+        $id = $id['data'][0]['id'];
+
+
+        $query_user['data'] = ['user'];
+        $query_user['select'] = ['user_role' => 'role'];
+        $query_user['where_detail'] = [
+            "WHERE user_id = $id"
+        ];
+
+        $role = (array) generateDetailData($this->request->getVar(), $query_user, $this->db);
+        $role = $role['data'][0]['role'];
+
+        if ($role != 'super_user') {
+            return $this->responseFail(ResponseInterface::HTTP_UNAUTHORIZED, "You Don't Have Permission To Do This Action", 'Access Denied', ['data' => '']);
+        }
+
+
+        // GET DATA POST
+        $id = $this->request->getGet();
+        $id = $id['id'];
+        $post = $this->request->getPost();
+        $username = $post['username'];
+        $password = $post['password'];
+        $name = $post['name'];
+        $email = $post['email'];
+        $no_handphone = $post['no_handphone'];
+
+        // get data array from post
+        $array1 = [
+            'username' => $username,
+            'password' => $password,
+            'name' => $name,
+            'email' => $email,
+            'no_handphone' => $no_handphone,
+        ];
+
+        // get data array from database
+        $data_2['data'] = ['user'];
+        $data_2['select'] = [
+            'user_username' => 'username',
+            'user_password' => 'password',
+            'user_name' => 'name',
+            'user_email' => 'email',
+            'user_no_handphone' => 'no_handphone',
+        ];
+        $data_2['where_detail'] = [
+            "WHERE user_id = $id"
+        ];
+        $array2 = (array) generateDetailData($this->request->getVar(), $data_2, $this->db);
+        $result = array_diff($array1, $array2['data'][0]);
+
+        // VALIDATION
+        $rules = [
+            'username' => 'required',
+            'password' => 'required|min_length[5]',
+            'email' => 'required|valid_email',
+            'no_handphone' => 'required',
+        ];
+
+        if (!$this->validate($rules)) {
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
+        }
+        // END VALIDATION
+
+        // VALIDATION FOR USERNAME
+        if (!empty($result['username'])) {
+            $username_data = $result['username'];
+            $check_username['data'] = ['user'];
+            $check_username['select'] = [
+                'user_username' => 'username'
+            ];
+            $check_username['where_detail'] = [
+                "WHERE user_username = '$username_data'"
+            ];
+            $data_check_username = (array) generateDetailData($this->request->getVar(), $check_username, $this->db);
+            $data_check_username = $data_check_username['data'];
+        }
+        // print_r($data_check_username); die;
+        if (!empty($data_check_username)) {
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', ['username' => 'The username field must contain a unique value.']);
+        }
+        // END VALIDATION FOR USERNAME
+
+
+        // update user
+        $sql = "UPDATE user 
+            SET user_username = '{$username}',
+                user_password = '{$password}',
+                user_name = '{$name}',
+                user_email = '{$email}',
+                user_no_handphone = '{$no_handphone}',
+                user_updated_at = NOW()
+            WHERE user_id = {$id}";
+        $this->db->query($sql);
+
+        // generate TOKEN
+        $auth = $username;
+        $auth .= $password;
+
+        $auth = base64_encode($auth);
+
+        // check token
+        $query_updated['data'] = ['auth_user'];
+        $query_updated['select'] = ['auth_user_token' => 'token'];
+        $query_updated['where_detail'] = ["WHERE auth_user_user_id = $id"];
+        $data_updated = (array) generateDetailData($this->request->getVar(), $query_updated, $this->db);
+        if (!empty($data_updated['data'])) {
+            $data_updated_token = $data_updated['data'][0]['token'];
+        }
+        // update auth_user
+        if (empty($data_updated_token)) {
+            $authSql = "UPDATE auth_user 
+            SET auth_user_username = '{$username}'
+            WHERE auth_user_user_id = '{$id}'";
+
+            $this->db->query($authSql);
+        } else {
+            $authSql = "UPDATE auth_user 
+            SET auth_user_username = '{$username}',
+                auth_user_token = '{$auth}'     
+            WHERE auth_user_user_id = '{$id}'";
+
+            $this->db->query($authSql);
+        }
+
+        // generate detail user
+        $query['data'] = ['user'];
+        $query['select'] = [
+            'user_id' => 'id',
+            'user_username' => 'username',
+            'user_password' => 'password',
+            'user_role' => 'role',
+            'user_name' => 'name',
+            'user_email' => 'email',
+            'user_no_handphone' => 'no_handphone',
+            'user_created_at' => 'created_at',
+            'user_updated_at' => 'updated_at',
+        ];
+        $query['where_detail'] = [
+            "WHERE user_id = $id"
+        ];
+        $data = (array) generateDetailData(ResponseInterface::HTTP_OK, $query, $this->db);
+        $data = $data['data'];
+
+        $response = ['data' => [
+            'user' => $data,
+            'token' => $auth
+        ]];
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Account Successfully Updated', $response);
     }
 
     public function delete()
@@ -386,6 +586,10 @@ class User extends AuthController
                 "WHERE user_id = $id"
             ];
             $data = (array) generateDetailData($this->request->getGet(), $query, $this->db);
+            $data_role = $data['data'][0]['role'];
+            if ($data_role == 'super_user') {
+                return $this->responseFail(ResponseInterface::HTTP_OK, "You Can't Delete Super User");
+            }
 
             // delete data from database
             $auth['data'] = ['auth_user'];
@@ -407,12 +611,48 @@ class User extends AuthController
             $this->db->query($sql);
 
             // check super user
-            $data_role = $data['data'][0]['role'];
-            if ($data_role == 'super_user') {
-                return $this->responseFail(ResponseInterface::HTTP_OK, "You Can't Delete Super User");
-            }
+
 
             return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Deleted', $data);
         }
+    }
+
+    public function user_logged_in()
+    {
+        // Authorization Token
+        $token = $this->before(getallheaders());
+        if (!empty($token)) {
+            return $token;
+        }
+
+        $token = $this->request->getHeaderLine('Token');
+
+        $query['data'] = ['auth_user'];
+        $query['select'] = [
+            'user.user_id' => 'id',
+            'auth_user_username' => 'username',
+            'auth_user_date_login' => 'date_login',
+            'auth_user_date_expired' => 'date_expired',
+            'user.user_role' => 'role',
+            'user.user_created_at' => 'created_at',
+            'user.user_updated_at' => 'updated_at',
+        ];
+        $query['join'] = [
+            'user' => 'auth_user.auth_user_user_id = user.user_id'
+        ];
+        $query['where_detail'] = [
+            "WHERE auth_user_token = '{$token}'"
+        ];
+
+        $data = (array) generateDetailData($this->request->getVar(), $query, $this->db);
+        $data = $data['data'];
+        $date = strftime("%A %d %B");
+        $result = [
+            'data' => [
+                'user' => $data,
+                'date' => $date
+            ]
+        ];
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, "User Detail Login", $result);
     }
 }
