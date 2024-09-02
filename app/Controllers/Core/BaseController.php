@@ -60,11 +60,11 @@ abstract class BaseController extends Controller
 
     public function responseErrorValidation($statusCode = ResponseInterface::HTTP_PRECONDITION_FAILED, $errorCode = 'error validation', $data = [])
     {
+        // print_r($data); die;
         $message = '';
         foreach ($data as $key => $value) {
             $message .= "{$value}\n ";
         }
-
         $response = [
             'status' => $statusCode,
             'message' => $message,

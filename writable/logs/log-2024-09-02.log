@@ -1,0 +1,348 @@
+CRITICAL - 2024-09-02 02:24:50 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(450): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-02 02:25:20 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(450): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-02 02:25:39 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(450): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-02 02:26:10 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(450): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-02 02:26:15 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(450): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-02 02:26:16 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(450): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-02 02:26:17 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(450): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-02 02:27:28 --> Error: Call to a member function getErrors() on null
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Admin\User.php on line 451.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-02 02:27:38 --> Error: Call to a member function getErrors() on null
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Admin\User.php on line 451.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-02 02:27:57 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(451): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-02 02:27:58 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(451): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-02 02:27:58 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(451): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-02 02:27:59 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(451): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-02 02:28:00 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(451): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-02 02:28:21 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(451): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-02 02:28:33 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(451): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-02 02:28:34 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(451): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-02 02:28:49 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(451): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-02 02:28:50 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Core\BaseController.php on line 65.
+ 1 APPPATH\Controllers\Core\BaseController.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 65)
+ 2 APPPATH\Controllers\Admin\User.php(451): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-02 02:29:22 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Core\BaseController.php on line 66.
+ 1 APPPATH\Controllers\Core\BaseController.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 66)
+ 2 APPPATH\Controllers\Admin\User.php(451): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-02 02:29:23 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Core\BaseController.php on line 66.
+ 1 APPPATH\Controllers\Core\BaseController.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 66)
+ 2 APPPATH\Controllers\Admin\User.php(451): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-02 02:29:24 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Core\BaseController.php on line 66.
+ 1 APPPATH\Controllers\Core\BaseController.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 66)
+ 2 APPPATH\Controllers\Admin\User.php(451): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-02 02:29:26 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Core\BaseController.php on line 66.
+ 1 APPPATH\Controllers\Core\BaseController.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 66)
+ 2 APPPATH\Controllers\Admin\User.php(451): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-02 02:31:09 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Core\BaseController.php on line 66.
+ 1 APPPATH\Controllers\Core\BaseController.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 66)
+ 2 APPPATH\Controllers\Admin\User.php(451): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-02 02:31:11 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Core\BaseController.php on line 66.
+ 1 APPPATH\Controllers\Core\BaseController.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 66)
+ 2 APPPATH\Controllers\Admin\User.php(451): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-02 02:31:12 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Core\BaseController.php on line 66.
+ 1 APPPATH\Controllers\Core\BaseController.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 66)
+ 2 APPPATH\Controllers\Admin\User.php(451): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-02 02:31:12 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Core\BaseController.php on line 66.
+ 1 APPPATH\Controllers\Core\BaseController.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 66)
+ 2 APPPATH\Controllers\Admin\User.php(451): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-02 02:31:13 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Core\BaseController.php on line 66.
+ 1 APPPATH\Controllers\Core\BaseController.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 66)
+ 2 APPPATH\Controllers\Admin\User.php(451): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-02 02:31:14 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Core\BaseController.php on line 66.
+ 1 APPPATH\Controllers\Core\BaseController.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\BaseController.php', 66)
+ 2 APPPATH\Controllers\Admin\User.php(451): App\Controllers\Core\BaseController->responseErrorValidation(412, 'Error Validation', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->update_admin()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-02 03:59:39 --> ParseError: syntax error, unexpected string content "", expecting "-" or identifier or variable or number
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Admin\User.php on line 531.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('admin/user/update-admin', 'POST')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('admin/user/update-admin')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('admin/user/update-admin')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-02 03:59:40 --> ParseError: syntax error, unexpected string content "", expecting "-" or identifier or variable or number
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Admin\User.php on line 531.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('admin/user/update-admin', 'POST')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('admin/user/update-admin')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('admin/user/update-admin')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-02 03:59:40 --> ParseError: syntax error, unexpected string content "", expecting "-" or identifier or variable or number
+[Method: POST, Route: admin/user/update-admin]
+in APPPATH\Controllers\Admin\User.php on line 531.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('admin/user/update-admin', 'POST')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('admin/user/update-admin')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('admin/user/update-admin')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

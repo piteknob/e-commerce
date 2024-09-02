@@ -89,7 +89,7 @@ class User extends AuthController
                 'password' => 'required|min_length[5]',
                 'confirm' => 'required|matches[password]',
                 'email' => 'required|valid_email|is_unique[user.user_email]',
-                'no_handphone' => 'required|is_unique[user.user_no_handphone]',
+                'no_handphone' => 'required|min_length[11]|is_unique[user.user_no_handphone]',
             ];
 
             if (!$this->validate($rules)) {
@@ -440,14 +440,40 @@ class User extends AuthController
 
         // VALIDATION
         $rules = [
+            'name' => 'required',
             'username' => 'required',
             'password' => 'required|min_length[5]',
             'email' => 'required|valid_email',
-            'no_handphone' => 'required',
+            'no_handphone' => 'required|min_length[11]',
         ];
 
+
         if (!$this->validate($rules)) {
-            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
+            $data = $this->validator->getErrors();
+            // print_r($data); die;
+            $message = '';
+            foreach ($data as $key => $value) {
+                $message .= "{$value}\n ";
+            }
+            $data = [
+                'id' => $id,
+                'error' => $this->validator->getErrors()
+            ];
+            $response = [
+                'status' => ResponseInterface::HTTP_PRECONDITION_FAILED,
+                'message' => $message,
+                'error' => 'Error Validation',
+                'result' => [
+                    'data' => $data
+                ]
+            ];
+
+            return $this->response->setJSON($response);
+            // return $this->responseErrorValidation(
+            //     ResponseInterface::HTTP_PRECONDITION_FAILED,
+            //     'Error Validation',
+            //     $this->validator->getErrors()
+            // );
         }
         // END VALIDATION
 
@@ -466,7 +492,20 @@ class User extends AuthController
         }
         // print_r($data_check_username); die;
         if (!empty($data_check_username)) {
-            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', ['username' => 'The username field must contain a unique value.']);
+            $data = [
+                'status' => ResponseInterface::HTTP_PRECONDITION_FAILED,
+                'message' => "The username field must contain a unique value.\n",
+                'error' => 'Error Validation',
+                'result' => [
+                    'data' => [
+                        'id' => $id,
+                        'username' => 'The username field must contain a unique value.'
+                    ]
+                ]
+            ];
+            return $this->response->setJSON($data);
+
+            
         }
         // END VALIDATION FOR USERNAME
 
