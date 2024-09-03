@@ -1,0 +1,1570 @@
+CRITICAL - 2024-09-03 02:43:20 --> Error: Call to undefined function App\Controllers\Admin\enerateDetailData()
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 236.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 02:43:22 --> Error: Call to undefined function App\Controllers\Admin\enerateDetailData()
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 236.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 02:46:53 --> ArgumentCountError: file_exists() expects exactly 1 argument, 2 given
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 239.
+ 1 APPPATH\Controllers\Admin\Product.php(239): file_exists('upload/product/', 'Bakpia 465 Kering  20_Mix Keju Coklat_1725330712_28c9743a76d498269ba6.png')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 02:46:54 --> ArgumentCountError: file_exists() expects exactly 1 argument, 2 given
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 239.
+ 1 APPPATH\Controllers\Admin\Product.php(239): file_exists('upload/product/', 'Bakpia 465 Kering  20_Mix Keju Coklat_1725330712_28c9743a76d498269ba6.png')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 02:46:55 --> ArgumentCountError: file_exists() expects exactly 1 argument, 2 given
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 239.
+ 1 APPPATH\Controllers\Admin\Product.php(239): file_exists('upload/product/', 'Bakpia 465 Kering  20_Mix Keju Coklat_1725330712_28c9743a76d498269ba6.png')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 02:46:55 --> ArgumentCountError: file_exists() expects exactly 1 argument, 2 given
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 239.
+ 1 APPPATH\Controllers\Admin\Product.php(239): file_exists('upload/product/', 'Bakpia 465 Kering  20_Mix Keju Coklat_1725330712_28c9743a76d498269ba6.png')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 02:46:56 --> ArgumentCountError: file_exists() expects exactly 1 argument, 2 given
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 239.
+ 1 APPPATH\Controllers\Admin\Product.php(239): file_exists('upload/product/', 'Bakpia 465 Kering  20_Mix Keju Coklat_1725330712_28c9743a76d498269ba6.png')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 02:57:46 --> ErrorException: finfo_file(C:\wamp64\tmp\php7DF8.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Files\File.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\wamp64\\tmp\\php7DF8.tmp): Failed to open stream: No such file or directory', 'C:\\wamp64\\www\\e-commerce\\system\\Files\\File.php', 114)
+ 2 SYSTEMPATH\Files\File.php(114): finfo_file(Object(finfo), 'C:\\wamp64\\tmp\\php7DF8.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(316): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(126): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Admin\Product.php(245): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 02:57:50 --> ErrorException: finfo_file(C:\wamp64\tmp\php8AFA.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Files\File.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\wamp64\\tmp\\php8AFA.tmp): Failed to open stream: No such file or directory', 'C:\\wamp64\\www\\e-commerce\\system\\Files\\File.php', 114)
+ 2 SYSTEMPATH\Files\File.php(114): finfo_file(Object(finfo), 'C:\\wamp64\\tmp\\php8AFA.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(316): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(126): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Admin\Product.php(245): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 02:58:23 --> ErrorException: finfo_file(C:\wamp64\tmp\phpCCF.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Files\File.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\wamp64\\tmp\\phpCCF.tmp): Failed to open stream: No such file or directory', 'C:\\wamp64\\www\\e-commerce\\system\\Files\\File.php', 114)
+ 2 SYSTEMPATH\Files\File.php(114): finfo_file(Object(finfo), 'C:\\wamp64\\tmp\\phpCCF.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(316): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(126): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Admin\Product.php(245): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 02:59:43 --> ErrorException: finfo_file(C:\wamp64\tmp\php4699.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Files\File.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\wamp64\\tmp\\php4699.tmp): Failed to open stream: No such file or directory', 'C:\\wamp64\\www\\e-commerce\\system\\Files\\File.php', 114)
+ 2 SYSTEMPATH\Files\File.php(114): finfo_file(Object(finfo), 'C:\\wamp64\\tmp\\php4699.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(316): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(126): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Admin\Product.php(245): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:00:03 --> ErrorException: finfo_file(C:\wamp64\tmp\php94DA.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Files\File.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\wamp64\\tmp\\php94DA.tmp): Failed to open stream: No such file or directory', 'C:\\wamp64\\www\\e-commerce\\system\\Files\\File.php', 114)
+ 2 SYSTEMPATH\Files\File.php(114): finfo_file(Object(finfo), 'C:\\wamp64\\tmp\\php94DA.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(316): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(126): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Admin\Product.php(245): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:00:23 --> ErrorException: finfo_file(C:\wamp64\tmp\phpE0E9.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Files\File.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\wamp64\\tmp\\phpE0E9.tmp): Failed to open stream: No such file or directory', 'C:\\wamp64\\www\\e-commerce\\system\\Files\\File.php', 114)
+ 2 SYSTEMPATH\Files\File.php(114): finfo_file(Object(finfo), 'C:\\wamp64\\tmp\\phpE0E9.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(316): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(126): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Admin\Product.php(245): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:00:29 --> ErrorException: finfo_file(C:\wamp64\tmp\phpFB29.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Files\File.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\wamp64\\tmp\\phpFB29.tmp): Failed to open stream: No such file or directory', 'C:\\wamp64\\www\\e-commerce\\system\\Files\\File.php', 114)
+ 2 SYSTEMPATH\Files\File.php(114): finfo_file(Object(finfo), 'C:\\wamp64\\tmp\\phpFB29.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(316): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(126): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Admin\Product.php(245): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:01:43 --> ErrorException: finfo_file(C:\wamp64\tmp\php1CE7.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Files\File.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\wamp64\\tmp\\php1CE7.tmp): Failed to open stream: No such file or directory', 'C:\\wamp64\\www\\e-commerce\\system\\Files\\File.php', 114)
+ 2 SYSTEMPATH\Files\File.php(114): finfo_file(Object(finfo), 'C:\\wamp64\\tmp\\php1CE7.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(316): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(126): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Admin\Product.php(245): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:02:24 --> ErrorException: finfo_file(C:\wamp64\tmp\phpBCE2.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Files\File.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\wamp64\\tmp\\phpBCE2.tmp): Failed to open stream: No such file or directory', 'C:\\wamp64\\www\\e-commerce\\system\\Files\\File.php', 114)
+ 2 SYSTEMPATH\Files\File.php(114): finfo_file(Object(finfo), 'C:\\wamp64\\tmp\\phpBCE2.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(316): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(126): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Admin\Product.php(244): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:03:23 --> ErrorException: finfo_file(C:\wamp64\tmp\phpA0EB.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Files\File.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\wamp64\\tmp\\phpA0EB.tmp): Failed to open stream: No such file or directory', 'C:\\wamp64\\www\\e-commerce\\system\\Files\\File.php', 114)
+ 2 SYSTEMPATH\Files\File.php(114): finfo_file(Object(finfo), 'C:\\wamp64\\tmp\\phpA0EB.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(316): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(126): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Admin\Product.php(245): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:04:22 --> ErrorException: finfo_file(C:\wamp64\tmp\php866B.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Files\File.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\wamp64\\tmp\\php866B.tmp): Failed to open stream: No such file or directory', 'C:\\wamp64\\www\\e-commerce\\system\\Files\\File.php', 114)
+ 2 SYSTEMPATH\Files\File.php(114): finfo_file(Object(finfo), 'C:\\wamp64\\tmp\\php866B.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(316): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(126): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Admin\Product.php(248): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:04:23 --> ErrorException: finfo_file(C:\wamp64\tmp\php8D92.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Files\File.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\wamp64\\tmp\\php8D92.tmp): Failed to open stream: No such file or directory', 'C:\\wamp64\\www\\e-commerce\\system\\Files\\File.php', 114)
+ 2 SYSTEMPATH\Files\File.php(114): finfo_file(Object(finfo), 'C:\\wamp64\\tmp\\php8D92.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(316): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(126): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Admin\Product.php(248): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:04:42 --> ErrorException: finfo_file(C:\wamp64\tmp\phpD78D.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Files\File.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\wamp64\\tmp\\phpD78D.tmp): Failed to open stream: No such file or directory', 'C:\\wamp64\\www\\e-commerce\\system\\Files\\File.php', 114)
+ 2 SYSTEMPATH\Files\File.php(114): finfo_file(Object(finfo), 'C:\\wamp64\\tmp\\phpD78D.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(316): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(126): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Admin\Product.php(248): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:05:23 --> Error: Call to a member function move() on string
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 244.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:07:55 --> Error: Call to a member function move() on string
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 244.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:09:41 --> ErrorException: finfo_file(C:\wamp64\tmp\php64DD.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Files\File.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\wamp64\\tmp\\php64DD.tmp): Failed to open stream: No such file or directory', 'C:\\wamp64\\www\\e-commerce\\system\\Files\\File.php', 114)
+ 2 SYSTEMPATH\Files\File.php(114): finfo_file(Object(finfo), 'C:\\wamp64\\tmp\\php64DD.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(316): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(126): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Admin\Product.php(249): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:09:48 --> ErrorException: finfo_file(C:\wamp64\tmp\php7FAA.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Files\File.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\wamp64\\tmp\\php7FAA.tmp): Failed to open stream: No such file or directory', 'C:\\wamp64\\www\\e-commerce\\system\\Files\\File.php', 114)
+ 2 SYSTEMPATH\Files\File.php(114): finfo_file(Object(finfo), 'C:\\wamp64\\tmp\\php7FAA.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(316): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(126): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Admin\Product.php(249): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:11:13 --> ErrorException: finfo_file(C:\wamp64\tmp\phpCD98.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Files\File.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\wamp64\\tmp\\phpCD98.tmp): Failed to open stream: No such file or directory', 'C:\\wamp64\\www\\e-commerce\\system\\Files\\File.php', 114)
+ 2 SYSTEMPATH\Files\File.php(114): finfo_file(Object(finfo), 'C:\\wamp64\\tmp\\phpCD98.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(316): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(126): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Admin\Product.php(259): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:11:19 --> ErrorException: finfo_file(C:\wamp64\tmp\phpE45E.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Files\File.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\wamp64\\tmp\\phpE45E.tmp): Failed to open stream: No such file or directory', 'C:\\wamp64\\www\\e-commerce\\system\\Files\\File.php', 114)
+ 2 SYSTEMPATH\Files\File.php(114): finfo_file(Object(finfo), 'C:\\wamp64\\tmp\\phpE45E.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(316): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(126): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Admin\Product.php(259): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:11:54 --> ErrorException: finfo_file(C:\wamp64\tmp\php6CCA.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Files\File.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\wamp64\\tmp\\php6CCA.tmp): Failed to open stream: No such file or directory', 'C:\\wamp64\\www\\e-commerce\\system\\Files\\File.php', 114)
+ 2 SYSTEMPATH\Files\File.php(114): finfo_file(Object(finfo), 'C:\\wamp64\\tmp\\php6CCA.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(316): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(126): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Admin\Product.php(259): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:12:26 --> ErrorException: finfo_file(C:\wamp64\tmp\phpEB05.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Files\File.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\wamp64\\tmp\\phpEB05.tmp): Failed to open stream: No such file or directory', 'C:\\wamp64\\www\\e-commerce\\system\\Files\\File.php', 114)
+ 2 SYSTEMPATH\Files\File.php(114): finfo_file(Object(finfo), 'C:\\wamp64\\tmp\\phpEB05.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(316): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(126): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Admin\Product.php(245): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:12:34 --> ErrorException: finfo_file(C:\wamp64\tmp\php8A1.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Files\File.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\wamp64\\tmp\\php8A1.tmp): Failed to open stream: No such file or directory', 'C:\\wamp64\\www\\e-commerce\\system\\Files\\File.php', 114)
+ 2 SYSTEMPATH\Files\File.php(114): finfo_file(Object(finfo), 'C:\\wamp64\\tmp\\php8A1.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(316): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(126): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Admin\Product.php(245): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:15:05 --> ErrorException: finfo_file(C:\wamp64\tmp\php560E.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Files\File.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\wamp64\\tmp\\php560E.tmp): Failed to open stream: No such file or directory', 'C:\\wamp64\\www\\e-commerce\\system\\Files\\File.php', 114)
+ 2 SYSTEMPATH\Files\File.php(114): finfo_file(Object(finfo), 'C:\\wamp64\\tmp\\php560E.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(316): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(126): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Admin\Product.php(245): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:18:35 --> ErrorException: finfo_file(C:\wamp64\tmp\php8A31.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Files\File.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\wamp64\\tmp\\php8A31.tmp): Failed to open stream: No such file or directory', 'C:\\wamp64\\www\\e-commerce\\system\\Files\\File.php', 114)
+ 2 SYSTEMPATH\Files\File.php(114): finfo_file(Object(finfo), 'C:\\wamp64\\tmp\\php8A31.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(316): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(126): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Admin\Product.php(245): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:18:40 --> ErrorException: finfo_file(C:\wamp64\tmp\php9EC4.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Files\File.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\wamp64\\tmp\\php9EC4.tmp): Failed to open stream: No such file or directory', 'C:\\wamp64\\www\\e-commerce\\system\\Files\\File.php', 114)
+ 2 SYSTEMPATH\Files\File.php(114): finfo_file(Object(finfo), 'C:\\wamp64\\tmp\\php9EC4.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(316): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(126): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Admin\Product.php(245): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:20:01 --> ErrorException: finfo_file(C:\wamp64\tmp\phpDD77.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Files\File.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\wamp64\\tmp\\phpDD77.tmp): Failed to open stream: No such file or directory', 'C:\\wamp64\\www\\e-commerce\\system\\Files\\File.php', 114)
+ 2 SYSTEMPATH\Files\File.php(114): finfo_file(Object(finfo), 'C:\\wamp64\\tmp\\phpDD77.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(316): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(126): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Admin\Product.php(247): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:22:28 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/product/delete]
+in APPPATH\Controllers\Admin\Product.php on line 326.
+ 1 APPPATH\Controllers\Admin\Product.php(326): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 326)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:23:51 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 239.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 239)
+ 2 APPPATH\Controllers\Admin\Product.php(239): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:23:53 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 239.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 239)
+ 2 APPPATH\Controllers\Admin\Product.php(239): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:23:54 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 239.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 239)
+ 2 APPPATH\Controllers\Admin\Product.php(239): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:23:55 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 239.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 239)
+ 2 APPPATH\Controllers\Admin\Product.php(239): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:24:34 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 239.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 239)
+ 2 APPPATH\Controllers\Admin\Product.php(239): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:24:34 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 239.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 239)
+ 2 APPPATH\Controllers\Admin\Product.php(239): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:24:47 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 239.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 239)
+ 2 APPPATH\Controllers\Admin\Product.php(239): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:26:26 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 239.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 239)
+ 2 APPPATH\Controllers\Admin\Product.php(239): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:26:28 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 239.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 239)
+ 2 APPPATH\Controllers\Admin\Product.php(239): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:26:32 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 239.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 239)
+ 2 APPPATH\Controllers\Admin\Product.php(239): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:26:39 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 239.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 239)
+ 2 APPPATH\Controllers\Admin\Product.php(239): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:26:46 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 239.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 239)
+ 2 APPPATH\Controllers\Admin\Product.php(239): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:26:48 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 239.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 239)
+ 2 APPPATH\Controllers\Admin\Product.php(239): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:26:49 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 239.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 239)
+ 2 APPPATH\Controllers\Admin\Product.php(239): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:26:54 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 239.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 239)
+ 2 APPPATH\Controllers\Admin\Product.php(239): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:26:55 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 239.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 239)
+ 2 APPPATH\Controllers\Admin\Product.php(239): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:26:57 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 239.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 239)
+ 2 APPPATH\Controllers\Admin\Product.php(239): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:28:15 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 239.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 239)
+ 2 APPPATH\Controllers\Admin\Product.php(239): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:28:15 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 239.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 239)
+ 2 APPPATH\Controllers\Admin\Product.php(239): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:28:55 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 243.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 243)
+ 2 APPPATH\Controllers\Admin\Product.php(243): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:28:57 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 243.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 243)
+ 2 APPPATH\Controllers\Admin\Product.php(243): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:28:58 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 243.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 243)
+ 2 APPPATH\Controllers\Admin\Product.php(243): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:28:59 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 243.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 243)
+ 2 APPPATH\Controllers\Admin\Product.php(243): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:29:13 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 243.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 243)
+ 2 APPPATH\Controllers\Admin\Product.php(243): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:29:23 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 244.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 244)
+ 2 APPPATH\Controllers\Admin\Product.php(244): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:29:25 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 244.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 244)
+ 2 APPPATH\Controllers\Admin\Product.php(244): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:29:26 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 244.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 244)
+ 2 APPPATH\Controllers\Admin\Product.php(244): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:29:27 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 244.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 244)
+ 2 APPPATH\Controllers\Admin\Product.php(244): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:30:30 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 239.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 239)
+ 2 APPPATH\Controllers\Admin\Product.php(239): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:30:43 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 239.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 239)
+ 2 APPPATH\Controllers\Admin\Product.php(239): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:30:44 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 239.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 239)
+ 2 APPPATH\Controllers\Admin\Product.php(239): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:30:45 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 239.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 239)
+ 2 APPPATH\Controllers\Admin\Product.php(239): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:30:47 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/product/delete]
+in APPPATH\Controllers\Admin\Product.php on line 326.
+ 1 APPPATH\Controllers\Admin\Product.php(326): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 326)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:30:48 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/product/delete]
+in APPPATH\Controllers\Admin\Product.php on line 326.
+ 1 APPPATH\Controllers\Admin\Product.php(326): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 326)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:30:49 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/product/delete]
+in APPPATH\Controllers\Admin\Product.php on line 326.
+ 1 APPPATH\Controllers\Admin\Product.php(326): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 326)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:33:03 --> ErrorException: finfo_file(C:\wamp64\tmp\phpCA41.tmp): Failed to open stream: No such file or directory
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Files\File.php on line 114.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'finfo_file(C:\\wamp64\\tmp\\phpCA41.tmp): Failed to open stream: No such file or directory', 'C:\\wamp64\\www\\e-commerce\\system\\Files\\File.php', 114)
+ 2 SYSTEMPATH\Files\File.php(114): finfo_file(Object(finfo), 'C:\\wamp64\\tmp\\phpCA41.tmp')
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(316): CodeIgniter\Files\File->getMimeType()
+ 4 SYSTEMPATH\HTTP\Files\UploadedFile.php(305): CodeIgniter\HTTP\Files\UploadedFile->guessExtension()
+ 5 SYSTEMPATH\Files\File.php(126): CodeIgniter\HTTP\Files\UploadedFile->getExtension()
+ 6 APPPATH\Controllers\Admin\Product.php(248): CodeIgniter\Files\File->getRandomName()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 03:53:20 --> ParseError: syntax error, unexpected variable "$data"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Core\AuthController.php on line 94.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\AuthController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Core\\AuthController')
+ 3 APPPATH\Controllers\Admin\Product.php(8): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Core\\AuthController')
+ 4 SYSTEMPATH\Router\AutoRouter.php(147): include_once('C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php')
+ 5 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('admin/product/list-product', 'GET')
+ 6 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('admin/product/list-product')
+ 7 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('admin/product/list-product')
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 04:31:24 --> ErrorException: Undefined array key 0
+[Method: GET, Route: admin/selected/category-selected]
+in APPPATH\Controllers\Admin\Selected.php on line 36.
+ 1 APPPATH\Controllers\Admin\Selected.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Selected.php', 36)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Selected->category_selected()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Selected))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-03 06:22:24 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('SELECT product....', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product....')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product....')
+#3 C:\wamp64\www\e-commerce\app\Helpers\query_helper.php(50): CodeIgniter\Database\BaseConnection->query('SELECT product....')
+#4 C:\wamp64\www\e-commerce\app\Controllers\Admin\Product.php(78): generateDetailData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Product->detail()
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+#7 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-09-03 06:22:24 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[Method: GET, Route: admin/product/detail]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Helpers\query_helper.php(50): CodeIgniter\Database\BaseConnection->query('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_id AS category_id, product.product_category_name AS category_name, variant.variant_id AS variant_id, variant.variant_name AS variant_name, product_stock.product_stock_stock AS stock_stock, product_stock.product_stock_in AS stock_in, product_stock.product_stock_out AS stock_out, product.product_description AS description, product.product_photo AS photo, product.product_created_at AS created_at, product.product_updated_at AS updated_at FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id JOIN variant ON product.product_id = variant.variant_product_id WHERE product_id = ')
+ 2 APPPATH\Controllers\Admin\Product.php(78): generateDetailData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->detail()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:22:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_id AS category_id, product.product_category_name AS category_name, variant.variant_id AS variant_id, variant.variant_name AS variant_name, product_stock.product_stock_stock AS stock_stock, product_stock.product_stock_in AS stock_in, product_stock.product_stock_out AS stock_out, product.product_description AS description, product.product_photo AS photo, product.product_created_at AS created_at, product.product_updated_at AS updated_at FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id JOIN variant ON product.product_id = variant.variant_product_id WHERE product_id = ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_id AS category_id, product.product_category_name AS category_name, variant.variant_id AS variant_id, variant.variant_name AS variant_name, product_stock.product_stock_stock AS stock_stock, product_stock.product_stock_in AS stock_in, product_stock.product_stock_out AS stock_out, product.product_description AS description, product.product_photo AS photo, product.product_created_at AS created_at, product.product_updated_at AS updated_at FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id JOIN variant ON product.product_id = variant.variant_product_id WHERE product_id = ')
+ 3 APPPATH\Helpers\query_helper.php(50): CodeIgniter\Database\BaseConnection->query('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_id AS category_id, product.product_category_name AS category_name, variant.variant_id AS variant_id, variant.variant_name AS variant_name, product_stock.product_stock_stock AS stock_stock, product_stock.product_stock_in AS stock_in, product_stock.product_stock_out AS stock_out, product.product_description AS description, product.product_photo AS photo, product.product_created_at AS created_at, product.product_updated_at AS updated_at FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id JOIN variant ON product.product_id = variant.variant_product_id WHERE product_id = ')
+ 4 APPPATH\Controllers\Admin\Product.php(78): generateDetailData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->detail()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:22:24 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_id AS category_id, product.product_category_name AS category_name, variant.variant_id AS variant_id, variant.variant_name AS variant_name, product_stock.product_stock_stock AS stock_stock, product_stock.product_stock_in AS stock_in, product_stock.product_stock_out AS stock_out, product.product_description AS description, product.product_photo AS photo, product.product_created_at AS created_at, product.product_updated_at AS updated_at FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id JOIN variant ON product.product_id = variant.variant_product_id WHERE product_id = ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_id AS category_id, product.product_category_name AS category_name, variant.variant_id AS variant_id, variant.variant_name AS variant_name, product_stock.product_stock_stock AS stock_stock, product_stock.product_stock_in AS stock_in, product_stock.product_stock_out AS stock_out, product.product_description AS description, product.product_photo AS photo, product.product_created_at AS created_at, product.product_updated_at AS updated_at FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id JOIN variant ON product.product_id = variant.variant_product_id WHERE product_id = ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_id AS category_id, product.product_category_name AS category_name, variant.variant_id AS variant_id, variant.variant_name AS variant_name, product_stock.product_stock_stock AS stock_stock, product_stock.product_stock_in AS stock_in, product_stock.product_stock_out AS stock_out, product.product_description AS description, product.product_photo AS photo, product.product_created_at AS created_at, product.product_updated_at AS updated_at FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id JOIN variant ON product.product_id = variant.variant_product_id WHERE product_id = ')
+ 4 APPPATH\Helpers\query_helper.php(50): CodeIgniter\Database\BaseConnection->query('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_id AS category_id, product.product_category_name AS category_name, variant.variant_id AS variant_id, variant.variant_name AS variant_name, product_stock.product_stock_stock AS stock_stock, product_stock.product_stock_in AS stock_in, product_stock.product_stock_out AS stock_out, product.product_description AS description, product.product_photo AS photo, product.product_created_at AS created_at, product.product_updated_at AS updated_at FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id JOIN variant ON product.product_id = variant.variant_product_id WHERE product_id = ')
+ 5 APPPATH\Controllers\Admin\Product.php(78): generateDetailData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->detail()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-03 06:22:24 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1 in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('SELECT product_...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_...')
+#3 C:\wamp64\www\e-commerce\app\Helpers\query_helper.php(50): CodeIgniter\Database\BaseConnection->query('SELECT product_...')
+#4 C:\wamp64\www\e-commerce\app\Controllers\Admin\Selected.php(35): generateDetailData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Selected->category_selected()
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Selected))
+#7 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-09-03 06:22:24 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+[Method: GET, Route: admin/selected/category-selected]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Helpers\query_helper.php(50): CodeIgniter\Database\BaseConnection->query('SELECT product_id AS id, product_name AS name, product_price AS price, product_category_id AS category_id, product_category_name AS category_name, product_created_at AS created_at, product_updated_at AS updated_at FROM `product` WHERE product_id = ')
+ 2 APPPATH\Controllers\Admin\Selected.php(35): generateDetailData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Selected->category_selected()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Selected))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:22:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_id AS id, product_name AS name, product_price AS price, product_category_id AS category_id, product_category_name AS category_name, product_created_at AS created_at, product_updated_at AS updated_at FROM `product` WHERE product_id = ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_id AS id, product_name AS name, product_price AS price, product_category_id AS category_id, product_category_name AS category_name, product_created_at AS created_at, product_updated_at AS updated_at FROM `product` WHERE product_id = ')
+ 3 APPPATH\Helpers\query_helper.php(50): CodeIgniter\Database\BaseConnection->query('SELECT product_id AS id, product_name AS name, product_price AS price, product_category_id AS category_id, product_category_name AS category_name, product_created_at AS created_at, product_updated_at AS updated_at FROM `product` WHERE product_id = ')
+ 4 APPPATH\Controllers\Admin\Selected.php(35): generateDetailData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Selected->category_selected()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Selected))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:22:24 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('SELECT product_id AS id, product_name AS name, product_price AS price, product_category_id AS category_id, product_category_name AS category_name, product_created_at AS created_at, product_updated_at AS updated_at FROM `product` WHERE product_id = ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product_id AS id, product_name AS name, product_price AS price, product_category_id AS category_id, product_category_name AS category_name, product_created_at AS created_at, product_updated_at AS updated_at FROM `product` WHERE product_id = ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product_id AS id, product_name AS name, product_price AS price, product_category_id AS category_id, product_category_name AS category_name, product_created_at AS created_at, product_updated_at AS updated_at FROM `product` WHERE product_id = ')
+ 4 APPPATH\Helpers\query_helper.php(50): CodeIgniter\Database\BaseConnection->query('SELECT product_id AS id, product_name AS name, product_price AS price, product_category_id AS category_id, product_category_name AS category_name, product_created_at AS created_at, product_updated_at AS updated_at FROM `product` WHERE product_id = ')
+ 5 APPPATH\Controllers\Admin\Selected.php(35): generateDetailData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Selected->category_selected()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Selected))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:44:37 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 42.
+ 1 APPPATH\Controllers\Admin\Product.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:44:38 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 42.
+ 1 APPPATH\Controllers\Admin\Product.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:44:39 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 42.
+ 1 APPPATH\Controllers\Admin\Product.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:44:39 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 42.
+ 1 APPPATH\Controllers\Admin\Product.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:44:40 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 42.
+ 1 APPPATH\Controllers\Admin\Product.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:45:30 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:45:31 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:45:32 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:45:32 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 43.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:45:38 --> ErrorException: Undefined array key "result"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 43.
+ 1 APPPATH\Controllers\Admin\Product.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "result"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:45:40 --> ErrorException: Undefined array key "result"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 43.
+ 1 APPPATH\Controllers\Admin\Product.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "result"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:45:41 --> ErrorException: Undefined array key "result"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 43.
+ 1 APPPATH\Controllers\Admin\Product.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "result"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:46:57 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 45.
+ 1 APPPATH\Controllers\Admin\Product.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:46:58 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 45.
+ 1 APPPATH\Controllers\Admin\Product.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:46:59 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 45.
+ 1 APPPATH\Controllers\Admin\Product.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:49:19 --> ErrorException: Undefined variable $data_result
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 80.
+ 1 APPPATH\Controllers\Admin\Product.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_result', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 80)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:49:20 --> ErrorException: Undefined variable $data_result
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 80.
+ 1 APPPATH\Controllers\Admin\Product.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_result', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 80)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:49:21 --> ErrorException: Undefined variable $data_result
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 80.
+ 1 APPPATH\Controllers\Admin\Product.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_result', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 80)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:49:24 --> ErrorException: Undefined variable $data_result
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 80.
+ 1 APPPATH\Controllers\Admin\Product.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_result', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 80)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:49:25 --> ErrorException: Undefined variable $data_result
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 80.
+ 1 APPPATH\Controllers\Admin\Product.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_result', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 80)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:49:26 --> ErrorException: Undefined variable $data_result
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 80.
+ 1 APPPATH\Controllers\Admin\Product.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data_result', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 80)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:49:52 --> ErrorException: Array to string conversion
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 77.
+ 1 APPPATH\Controllers\Admin\Product.php(77): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 77)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:50:55 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 45.
+ 1 APPPATH\Controllers\Admin\Product.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:50:57 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 45.
+ 1 APPPATH\Controllers\Admin\Product.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:51:50 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 32.
+ 1 APPPATH\Controllers\Admin\Product.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:51:51 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 32.
+ 1 APPPATH\Controllers\Admin\Product.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:51:51 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 32.
+ 1 APPPATH\Controllers\Admin\Product.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:51:57 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 32.
+ 1 APPPATH\Controllers\Admin\Product.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:51:58 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 32.
+ 1 APPPATH\Controllers\Admin\Product.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 06:51:59 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 32.
+ 1 APPPATH\Controllers\Admin\Product.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 07:08:10 --> ErrorException: Array to string conversion
+[Method: GET, Route: /]
+in APPPATH\Views\welcome_message.php on line 351.
+ 1 APPPATH\Views\welcome_message.php(351): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Views\\welcome_message.php', 351)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\e-commerce\\app\\Views\\welcome_message.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('welcome_message', [], true)
+ 5 APPPATH\Controllers\Home.php(11): view('welcome_message')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 07:08:28 --> ErrorException: Array to string conversion
+[Method: GET, Route: /]
+in APPPATH\Views\welcome_message.php on line 351.
+ 1 APPPATH\Views\welcome_message.php(351): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Views\\welcome_message.php', 351)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\e-commerce\\app\\Views\\welcome_message.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('welcome_message', [], true)
+ 5 APPPATH\Controllers\Home.php(11): view('welcome_message')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 07:08:59 --> Error: Object of class stdClass could not be converted to string
+[Method: GET, Route: /]
+in APPPATH\Views\welcome_message.php on line 352.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('welcome_message', [], true)
+ 4 APPPATH\Controllers\Home.php(11): view('welcome_message')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 07:09:00 --> Error: Object of class stdClass could not be converted to string
+[Method: GET, Route: /]
+in APPPATH\Views\welcome_message.php on line 352.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('welcome_message', [], true)
+ 4 APPPATH\Controllers\Home.php(11): view('welcome_message')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 07:09:00 --> Error: Object of class stdClass could not be converted to string
+[Method: GET, Route: /]
+in APPPATH\Views\welcome_message.php on line 352.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('welcome_message', [], true)
+ 4 APPPATH\Controllers\Home.php(11): view('welcome_message')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 07:09:00 --> Error: Object of class stdClass could not be converted to string
+[Method: GET, Route: /]
+in APPPATH\Views\welcome_message.php on line 352.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('welcome_message', [], true)
+ 4 APPPATH\Controllers\Home.php(11): view('welcome_message')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 07:09:00 --> Error: Object of class stdClass could not be converted to string
+[Method: GET, Route: /]
+in APPPATH\Views\welcome_message.php on line 352.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('welcome_message', [], true)
+ 4 APPPATH\Controllers\Home.php(11): view('welcome_message')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 07:09:28 --> Error: Object of class stdClass could not be converted to string
+[Method: GET, Route: /]
+in APPPATH\Views\welcome_message.php on line 353.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('welcome_message', [], true)
+ 4 APPPATH\Controllers\Home.php(11): view('welcome_message')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 07:09:30 --> Error: Object of class stdClass could not be converted to string
+[Method: GET, Route: /]
+in APPPATH\Views\welcome_message.php on line 353.
+ 1 SYSTEMPATH\View\View.php(234): include()
+ 2 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('welcome_message', [], true)
+ 4 APPPATH\Controllers\Home.php(11): view('welcome_message')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 07:14:50 --> ParseError: syntax error, unexpected variable "$product_data"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 74.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('admin/product/list-product', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('admin/product/list-product')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('admin/product/list-product')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 08:27:43 --> Error: Call to a member function getRandomName() on null
+[Method: POST, Route: admin/product/insert]
+in APPPATH\Controllers\Admin\Product.php on line 160.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->insert()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 08:27:59 --> Error: Call to a member function getRandomName() on null
+[Method: POST, Route: admin/product/insert]
+in APPPATH\Controllers\Admin\Product.php on line 160.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->insert()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 08:30:03 --> Error: Call to a member function getRandomName() on null
+[Method: POST, Route: admin/product/insert]
+in APPPATH\Controllers\Admin\Product.php on line 160.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->insert()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 08:37:42 --> Error: Call to a member function getRandomName() on null
+[Method: POST, Route: admin/product/insert]
+in APPPATH\Controllers\Admin\Product.php on line 160.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->insert()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 08:37:43 --> Error: Call to a member function getRandomName() on null
+[Method: POST, Route: admin/product/insert]
+in APPPATH\Controllers\Admin\Product.php on line 160.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->insert()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 08:37:44 --> Error: Call to a member function getRandomName() on null
+[Method: POST, Route: admin/product/insert]
+in APPPATH\Controllers\Admin\Product.php on line 160.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->insert()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 08:38:04 --> Error: Call to a member function getRandomName() on null
+[Method: POST, Route: admin/product/insert]
+in APPPATH\Controllers\Admin\Product.php on line 160.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->insert()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 08:38:05 --> Error: Call to a member function getRandomName() on null
+[Method: POST, Route: admin/product/insert]
+in APPPATH\Controllers\Admin\Product.php on line 160.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->insert()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 08:38:13 --> Error: Call to a member function getRandomName() on null
+[Method: POST, Route: admin/product/insert]
+in APPPATH\Controllers\Admin\Product.php on line 160.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->insert()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 08:38:15 --> Error: Call to a member function getRandomName() on null
+[Method: POST, Route: admin/product/insert]
+in APPPATH\Controllers\Admin\Product.php on line 160.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->insert()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 08:38:56 --> Error: Call to a member function move() on null
+[Method: POST, Route: admin/product/insert]
+in APPPATH\Controllers\Admin\Product.php on line 160.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->insert()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 08:38:59 --> Error: Call to a member function move() on null
+[Method: POST, Route: admin/product/insert]
+in APPPATH\Controllers\Admin\Product.php on line 160.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->insert()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 08:39:03 --> Error: Call to a member function move() on null
+[Method: POST, Route: admin/product/insert]
+in APPPATH\Controllers\Admin\Product.php on line 160.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->insert()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 08:39:04 --> Error: Call to a member function move() on null
+[Method: POST, Route: admin/product/insert]
+in APPPATH\Controllers\Admin\Product.php on line 160.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->insert()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 09:24:19 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/product/delete]
+in APPPATH\Controllers\Admin\Product.php on line 371.
+ 1 APPPATH\Controllers\Admin\Product.php(371): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 371)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 09:24:23 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/product/delete]
+in APPPATH\Controllers\Admin\Product.php on line 371.
+ 1 APPPATH\Controllers\Admin\Product.php(371): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 371)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 09:24:25 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/product/delete]
+in APPPATH\Controllers\Admin\Product.php on line 371.
+ 1 APPPATH\Controllers\Admin\Product.php(371): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 371)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-03 09:24:26 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/product/delete]
+in APPPATH\Controllers\Admin\Product.php on line 371.
+ 1 APPPATH\Controllers\Admin\Product.php(371): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 371)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

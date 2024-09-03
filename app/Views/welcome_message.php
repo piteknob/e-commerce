@@ -327,5 +327,30 @@
 
 <!-- -->
 
+<?php
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'http://10.10.0.9/e-commerce/public/admin/product/list-product',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'GET',
+  CURLOPT_HTTPHEADER => array(
+    'Token: YmFrcGlhMTIzNDU2'
+  ),
+));
+
+$response = curl_exec($curl);
+$array = json_decode($response); 
+curl_close($curl);
+print_r($array); die;
+echo $array;
+?>
+
 </body>
 </html>

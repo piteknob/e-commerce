@@ -83,6 +83,16 @@ class AuthController extends DataController
             WHERE auth_user_token = '{$token}'";
             $db->query($updateExpired);
         }
+
+
+        
+        // $query['data'] = ['sales_order'];
+        // $query['select'] = [
+        //     'sales_order_date' => 'date'
+        // ];
+        // $query['pagination'] = [false];
+        // $data = (array) generateListData($this->request->getVar(), $query, $this->db);
+        // print_r($data); die;
     }
     
     
