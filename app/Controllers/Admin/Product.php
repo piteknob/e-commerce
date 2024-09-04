@@ -67,15 +67,17 @@ class Product extends AuthController
             // GET DATA NOT SELECTED
             $query_category = "SELECT * FROM `category` WHERE category_id != {$id_category}";
             $data_category = $this->db->query($query_category)->getResultArray();
-            
-    
+
+            $category_array = array_merge($data_category_selected, $data_category);
+
+
+
 
             // MAKE LIST CATEGORY (SELECTED OR NOT SELECTED)
             $product_data = $data_product['data'];
             $return[] = [
                 'product' => $product_data[0],
-                'category_selected' => $data_category_selected[0],
-                'category_not_selected' => $data_category[0]
+                'category_list' => $category_array,
             ];
             // $result = ['data' => $return];
         }
@@ -141,40 +143,51 @@ class Product extends AuthController
         $stock = htmlspecialchars($post['stock']);
         $desc = htmlspecialchars($post['description']);
 
+        // ----------------------- RANDOM DATE --------------------------- //
+
+        $start = time();
+        $end = time() + 3600;
+        $random = mt_rand($start, $end);
 
         // --------------------- SET VALIDATION && UPLOAD GET POST PHOTO ------------------------ //
         $photo = $this->request->getFile('upload');
-        // $validator = \Config\Services::validation();
-        // $validator->setRules([
-        //     'upload' => 'uploaded[upload]|max_size[upload, 2048]|is_image[upload]|mime_in[upload,image/jpg,image/jpeg,image/png]',
-        // ]);
+        if (empty($photo)) {
+            $photo_name = '';
+        } else {
+            $extension = $photo->getExtension();
+            $photo_name = "$product" . "_" . "$random" . "." . "$extension";
+            $photo_name = $photo_name;
+            $photo_name = strtolower($photo_name);
+            $photo_name = str_replace(' ', '_', $photo_name);
+            // move file to directory
+            $photo->move('./upload/product', $photo_name);
+        }
+        $sql = "INSERT INTO product
+            (
+                product_name,
+                product_price,
+                product_category_id,
+                product_category_name,
+                product_description,
+                product_photo,
+                product_created_at,
+                product_updated_at
+            )
+            SELECT 
+                '{$product}', 
+                '{$price}', 
+                '{$category}', 
+                category_name, 
+                '{$desc}', 
+                CASE 
+                    WHEN '{$photo_name}' = '' THEN NULL
+                    ELSE '{$photo_name}'
+                END, 
+                NOW(), 
+                NULL
+            FROM category
+            WHERE category_id = '{$category}';";
 
-        // if (!$validator->run((array)$photo)) {
-        //     $error = $validator->getErrors();
-        //     if ($error) {
-        //         return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'error validation', $error);
-        //     }
-        // }
-
-        $photo_name = "$product" . "_" . "$variant" . "_";
-        $photo->move('./upload/product', $photo_name);
-
-        $sql = "INSERT INTO 
-        product
-        (
-        product_name,
-        product_price,
-        product_category_id,
-        product_category_name,
-        product_description,
-        product_photo,
-        product_created_at,
-        product_updated_at
-        )
-        SELECT '{$product}', '{$price}', '{$category}', category_name, '{$desc}', '{$photo_name}', NOW(), NULL
-        FROM category
-        WHERE category_id = '{$category}'
-        ";
 
         $this->db->query($sql);
         // Get Inserted Id
@@ -285,12 +298,29 @@ class Product extends AuthController
             unlink("upload/product/" . $data_photo);
         }
 
-        $photo_name = "$product" . "_" . "$variant" . "_";
-        $photo->move('./upload/product', $photo_name);
+        // ----------------------- RANDOM DATE --------------------------- //
+
+        $start = time();
+        $end = time() + 3600;
+        $random = mt_rand($start, $end);
+
+        // --------------------- SET VALIDATION && UPLOAD GET POST PHOTO ------------------------ //
+
+        $photo = $this->request->getFile('upload');
+        if (empty($photo)) {
+            $photo_name = '';
+        } else {
+            $extension = $photo->getExtension();
+            $photo_name = "$product" . "_" . "$random" . "." . "$extension";
+            $photo_name = $photo_name;
+            $photo_name = strtolower($photo_name);
+            $photo_name = str_replace(' ', '_', $photo_name);
+            // move file to directory
+            $photo->move('./upload/product', $photo_name);
 
 
 
-        $sql = "UPDATE product 
+            $sql = "UPDATE product 
             SET
             product_name = '{$product}',
             product_price = '{$price}',
@@ -301,49 +331,50 @@ class Product extends AuthController
             product_updated_at = NOW()
             WHERE product_id = {$id}
             ";
-        $this->db->query($sql);
+            $this->db->query($sql);
 
-        $sql_stock = "UPDATE product_stock
+            $sql_stock = "UPDATE product_stock
         SET product_stock_stock = {$stock}
             WHERE product_stock_product_id = {$id}
             ";
-        $this->db->query($sql_stock);
+            $this->db->query($sql_stock);
 
-        $sql_variant = "UPDATE variant
+            $sql_variant = "UPDATE variant
         SET variant_name = '{$variant}'
             WHERE variant_product_id = {$id}
             ";
-        $this->db->query($sql_variant);
+            $this->db->query($sql_variant);
 
-        // Get Data Updated
-        $query['data'] = ['product'];
-        $query['select'] = [
-            'product.product_id' => 'id',
-            'product.product_name' => 'name',
-            'product.product_price' => 'price',
-            'product.product_category_id' => 'category_id',
-            'product.product_category_name' => 'category_name',
-            'variant.variant_id' => 'variant_id',
-            'variant.variant_name' => 'variant_name',
-            'product_stock.product_stock_stock' => 'stock_stock',
-            'product_stock.product_stock_in' => 'stock_in',
-            'product_stock.product_stock_out' => 'stock_out',
-            'product.product_description' => 'description',
-            'product.product_photo' => 'photo',
-            'product.product_created_at' => 'created_at',
-            'product.product_updated_at' => 'updated_at',
-        ];
-        $query['join'] = [
-            'product_stock' => 'product.product_id = product_stock.product_stock_product_id',
-            'variant' => 'product.product_id = variant.variant_product_id',
-        ];
-        $query['where_detail'] = [
-            "WHERE product_id = $id"
-        ];
+            // Get Data Updated
+            $query['data'] = ['product'];
+            $query['select'] = [
+                'product.product_id' => 'id',
+                'product.product_name' => 'name',
+                'product.product_price' => 'price',
+                'product.product_category_id' => 'category_id',
+                'product.product_category_name' => 'category_name',
+                'variant.variant_id' => 'variant_id',
+                'variant.variant_name' => 'variant_name',
+                'product_stock.product_stock_stock' => 'stock_stock',
+                'product_stock.product_stock_in' => 'stock_in',
+                'product_stock.product_stock_out' => 'stock_out',
+                'product.product_description' => 'description',
+                'product.product_photo' => 'photo',
+                'product.product_created_at' => 'created_at',
+                'product.product_updated_at' => 'updated_at',
+            ];
+            $query['join'] = [
+                'product_stock' => 'product.product_id = product_stock.product_stock_product_id',
+                'variant' => 'product.product_id = variant.variant_product_id',
+            ];
+            $query['where_detail'] = [
+                "WHERE product_id = $id"
+            ];
 
-        $data = generateDetailData($this->request->getPost(), $query, $this->db);
+            $data = generateDetailData($this->request->getPost(), $query, $this->db);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfull Updated', $data);
+            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfull Updated', $data);
+        }
     }
 
     public function delete() //done

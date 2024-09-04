@@ -161,10 +161,10 @@ if (!function_exists('generateListData')) {
         if (!empty($orderByQuery)) {
             $sql .= orderBy($orderByQuery);
         }
-        
 
-            // print_r($sql);
-            // die;
+
+        // print_r($sql);
+        // die;
         // Set Pagination from Params
 
         if ($paginationParams == 'false') {
@@ -240,7 +240,7 @@ if (!function_exists('generateListData')) {
             } else {
                 $limit = isset($query['limit']['limit']) ? $query['limit']['limit'] : 5;
             }
-            
+
             $offset = ($paginationPage - 1) * $limit;
 
             $sql .= " LIMIT {$offset}, {$limit}";
@@ -290,9 +290,23 @@ if (!function_exists('generateListData')) {
 }
 
 if (!function_exists('update')) {
-    function update($table, $data, $where, $db) {
+    function update($table, $data, $where, $db)
+    {
         $sql = "UPDATE $table SET ";
+    }
+}
 
+if (!function_exists('randomDate')) {
+    function randomDate($firstDate, $secondDate, $format = 'Y-m-d'): string
+    {
+        $firstDateTimeStamp = strtotime($firstDate);
+        $secondDateTimeStamp = strtotime($secondDate);
+
+        if ($firstDateTimeStamp < $secondDateTimeStamp) {
+            return date($format, mt_rand($firstDateTimeStamp, $secondDateTimeStamp));
+        }
+
+        return date($format, mt_rand($secondDateTimeStamp, $firstDateTimeStamp));
     }
 }
 
