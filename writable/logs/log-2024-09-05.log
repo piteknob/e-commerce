@@ -1,0 +1,2012 @@
+CRITICAL - 2024-09-05 03:58:01 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/delete]
+in APPPATH\Controllers\Admin\Product.php on line 420.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 420)
+ 2 APPPATH\Controllers\Admin\Product.php(420): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->delete()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 03:58:07 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/delete]
+in APPPATH\Controllers\Admin\Product.php on line 420.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 420)
+ 2 APPPATH\Controllers\Admin\Product.php(420): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->delete()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 03:58:33 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/delete]
+in APPPATH\Controllers\Admin\Product.php on line 420.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 420)
+ 2 APPPATH\Controllers\Admin\Product.php(420): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->delete()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 04:00:56 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/delete]
+in APPPATH\Controllers\Admin\Product.php on line 420.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 420)
+ 2 APPPATH\Controllers\Admin\Product.php(420): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->delete()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 04:01:07 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/delete]
+in APPPATH\Controllers\Admin\Product.php on line 420.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 420)
+ 2 APPPATH\Controllers\Admin\Product.php(420): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->delete()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 04:01:20 --> ErrorException: unlink(upload/product/): Is a directory
+[Method: POST, Route: admin/product/delete]
+in APPPATH\Controllers\Admin\Product.php on line 420.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'unlink(upload/product/): Is a directory', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 420)
+ 2 APPPATH\Controllers\Admin\Product.php(420): unlink('upload/product/')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->delete()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 06:33:49 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/product/delete]
+in APPPATH\Controllers\Admin\Product.php on line 417.
+ 1 APPPATH\Controllers\Admin\Product.php(417): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 417)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 07:08:12 --> ErrorException: Undefined variable $data
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 312.
+ 1 APPPATH\Controllers\Admin\Product.php(312): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 312)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 07:08:13 --> ErrorException: Undefined variable $data
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 312.
+ 1 APPPATH\Controllers\Admin\Product.php(312): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 312)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 07:08:14 --> ErrorException: Undefined variable $data
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 312.
+ 1 APPPATH\Controllers\Admin\Product.php(312): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 312)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 07:08:15 --> ErrorException: Undefined variable $data
+[Method: POST, Route: admin/product/update]
+in APPPATH\Controllers\Admin\Product.php on line 312.
+ 1 APPPATH\Controllers\Admin\Product.php(312): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 312)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-05 07:12:01 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CASE 
+                WHEN '' = '' THEN NULL
+                ELSE ''
+        ' at line 8 in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE product ...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product ...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product ...')
+#3 C:\wamp64\www\e-commerce\app\Controllers\Admin\Product.php(342): CodeIgniter\Database\BaseConnection->query('UPDATE product ...')
+#4 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-09-05 07:12:01 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CASE 
+                WHEN '' = '' THEN NULL
+                ELSE ''
+        ' at line 8
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Controllers\Admin\Product.php(342): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+            SET
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            CASE 
+                WHEN \'\' = \'\' THEN NULL
+                ELSE \'\'
+            END, 
+            product_updated_at = NOW()
+            WHERE product_id = 117
+            ')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 07:12:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CASE 
+                WHEN '' = '' THEN NULL
+                ELSE ''
+        ' at line 8
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product 
+            SET
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            CASE 
+                WHEN \'\' = \'\' THEN NULL
+                ELSE \'\'
+            END, 
+            product_updated_at = NOW()
+            WHERE product_id = 117
+            ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product 
+            SET
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            CASE 
+                WHEN \'\' = \'\' THEN NULL
+                ELSE \'\'
+            END, 
+            product_updated_at = NOW()
+            WHERE product_id = 117
+            ')
+ 3 APPPATH\Controllers\Admin\Product.php(342): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+            SET
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            CASE 
+                WHEN \'\' = \'\' THEN NULL
+                ELSE \'\'
+            END, 
+            product_updated_at = NOW()
+            WHERE product_id = 117
+            ')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 07:12:01 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CASE 
+                WHEN '' = '' THEN NULL
+                ELSE ''
+        ' at line 8
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE product 
+            SET
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            CASE 
+                WHEN \'\' = \'\' THEN NULL
+                ELSE \'\'
+            END, 
+            product_updated_at = NOW()
+            WHERE product_id = 117
+            ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product 
+            SET
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            CASE 
+                WHEN \'\' = \'\' THEN NULL
+                ELSE \'\'
+            END, 
+            product_updated_at = NOW()
+            WHERE product_id = 117
+            ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product 
+            SET
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            CASE 
+                WHEN \'\' = \'\' THEN NULL
+                ELSE \'\'
+            END, 
+            product_updated_at = NOW()
+            WHERE product_id = 117
+            ')
+ 4 APPPATH\Controllers\Admin\Product.php(342): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+            SET
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            CASE 
+                WHEN \'\' = \'\' THEN NULL
+                ELSE \'\'
+            END, 
+            product_updated_at = NOW()
+            WHERE product_id = 117
+            ')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-05 07:12:02 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CASE 
+                WHEN '' = '' THEN NULL
+                ELSE ''
+        ' at line 8 in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE product ...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product ...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product ...')
+#3 C:\wamp64\www\e-commerce\app\Controllers\Admin\Product.php(342): CodeIgniter\Database\BaseConnection->query('UPDATE product ...')
+#4 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-09-05 07:12:02 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CASE 
+                WHEN '' = '' THEN NULL
+                ELSE ''
+        ' at line 8
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Controllers\Admin\Product.php(342): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+            SET
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            CASE 
+                WHEN \'\' = \'\' THEN NULL
+                ELSE \'\'
+            END, 
+            product_updated_at = NOW()
+            WHERE product_id = 117
+            ')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 07:12:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CASE 
+                WHEN '' = '' THEN NULL
+                ELSE ''
+        ' at line 8
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product 
+            SET
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            CASE 
+                WHEN \'\' = \'\' THEN NULL
+                ELSE \'\'
+            END, 
+            product_updated_at = NOW()
+            WHERE product_id = 117
+            ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product 
+            SET
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            CASE 
+                WHEN \'\' = \'\' THEN NULL
+                ELSE \'\'
+            END, 
+            product_updated_at = NOW()
+            WHERE product_id = 117
+            ')
+ 3 APPPATH\Controllers\Admin\Product.php(342): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+            SET
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            CASE 
+                WHEN \'\' = \'\' THEN NULL
+                ELSE \'\'
+            END, 
+            product_updated_at = NOW()
+            WHERE product_id = 117
+            ')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 07:12:02 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CASE 
+                WHEN '' = '' THEN NULL
+                ELSE ''
+        ' at line 8
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE product 
+            SET
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            CASE 
+                WHEN \'\' = \'\' THEN NULL
+                ELSE \'\'
+            END, 
+            product_updated_at = NOW()
+            WHERE product_id = 117
+            ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product 
+            SET
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            CASE 
+                WHEN \'\' = \'\' THEN NULL
+                ELSE \'\'
+            END, 
+            product_updated_at = NOW()
+            WHERE product_id = 117
+            ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product 
+            SET
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            CASE 
+                WHEN \'\' = \'\' THEN NULL
+                ELSE \'\'
+            END, 
+            product_updated_at = NOW()
+            WHERE product_id = 117
+            ')
+ 4 APPPATH\Controllers\Admin\Product.php(342): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+            SET
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            CASE 
+                WHEN \'\' = \'\' THEN NULL
+                ELSE \'\'
+            END, 
+            product_updated_at = NOW()
+            WHERE product_id = 117
+            ')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-05 09:14:50 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3 in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE product ...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product ...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product ...')
+#3 C:\wamp64\www\e-commerce\app\Controllers\Admin\Product.php(342): CodeIgniter\Database\BaseConnection->query('UPDATE product ...')
+#4 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-09-05 09:14:50 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Controllers\Admin\Product.php(342): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+            
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 09:14:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product 
+            
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product 
+            
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 3 APPPATH\Controllers\Admin\Product.php(342): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+            
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 09:14:50 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE product 
+            
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product 
+            
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product 
+            
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 4 APPPATH\Controllers\Admin\Product.php(342): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+            
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-05 09:15:18 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3 in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE product ...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product ...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product ...')
+#3 C:\wamp64\www\e-commerce\app\Controllers\Admin\Product.php(342): CodeIgniter\Database\BaseConnection->query('UPDATE product ...')
+#4 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-09-05 09:15:18 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Controllers\Admin\Product.php(342): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+            
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 09:15:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product 
+            
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product 
+            
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 3 APPPATH\Controllers\Admin\Product.php(342): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+            
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 09:15:18 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE product 
+            
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product 
+            
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product 
+            
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 4 APPPATH\Controllers\Admin\Product.php(342): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+            
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-05 09:15:19 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3 in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE product ...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product ...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product ...')
+#3 C:\wamp64\www\e-commerce\app\Controllers\Admin\Product.php(342): CodeIgniter\Database\BaseConnection->query('UPDATE product ...')
+#4 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-09-05 09:15:19 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Controllers\Admin\Product.php(342): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+            
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 09:15:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product 
+            
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product 
+            
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 3 APPPATH\Controllers\Admin\Product.php(342): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+            
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 09:15:19 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE product 
+            
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product 
+            
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product 
+            
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 4 APPPATH\Controllers\Admin\Product.php(342): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+            
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-05 09:15:46 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3 in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE product ...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product ...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product ...')
+#3 C:\wamp64\www\e-commerce\app\Controllers\Admin\Product.php(341): CodeIgniter\Database\BaseConnection->query('UPDATE product ...')
+#4 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-09-05 09:15:46 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Controllers\Admin\Product.php(341): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 09:15:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 3 APPPATH\Controllers\Admin\Product.php(341): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 09:15:46 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 4 APPPATH\Controllers\Admin\Product.php(341): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-05 09:15:47 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3 in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE product ...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product ...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product ...')
+#3 C:\wamp64\www\e-commerce\app\Controllers\Admin\Product.php(341): CodeIgniter\Database\BaseConnection->query('UPDATE product ...')
+#4 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-09-05 09:15:47 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Controllers\Admin\Product.php(341): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 09:15:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 3 APPPATH\Controllers\Admin\Product.php(341): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 09:15:47 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 4 APPPATH\Controllers\Admin\Product.php(341): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-05 09:15:48 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3 in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE product ...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product ...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product ...')
+#3 C:\wamp64\www\e-commerce\app\Controllers\Admin\Product.php(341): CodeIgniter\Database\BaseConnection->query('UPDATE product ...')
+#4 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-09-05 09:15:48 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Controllers\Admin\Product.php(341): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 09:15:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 3 APPPATH\Controllers\Admin\Product.php(341): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 09:15:48 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 4 APPPATH\Controllers\Admin\Product.php(341): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-05 09:15:48 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3 in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE product ...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product ...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product ...')
+#3 C:\wamp64\www\e-commerce\app\Controllers\Admin\Product.php(341): CodeIgniter\Database\BaseConnection->query('UPDATE product ...')
+#4 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-09-05 09:15:48 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Controllers\Admin\Product.php(341): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 09:15:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 3 APPPATH\Controllers\Admin\Product.php(341): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 09:15:48 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 4 APPPATH\Controllers\Admin\Product.php(341): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-05 09:15:49 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3 in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE product ...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product ...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product ...')
+#3 C:\wamp64\www\e-commerce\app\Controllers\Admin\Product.php(341): CodeIgniter\Database\BaseConnection->query('UPDATE product ...')
+#4 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-09-05 09:15:49 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Controllers\Admin\Product.php(341): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 09:15:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 3 APPPATH\Controllers\Admin\Product.php(341): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 09:15:49 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 4 APPPATH\Controllers\Admin\Product.php(341): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-05 09:15:50 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3 in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE product ...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product ...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product ...')
+#3 C:\wamp64\www\e-commerce\app\Controllers\Admin\Product.php(341): CodeIgniter\Database\BaseConnection->query('UPDATE product ...')
+#4 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-09-05 09:15:50 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Controllers\Admin\Product.php(341): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 09:15:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 3 APPPATH\Controllers\Admin\Product.php(341): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 09:15:50 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 4 APPPATH\Controllers\Admin\Product.php(341): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            E product_id = 117
+                ')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-05 09:16:23 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 2 in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE product ...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product ...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product ...')
+#3 C:\wamp64\www\e-commerce\app\Controllers\Admin\Product.php(340): CodeIgniter\Database\BaseConnection->query('UPDATE product ...')
+#4 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-09-05 09:16:23 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 2
+[Method: POST, Route: admin/product/update]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Controllers\Admin\Product.php(340): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            product_id = 117
+                ')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 09:16:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product 
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            product_id = 117
+                ')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product 
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            product_id = 117
+                ')
+ 3 APPPATH\Controllers\Admin\Product.php(340): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            product_id = 117
+                ')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-05 09:16:23 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= 'Bakpia 465 2005',
+            product_price = '26000',
+            product_' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE product 
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            product_id = 117
+                ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE product 
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            product_id = 117
+                ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE product 
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            product_id = 117
+                ')
+ 4 APPPATH\Controllers\Admin\Product.php(340): CodeIgniter\Database\BaseConnection->query('UPDATE product 
+            product_name = \'Bakpia 465 2005\',
+            product_price = \'26000\',
+            product_category_id = \'1\',
+            product_category_name = (SELECT category_name FROM `category` WHERE category_id = \'1\'),
+            product_description = \'coba - coba saja wak\',
+            product_photo = CASE 
+                WHEN \'\' = \'\' THEN product_photo
+                ELSE \'\'  
+            END, 
+            product_updated_at = NOW()
+            product_id = 117
+                ')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->update()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

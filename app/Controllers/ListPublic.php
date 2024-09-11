@@ -11,36 +11,36 @@ class ListPublic extends AuthController
     {
         $query['data'] = ['product'];
         $query['select'] = [
-        'product_id' => 'id',
-        'product_name' => 'name',
-        'product_price' => 'price',
-        'product_variant_id' => 'variant_id',
-        'product_variant_name' => 'variant_name',
-        'product_category_id' => 'category_id',
-        'product_category_name' => 'category_name',
-        'product_box_id' => 'box_id',
-        'product_box_value' => 'box_value',
-        'product_created_at' => 'created_at',
-        'product_updated_at' => 'updated_at',
-        'product_stock.product_stock_stock' => 'stock'
+            'product.product_id' => 'id',
+            'product.product_name' => 'name',
+            'product.product_price' => 'price',
+            'product.product_category_id' => 'category_id',
+            'product.product_category_name' => 'category_name',
+            'variant.variant_id' => 'variant_id',
+            'variant.variant_name' => 'variant_name',
+            'product_stock.product_stock_stock' => 'stock_stock',
+            'product_stock.product_stock_in' => 'stock_in',
+            'product_stock.product_stock_out' => 'stock_out',
+            'product.product_description' => 'description',
+            'product.product_photo' => 'photo',
+            'product.product_created_at' => 'created_at',
+            'product.product_updated_at' => 'updated_at',
         ];
         $query['join'] = [
-            'product_stock' => 'product.product_id = product_stock.product_stock_product_id'
+            'product_stock' => 'product.product_id = product_stock.product_stock_product_id',
+            'variant' => 'product.product_id = variant.variant_product_id',
         ];
-        $query['pagination'] = [
-            'pagination' => true
-        ];  
         $query['search_data'] = [
             'product_name',
-            'product_category_name'
         ];
         $query['filter'] = [
             "product_category_name",
-            "product_value_value",
+        ];
+        $query['pagination'] = [
+            'pagination' => true
         ];
 
-
-        $data = generateListData($this->request->getVar(), $query, $this->db);
+        $data = (array) generateListData($this->request->getVar(), $query, $this->db);
 
         return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List Data Product', $data);
     }

@@ -74,9 +74,29 @@ class Product extends AuthController
 
 
             // MAKE LIST CATEGORY (SELECTED OR NOT SELECTED)
-            $product_data = $data_product['data'];
+            $product_data = $data_product['data'][0];
+            if (empty($product_data['photo'])) {
+                $photo = 'upload/default/default_photo.webp';
+            } else {
+                $photo = 'upload/product/' . $product_data['photo'];
+            }
             $return[] = [
-                'product' => $product_data[0],
+                'product' => [
+                    'id' => $product_data['id'],
+                    'name' => $product_data['name'],
+                    'price' => $product_data['price'],
+                    'category_id' => $product_data['category_id'],
+                    'category_name' => $product_data['category_name'],
+                    'variant_id' => $product_data['variant_id'],
+                    'variant_name' => $product_data['variant_name'],
+                    'stock_stock' => $product_data['stock_stock'],
+                    'stock_in' => $product_data['stock_in'],
+                    'stock_out' => $product_data['stock_out'],
+                    'description' => $product_data['description'],
+                    'photo' => $photo,
+                    'created_at' => $product_data['created_at'],
+                    'updated_at' => $product_data['updated_at'],
+                ],
                 'category_list' => $category_array,
             ];
             // $result = ['data' => $return];
@@ -268,19 +288,6 @@ class Product extends AuthController
         $desc = htmlspecialchars($post['description']);
 
         // --------------------- SET VALIDATION && UPLOAD GET POST PHOTO ------------------------ //
-        $photo = $this->request->getFile('upload');
-        $validator = \Config\Services::validation();
-        $validator->setRules([
-            'upload' => 'uploaded[upload]|max_size[upload, 2048]|is_image[upload]|mime_in[upload,image/jpg,image/jpeg,image/png]',
-        ]);
-
-        if (!$validator->run((array)$photo)) {
-            $error = $validator->getErrors();
-            if ($error) {
-                return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'error validation', $error);
-            }
-        }
-
         $query['data'] = ['product'];
         $query['select'] = [
             'product_photo' => 'photo'
@@ -307,6 +314,9 @@ class Product extends AuthController
         // --------------------- SET VALIDATION && UPLOAD GET POST PHOTO ------------------------ //
 
         $photo = $this->request->getFile('upload');
+
+
+
         if (empty($photo)) {
             $photo_name = '';
         } else {
@@ -317,64 +327,66 @@ class Product extends AuthController
             $photo_name = str_replace(' ', '_', $photo_name);
             // move file to directory
             $photo->move('./upload/product', $photo_name);
+        }
+        
 
-
-
-            $sql = "UPDATE product 
-            SET
+        $sql = "UPDATE product 
+        SET
             product_name = '{$product}',
             product_price = '{$price}',
             product_category_id = '{$category}',
             product_category_name = (SELECT category_name FROM `category` WHERE category_id = '{$category}'),
             product_description = '{$desc}',
-            product_photo = '{$photo_name}',
+            product_photo = CASE 
+                WHEN '{$photo_name}' = '' THEN product_photo  
+                ELSE '{$photo_name}'  
+            END, 
             product_updated_at = NOW()
-            WHERE product_id = {$id}
+        WHERE product_id = {$id}
             ";
-            $this->db->query($sql);
+        $this->db->query($sql);
 
-            $sql_stock = "UPDATE product_stock
+        $sql_stock = "UPDATE product_stock
         SET product_stock_stock = {$stock}
             WHERE product_stock_product_id = {$id}
             ";
-            $this->db->query($sql_stock);
+        $this->db->query($sql_stock);
 
-            $sql_variant = "UPDATE variant
+        $sql_variant = "UPDATE variant
         SET variant_name = '{$variant}'
             WHERE variant_product_id = {$id}
             ";
-            $this->db->query($sql_variant);
+        $this->db->query($sql_variant);
 
-            // Get Data Updated
-            $query['data'] = ['product'];
-            $query['select'] = [
-                'product.product_id' => 'id',
-                'product.product_name' => 'name',
-                'product.product_price' => 'price',
-                'product.product_category_id' => 'category_id',
-                'product.product_category_name' => 'category_name',
-                'variant.variant_id' => 'variant_id',
-                'variant.variant_name' => 'variant_name',
-                'product_stock.product_stock_stock' => 'stock_stock',
-                'product_stock.product_stock_in' => 'stock_in',
-                'product_stock.product_stock_out' => 'stock_out',
-                'product.product_description' => 'description',
-                'product.product_photo' => 'photo',
-                'product.product_created_at' => 'created_at',
-                'product.product_updated_at' => 'updated_at',
-            ];
-            $query['join'] = [
-                'product_stock' => 'product.product_id = product_stock.product_stock_product_id',
-                'variant' => 'product.product_id = variant.variant_product_id',
-            ];
-            $query['where_detail'] = [
-                "WHERE product_id = $id"
-            ];
+        // Get Data Updated
+        $query['data'] = ['product'];
+        $query['select'] = [
+            'product.product_id' => 'id',
+            'product.product_name' => 'name',
+            'product.product_price' => 'price',
+            'product.product_category_id' => 'category_id',
+            'product.product_category_name' => 'category_name',
+            'variant.variant_id' => 'variant_id',
+            'variant.variant_name' => 'variant_name',
+            'product_stock.product_stock_stock' => 'stock_stock',
+            'product_stock.product_stock_in' => 'stock_in',
+            'product_stock.product_stock_out' => 'stock_out',
+            'product.product_description' => 'description',
+            'product.product_photo' => 'photo',
+            'product.product_created_at' => 'created_at',
+            'product.product_updated_at' => 'updated_at',
+        ];
+        $query['join'] = [
+            'product_stock' => 'product.product_id = product_stock.product_stock_product_id',
+            'variant' => 'product.product_id = variant.variant_product_id',
+        ];
+        $query['where_detail'] = [
+            "WHERE product_id = $id"
+        ];
 
-            $data = generateDetailData($this->request->getPost(), $query, $this->db);
+        $data = generateDetailData($this->request->getPost(), $query, $this->db);
 
-            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfull Updated', $data);
-        }
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfull Updated', $data);
     }
 
     public function delete() //done
@@ -400,10 +412,12 @@ class Product extends AuthController
         ];
         $data_photo = (array) generateDetailData($this->request->getGet(), $query, $this->db);
         $data_photo = $data_photo['data'][0]['photo'];
-
-        if (file_exists("upload/product/" . $data_photo)) {
-            unlink("upload/product/" . $data_photo);
+        if (!empty($data_photo)) {
+            if (file_exists("upload/product/" . $data_photo)) {
+                unlink("upload/product/" . $data_photo);
+            }
         }
+
 
         $query['data'] = ['product'];
         $query['select'] = [
