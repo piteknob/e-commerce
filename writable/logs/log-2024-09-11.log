@@ -280,3 +280,1063 @@ WARNING - 2024-09-11 04:42:19 --> [DEPRECATED] Function strftime() is deprecated
  4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-11 06:39:11 --> ErrorException: Undefined array key "photo"
+[Method: POST, Route: admin/outlet/insert]
+in APPPATH\Controllers\Admin\Outlet.php on line 28.
+ 1 APPPATH\Controllers\Admin\Outlet.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "photo"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Outlet.php', 28)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->insert()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-11 06:39:36 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_address
+        outlet_photo
+        outlet_link
+        outlet_create' at line 3 in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO out...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO out...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO out...')
+#3 C:\wamp64\www\e-commerce\app\Controllers\Admin\Outlet.php(65): CodeIgniter\Database\BaseConnection->query('INSERT INTO out...')
+#4 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Outlet->insert()
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-09-11 06:39:36 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_address
+        outlet_photo
+        outlet_link
+        outlet_create' at line 3
+[Method: POST, Route: admin/outlet/insert]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Controllers\Admin\Outlet.php(65): CodeIgniter\Database\BaseConnection->query('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        \'\',
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->insert()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-11 06:39:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_address
+        outlet_photo
+        outlet_link
+        outlet_create' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        \'\',
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        \'\',
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 3 APPPATH\Controllers\Admin\Outlet.php(65): CodeIgniter\Database\BaseConnection->query('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        \'\',
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->insert()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-11 06:39:36 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_address
+        outlet_photo
+        outlet_link
+        outlet_create' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        \'\',
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        \'\',
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        \'\',
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 4 APPPATH\Controllers\Admin\Outlet.php(65): CodeIgniter\Database\BaseConnection->query('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        \'\',
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->insert()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-11 06:40:17 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_address
+        outlet_photo
+        outlet_link
+        outlet_create' at line 3 in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO out...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO out...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO out...')
+#3 C:\wamp64\www\e-commerce\app\Controllers\Admin\Outlet.php(65): CodeIgniter\Database\BaseConnection->query('INSERT INTO out...')
+#4 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Outlet->insert()
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-09-11 06:40:17 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_address
+        outlet_photo
+        outlet_link
+        outlet_create' at line 3
+[Method: POST, Route: admin/outlet/insert]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Controllers\Admin\Outlet.php(65): CodeIgniter\Database\BaseConnection->query('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        \'\',
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->insert()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-11 06:40:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_address
+        outlet_photo
+        outlet_link
+        outlet_create' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        \'\',
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        \'\',
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 3 APPPATH\Controllers\Admin\Outlet.php(65): CodeIgniter\Database\BaseConnection->query('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        \'\',
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->insert()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-11 06:40:17 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_address
+        outlet_photo
+        outlet_link
+        outlet_create' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        \'\',
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        \'\',
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        \'\',
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 4 APPPATH\Controllers\Admin\Outlet.php(65): CodeIgniter\Database\BaseConnection->query('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        \'\',
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->insert()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-11 06:40:19 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_address
+        outlet_photo
+        outlet_link
+        outlet_create' at line 3 in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO out...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO out...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO out...')
+#3 C:\wamp64\www\e-commerce\app\Controllers\Admin\Outlet.php(65): CodeIgniter\Database\BaseConnection->query('INSERT INTO out...')
+#4 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Outlet->insert()
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-09-11 06:40:19 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_address
+        outlet_photo
+        outlet_link
+        outlet_create' at line 3
+[Method: POST, Route: admin/outlet/insert]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Controllers\Admin\Outlet.php(65): CodeIgniter\Database\BaseConnection->query('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        \'\',
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->insert()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-11 06:40:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_address
+        outlet_photo
+        outlet_link
+        outlet_create' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        \'\',
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        \'\',
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 3 APPPATH\Controllers\Admin\Outlet.php(65): CodeIgniter\Database\BaseConnection->query('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        \'\',
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->insert()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-11 06:40:19 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_address
+        outlet_photo
+        outlet_link
+        outlet_create' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        \'\',
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        \'\',
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        \'\',
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 4 APPPATH\Controllers\Admin\Outlet.php(65): CodeIgniter\Database\BaseConnection->query('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        \'\',
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->insert()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-11 06:41:56 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_address
+        outlet_photo
+        outlet_link
+        outlet_create' at line 3 in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO out...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO out...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO out...')
+#3 C:\wamp64\www\e-commerce\app\Controllers\Admin\Outlet.php(69): CodeIgniter\Database\BaseConnection->query('INSERT INTO out...')
+#4 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Outlet->insert()
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-09-11 06:41:56 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_address
+        outlet_photo
+        outlet_link
+        outlet_create' at line 3
+[Method: POST, Route: admin/outlet/insert]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Controllers\Admin\Outlet.php(69): CodeIgniter\Database\BaseConnection->query('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        CASE 
+            WHEN \'tes_1726038039.png\' = \'\' THEN NULL
+            ELSE \'tes_1726038039.png\'
+        END, 
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->insert()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-11 06:41:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_address
+        outlet_photo
+        outlet_link
+        outlet_create' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        CASE 
+            WHEN \'tes_1726038039.png\' = \'\' THEN NULL
+            ELSE \'tes_1726038039.png\'
+        END, 
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        CASE 
+            WHEN \'tes_1726038039.png\' = \'\' THEN NULL
+            ELSE \'tes_1726038039.png\'
+        END, 
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 3 APPPATH\Controllers\Admin\Outlet.php(69): CodeIgniter\Database\BaseConnection->query('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        CASE 
+            WHEN \'tes_1726038039.png\' = \'\' THEN NULL
+            ELSE \'tes_1726038039.png\'
+        END, 
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->insert()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-11 06:41:56 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_address
+        outlet_photo
+        outlet_link
+        outlet_create' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        CASE 
+            WHEN \'tes_1726038039.png\' = \'\' THEN NULL
+            ELSE \'tes_1726038039.png\'
+        END, 
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        CASE 
+            WHEN \'tes_1726038039.png\' = \'\' THEN NULL
+            ELSE \'tes_1726038039.png\'
+        END, 
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        CASE 
+            WHEN \'tes_1726038039.png\' = \'\' THEN NULL
+            ELSE \'tes_1726038039.png\'
+        END, 
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 4 APPPATH\Controllers\Admin\Outlet.php(69): CodeIgniter\Database\BaseConnection->query('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        CASE 
+            WHEN \'tes_1726038039.png\' = \'\' THEN NULL
+            ELSE \'tes_1726038039.png\'
+        END, 
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->insert()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-11 06:43:31 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_address
+        outlet_photo
+        outlet_link
+        outlet_create' at line 3 in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO out...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO out...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO out...')
+#3 C:\wamp64\www\e-commerce\app\Controllers\Admin\Outlet.php(69): CodeIgniter\Database\BaseConnection->query('INSERT INTO out...')
+#4 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Outlet->insert()
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-09-11 06:43:31 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_address
+        outlet_photo
+        outlet_link
+        outlet_create' at line 3
+[Method: POST, Route: admin/outlet/insert]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Controllers\Admin\Outlet.php(69): CodeIgniter\Database\BaseConnection->query('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        CASE 
+            WHEN \'tes_1726039234.png\' = \'\' THEN NULL
+            ELSE \'tes_1726039234.png\'
+        END, 
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->insert()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-11 06:43:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_address
+        outlet_photo
+        outlet_link
+        outlet_create' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        CASE 
+            WHEN \'tes_1726039234.png\' = \'\' THEN NULL
+            ELSE \'tes_1726039234.png\'
+        END, 
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        CASE 
+            WHEN \'tes_1726039234.png\' = \'\' THEN NULL
+            ELSE \'tes_1726039234.png\'
+        END, 
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 3 APPPATH\Controllers\Admin\Outlet.php(69): CodeIgniter\Database\BaseConnection->query('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        CASE 
+            WHEN \'tes_1726039234.png\' = \'\' THEN NULL
+            ELSE \'tes_1726039234.png\'
+        END, 
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->insert()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-11 06:43:31 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_address
+        outlet_photo
+        outlet_link
+        outlet_create' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        CASE 
+            WHEN \'tes_1726039234.png\' = \'\' THEN NULL
+            ELSE \'tes_1726039234.png\'
+        END, 
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        CASE 
+            WHEN \'tes_1726039234.png\' = \'\' THEN NULL
+            ELSE \'tes_1726039234.png\'
+        END, 
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        CASE 
+            WHEN \'tes_1726039234.png\' = \'\' THEN NULL
+            ELSE \'tes_1726039234.png\'
+        END, 
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 4 APPPATH\Controllers\Admin\Outlet.php(69): CodeIgniter\Database\BaseConnection->query('INSERT INTO outlet (
+        outlet_title
+        outlet_address
+        outlet_photo
+        outlet_link
+        outlet_created_at
+        outlet_updated_at
+        ) VALUES (
+        \'tes\',
+        \'tes\',
+        CASE 
+            WHEN \'tes_1726039234.png\' = \'\' THEN NULL
+            ELSE \'tes_1726039234.png\'
+        END, 
+        \'kdkoakdoawkd\',
+        NOW(),
+        NULL);')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->insert()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-11 06:48:33 --> ErrorException: Undefined array key "Token"
+[Method: GET, Route: admin/outlet/list-outlet]
+in APPPATH\Controllers\Core\AuthController.php on line 26.
+ 1 APPPATH\Controllers\Core\AuthController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\AuthController.php', 26)
+ 2 APPPATH\Controllers\Admin\Outlet.php(13): App\Controllers\Core\AuthController->before([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->list_outlet()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-11 06:51:45 --> ErrorException: Undefined array key "title"
+[Method: POST, Route: admin/outlet/update]
+in APPPATH\Controllers\Admin\Outlet.php on line 122.
+ 1 APPPATH\Controllers\Admin\Outlet.php(122): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "title"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Outlet.php', 122)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-11 06:51:46 --> ErrorException: Undefined array key "title"
+[Method: POST, Route: admin/outlet/update]
+in APPPATH\Controllers\Admin\Outlet.php on line 122.
+ 1 APPPATH\Controllers\Admin\Outlet.php(122): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "title"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Outlet.php', 122)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-11 06:51:48 --> ErrorException: Undefined array key "title"
+[Method: POST, Route: admin/outlet/update]
+in APPPATH\Controllers\Admin\Outlet.php on line 122.
+ 1 APPPATH\Controllers\Admin\Outlet.php(122): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "title"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Outlet.php', 122)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-11 06:51:57 --> ErrorException: Undefined array key "title"
+[Method: POST, Route: admin/outlet/update]
+in APPPATH\Controllers\Admin\Outlet.php on line 122.
+ 1 APPPATH\Controllers\Admin\Outlet.php(122): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "title"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Outlet.php', 122)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-11 07:04:59 --> ErrorException: Undefined array key "title"
+[Method: POST, Route: admin/outlet/insert]
+in APPPATH\Controllers\Admin\Outlet.php on line 44.
+ 1 APPPATH\Controllers\Admin\Outlet.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "title"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Outlet.php', 44)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->insert()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-11 07:05:01 --> ErrorException: Undefined array key "title"
+[Method: POST, Route: admin/outlet/insert]
+in APPPATH\Controllers\Admin\Outlet.php on line 44.
+ 1 APPPATH\Controllers\Admin\Outlet.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "title"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Outlet.php', 44)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->insert()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-11 07:13:30 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/outlet/list-outlet]
+in APPPATH\Controllers\Admin\Outlet.php on line 53.
+ 1 APPPATH\Controllers\Admin\Outlet.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Outlet.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->list_outlet()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-11 07:13:32 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/outlet/list-outlet]
+in APPPATH\Controllers\Admin\Outlet.php on line 53.
+ 1 APPPATH\Controllers\Admin\Outlet.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Outlet.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->list_outlet()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-11 07:14:03 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/outlet/list-outlet]
+in APPPATH\Controllers\Admin\Outlet.php on line 53.
+ 1 APPPATH\Controllers\Admin\Outlet.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Outlet.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->list_outlet()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-11 07:14:04 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/outlet/list-outlet]
+in APPPATH\Controllers\Admin\Outlet.php on line 53.
+ 1 APPPATH\Controllers\Admin\Outlet.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Outlet.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->list_outlet()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-11 07:14:04 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/outlet/list-outlet]
+in APPPATH\Controllers\Admin\Outlet.php on line 53.
+ 1 APPPATH\Controllers\Admin\Outlet.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Outlet.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->list_outlet()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-11 07:14:05 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/outlet/list-outlet]
+in APPPATH\Controllers\Admin\Outlet.php on line 53.
+ 1 APPPATH\Controllers\Admin\Outlet.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Outlet.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->list_outlet()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-11 07:14:49 --> ParseError: syntax error, unexpected variable "$return"
+[Method: GET, Route: admin/outlet/list-outlet]
+in APPPATH\Controllers\Admin\Outlet.php on line 53.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('admin/outlet/list-outlet', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('admin/outlet/list-outlet')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('admin/outlet/list-outlet')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-11 07:14:57 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/outlet/list-outlet]
+in APPPATH\Controllers\Admin\Outlet.php on line 54.
+ 1 APPPATH\Controllers\Admin\Outlet.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Outlet.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->list_outlet()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-11 07:14:58 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/outlet/list-outlet]
+in APPPATH\Controllers\Admin\Outlet.php on line 54.
+ 1 APPPATH\Controllers\Admin\Outlet.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Outlet.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->list_outlet()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-11 07:14:59 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/outlet/list-outlet]
+in APPPATH\Controllers\Admin\Outlet.php on line 54.
+ 1 APPPATH\Controllers\Admin\Outlet.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Outlet.php', 54)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->list_outlet()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-11 07:17:04 --> ErrorException: Undefined array key "photo"
+[Method: GET, Route: admin/outlet/list-outlet]
+in APPPATH\Controllers\Admin\Outlet.php on line 50.
+ 1 APPPATH\Controllers\Admin\Outlet.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "photo"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Outlet.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->list_outlet()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-11 07:17:05 --> ErrorException: Undefined array key "photo"
+[Method: GET, Route: admin/outlet/list-outlet]
+in APPPATH\Controllers\Admin\Outlet.php on line 50.
+ 1 APPPATH\Controllers\Admin\Outlet.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "photo"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Outlet.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->list_outlet()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
