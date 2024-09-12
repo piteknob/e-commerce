@@ -1,0 +1,886 @@
+CRITICAL - 2024-09-12 02:45:35 --> ErrorException: Undefined variable $id
+[Method: GET, Route: admin/outlet/detail-outlet]
+in APPPATH\Controllers\Admin\Outlet.php on line 80.
+ 1 APPPATH\Controllers\Admin\Outlet.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Outlet.php', 80)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->detail_outlet()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 02:46:09 --> ErrorException: Undefined array key "Token"
+[Method: GET, Route: admin/outlet/detail-outlet]
+in APPPATH\Controllers\Core\AuthController.php on line 26.
+ 1 APPPATH\Controllers\Core\AuthController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\AuthController.php', 26)
+ 2 APPPATH\Controllers\Admin\Outlet.php(70): App\Controllers\Core\AuthController->before([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->detail_outlet()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 02:46:10 --> ErrorException: Undefined array key "Token"
+[Method: GET, Route: admin/outlet/detail-outlet]
+in APPPATH\Controllers\Core\AuthController.php on line 26.
+ 1 APPPATH\Controllers\Core\AuthController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\AuthController.php', 26)
+ 2 APPPATH\Controllers\Admin\Outlet.php(70): App\Controllers\Core\AuthController->before([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->detail_outlet()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 02:59:42 --> ParseError: syntax error, unexpected token "}"
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 343.
+ 1 SYSTEMPATH\Controller.php(93): helper([...])
+ 2 APPPATH\Controllers\Core\BaseController.php(53): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 APPPATH\Controllers\Core\DataController.php(18): App\Controllers\Core\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 APPPATH\Controllers\Core\AuthController.php(18): App\Controllers\Core\DataController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Core\AuthController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 6 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 02:59:50 --> ParseError: syntax error, unexpected token "}"
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 343.
+ 1 SYSTEMPATH\Controller.php(93): helper([...])
+ 2 APPPATH\Controllers\Core\BaseController.php(53): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 APPPATH\Controllers\Core\DataController.php(18): App\Controllers\Core\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 APPPATH\Controllers\Core\AuthController.php(18): App\Controllers\Core\DataController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Core\AuthController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 6 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 03:42:59 --> ErrorException: Undefined variable $id
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Controllers\Admin\Outlet.php on line 327.
+ 1 APPPATH\Controllers\Admin\Outlet.php(327): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Outlet.php', 327)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 03:42:59 --> ErrorException: Undefined variable $id
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Controllers\Admin\Outlet.php on line 327.
+ 1 APPPATH\Controllers\Admin\Outlet.php(327): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Outlet.php', 327)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 03:44:43 --> ParseError: syntax error, unexpected token "}"
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 369.
+ 1 SYSTEMPATH\Controller.php(93): helper([...])
+ 2 APPPATH\Controllers\Core\BaseController.php(53): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 APPPATH\Controllers\Core\DataController.php(18): App\Controllers\Core\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 APPPATH\Controllers\Core\AuthController.php(18): App\Controllers\Core\DataController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Core\AuthController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 6 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 03:44:44 --> ParseError: syntax error, unexpected token "}"
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 369.
+ 1 SYSTEMPATH\Controller.php(93): helper([...])
+ 2 APPPATH\Controllers\Core\BaseController.php(53): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 APPPATH\Controllers\Core\DataController.php(18): App\Controllers\Core\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 APPPATH\Controllers\Core\AuthController.php(18): App\Controllers\Core\DataController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Core\AuthController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 6 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 03:44:44 --> ParseError: syntax error, unexpected token "}"
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 369.
+ 1 SYSTEMPATH\Controller.php(93): helper([...])
+ 2 APPPATH\Controllers\Core\BaseController.php(53): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 APPPATH\Controllers\Core\DataController.php(18): App\Controllers\Core\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 APPPATH\Controllers\Core\AuthController.php(18): App\Controllers\Core\DataController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Core\AuthController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 6 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 03:44:45 --> ParseError: syntax error, unexpected token "}"
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 369.
+ 1 SYSTEMPATH\Controller.php(93): helper([...])
+ 2 APPPATH\Controllers\Core\BaseController.php(53): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 APPPATH\Controllers\Core\DataController.php(18): App\Controllers\Core\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 APPPATH\Controllers\Core\AuthController.php(18): App\Controllers\Core\DataController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Core\AuthController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 6 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 03:44:48 --> ParseError: syntax error, unexpected token "}"
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 369.
+ 1 SYSTEMPATH\Controller.php(93): helper([...])
+ 2 APPPATH\Controllers\Core\BaseController.php(53): CodeIgniter\Controller->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 3 APPPATH\Controllers\Core\DataController.php(18): App\Controllers\Core\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 4 APPPATH\Controllers\Core\AuthController.php(18): App\Controllers\Core\DataController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Core\AuthController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 6 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 03:53:21 --> Error: Call to a member function getResultArray() on bool
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 319.
+ 1 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 03:53:22 --> Error: Call to a member function getResultArray() on bool
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 319.
+ 1 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 03:53:22 --> Error: Call to a member function getResultArray() on bool
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 319.
+ 1 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 03:53:23 --> Error: Call to a member function getResultArray() on bool
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 319.
+ 1 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 03:54:15 --> Error: Call to a member function getResultArray() on bool
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 319.
+ 1 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 03:54:15 --> Error: Call to a member function getResultArray() on bool
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 319.
+ 1 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 03:56:38 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 321.
+ 1 APPPATH\Helpers\query_helper.php(321): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Helpers\\query_helper.php', 321)
+ 2 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 03:58:19 --> ErrorException: Undefined variable $getData
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 326.
+ 1 APPPATH\Helpers\query_helper.php(326): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $getData', 'C:\\wamp64\\www\\e-commerce\\app\\Helpers\\query_helper.php', 326)
+ 2 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 03:58:19 --> ErrorException: Undefined variable $getData
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 326.
+ 1 APPPATH\Helpers\query_helper.php(326): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $getData', 'C:\\wamp64\\www\\e-commerce\\app\\Helpers\\query_helper.php', 326)
+ 2 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 03:58:20 --> ErrorException: Undefined variable $getData
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 326.
+ 1 APPPATH\Helpers\query_helper.php(326): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $getData', 'C:\\wamp64\\www\\e-commerce\\app\\Helpers\\query_helper.php', 326)
+ 2 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 03:59:15 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 330.
+ 1 APPPATH\Helpers\query_helper.php(330): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Helpers\\query_helper.php', 330)
+ 2 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 03:59:16 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 330.
+ 1 APPPATH\Helpers\query_helper.php(330): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Helpers\\query_helper.php', 330)
+ 2 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 03:59:17 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 330.
+ 1 APPPATH\Helpers\query_helper.php(330): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Helpers\\query_helper.php', 330)
+ 2 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 03:59:21 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 330.
+ 1 APPPATH\Helpers\query_helper.php(330): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Helpers\\query_helper.php', 330)
+ 2 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 03:59:22 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 330.
+ 1 APPPATH\Helpers\query_helper.php(330): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Helpers\\query_helper.php', 330)
+ 2 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 03:59:22 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 330.
+ 1 APPPATH\Helpers\query_helper.php(330): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Helpers\\query_helper.php', 330)
+ 2 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 03:59:23 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 330.
+ 1 APPPATH\Helpers\query_helper.php(330): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Helpers\\query_helper.php', 330)
+ 2 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 03:59:56 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 332.
+ 1 APPPATH\Helpers\query_helper.php(332): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Helpers\\query_helper.php', 332)
+ 2 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 03:59:56 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 332.
+ 1 APPPATH\Helpers\query_helper.php(332): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Helpers\\query_helper.php', 332)
+ 2 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 03:59:57 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 332.
+ 1 APPPATH\Helpers\query_helper.php(332): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Helpers\\query_helper.php', 332)
+ 2 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 03:59:58 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 332.
+ 1 APPPATH\Helpers\query_helper.php(332): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Helpers\\query_helper.php', 332)
+ 2 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 04:00:05 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 332.
+ 1 APPPATH\Helpers\query_helper.php(332): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Helpers\\query_helper.php', 332)
+ 2 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 04:00:06 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 332.
+ 1 APPPATH\Helpers\query_helper.php(332): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Helpers\\query_helper.php', 332)
+ 2 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 04:00:08 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 331.
+ 1 APPPATH\Helpers\query_helper.php(331): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Helpers\\query_helper.php', 331)
+ 2 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 04:00:09 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 331.
+ 1 APPPATH\Helpers\query_helper.php(331): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Helpers\\query_helper.php', 331)
+ 2 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 04:00:09 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 331.
+ 1 APPPATH\Helpers\query_helper.php(331): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Helpers\\query_helper.php', 331)
+ 2 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 04:00:51 --> ErrorException: Undefined array key ""
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 336.
+ 1 APPPATH\Helpers\query_helper.php(336): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key ""', 'C:\\wamp64\\www\\e-commerce\\app\\Helpers\\query_helper.php', 336)
+ 2 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 04:00:52 --> ErrorException: Undefined array key ""
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 336.
+ 1 APPPATH\Helpers\query_helper.php(336): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key ""', 'C:\\wamp64\\www\\e-commerce\\app\\Helpers\\query_helper.php', 336)
+ 2 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 04:00:52 --> ErrorException: Undefined array key ""
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 336.
+ 1 APPPATH\Helpers\query_helper.php(336): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key ""', 'C:\\wamp64\\www\\e-commerce\\app\\Helpers\\query_helper.php', 336)
+ 2 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 04:00:53 --> ErrorException: Undefined array key ""
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 336.
+ 1 APPPATH\Helpers\query_helper.php(336): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key ""', 'C:\\wamp64\\www\\e-commerce\\app\\Helpers\\query_helper.php', 336)
+ 2 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 04:14:29 --> ErrorException: Array to string conversion
+[Method: POST, Route: admin/outlet/test-update-core]
+in APPPATH\Helpers\query_helper.php on line 336.
+ 1 APPPATH\Helpers\query_helper.php(336): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\wamp64\\www\\e-commerce\\app\\Helpers\\query_helper.php', 336)
+ 2 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-12 04:24:57 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_id = 4' at line 1 in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('SELECT * FROM `...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM `...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM `...')
+#3 C:\wamp64\www\e-commerce\app\Helpers\query_helper.php(58): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `...')
+#4 C:\wamp64\www\e-commerce\app\Helpers\query_helper.php(351): generateDetailData(NULL, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\wamp64\www\e-commerce\app\Controllers\Admin\Outlet.php(329): update(Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+#7 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+#8 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-09-12 04:24:57 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_id = 4' at line 1
+[Method: POST, Route: admin/outlet/test-update-core]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Helpers\query_helper.php(58): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 2 APPPATH\Helpers\query_helper.php(351): generateDetailData(null, [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 04:24:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_id = 4' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 3 APPPATH\Helpers\query_helper.php(58): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 4 APPPATH\Helpers\query_helper.php(351): generateDetailData(null, [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 04:24:57 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_id = 4' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 4 APPPATH\Helpers\query_helper.php(58): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 5 APPPATH\Helpers\query_helper.php(351): generateDetailData(null, [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-12 04:24:58 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_id = 4' at line 1 in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('SELECT * FROM `...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM `...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM `...')
+#3 C:\wamp64\www\e-commerce\app\Helpers\query_helper.php(58): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `...')
+#4 C:\wamp64\www\e-commerce\app\Helpers\query_helper.php(351): generateDetailData(NULL, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\wamp64\www\e-commerce\app\Controllers\Admin\Outlet.php(329): update(Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+#7 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+#8 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-09-12 04:24:58 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_id = 4' at line 1
+[Method: POST, Route: admin/outlet/test-update-core]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Helpers\query_helper.php(58): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 2 APPPATH\Helpers\query_helper.php(351): generateDetailData(null, [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 04:24:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_id = 4' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 3 APPPATH\Helpers\query_helper.php(58): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 4 APPPATH\Helpers\query_helper.php(351): generateDetailData(null, [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 04:24:58 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_id = 4' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 4 APPPATH\Helpers\query_helper.php(58): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 5 APPPATH\Helpers\query_helper.php(351): generateDetailData(null, [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-12 04:24:58 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_id = 4' at line 1 in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('SELECT * FROM `...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM `...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM `...')
+#3 C:\wamp64\www\e-commerce\app\Helpers\query_helper.php(58): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `...')
+#4 C:\wamp64\www\e-commerce\app\Helpers\query_helper.php(351): generateDetailData(NULL, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\wamp64\www\e-commerce\app\Controllers\Admin\Outlet.php(329): update(Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+#7 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+#8 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-09-12 04:24:58 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_id = 4' at line 1
+[Method: POST, Route: admin/outlet/test-update-core]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Helpers\query_helper.php(58): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 2 APPPATH\Helpers\query_helper.php(351): generateDetailData(null, [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 04:24:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_id = 4' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 3 APPPATH\Helpers\query_helper.php(58): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 4 APPPATH\Helpers\query_helper.php(351): generateDetailData(null, [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 04:24:58 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_id = 4' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 4 APPPATH\Helpers\query_helper.php(58): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 5 APPPATH\Helpers\query_helper.php(351): generateDetailData(null, [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-12 04:25:07 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_id = 4' at line 1 in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('SELECT * FROM `...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM `...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM `...')
+#3 C:\wamp64\www\e-commerce\app\Helpers\query_helper.php(58): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `...')
+#4 C:\wamp64\www\e-commerce\app\Helpers\query_helper.php(351): generateDetailData(NULL, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\wamp64\www\e-commerce\app\Controllers\Admin\Outlet.php(329): update(Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+#7 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+#8 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-09-12 04:25:07 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_id = 4' at line 1
+[Method: POST, Route: admin/outlet/test-update-core]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Helpers\query_helper.php(58): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 2 APPPATH\Helpers\query_helper.php(351): generateDetailData(null, [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 04:25:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_id = 4' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 3 APPPATH\Helpers\query_helper.php(58): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 4 APPPATH\Helpers\query_helper.php(351): generateDetailData(null, [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 04:25:07 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_id = 4' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 4 APPPATH\Helpers\query_helper.php(58): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 5 APPPATH\Helpers\query_helper.php(351): generateDetailData(null, [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-12 04:25:08 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_id = 4' at line 1 in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('SELECT * FROM `...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM `...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM `...')
+#3 C:\wamp64\www\e-commerce\app\Helpers\query_helper.php(58): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `...')
+#4 C:\wamp64\www\e-commerce\app\Helpers\query_helper.php(351): generateDetailData(NULL, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\wamp64\www\e-commerce\app\Controllers\Admin\Outlet.php(329): update(Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+#7 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+#8 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-09-12 04:25:08 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_id = 4' at line 1
+[Method: POST, Route: admin/outlet/test-update-core]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Helpers\query_helper.php(58): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 2 APPPATH\Helpers\query_helper.php(351): generateDetailData(null, [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 04:25:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_id = 4' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 3 APPPATH\Helpers\query_helper.php(58): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 4 APPPATH\Helpers\query_helper.php(351): generateDetailData(null, [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 04:25:08 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_id = 4' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 4 APPPATH\Helpers\query_helper.php(58): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 5 APPPATH\Helpers\query_helper.php(351): generateDetailData(null, [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-12 04:25:09 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_id = 4' at line 1 in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('SELECT * FROM `...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM `...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM `...')
+#3 C:\wamp64\www\e-commerce\app\Helpers\query_helper.php(58): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `...')
+#4 C:\wamp64\www\e-commerce\app\Helpers\query_helper.php(351): generateDetailData(NULL, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\wamp64\www\e-commerce\app\Controllers\Admin\Outlet.php(329): update(Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+#7 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+#8 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-09-12 04:25:09 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_id = 4' at line 1
+[Method: POST, Route: admin/outlet/test-update-core]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Helpers\query_helper.php(58): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 2 APPPATH\Helpers\query_helper.php(351): generateDetailData(null, [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 04:25:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_id = 4' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 3 APPPATH\Helpers\query_helper.php(58): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 4 APPPATH\Helpers\query_helper.php(351): generateDetailData(null, [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 04:25:09 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_id = 4' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 4 APPPATH\Helpers\query_helper.php(58): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 5 APPPATH\Helpers\query_helper.php(351): generateDetailData(null, [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-09-12 04:25:09 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_id = 4' at line 1 in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('SELECT * FROM `...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM `...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM `...')
+#3 C:\wamp64\www\e-commerce\app\Helpers\query_helper.php(58): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `...')
+#4 C:\wamp64\www\e-commerce\app\Helpers\query_helper.php(351): generateDetailData(NULL, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\wamp64\www\e-commerce\app\Controllers\Admin\Outlet.php(329): update(Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+#7 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+#8 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+CRITICAL - 2024-09-12 04:25:09 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_id = 4' at line 1
+[Method: POST, Route: admin/outlet/test-update-core]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Helpers\query_helper.php(58): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 2 APPPATH\Helpers\query_helper.php(351): generateDetailData(null, [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 04:25:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_id = 4' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 3 APPPATH\Helpers\query_helper.php(58): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 4 APPPATH\Helpers\query_helper.php(351): generateDetailData(null, [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 04:25:09 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'outlet_id = 4' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 4 APPPATH\Helpers\query_helper.php(58): CodeIgniter\Database\BaseConnection->query('SELECT * FROM `outlet` WHERE 0 = 4 outlet_id = 4')
+ 5 APPPATH\Helpers\query_helper.php(351): generateDetailData(null, [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 APPPATH\Controllers\Admin\Outlet.php(329): update([...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->test_update_core()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 04:41:26 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/outlet/update]
+in APPPATH\Controllers\Admin\Outlet.php on line 198.
+ 1 APPPATH\Controllers\Admin\Outlet.php(198): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Outlet.php', 198)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 04:42:01 --> ErrorException: Undefined array key "title"
+[Method: POST, Route: admin/outlet/update]
+in APPPATH\Controllers\Admin\Outlet.php on line 184.
+ 1 APPPATH\Controllers\Admin\Outlet.php(184): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "title"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Outlet.php', 184)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-09-12 04:42:03 --> ErrorException: Undefined array key "title"
+[Method: POST, Route: admin/outlet/update]
+in APPPATH\Controllers\Admin\Outlet.php on line 184.
+ 1 APPPATH\Controllers\Admin\Outlet.php(184): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "title"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Outlet.php', 184)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->update()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

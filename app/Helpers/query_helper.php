@@ -1,5 +1,8 @@
 <?php
 
+
+// ------------------------------------------- CORE ------------------------------------------- //
+
 if (!function_exists('generateDetailData')) {
     function generateDetailData($params, $query, $db)
     {
@@ -289,13 +292,6 @@ if (!function_exists('generateListData')) {
     }
 }
 
-if (!function_exists('update')) {
-    function update($table, $data, $where, $db)
-    {
-        $sql = "UPDATE $table SET ";
-    }
-}
-
 if (!function_exists('randomDate')) {
     function randomDate($firstDate, $secondDate, $format = 'Y-m-d'): string
     {
@@ -310,9 +306,90 @@ if (!function_exists('randomDate')) {
     }
 }
 
+if (!function_exists('update')) {
+    function update($query, $db)
+    {
+        // --------------- set query --------------- //
+        $tableQuery = isset($query['table']) ? $query['table'] : '';
+        $updateQuery = isset($query['update']) ? $query['update'] : '';
+        $whereQuery = isset($query['where']) ? $query['where'] : '';
+        $whereDetailQuery = isset($query['where_detail']) ? $query['where_detail'] : '';
+
+        // ------------ QUERY BEGIN ------------- //
+
+        $data = (object) [];
+        $sql = '';
+        if (!empty($tableQuery)) {
+            $sql .= tableQuery($tableQuery);
+        }
+
+        if (!empty($updateQuery)) {
+            $sql .= updateQuery($updateQuery);
+        }
+
+        if (!empty($whereDetailQuery)) {
+            $sql .= whereDataDetail($whereDetailQuery);
+        }
+
+        if (!empty($whereQuery)) {
+            $sql .= whereUpdateQuery($tableQuery, $whereQuery);
+        }
+
+        if (!empty($whereQuery)) {
+            $newResult = "SELECT * FROM `" . $tableQuery[0] . "` WHERE " . $tableQuery[0] . "_id = '" . $whereQuery[0] . "'";
+            $newResult = $db->query($newResult)->getResultArray();
+            $data->data = $newResult;
+        } elseif (!empty($whereDetailQuery)) {
+            $newResult = "SELECT * FROM `" . $tableQuery[0] . "` ".$whereDetailQuery[0]."";
+            $newResult = $db->query($newResult)->getResultArray();
+            $data->data = $newResult;
+        }
+        
+        return $data;
+    }
+}
+
+
+
 
 
 // ------------------------------------------- PRINTILAN ------------------------------------------- //
+
+
+// Generate Select Table for Updating
+
+if (!function_exists('tableQuery')) {
+    function tableQuery($data)
+    {
+        $tableQuery = '';
+        $tableQuery = 'UPDATE `' . $data[0] . '` SET';
+        return $tableQuery;
+    }
+}
+
+// Generate UPDATE SET 
+if (!function_exists('updateQuery')) {
+    function updateQuery($data)
+    {
+        $sql = '';
+        foreach ($data as $key => $value) {
+            $sql .= " " . $key . " = '" . $value . "',";
+        }
+        $sql = rtrim($sql, ', ');
+        return $sql;
+    }
+}
+
+if (!function_exists('whereUpdateQuery')) {
+    function whereUpdateQuery($data, $id)
+    {
+        foreach ($data as $key => $value) {
+            $sql = ' WHERE ' . $value . '_id = ';
+        }
+        $sql .= "'" . $id[0] . "'";
+        return $sql;
+    }
+}
 
 // Generate result Array to JSON
 if (!function_exists('setToJSON')) {

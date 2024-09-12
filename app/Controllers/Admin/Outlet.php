@@ -51,17 +51,46 @@ class Outlet extends AuthController
             }
             $data_outlet = $data_outlet['data'][0];
             $return[] = [
-                    'id' => $data_outlet['id'],
-                    'title' => $data_outlet['title'],
-                    'address' => $data_outlet['address'],
-                    'link' => $data_outlet['link'],
-                    'photo' => $photo,
-                    'created_at' => $data_outlet['created_at'],
-                    'updated_at' => $data_outlet['updated_at'],
+                'id' => $data_outlet['id'],
+                'title' => $data_outlet['title'],
+                'address' => $data_outlet['address'],
+                'link' => $data_outlet['link'],
+                'photo' => $photo,
+                'created_at' => $data_outlet['created_at'],
+                'updated_at' => $data_outlet['updated_at'],
             ];
         }
 
         return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List Outlet', $return);
+    }
+
+    public function detail_outlet()
+    {
+        // Authorization Token
+        $token = $this->before(getallheaders());
+        if (!empty($token)) {
+            return $token;
+        }
+
+
+        $id = $this->request->getGet();
+        $id = $id['id'];
+        $query['data'] = ['outlet'];
+        $query['select'] = [
+            'outlet_id' => 'id',
+            'outlet_title' => 'title',
+            'outlet_address' => 'address',
+            'outlet_photo' => 'photo',
+            'outlet_link' => 'link',
+            'outlet_created_at' => 'created_at',
+            'outlet_updated_at' => 'updated_at',
+        ];
+        $query['where_detail'] = [
+            "WHERE outlet_id = $id"
+        ];
+        $data = (array) generateDetailData($this->request->getVar(), $query, $this->db);
+
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Detail Outlet', $data);
     }
 
     public function insert()
@@ -233,6 +262,12 @@ class Outlet extends AuthController
 
     public function delete()
     {
+        // Authorization Token
+        $token = $this->before(getallheaders());
+        if (!empty($token)) {
+            return $token;
+        }
+
         $id = $this->request->getGet();
         $id = $id['id'];
 
@@ -271,5 +306,31 @@ class Outlet extends AuthController
         $this->db->query($sql);
 
         return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfull Deleted', $data);
+    }
+
+    public function test_update_core() // test update core DONE
+    {
+        // Authorization Token
+        $token = $this->before(getallheaders());
+        if (!empty($token)) {
+            return $token;
+        }
+        $id = $this->request->getGet(); 
+        $id = $id['id'];
+        $query['table'] = ['outlet'];
+        $query['update'] = [
+            'outlet_title' => 'core',
+            'outlet_address' => 'core',
+            'outlet_photo' => 'core',
+            'outlet_link' => 'core',
+        ];
+        // $query['where_detail'] = [
+        //     "WHERE outlet_id = $id"
+        // ];
+        $query['where'] = [$id];
+
+        $data = (array) update($query, $this->db);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'test', $data);
+
     }
 }
