@@ -3,6 +3,7 @@
 
 // ------------------------------------------- CORE ------------------------------------------- //
 
+// generate detail data query
 if (!function_exists('generateDetailData')) {
     function generateDetailData($params, $query, $db)
     {
@@ -57,6 +58,7 @@ if (!function_exists('generateDetailData')) {
     }
 }
 
+// generate list data query
 if (!function_exists('generateListData')) {
     function generateListData($params, $query, $db)
     {
@@ -292,6 +294,7 @@ if (!function_exists('generateListData')) {
     }
 }
 
+// random date query
 if (!function_exists('randomDate')) {
     function randomDate($firstDate, $secondDate, $format = 'Y-m-d'): string
     {
@@ -306,6 +309,7 @@ if (!function_exists('randomDate')) {
     }
 }
 
+// update query
 if (!function_exists('update')) {
     function update($query, $db)
     {
@@ -348,6 +352,9 @@ if (!function_exists('update')) {
         return $data;
     }
 }
+
+// delete query
+
 
 
 
