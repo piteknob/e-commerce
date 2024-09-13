@@ -141,9 +141,35 @@ class Product extends AuthController
             "WHERE product_id = $id"
         ];
 
-        $data = generateDetailData($this->request->getVar(), $query, $this->db);
+        $data = (array) generateDetailData($this->request->getVar(), $query, $this->db);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Detail Data', $data);
+        $product_data = $data['data'][0];
+        if (empty($product_data['photo'])) {
+            $photo = 'upload/default/default_photo.webp';
+        } else {
+            $photo = 'upload/product/' . $product_data['photo'];
+        }
+        $return = (object) [];
+        $return->data = [
+            '0' => [
+                'id' => $product_data['id'],
+                'name' => $product_data['name'],
+                'price' => $product_data['price'],
+                'category_id' => $product_data['category_id'],
+                'category_name' => $product_data['category_name'],
+                'variant_id' => $product_data['variant_id'],
+                'variant_name' => $product_data['variant_name'],
+                'stock_stock' => $product_data['stock_stock'],
+                'stock_in' => $product_data['stock_in'],
+                'stock_out' => $product_data['stock_out'],
+                'description' => $product_data['description'],
+                'photo' => $photo,
+                'created_at' => $product_data['created_at'],
+                'updated_at' => $product_data['updated_at'],
+            ]
+        ];
+
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Detail Data', $return);
     }
 
     public function insert() //done
@@ -328,7 +354,7 @@ class Product extends AuthController
             // move file to directory
             $photo->move('./upload/product', $photo_name);
         }
-        
+
 
         $sql = "UPDATE product 
         SET

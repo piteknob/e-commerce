@@ -344,16 +344,13 @@ if (!function_exists('update')) {
             $newResult = $db->query($newResult)->getResultArray();
             $data->data = $newResult;
         } elseif (!empty($whereDetailQuery)) {
-            $newResult = "SELECT * FROM `" . $tableQuery[0] . "` ".$whereDetailQuery[0]."";
+            $newResult = "SELECT * FROM `" . $tableQuery[0] . "` " . $whereDetailQuery[0] . "";
             $newResult = $db->query($newResult)->getResultArray();
             $data->data = $newResult;
         }
-        
         return $data;
     }
 }
-
-// delete query
 
 
 
@@ -361,7 +358,6 @@ if (!function_exists('update')) {
 
 
 // ------------------------------------------- PRINTILAN ------------------------------------------- //
-
 
 // Generate Select Table for Updating
 

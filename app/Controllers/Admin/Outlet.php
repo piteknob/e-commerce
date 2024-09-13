@@ -90,7 +90,24 @@ class Outlet extends AuthController
         ];
         $data = (array) generateDetailData($this->request->getVar(), $query, $this->db);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Detail Outlet', $data);
+        if (empty($data['data'][0]['photo'])) {
+            $photo = 'upload/default/default_photo.webp';
+        } else {
+            $photo = 'upload/photo/' . $data['data'][0]['photo'];
+        }
+        $data_outlet = $data['data'][0];
+
+        $return[] = [
+            'id' => $data_outlet['id'],
+            'title' => $data_outlet['title'],
+            'address' => $data_outlet['address'],
+            'link' => $data_outlet['link'],
+            'photo' => $photo,
+            'created_at' => $data_outlet['created_at'],
+            'updated_at' => $data_outlet['updated_at'],
+        ];
+
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Detail Outlet', $return);
     }
 
     public function insert()
