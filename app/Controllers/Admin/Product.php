@@ -101,10 +101,113 @@ class Product extends AuthController
             ];
             // $result = ['data' => $return];
         }
-        // print_r($return); die;
-
 
         return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List Product', $return);
+    }
+
+    public function list_product_pagination()
+    {
+        // Authorization Token
+        $token = $this->before(getallheaders());
+        if (!empty($token)) {
+            return $token;
+        }
+
+        $query['data'] = ['product'];
+        $query['select'] = [
+            'product.product_id' => 'id'
+        ];
+        $query['join'] = [
+            'product_stock' => 'product.product_id = product_stock.product_stock_product_id',
+            'variant' => 'product.product_id = variant.variant_product_id',
+        ];
+        $query['pagination'] = [false];
+        $data = (array) generateListData($this->request->getGet(), $query, $this->db);
+        // print_r($data); die;
+
+        // GET CATEGORY ID FROM PRODUCT
+        $return = [];
+        foreach ($data as $key => $value) {
+            $id = $value['id'];
+            // print_r($id); die;
+
+            $query['data'] = ['product'];
+            $query['select'] = [
+                'product.product_id' => 'id',
+                'product.product_name' => 'name',
+                'product.product_price' => 'price',
+                'product.product_category_id' => 'category_id',
+                'product.product_category_name' => 'category_name',
+                'variant.variant_id' => 'variant_id',
+                'variant.variant_name' => 'variant_name',
+                'product_stock.product_stock_stock' => 'stock_stock',
+                'product_stock.product_stock_in' => 'stock_in',
+                'product_stock.product_stock_out' => 'stock_out',
+                'product.product_description' => 'description',
+                'product.product_photo' => 'photo',
+                'product.product_created_at' => 'created_at',
+                'product.product_updated_at' => 'updated_at',
+            ];
+            $query['join'] = [
+                'product_stock' => 'product.product_id = product_stock.product_stock_product_id',
+                'variant' => 'product.product_id = variant.variant_product_id',
+            ];
+            $query['where_detail'] = [
+                "WHERE product_id = $id"
+            ];
+            $data_product = (array) generateDetailData($this->request->getVar(), $query, $this->db);
+            $id_category = $data_product['data'][0]['category_id'];
+
+            // GET DATA SELECTED
+            $query_category_selected = "SELECT * FROM `category` WHERE category_id = {$id_category}";
+            $data_category_selected = $this->db->query($query_category_selected)->getResultArray();
+
+            // GET DATA NOT SELECTED
+            $query_category = "SELECT * FROM `category` WHERE category_id != {$id_category}";
+            $data_category = $this->db->query($query_category)->getResultArray();
+
+            $category_array = array_merge($data_category_selected, $data_category);
+
+
+
+
+            // MAKE LIST CATEGORY (SELECTED OR NOT SELECTED)
+            $product_data = $data_product['data'][0];
+            if (empty($product_data['photo'])) {
+                $photo = 'upload/default/default_photo.webp';
+            } else {
+                $photo = 'upload/product/' . $product_data['photo'];
+            }
+            $return[] = [
+                'product' => [
+                    'id' => $product_data['id'],
+                    'name' => $product_data['name'],
+                    'price' => $product_data['price'],
+                    'category_id' => $product_data['category_id'],
+                    'category_name' => $product_data['category_name'],
+                    'variant_id' => $product_data['variant_id'],
+                    'variant_name' => $product_data['variant_name'],
+                    'stock_stock' => $product_data['stock_stock'],
+                    'stock_in' => $product_data['stock_in'],
+                    'stock_out' => $product_data['stock_out'],
+                    'description' => $product_data['description'],
+                    'photo' => $photo,
+                    'created_at' => $product_data['created_at'],
+                    'updated_at' => $product_data['updated_at'],
+                ],
+                'category_list' => $category_array,
+            ];
+            // $result = ['data' => $return];
+        }
+        // print_r($return); die;
+        $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+        $limit = isset($_GET['limit']) ? (int)$_GET['limit'] : 5;
+
+        $paginationResult = paginate($return, $page, $limit);
+        // print_r($paginationResult); die;
+
+
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List Product', $paginationResult);
     }
 
     public function detail() //done

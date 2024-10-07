@@ -175,6 +175,7 @@ if (!function_exists('generateListData')) {
         if ($paginationParams == 'false') {
             return $db->query($sql)->getResultArray();
         }
+
         if ($paginationParams == 'true') {
             $pagination = true;
 
@@ -187,19 +188,27 @@ if (!function_exists('generateListData')) {
                 $countQuery = $sql;
                 $countResult = $db->query($countQuery)->getResultArray();
                 $countData = count($countResult);
+                
                 if (!empty($limitPage)) {
                     $limit = $limitPage;
                 } else {
                     $limit = isset($query['limit']['limit']) ? $query['limit']['limit'] : 5;
+                }
+                $jumlahPage = ceil($countData / $limit);
+                // Validation for PAges 
+                if ($paginationPage < 1) {
+                    $paginationPage = 1;
+                } elseif ($paginationPage > $jumlahPage) {
+                    $paginationPage = $jumlahPage;
                 }
                 $offset = ($paginationPage - 1) * $limit;
 
                 $sql .= " LIMIT {$offset}, {$limit}";
 
                 $result = $db->query($sql)->getResultArray();
-                $jumlahPage = ceil($countData / $limit);
                 $pageSebelumnya = ($paginationPage - 1 > 0) ? ($paginationPage - 1) : null;
                 $pageSelanjutnya = ($paginationPage + 1 <= $jumlahPage) ? ($paginationPage + 1) : null;
+
 
 
                 $detailPage = detailPage($jumlahPage, $paginationPage, $countData, $limit);
@@ -213,8 +222,8 @@ if (!function_exists('generateListData')) {
                 // Data
                 $data->data = $result;
                 $data->pagination = [
-                    'jumlah_data' => $countData,
-                    'jumlah_page' => $jumlahPage,
+                    'total_data' => $countData,
+                    'total_page' => $jumlahPage,
                     'prev' => $pageSebelumnya,
                     'page' => $paginationPage,
                     'next' => $pageSelanjutnya,
@@ -240,10 +249,19 @@ if (!function_exists('generateListData')) {
             $countResult = $db->query($countQuery)->getResultArray();
             $countData = count($countResult);
 
+
             if (!empty($limitPage)) {
                 $limit = $limitPage;
             } else {
                 $limit = isset($query['limit']['limit']) ? $query['limit']['limit'] : 5;
+            }
+
+            $jumlahPage = ceil($countData / $limit);
+            // Validation for PAges 
+            if ($paginationPage < 1) {
+                $paginationPage = 1;
+            } elseif ($paginationPage > $jumlahPage) {
+                $paginationPage = $jumlahPage;
             }
 
             $offset = ($paginationPage - 1) * $limit;
@@ -251,11 +269,10 @@ if (!function_exists('generateListData')) {
             $sql .= " LIMIT {$offset}, {$limit}";
 
             $result = $db->query($sql)->getResultArray();
-            $jumlahPage = ceil($countData / $limit);
+
+
             $pageSebelumnya = ($paginationPage - 1 > 0) ? ($paginationPage - 1) : null;
             $pageSelanjutnya = ($paginationPage + 1 <= $jumlahPage) ? ($paginationPage + 1) : null;
-
-
             $detailPage = detailPage($jumlahPage, $paginationPage, $countData, $limit);
 
 
@@ -276,8 +293,8 @@ if (!function_exists('generateListData')) {
             // Data
             $data->data = $result;
             $data->pagination = [
-                'jumlah_data' => $countData,
-                'jumlah_page' => $jumlahPage,
+                'total_data' => $countData,
+                'total_page' => $jumlahPage,
                 'prev' => $pageSebelumnya,
                 'page' => $paginationPage,
                 'next' => $pageSelanjutnya,
@@ -352,6 +369,45 @@ if (!function_exists('update')) {
     }
 }
 
+// pagination 
+if (!function_exists('paginate')) {
+    function paginate($data, $page = 1, $itemsPerPage = 5)
+    {
+        $totalItems = count($data);
+        $totalPages = ceil($totalItems / $itemsPerPage);
+
+        // Validation for PAges 
+        if ($page < 1) {
+            $page = 1;
+        } elseif ($page > $totalPages) {
+            $page = $totalPages;
+        }
+
+        $startIndex = ($page - 1) * $itemsPerPage;
+        $pagedData = array_slice($data, $startIndex, $itemsPerPage);
+        $detailPage = detailPage($totalPages, $page, $totalItems, $itemsPerPage);
+        $pageSebelumnya = ($page - 1 > 0) ? ($page - 1) : null;
+        $pageSelanjutnya = ($page + 1 <= $totalPages) ? ($page + 1) : null;
+        foreach ($detailPage as $key => $value) {
+            $pageStartEnd[] = $value;
+        }
+        $detailPage = range($pageStartEnd[0], $pageStartEnd[1]);
+
+        return [
+            'data' => $pagedData,
+            'pagination' => [
+                'total_data' => $totalItems,
+                'total_page' => $totalPages,
+                'prev' => $pageSebelumnya,
+                'page' => $page,
+                'next' => $pageSelanjutnya,
+                'detail' => $detailPage,
+                'start' => $pageStartEnd[2],
+                'end' => $pageStartEnd[3],
+            ]
+        ];
+    }
+}
 
 
 
@@ -359,8 +415,8 @@ if (!function_exists('update')) {
 
 // ------------------------------------------- PRINTILAN ------------------------------------------- //
 
-// Generate Select Table for Updating
 
+// Generate Select Table for Updating
 if (!function_exists('tableQuery')) {
     function tableQuery($data)
     {
@@ -383,6 +439,7 @@ if (!function_exists('updateQuery')) {
     }
 }
 
+// Generate query for where update
 if (!function_exists('whereUpdateQuery')) {
     function whereUpdateQuery($data, $id)
     {
@@ -402,7 +459,6 @@ if (!function_exists('setToJSON')) {
         return $data;
     }
 }
-
 
 // Generate result JSON to Array
 if (!function_exists('setToArray')) {
