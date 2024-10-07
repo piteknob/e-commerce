@@ -121,6 +121,12 @@ class Product extends AuthController
             'product_stock' => 'product.product_id = product_stock.product_stock_product_id',
             'variant' => 'product.product_id = variant.variant_product_id',
         ];
+        $query['search_data'] = [
+            'product_name',
+        ];
+        $query['filter'] = [
+            "product_category_name",
+        ];
         $query['pagination'] = [false];
         $data = (array) generateListData($this->request->getGet(), $query, $this->db);
         // print_r($data); die;
@@ -299,6 +305,17 @@ class Product extends AuthController
         $random = mt_rand($start, $end);
 
         // --------------------- SET VALIDATION && UPLOAD GET POST PHOTO ------------------------ //
+
+        $rules = [
+            'name' => 'required',
+            'variant' => 'required',
+            'category' => 'required'
+        ];
+
+        if (!$this->validate($rules)) { 
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
+        }
+
         $photo = $this->request->getFile('upload');
         if (empty($photo)) {
             $photo_name = '';

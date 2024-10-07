@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Waktu pembuatan: 11 Sep 2024 pada 04.53
+-- Waktu pembuatan: 07 Okt 2024 pada 09.32
 -- Versi server: 8.3.0
 -- Versi PHP: 8.2.18
 
@@ -44,8 +44,8 @@ CREATE TABLE IF NOT EXISTS `auth_user` (
 --
 
 INSERT INTO `auth_user` (`auth_user_id`, `auth_user_user_id`, `auth_user_username`, `auth_user_token`, `auth_user_date_login`, `auth_user_date_expired`) VALUES
-(6, 1, 'bakpia', 'YmFrcGlhMTIzNDU2', '2024-09-11 11:42:19', '2024-09-12 11:42:19'),
-(8, 24, 'bakpia2', NULL, '2024-09-10 10:05:04', '2024-09-11 10:05:04');
+(6, 1, 'bakpia', 'YmFrcGlhMTIzNDU2', '2024-10-07 16:21:55', '2024-10-08 16:21:55'),
+(8, 24, 'bakpia2', 'YmFrcGlhMjEyMzQ1Ng==', '2024-10-07 15:31:25', '2024-10-08 15:31:25');
 
 -- --------------------------------------------------------
 
@@ -69,9 +69,7 @@ CREATE TABLE IF NOT EXISTS `category` (
 
 INSERT INTO `category` (`category_id`, `category_name`, `category_created_at`, `category_updated_at`, `category_deleted_at`) VALUES
 (1, 'Basah', '2024-08-02 06:58:12', NULL, NULL),
-(8, 'kering', '2024-09-06 10:20:17', NULL, NULL),
-(7, 'test inser', '2024-09-04 11:10:33', '2024-09-06 14:21:51', NULL),
-(22, 'dwadwadaw', '2024-09-06 14:20:10', '2024-09-06 14:25:30', NULL);
+(8, 'kering', '2024-09-06 10:20:17', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -146,7 +144,15 @@ CREATE TABLE IF NOT EXISTS `outlet` (
   `outlet_created_at` datetime DEFAULT NULL,
   `outlet_updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`outlet_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data untuk tabel `outlet`
+--
+
+INSERT INTO `outlet` (`outlet_id`, `outlet_title`, `outlet_address`, `outlet_photo`, `outlet_link`, `outlet_created_at`, `outlet_updated_at`) VALUES
+(3, 'tes', 'tes', 'tes_1726040201.png', 'tes', '2024-09-11 14:13:13', NULL),
+(4, 'tes', 'tes', 'tes_1726118062.png', 'tes', '2024-09-11 14:17:28', '2024-09-12 11:42:28');
 
 -- --------------------------------------------------------
 
@@ -167,27 +173,26 @@ CREATE TABLE IF NOT EXISTS `product` (
   `product_updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`product_id`),
   KEY `fk_product_category` (`product_category_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=135 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=152 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data untuk tabel `product`
 --
 
 INSERT INTO `product` (`product_id`, `product_name`, `product_price`, `product_category_id`, `product_category_name`, `product_description`, `product_photo`, `product_created_at`, `product_updated_at`) VALUES
-(41, 'Bakpia 465 2005', 26000, 1, 'Basah', 'coba - coba saja wak', 'bakpia_465_2005_1725866477.png', '2024-08-22 16:24:28', '2024-09-09 13:33:08'),
-(42, 'Bakpia 465 Kering  20', 24000, 2, 'Kering', 'coba coba wak', NULL, '2024-08-22 16:24:33', NULL),
-(43, 'Bakpia 465 Kering  20', 24000, 2, 'Kering', 'coba coba wak', NULL, '2024-08-22 16:24:40', NULL),
-(44, 'Bakpia 465 Kering  20', 24000, 2, 'Kering', 'coba coba wak', NULL, '2024-08-22 16:24:45', NULL),
-(39, 'Bakpia 465 20', 26000, 1, 'Basah', 'coba coba wak', NULL, '2024-08-22 16:23:27', NULL),
-(40, 'Bakpia 465 15', 24000, 1, 'Basah', 'coba coba wak', NULL, '2024-08-22 16:23:44', NULL),
-(31, 'Griya Bakpia Premium 15', 40000, 1, 'Basah', 'coba coba wak', NULL, '2024-08-22 16:20:47', NULL),
-(33, 'Griya Bakpia Premium 15', 40000, 1, 'Basah', '\r\nLorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam maiores fuga id. Magnam rerum sunt atque sequi dolores, sit id, voluptas et qui debitis cumque eligendi maiores rem, accusantium nobis!\r\nNecessitatibus dolorem temporibus, recusandae officia soluta beatae, minima repudiandae quis eos nam consectetur! Ipsum beatae voluptas fuga ullam vitae voluptatibus cupiditate blanditiis accusamus. Explicabo cumque odit, quas libero ut sint.\r\nExpedita tenetur incidunt quod assumenda cupiditate exercitationem distinctio veniam, cum quae magni? Ullam cupiditate repudiandae sit, sequi eaque voluptatem vel alias tempora unde! Architecto, tenetur. Delectus quibusdam similique inventore dicta?\r\nMinus, sunt saepe sapiente soluta consequuntur delectus aspernatur esse rerum perferendis dolores, necessitatibus quia possimus praesentium quisquam laboriosam enim placeat sed blanditiis voluptas explicabo dicta, maxime omnis culpa veritatis. Repellendus?\r\nEx cum voluptatem expedita quia ipsam tene', NULL, '2024-08-22 16:22:07', '2024-08-23 09:45:36'),
-(34, 'Griya Bakpia Premium 15', 40000, 1, 'Basah', 'coba coba wak', NULL, '2024-08-22 16:22:20', NULL),
-(35, 'Griya Bakpia Premium 15', 40000, 1, 'Basah', 'coba coba wak', NULL, '2024-08-22 16:22:24', NULL),
-(36, 'Griya Bakpia Premium 15', 42000, 1, 'Basah', 'coba coba wak', NULL, '2024-08-22 16:22:36', NULL),
-(37, 'Bakpia 465 20', 24000, 1, 'Basah', 'coba coba wak', NULL, '2024-08-22 16:23:01', NULL),
-(117, 'Bakpia 465 20', 26000, 1, 'Basah', 'coba - coba saja wak', NULL, '2024-09-05 14:06:30', '2024-09-06 16:51:21'),
-(134, 'hitam111', 123, 1, 'Basah', '123', NULL, '2024-09-10 09:45:08', '2024-09-10 09:45:44');
+(139, 'Griya Bakpia Premium 15', 40000, 1, 'Basah', '', 'griya_bakpia_premium_15_1728272986.jpg', '2024-10-07 10:44:22', NULL),
+(140, 'Griya Bakpia Premium 15', 40000, 1, 'Basah', '', 'griya_bakpia_premium_15_1728274358.jpg', '2024-10-07 10:46:10', NULL),
+(141, 'Griya Bakpia Premium 15', 40000, 1, 'Basah', '', 'griya_bakpia_premium_15_1728273486.jpg', '2024-10-07 10:48:52', NULL),
+(142, 'Griya Bakpia Premium 15', 40000, 1, 'Basah', '', 'griya_bakpia_premium_15_1728273939.jpg', '2024-10-07 10:50:43', NULL),
+(143, 'Griya Bakpia Premium 15', 42000, 1, 'Basah', '', 'griya_bakpia_premium_15_1728275816.jpg', '2024-10-07 10:52:22', NULL),
+(144, 'Bakpia 465 Basah 20', 24000, 1, 'Basah', '', 'bakpia_465_basah_20_1728274299.jpg', '2024-10-07 10:56:30', NULL),
+(145, 'Bakpia 465 Basah 20', 26000, 1, 'Basah', '', 'bakpia_465_basah_20_1728274581.jpg', '2024-10-07 11:04:07', NULL),
+(146, 'Bakpia 465 Basah 20', 26000, 1, 'Basah', '', 'bakpia_465_basah_20_1728274597.jpg', '2024-10-07 11:06:52', NULL),
+(147, 'Bakpia 465 Basah 15', 24000, 1, 'Basah', '', 'bakpia_465_basah_15_1728276956.jpg', '2024-10-07 11:08:32', NULL),
+(148, 'Bakpia 465 Kering 20', 24000, 8, 'kering', '', 'bakpia_465_kering_20_1728274675.jpg', '2024-10-07 11:10:53', NULL),
+(149, 'Bakpia 465 Kering 20', 24000, 8, 'kering', '', 'bakpia_465_kering_20_1728274998.jpg', '2024-10-07 11:12:03', NULL),
+(150, 'Bakpia 465 Kering 20', 24000, 8, 'kering', 'Bakpia dengan isi rasa strawberry, blueberry, capucino, dan tiramisu', 'bakpia_465_kering_20_1728275508.jpg', '2024-10-07 11:14:25', NULL),
+(151, 'Bakpia 465 Kering 20', 24000, 8, 'kering', '', 'bakpia_465_kering_20_1728277524.jpg', '2024-10-07 11:16:13', NULL);
 
 -- --------------------------------------------------------
 
@@ -208,48 +213,26 @@ CREATE TABLE IF NOT EXISTS `product_stock` (
   KEY `fk_product_stock_product` (`product_stock_product_id`),
   KEY `fk_product_stock_variant` (`product_stock_variant_id`),
   KEY `fk_product_stock_category` (`product_stock_category_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=126 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=145 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data untuk tabel `product_stock`
 --
 
 INSERT INTO `product_stock` (`product_stock_id`, `product_stock_product_id`, `product_stock_variant_id`, `product_stock_category_id`, `product_stock_stock`, `product_stock_in`, `product_stock_out`) VALUES
-(49, 59, 48, 1, 25, 0, 0),
-(37, 47, 36, 2, 50, 0, 0),
-(34, 44, 33, 2, 51, 0, 0),
-(33, 43, 32, 2, 50, 0, 0),
-(32, 42, 31, 2, 50, 0, 0),
-(31, 41, 30, 2, 25, 0, 0),
-(30, 40, 29, 1, 50, 0, 0),
-(29, 39, 28, 1, 105, 0, 35),
-(28, 38, 27, 1, 25, 0, 0),
-(27, 37, 26, 1, 50, 0, 0),
-(26, 36, 25, 1, 105, 0, 35),
-(25, 35, 24, 1, 105, 0, 35),
-(24, 34, 23, 1, 50, 0, 0),
-(21, 31, 20, 1, 105, 0, 35),
-(23, 33, 22, 1, 50, 0, 0),
-(50, 60, 49, 1, 25, 0, 0),
-(57, 67, 56, 2, 123, 0, 0),
-(62, 72, 61, 2, 50, 0, 0),
-(59, 69, 58, 2, 50, 0, 0),
-(58, 68, 57, 2, 50, 0, 0),
-(60, 70, 59, 2, 50, 0, 0),
-(61, 71, 60, 2, 50, 0, 0),
-(65, 75, 64, 1, 1321, 0, 0),
-(66, 76, 65, 2, 50, 0, 0),
-(67, 77, 66, 2, 50, 0, 0),
-(68, 78, 67, 2, 50, 0, 0),
-(69, 79, 68, 2, 50, 0, 0),
-(70, 80, 69, 1, 12, 0, 0),
-(76, 86, 75, 1, 123, 0, 0),
-(104, 114, 103, 1, 123, 0, 0),
-(105, 115, 104, 1, 123, 0, 0),
-(106, 116, 105, 1, 123, 0, 0),
-(107, 117, 106, 7, 251, 0, 0),
-(108, 0, 107, 2, 50, 0, 0),
-(125, 134, 124, 1, 123, 0, 0);
+(144, 151, 143, 8, 50, 0, 0),
+(143, 150, 142, 8, 50, 0, 0),
+(142, 149, 141, 8, 50, 0, 0),
+(141, 148, 140, 8, 50, 0, 0),
+(140, 147, 139, 1, 50, 0, 0),
+(139, 146, 138, 1, 50, 0, 0),
+(138, 145, 137, 1, 50, 0, 0),
+(137, 144, 136, 1, 50, 0, 0),
+(136, 143, 135, 1, 50, 0, 0),
+(135, 142, 134, 1, 50, 0, 0),
+(134, 141, 133, 1, 50, 0, 0),
+(133, 140, 132, 1, 50, 0, 0),
+(132, 139, 131, 1, 50, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -376,7 +359,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `user_created_at` datetime DEFAULT NULL,
   `user_updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `user`
@@ -403,48 +386,26 @@ CREATE TABLE IF NOT EXISTS `variant` (
   `variant_deleted_at` datetime DEFAULT NULL,
   PRIMARY KEY (`variant_id`),
   KEY `fk_variant_product` (`variant_product_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=125 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=144 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data untuk tabel `variant`
 --
 
 INSERT INTO `variant` (`variant_id`, `variant_product_id`, `variant_name`, `variant_created_at`, `variant_updated_at`, `variant_deleted_at`) VALUES
-(30, 41, 'Kacang Hijau Rasa Keju', '2024-08-22 16:24:28', NULL, NULL),
-(29, 40, 'Telo Ungu', '2024-08-22 16:23:44', NULL, NULL),
-(28, 39, 'Kacang Hijau Rasa Coklat', '2024-08-22 16:23:27', NULL, NULL),
-(27, 38, 'Kacang Hijau Rasa Keju', '2024-08-22 16:23:21', NULL, NULL),
-(26, 37, 'Kacang Hijau Original', '2024-08-22 16:23:01', NULL, NULL),
-(25, 36, 'Mix', '2024-08-22 16:22:36', NULL, NULL),
-(24, 35, 'Durian', '2024-08-22 16:22:24', NULL, NULL),
-(23, 34, 'Coklat', '2024-08-22 16:22:20', NULL, NULL),
-(22, 33, 'Keju', '2024-08-22 16:22:07', NULL, NULL),
-(20, 31, 'Kacang Hijau', '2024-08-22 16:20:47', NULL, NULL),
-(31, 42, 'Kering Coklat', '2024-08-22 16:24:33', NULL, NULL),
-(32, 43, 'Kering Aneka Rasa', '2024-08-22 16:24:40', NULL, NULL),
-(33, 44, 'Kering Mix Keju Coklat', '2024-08-22 16:24:45', NULL, NULL),
-(36, 47, 'Mix Keju Coklat', '2024-09-03 15:29:24', NULL, NULL),
-(48, 59, 'dwa', '2024-09-03 16:25:18', NULL, NULL),
-(49, 60, 'dwa', '2024-09-03 16:25:42', NULL, NULL),
-(56, 67, 'asdf', '2024-09-04 09:22:52', NULL, NULL),
-(57, 68, 'Mix Keju Coklat', '2024-09-04 09:24:48', NULL, NULL),
-(58, 69, 'Mix Keju Coklat', '2024-09-04 09:29:26', NULL, NULL),
-(59, 70, 'Mix Keju Coklat', '2024-09-04 09:43:23', NULL, NULL),
-(60, 71, 'Mix Keju Coklat', '2024-09-04 09:43:54', NULL, NULL),
-(61, 72, 'Mix Keju Coklat', '2024-09-04 09:44:17', NULL, NULL),
-(64, 75, 'asdf', '2024-09-04 14:01:26', NULL, NULL),
-(65, 76, 'Mix Keju Coklat', '2024-09-04 14:02:44', NULL, NULL),
-(66, 77, 'Mix Keju Coklat', '2024-09-04 14:06:36', NULL, NULL),
-(67, 78, 'Mix Keju Coklat', '2024-09-04 14:07:11', NULL, NULL),
-(68, 79, 'Mix Keju Coklat', '2024-09-04 14:07:20', NULL, NULL),
-(69, 80, 'asdf', '2024-09-04 16:12:01', NULL, NULL),
-(75, 86, '123', '2024-09-05 11:12:56', NULL, NULL),
-(103, 114, '123', '2024-09-05 13:53:00', NULL, NULL),
-(104, 115, '123', '2024-09-05 13:53:55', NULL, NULL),
-(105, 116, '123', '2024-09-05 13:54:19', NULL, NULL),
-(106, 117, 'Kacang Hijau Rasa Keju', '2024-09-05 14:06:30', NULL, NULL),
-(107, 0, 'Mix Keju Coklat', '2024-09-09 13:30:58', NULL, NULL),
-(124, 134, 'asdf', '2024-09-10 09:45:08', NULL, NULL);
+(143, 151, 'Mix Keju Coklat', '2024-10-07 11:16:13', NULL, NULL),
+(142, 150, 'Aneka Rasa', '2024-10-07 11:14:25', NULL, NULL),
+(140, 148, 'Keju', '2024-10-07 11:10:53', NULL, NULL),
+(141, 149, 'Coklat', '2024-10-07 11:12:03', NULL, NULL),
+(139, 147, 'Telo Ungu', '2024-10-07 11:08:32', NULL, NULL),
+(138, 146, 'Kacang Hijau Rasa Coklat', '2024-10-07 11:06:52', NULL, NULL),
+(131, 139, 'Kacang Hijau', '2024-10-07 10:44:22', NULL, NULL),
+(132, 140, 'Keju', '2024-10-07 10:46:10', NULL, NULL),
+(133, 141, 'Coklat', '2024-10-07 10:48:52', NULL, NULL),
+(134, 142, 'Durian', '2024-10-07 10:50:43', NULL, NULL),
+(135, 143, 'Mix', '2024-10-07 10:52:22', NULL, NULL),
+(136, 144, 'Kacang Hijau Original', '2024-10-07 10:56:30', NULL, NULL),
+(137, 145, 'Kacang Hijau Rasa Keju', '2024-10-07 11:04:07', NULL, NULL);
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)

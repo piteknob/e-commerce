@@ -1,0 +1,450 @@
+ERROR - 2024-10-07 01:57:28 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-5, 5' at line 1 in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('SELECT product....', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product....')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product....')
+#3 C:\wamp64\www\e-commerce\app\Helpers\query_helper.php(271): CodeIgniter\Database\BaseConnection->query('SELECT product....')
+#4 C:\wamp64\www\e-commerce\app\Controllers\ListPublic.php(43): generateListData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\ListPublic->product()
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListPublic))
+#7 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-10-07 01:57:29 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-5, 5' at line 1
+[Method: GET, Route: listpublic/product]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Helpers\query_helper.php(271): CodeIgniter\Database\BaseConnection->query('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_id AS category_id, product.product_category_name AS category_name, variant.variant_id AS variant_id, variant.variant_name AS variant_name, product_stock.product_stock_stock AS stock_stock, product_stock.product_stock_in AS stock_in, product_stock.product_stock_out AS stock_out, product.product_description AS description, product.product_photo AS photo, product.product_created_at AS created_at, product.product_updated_at AS updated_at FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id JOIN variant ON product.product_id = variant.variant_product_id WHERE (product_name LIKE \'%Griya Bakpia 465%\') LIMIT -5, 5')
+ 2 APPPATH\Controllers\ListPublic.php(43): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ListPublic->product()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListPublic))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 01:57:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-5, 5' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_id AS category_id, product.product_category_name AS category_name, variant.variant_id AS variant_id, variant.variant_name AS variant_name, product_stock.product_stock_stock AS stock_stock, product_stock.product_stock_in AS stock_in, product_stock.product_stock_out AS stock_out, product.product_description AS description, product.product_photo AS photo, product.product_created_at AS created_at, product.product_updated_at AS updated_at FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id JOIN variant ON product.product_id = variant.variant_product_id WHERE (product_name LIKE \'%Griya Bakpia 465%\') LIMIT -5, 5')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_id AS category_id, product.product_category_name AS category_name, variant.variant_id AS variant_id, variant.variant_name AS variant_name, product_stock.product_stock_stock AS stock_stock, product_stock.product_stock_in AS stock_in, product_stock.product_stock_out AS stock_out, product.product_description AS description, product.product_photo AS photo, product.product_created_at AS created_at, product.product_updated_at AS updated_at FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id JOIN variant ON product.product_id = variant.variant_product_id WHERE (product_name LIKE \'%Griya Bakpia 465%\') LIMIT -5, 5')
+ 3 APPPATH\Helpers\query_helper.php(271): CodeIgniter\Database\BaseConnection->query('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_id AS category_id, product.product_category_name AS category_name, variant.variant_id AS variant_id, variant.variant_name AS variant_name, product_stock.product_stock_stock AS stock_stock, product_stock.product_stock_in AS stock_in, product_stock.product_stock_out AS stock_out, product.product_description AS description, product.product_photo AS photo, product.product_created_at AS created_at, product.product_updated_at AS updated_at FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id JOIN variant ON product.product_id = variant.variant_product_id WHERE (product_name LIKE \'%Griya Bakpia 465%\') LIMIT -5, 5')
+ 4 APPPATH\Controllers\ListPublic.php(43): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ListPublic->product()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListPublic))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 01:57:29 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '-5, 5' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_id AS category_id, product.product_category_name AS category_name, variant.variant_id AS variant_id, variant.variant_name AS variant_name, product_stock.product_stock_stock AS stock_stock, product_stock.product_stock_in AS stock_in, product_stock.product_stock_out AS stock_out, product.product_description AS description, product.product_photo AS photo, product.product_created_at AS created_at, product.product_updated_at AS updated_at FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id JOIN variant ON product.product_id = variant.variant_product_id WHERE (product_name LIKE \'%Griya Bakpia 465%\') LIMIT -5, 5', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_id AS category_id, product.product_category_name AS category_name, variant.variant_id AS variant_id, variant.variant_name AS variant_name, product_stock.product_stock_stock AS stock_stock, product_stock.product_stock_in AS stock_in, product_stock.product_stock_out AS stock_out, product.product_description AS description, product.product_photo AS photo, product.product_created_at AS created_at, product.product_updated_at AS updated_at FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id JOIN variant ON product.product_id = variant.variant_product_id WHERE (product_name LIKE \'%Griya Bakpia 465%\') LIMIT -5, 5')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_id AS category_id, product.product_category_name AS category_name, variant.variant_id AS variant_id, variant.variant_name AS variant_name, product_stock.product_stock_stock AS stock_stock, product_stock.product_stock_in AS stock_in, product_stock.product_stock_out AS stock_out, product.product_description AS description, product.product_photo AS photo, product.product_created_at AS created_at, product.product_updated_at AS updated_at FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id JOIN variant ON product.product_id = variant.variant_product_id WHERE (product_name LIKE \'%Griya Bakpia 465%\') LIMIT -5, 5')
+ 4 APPPATH\Helpers\query_helper.php(271): CodeIgniter\Database\BaseConnection->query('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_id AS category_id, product.product_category_name AS category_name, variant.variant_id AS variant_id, variant.variant_name AS variant_name, product_stock.product_stock_stock AS stock_stock, product_stock.product_stock_in AS stock_in, product_stock.product_stock_out AS stock_out, product.product_description AS description, product.product_photo AS photo, product.product_created_at AS created_at, product.product_updated_at AS updated_at FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id JOIN variant ON product.product_id = variant.variant_product_id WHERE (product_name LIKE \'%Griya Bakpia 465%\') LIMIT -5, 5')
+ 5 APPPATH\Controllers\ListPublic.php(43): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ListPublic->product()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListPublic))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 03:24:26 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/product/delete]
+in APPPATH\Controllers\Admin\Product.php on line 543.
+ 1 APPPATH\Controllers\Admin\Product.php(543): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 543)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 03:24:40 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/product/delete]
+in APPPATH\Controllers\Admin\Product.php on line 543.
+ 1 APPPATH\Controllers\Admin\Product.php(543): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 543)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->delete()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 08:02:24 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 40.
+ 1 APPPATH\Controllers\Admin\Product.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 08:02:56 --> ParseError: syntax error, unexpected variable "$query"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 21.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('admin/product/list-product', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('admin/product/list-product')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('admin/product/list-product')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 08:05:02 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 42.
+ 1 APPPATH\Controllers\Admin\Product.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 08:05:05 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 42.
+ 1 APPPATH\Controllers\Admin\Product.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 08:07:55 --> ParseError: syntax error, unexpected variable "$return"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 99.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('admin/product/list-product', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('admin/product/list-product')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('admin/product/list-product')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 08:12:36 --> ParseError: syntax error, unexpected token "}"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 118.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('admin/product/list-product', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('admin/product/list-product')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('admin/product/list-product')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 08:14:20 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 42.
+ 1 APPPATH\Controllers\Admin\Product.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 08:14:26 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 42.
+ 1 APPPATH\Controllers\Admin\Product.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 08:14:26 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 42.
+ 1 APPPATH\Controllers\Admin\Product.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 08:15:11 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 43.
+ 1 APPPATH\Controllers\Admin\Product.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 08:15:12 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 43.
+ 1 APPPATH\Controllers\Admin\Product.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 08:15:13 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 43.
+ 1 APPPATH\Controllers\Admin\Product.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 08:15:13 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 43.
+ 1 APPPATH\Controllers\Admin\Product.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 08:15:14 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 43.
+ 1 APPPATH\Controllers\Admin\Product.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 08:15:37 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 43.
+ 1 APPPATH\Controllers\Admin\Product.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 08:15:39 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 43.
+ 1 APPPATH\Controllers\Admin\Product.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 08:15:39 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 43.
+ 1 APPPATH\Controllers\Admin\Product.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 08:15:40 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 43.
+ 1 APPPATH\Controllers\Admin\Product.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 08:18:34 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 43.
+ 1 APPPATH\Controllers\Admin\Product.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 08:18:35 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 43.
+ 1 APPPATH\Controllers\Admin\Product.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 08:18:37 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 43.
+ 1 APPPATH\Controllers\Admin\Product.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 08:18:46 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 43.
+ 1 APPPATH\Controllers\Admin\Product.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 08:18:47 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 43.
+ 1 APPPATH\Controllers\Admin\Product.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 08:18:57 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 113.
+ 1 APPPATH\Controllers\Admin\Product.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 113)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 08:19:00 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 113.
+ 1 APPPATH\Controllers\Admin\Product.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 113)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 08:19:01 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 113.
+ 1 APPPATH\Controllers\Admin\Product.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 113)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 08:19:01 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 113.
+ 1 APPPATH\Controllers\Admin\Product.php(113): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 113)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 08:19:16 --> ErrorException: Undefined array key "data"
+[Method: GET, Route: admin/product/list-product]
+in APPPATH\Controllers\Admin\Product.php on line 43.
+ 1 APPPATH\Controllers\Admin\Product.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Product.php', 43)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 08:24:03 --> ErrorException: Undefined array key "Token"
+[Method: GET, Route: admin/product/list-product-selected-category]
+in APPPATH\Controllers\Core\AuthController.php on line 26.
+ 1 APPPATH\Controllers\Core\AuthController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\AuthController.php', 26)
+ 2 APPPATH\Controllers\Admin\Product.php(111): App\Controllers\Core\AuthController->before([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product_selected_category()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 08:24:05 --> ErrorException: Undefined array key "Token"
+[Method: GET, Route: admin/product/list-product-selected-category]
+in APPPATH\Controllers\Core\AuthController.php on line 26.
+ 1 APPPATH\Controllers\Core\AuthController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\AuthController.php', 26)
+ 2 APPPATH\Controllers\Admin\Product.php(111): App\Controllers\Core\AuthController->before([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Product->list_product_selected_category()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Product))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-10-07 08:31:58 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Controllers\Admin\User.php on line 688.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->user_logged_in()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-10-07 08:32:06 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Controllers\Admin\User.php on line 688.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->user_logged_in()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-10-07 08:32:35 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Controllers\Admin\User.php on line 684.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->user_logged_in()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-10-07 08:32:40 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Controllers\Admin\User.php on line 688.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->user_logged_in()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 08:47:02 --> ErrorException: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()
+[Method: POST, Route: admin/user/reset-password-super-user]
+in APPPATH\Controllers\Admin\User.php on line 703.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 703)
+ 2 APPPATH\Controllers\Admin\User.php(703): mail('piteknoob@gmail.com', 'Test Email', 'Hello, this is a test email!', 'From: sender@example.com')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->reset_password_super_user()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 09:07:18 --> ErrorException: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()
+[Method: POST, Route: admin/user/reset-password-super-user]
+in APPPATH\Controllers\Admin\User.php on line 703.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 703)
+ 2 APPPATH\Controllers\Admin\User.php(703): mail('piteknoob@gmail.com', 'Test Email', 'Hello, this is a test email!', 'From: thomasrovino@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->reset_password_super_user()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-07 09:07:21 --> ErrorException: mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()
+[Method: POST, Route: admin/user/reset-password-super-user]
+in APPPATH\Controllers\Admin\User.php on line 703.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\User.php', 703)
+ 2 APPPATH\Controllers\Admin\User.php(703): mail('piteknoob@gmail.com', 'Test Email', 'Hello, this is a test email!', 'From: thomasrovino@gmail.com')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->reset_password_super_user()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-10-07 09:13:34 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Controllers\Admin\User.php on line 686.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->user_logged_in()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+WARNING - 2024-10-07 09:16:47 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Controllers\Admin\User.php on line 686.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->user_logged_in()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

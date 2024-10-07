@@ -504,8 +504,6 @@ class User extends AuthController
                 ]
             ];
             return $this->response->setJSON($data);
-
-            
         }
         // END VALIDATION FOR USERNAME
 
@@ -693,5 +691,19 @@ class User extends AuthController
             ]
         ];
         return $this->responseSuccess(ResponseInterface::HTTP_OK, "User Detail Login", $result);
+    }
+
+    public function reset_password_super_user()
+    {
+        $to = "piteknoob@gmail.com";
+        $subject = "Test Email";
+        $message = "Hello, this is a test email!";
+        $headers = "From: thomasrovino@gmail.com";
+
+        if (mail($to, $subject, $message, $headers)) {
+            echo "Email berhasil dikirim.";
+        } else {
+            echo "Email gagal dikirim.";
+        }
     }
 }
