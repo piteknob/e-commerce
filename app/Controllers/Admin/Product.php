@@ -185,7 +185,6 @@ class Product extends AuthController
                 $photo = 'upload/product/' . $product_data['photo'];
             }
             $return[] = [
-                'product' => [
                     'id' => $product_data['id'],
                     'name' => $product_data['name'],
                     'price' => $product_data['price'],
@@ -200,8 +199,6 @@ class Product extends AuthController
                     'photo' => $photo,
                     'created_at' => $product_data['created_at'],
                     'updated_at' => $product_data['updated_at'],
-                ],
-                'category_list' => $category_array,
             ];
             // $result = ['data' => $return];
         }

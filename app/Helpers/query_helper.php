@@ -157,8 +157,6 @@ if (!function_exists('generateListData')) {
             }
         }
 
-
-
         if (!empty($groupByQuery)) {
             $sql .= groupBy($groupByQuery);
         }
@@ -167,9 +165,8 @@ if (!function_exists('generateListData')) {
             $sql .= orderBy($orderByQuery);
         }
 
+        // print_r($sql); die;
 
-        // print_r($sql);
-        // die;
         // Set Pagination from Params
 
         if ($paginationParams == 'false') {
@@ -188,7 +185,7 @@ if (!function_exists('generateListData')) {
                 $countQuery = $sql;
                 $countResult = $db->query($countQuery)->getResultArray();
                 $countData = count($countResult);
-                
+
                 if (!empty($limitPage)) {
                     $limit = $limitPage;
                 } else {
@@ -583,7 +580,7 @@ if (!function_exists('filterBetween')) {
                 }
                 if (!empty($start)) {
                     foreach ($data as $key => $value) {
-                        $sql = " AND {$value} BETWEEN '{$start}' AND '9999999999999999999' AND ";
+                        $sql = " AND {$value} BETWEEN '{$start}' AND '999999999999999999999' AND ";
                     }
                     $sql = rtrim($sql, ' AND ');
                     return $sql;
@@ -617,6 +614,30 @@ if (!function_exists('filterBetween')) {
                         }
                         $sql = rtrim($sql, ' AND ');
                         return $sql;
+                    }
+                } else {
+                    if (empty($filter) && empty($search)) {
+                        if (!empty($start) && ($end)) {
+                            foreach ($data as $key => $value) {
+                                $sql = " AND {$value} BETWEEN '{$start}' AND '{$end}' AND ";
+                            }
+                            $sql = rtrim($sql, ' AND ');
+                            return $sql;
+                        }
+                        if (!empty($start)) {
+                            foreach ($data as $key => $value) {
+                                $sql = " AND {$value} BETWEEN '{$start}' AND '9999999999999999999' AND ";
+                            }
+                            $sql = rtrim($sql, ' AND ');
+                            return $sql;
+                        }
+                        if (!empty($end)) {
+                            foreach ($data as $key => $value) {
+                                $sql = " AND {$value} BETWEEN '{$start}' AND '{$end}' AND ";
+                            }
+                            $sql = rtrim($sql, ' AND ');
+                            return $sql;
+                        }
                     }
                 }
             }

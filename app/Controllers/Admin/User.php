@@ -2,6 +2,9 @@
 
 namespace App\Controllers\Admin;
 
+use Mailtrap\MailtrapClient;
+use Mailtrap\Mime\MailtrapEmail;
+use Symfony\Component\Mime\Address;
 use App\Controllers\Core\AuthController;
 use CodeIgniter\HTTP\ResponseInterface;
 
@@ -693,17 +696,140 @@ class User extends AuthController
         return $this->responseSuccess(ResponseInterface::HTTP_OK, "User Detail Login", $result);
     }
 
-    public function reset_password_super_user()
+    public function send_otp_reset_password()
     {
-        $to = "piteknoob@gmail.com";
-        $subject = "Test Email";
-        $message = "Hello, this is a test email!";
-        $headers = "From: thomasrovino@gmail.com";
+        date_default_timezone_set("Asia/Jakarta");
+        $no = $this->request->getVar('no_handphone');
+        $token = "YZ+iWZ+so_x!_eK#aZ9c";
+        $otp = mt_rand(100000, 999999);
 
-        if (mail($to, $subject, $message, $headers)) {
-            echo "Email berhasil dikirim.";
-        } else {
-            echo "Email gagal dikirim.";
+        // Get user role
+        $query_select = "SELECT user_role FROM `user` WHERE user_no_handphone = '$no'";
+        $role = $this->db->query($query_select)->getResultArray();
+        if (!empty($role)) {
+            foreach ($role[0] as $key => $value) {
+                $role = $value;
+            }
         }
+
+        // Get detail data user
+        $query_data['data'] = ['user'];
+        $query_data['select'] = [
+            'user_role' => 'role',
+            'user_no_handphone' => 'no_handphone',
+        ];
+        $query_data['where_detail'] = [
+            "WHERE user_no_handphone = '{$no}'"
+        ];
+        $data_user = generateDetailData($this->request->getVar(), $query_data, $this->db);
+
+        // check user role
+        if (!empty($role)) {
+            if ($role != 'super_user') {
+                return $this->responseFail(ResponseInterface::HTTP_UNAUTHORIZED, 'Access Denied: You do not have the necessary permissions to perform this action.', 'Unauthorized: User is not a super user.', $data_user);
+            }
+        } else {
+            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'Access Denied: The provided no handphone is not registered.', 'No handphone not found in the system.');
+        }
+
+        // insert otp to database
+        $date = date("Y-m-d H:i:s");
+        $currentDate = strtotime($date);
+        $futureDate = $currentDate + (60 * 5);
+        $formatDate = date("Y-m-d H:i:s", $futureDate);
+
+        $query = "UPDATE user SET user_otp = $otp, user_otp_expired = '{$formatDate}' WHERE user_no_handphone = '$no'";
+        $this->db->query($query);
+
+        $curl = curl_init();
+
+        curl_setopt_array($curl, array(
+            CURLOPT_URL => 'https://api.fonnte.com/send',
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_ENCODING => '',
+            CURLOPT_MAXREDIRS => 10,
+            CURLOPT_TIMEOUT => 0,
+            CURLOPT_FOLLOWLOCATION => true,
+            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+            CURLOPT_CUSTOMREQUEST => 'POST',
+            CURLOPT_POSTFIELDS => array(
+                'target' => "'$no'",
+                'message' => "ini kode otp anda: $otp",
+            ),
+            CURLOPT_HTTPHEADER => array(
+                "Authorization: $token"
+            ),
+            CURLOPT_SSL_VERIFYPEER => false, // Disable SSL verification (not recommended for production)
+        ));
+
+        curl_exec($curl);
+
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Message sent', $data_user);
+    }
+
+    public function reset_password()
+    {
+        date_default_timezone_set("Asia/Jakarta");
+        $post = $this->request->getPost();
+
+        // -------------------------- VALIDATION -------------------------- //
+        $rules = [
+            'otp' => 'required|numeric',
+            'password' => 'required|min_length[5]',
+            'confirm' => 'required|matches[password]',
+        ];
+
+        if (!$this->validate($rules)) {
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
+        }
+
+        // get data from post
+        $otp = $post['otp'];
+        $password = $post['password'];
+
+        // check OTP 
+        $query['data'] = ['user'];
+        $query['select'] = [
+            'user_otp_expired' => 'expired'
+        ];
+        $query['where_detail'] = [
+            "WHERE user_otp = '{$otp}'"
+        ];
+        $data_user = (array) generateDetailData($this->request->getVar(), $query, $this->db);
+
+
+        // get id from OTP
+        $get_id['data'] = ['user'];
+        $get_id['select'] = [
+            'user_id' => 'id',
+        ];
+        $get_id['where_detail'] = ["WHERE user_otp = $otp"];
+        $id = (array) generateDetailData($this->request->getVar(), $get_id, $this->db);
+        if(!empty($id['data'])) {
+            foreach ($id['data'][0] as $key => $value) {
+                $id_user = $value;
+            }
+        }
+
+        // check otp valid or not
+        if (empty($data_user['data'])) {
+            return $this->responseFail(ResponseInterface::HTTP_UNAUTHORIZED, 'Invalid OTP', 'The OTP provided is incorrect.');
+        } 
+        if (!empty($data_user['data'])) {
+            foreach ($data_user['data'][0] as $key => $value) {
+                $expired = strtotime($value);
+            }
+            if ($expired < strtotime(date('Y-m-d H:i:s'))) {
+                return $this->responseFail(ResponseInterface::HTTP_UNAUTHORIZED, 'The OTP has expired. Please request a new OTP and try again', 'OTP expired');
+            }
+        }
+        
+        $query_update_user = "UPDATE `user` SET user_password = '{$password}', user_otp = null, user_otp_expired = null WHERE user_otp = $otp";
+        $this->db->query($query_update_user);
+        $query_update_token = "UPDATE auth_user SET auth_user_token = NULL WHERE auth_user_user_id = $id_user";
+        $this->db->query($query_update_token);
+
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Password reset success');    
+
     }
 }

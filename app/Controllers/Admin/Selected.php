@@ -18,7 +18,6 @@ class Selected extends AuthController
         // GET CATEGORY ID FROM PRODUCT
         $id = $this->request->getGet();
         $id = $id['id'];
-
         $query['data'] = ['product'];
         $query['select'] = [
             'product_id' => 'id',

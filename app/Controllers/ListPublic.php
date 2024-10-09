@@ -32,9 +32,13 @@ class ListPublic extends AuthController
         ];
         $query['search_data'] = [
             'product_name',
+            'variant_name'
         ];
         $query['filter'] = [
             "product_category_name",
+        ];
+        $query['filter_between'] = [
+            'product_price'
         ];
         $query['pagination'] = [
             'pagination' => true
@@ -76,5 +80,4 @@ class ListPublic extends AuthController
 
         return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List Data Variant', $data);
     }
-
 }
