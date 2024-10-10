@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Controllers\Core;
 
@@ -30,12 +30,15 @@ class AuthController extends DataController
 
         // check token exist
         if (empty($token)) {
+            $token = (object) [];
             return Services::response()
                 ->setJSON([
-                    'status' => ResponseInterface::HTTP_NETWORK_AUTHENTICATION_REQUIRED,
+                    'status' => ResponseInterface::HTTP_UNAUTHORIZED,
                     'message' => 'Token Required',
                     'error' => 'Token not inputed',
-                    'inputed_token' => $token
+                    'result' => [
+                        'data' => ['inputed_token' => $token]
+                    ]
                 ]);
         }
         if (!$getResult) {
@@ -44,7 +47,9 @@ class AuthController extends DataController
                     'status' => ResponseInterface::HTTP_UNAUTHORIZED,
                     'message' => 'Invalid Token',
                     'error' => 'Token is not registered',
-                    'inputed_token' => $token
+                    'result' => [
+                        'data' => ['inputed_token' => $token]
+                    ]
                 ]);
         } else {
             $user = "SELECT *
@@ -67,7 +72,9 @@ class AuthController extends DataController
                         'status' => ResponseInterface::HTTP_REQUEST_TIMEOUT,
                         'message' => 'Token Expired',
                         'error' => 'Token date expired',
-                        'inputed_token' => $token
+                        'result' => [
+                            'data' => ['inputed_token' => $token]
+                        ]
                     ]);
             }
             // Add Active Time Expired Token (1 hour)
@@ -85,7 +92,7 @@ class AuthController extends DataController
         }
 
 
-        
+
         // $query['data'] = ['sales_order'];
         // $query['select'] = [
         //     'sales_order_date' => 'date'
@@ -94,7 +101,4 @@ class AuthController extends DataController
         // $data = (array) generateListData($this->request->getVar(), $query, $this->db);
         // print_r($data); die;
     }
-    
-    
-
 }

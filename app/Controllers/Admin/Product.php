@@ -21,7 +21,6 @@ class Product extends AuthController
         ];
         $query['join'] = [
             'product_stock' => 'product.product_id = product_stock.product_stock_product_id',
-            'variant' => 'product.product_id = variant.variant_product_id',
         ];
         $query['pagination'] = [false];
         $data = (array) generateListData($this->request->getGet(), $query, $this->db);
@@ -185,20 +184,20 @@ class Product extends AuthController
                 $photo = 'upload/product/' . $product_data['photo'];
             }
             $return[] = [
-                    'id' => $product_data['id'],
-                    'name' => $product_data['name'],
-                    'price' => $product_data['price'],
-                    'category_id' => $product_data['category_id'],
-                    'category_name' => $product_data['category_name'],
-                    'variant_id' => $product_data['variant_id'],
-                    'variant_name' => $product_data['variant_name'],
-                    'stock_stock' => $product_data['stock_stock'],
-                    'stock_in' => $product_data['stock_in'],
-                    'stock_out' => $product_data['stock_out'],
-                    'description' => $product_data['description'],
-                    'photo' => $photo,
-                    'created_at' => $product_data['created_at'],
-                    'updated_at' => $product_data['updated_at'],
+                'id' => $product_data['id'],
+                'name' => $product_data['name'],
+                'price' => $product_data['price'],
+                'category_id' => $product_data['category_id'],
+                'category_name' => $product_data['category_name'],
+                'variant_id' => $product_data['variant_id'],
+                'variant_name' => $product_data['variant_name'],
+                'stock_stock' => $product_data['stock_stock'],
+                'stock_in' => $product_data['stock_in'],
+                'stock_out' => $product_data['stock_out'],
+                'description' => $product_data['description'],
+                'photo' => $photo,
+                'created_at' => $product_data['created_at'],
+                'updated_at' => $product_data['updated_at'],
             ];
             // $result = ['data' => $return];
         }
@@ -286,6 +285,19 @@ class Product extends AuthController
             return $token;
         }
 
+        // ---------------------- SET VALIDATION ------------------------ //
+
+        $rules = [
+            'name' => 'required',
+            'variant' => 'required|numeric',
+            'category' => 'required|numeric'
+        ];
+
+        if (!$this->validate($rules)) {
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
+        }
+        
+
         $post = $this->request->getPost();
 
         $product = htmlspecialchars($post['name']);
@@ -301,17 +313,8 @@ class Product extends AuthController
         $end = time() + 3600;
         $random = mt_rand($start, $end);
 
-        // --------------------- SET VALIDATION && UPLOAD GET POST PHOTO ------------------------ //
+        // --------------------- UPLOAD GET POST PHOTO ------------------------ //
 
-        $rules = [
-            'name' => 'required',
-            'variant' => 'required',
-            'category' => 'required'
-        ];
-
-        if (!$this->validate($rules)) { 
-            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
-        }
 
         $photo = $this->request->getFile('upload');
         if (empty($photo)) {

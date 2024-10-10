@@ -52,7 +52,7 @@ if (!function_exists('generateDetailData')) {
         // die;
 
         $sql = $db->query($sql)->getResultArray();
-        $data->data = $sql;
+        $data->data = $sql[0];
 
         return $data;
     }
@@ -165,8 +165,32 @@ if (!function_exists('generateListData')) {
             $sql .= orderBy($orderByQuery);
         }
 
-        // print_r($sql); die;
 
+        $data_check = $db->query($sql);
+        $data_check = $data_check->getResultArray();
+        if (!$data_check) {
+            // print_r($paginationParams); die;
+            if ($paginationParams == 'true' || !$paginationParams) {
+                $data = [
+                    'data' => [],
+                    'pagination' => [
+                        'total_data' => 0,
+                        'total_page' => 0,
+                        "prev" => null,
+                        "page" => 1,
+                        "next" => null,
+                        "detail" => [
+                            1
+                        ],
+                        "start" => 0,
+                        "end" => 0
+                    ]
+                ];
+                return $data;
+            } else {
+                return ['data' => []];
+            }
+        }
         // Set Pagination from Params
 
         if ($paginationParams == 'false') {
@@ -182,8 +206,8 @@ if (!function_exists('generateListData')) {
 
             if (!empty($pagination)) {
 
-                $countQuery = $sql;
-                $countResult = $db->query($countQuery)->getResultArray();
+                // $countQuery = $sql;
+                $countResult = $db->query($sql)->getResultArray();
                 $countData = count($countResult);
 
                 if (!empty($limitPage)) {
@@ -242,8 +266,8 @@ if (!function_exists('generateListData')) {
 
         if (!empty($pagination)) {
 
-            $countQuery = $sql;
-            $countResult = $db->query($countQuery)->getResultArray();
+            // $countQuery = $sql;
+            $countResult = $db->query($sql)->getResultArray();
             $countData = count($countResult);
 
 

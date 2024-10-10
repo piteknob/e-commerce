@@ -7,7 +7,7 @@ use CodeIgniter\HTTP\ResponseInterface;
 
 class Category extends AuthController
 {
-    public function list()
+    public function list_category()
     {
         // Authorization Token
         $token = $this->before(getallheaders());
