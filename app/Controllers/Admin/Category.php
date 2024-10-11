@@ -4,6 +4,7 @@ namespace App\Controllers\Admin;
 
 use App\Controllers\Core\AuthController;
 use CodeIgniter\HTTP\ResponseInterface;
+use Exception;
 
 class Category extends AuthController
 {
@@ -22,6 +23,9 @@ class Category extends AuthController
             'category_created_at' => 'created_at',
             'category_updated_at' => 'updated_at',
             'category_deleted_at' => 'deleted_at',
+        ];
+        $query['where_detail'] = [
+            "WHERE category_deleted_at IS NULL"
         ];
         $data = generateListData($this->request->getVar(), $query, $this->db);
 
@@ -63,24 +67,37 @@ class Category extends AuthController
             return $token;
         }
 
-        $post = $this->request->getPost();
+        // ---------------------- SET VALIDATION ------------------------ //
+        $rules = [
+            'name' => 'required|is_unique[category.category_name]|max_length[50]'
+        ];
 
-        $category = htmlspecialchars_decode($post['category']);
-        $sql = "INSERT INTO `category`(category_name, category_created_at, category_updated_at, category_deleted_at)
-        VALUES ('{$category}', NOW(), NULL, NULL)";
+        if (!$this->validate($rules)) {
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
+        }
 
-        $this->db->query($sql);
+        try {
+            $post = $this->request->getPost();
+            $category = htmlspecialchars($post['name']);
+            $db = db_connect();
+            $data = [
+                'category_name' => $category,
+                'category_created_at' => date('Y-m-d H:i:s'),
+                'category_updated_at' => NULL,
+                'category_deleted_at' => NULL
+            ];
+            $db->table('category')->insert($data);
+            $id = $db->insertID();
+        } catch (Exception $e) {
+            return $this->responseFail(ResponseInterface::HTTP_INTERNAL_SERVER_ERROR, 'Error occurred', $e->getMessage());
+        }
 
-        // Get Inserted Id
-        $id = $this->db->insertID();
-
+        // print_r($id); die;
         $query['data'] = ['category'];
-
         $query['select'] = [
             'category_name' => 'category',
             'category_created_at' => 'created',
         ];
-
         $query['where_detail'] = [
             "WHERE category_id = {$id}"
         ];
@@ -98,20 +115,32 @@ class Category extends AuthController
             return $token;
         }
 
-        $post = $this->request->getPost();
-        $id = $this->request->getGet();
+        // ---------------------- SET VALIDATION ------------------------ //
+        $rules = [
+            'id' => 'required|numeric',
+            'name' => 'required|is_unique[category.category_name]|max_length[50]'
+        ];
 
-        foreach ($id as $key => $value) {
-            $id = $value;
+        if (!$this->validate($rules)) {
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
         }
 
-        $category = htmlspecialchars($post['category']);
-        $sql = "UPDATE category SET
-        category_name = '{$category}',
-        category_updated_at = NOW()
-        WHERE category_id = {$id}";
+        try {
+            $post = $this->request->getPost();
+            $id = htmlspecialchars($post['id']);
+            $category = htmlspecialchars($post['name']);
 
-        $this->db->query($sql);
+            $data = [
+                'category_name' => $category,
+                'category_updated_at' => date('Y-m-d H:i:s'),
+            ];
+
+            $this->db->table('category')
+                ->where('category_id', $id)
+                ->update($data);
+        } catch (\Exception $e) {
+            return $this->responseFail(ResponseInterface::HTTP_INTERNAL_SERVER_ERROR, 'Error occurred', $e->getMessage());
+        }
 
         $query['data'] = ['category'];
         $query['select'] = [
@@ -136,25 +165,51 @@ class Category extends AuthController
             return $token;
         }
 
-        $id = $this->request->getGet();
-        foreach ($id as $key => $value) {
-            $id = $value;
+        // ---------------------- SET VALIDATION ------------------------ //
+        $rules = [
+            'id' => 'required|numeric'
+        ];
+
+        if (!$this->validate($rules)) {
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
         }
+
+        $post = $this->request->getPost();
+        $id = $post['id'];
 
         $query['data'] = ['category'];
         $query['select'] = [
             'category_id' => 'id',
             'category_name' => 'name',
-            'category_created_at' => 'created',
-            'category_updated_at' => 'updated',
-            'category_deleted_at' => 'deleted',
+            'category_created_at' => 'created_at',
+            'category_updated_at' => 'updated_at',
+            'category_deleted_at' => 'deleted_at',
         ];
         $query['where_detail'] = [
             "WHERE category_id = {$id}"
         ];
 
-        $data = generateDetailData($this->request->getGet(), $query, $this->db);
+        $data = (array) generateDetailData($this->request->getGet(), $query, $this->db);
+        // print_r($data['data']); die;
 
+        if ($data['data']['deleted_at'] == null) {
+            $data['data']['deleted_at'] = date('Y-m-d H:i:s');
+        } else {
+
+            $query['data'] = ['category'];
+            $query['select'] = [
+                'category_id' => 'id',
+                'category_name' => 'name',
+                'category_deleted_at' => 'deleted_at',
+            ];
+            $query['where_detail'] = [
+                "WHERE category_id = {$id}"
+            ];
+            $data = (array) generateDetailData($this->request->getGet(), $query, $this->db);
+
+
+            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND,  'The requested data has already been deleted', 'The data you are trying to access has been deleted and is no longer available.', $data);
+        }
         $sql = "UPDATE `category` 
         SET category_updated_at = NOW(),
             category_deleted_at = NOW()
@@ -177,17 +232,17 @@ class Category extends AuthController
         $query['data'] = ['category'];
         $query['select'] = [
             'category_id' => 'id',
-            'category_name' => 'category',
+            'category_name' => 'name',
             'category_created_at' => 'created_at',
             'category_updated_at' => 'updated_at',
+            'category_deleted_at' => 'deleted_at',
         ];
         $query['where_detail'] = [
             "WHERE category_deleted_at is not null"
         ];
 
         $data = generateListData($this->request->getGet(), $query, $this->db);
-
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List Data Category', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List Data Value', $data);
     }
 
     public function restore()
@@ -198,11 +253,17 @@ class Category extends AuthController
             return $token;
         }
 
-        $id = $this->request->getGet();
+        // ---------------------- SET VALIDATION ------------------------ //
+        $rules = [
+            'id' => 'required|numeric'
+        ];
 
-        foreach ($id as $key => $value) {
-            $id = $value;
+        if (!$this->validate($rules)) {
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
         }
+
+        $post = $this->request->getPost();
+        $id = $post['id'];
 
         $sql = "UPDATE `category` 
             SET category_deleted_at = NULL,
@@ -234,29 +295,40 @@ class Category extends AuthController
             return $token;
         }
 
-        $id = $this->request->getGet();
-        foreach ($id as $key => $value) {
-            $id = $value;
+        // ---------------------- SET VALIDATION ------------------------ //
+        $rules = [
+            'id' => 'required|numeric'
+        ];
+
+        if (!$this->validate($rules)) {
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
         }
+        $id = $this->request->getPost('id');
 
         $query['data'] = ['category'];
         $query['select'] = [
-            'category_id' => 'id',
             'category_name' => 'name',
-            'category_created_at' => 'created',
-            'category_updated_at' => 'updated',
-            'category_deleted_at' => 'deleted',
         ];
         $query['where_detail'] = [
-            "WHERE category_id = {$id}"
+            "WHERE category_id = $id"
         ];
+        $data = (array) generateDetailData($this->request->getVar(), $query, $this->db);
 
-        $data = generateDetailData($this->request->getGet(), $query, $this->db);
+        if (empty($data['data'])) {
+            return $this->responseFail(ResponseInterface::HTTP_GONE, 'Data already deleted from database', 'Data already deleted', "");
+        }
 
-        $sql = "DELETE FROM `category` WHERE category_id = {$id}";
 
-        $this->db->query($sql);
+        try {
+            // delete category
+            $db = db_connect();
+            $db->table('category')
+                ->where('category_id', $id)
+                ->delete();
+        } catch (Exception $e) {
+            return $this->responseFail(ResponseInterface::HTTP_INTERNAL_SERVER_ERROR, 'Error occurred', $e->getMessage());
+        }
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Deleted', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Deleted', (object) []);
     }
 }

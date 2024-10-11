@@ -21,19 +21,17 @@ class Stock extends AuthController
             'product.product_name' => 'name',
             'product.product_category_id' => 'category_id',
             'product.product_category_name' => 'category_name',
-            'variant.variant_id' => 'variant_id',
-            'variant.variant_name' => 'variant_name',
+            'product.product_variant_id' => 'variant_id',
+            'product.product_variant_name' => 'variant_name',
             'product_stock.product_stock_stock' => 'stock_stock',
             'product_stock.product_stock_in' => 'stock_in',
             'product_stock.product_stock_out' => 'stock_out',
         ];
         $query['join'] = [
             'product_stock' => 'product.product_id = product_stock.product_stock_product_id',
-            'variant' => 'product.product_id = variant.variant_product_id',
         ];
-        $query['pagination'] = [
-            'pagination' => true
-        ];
+        $query['search_data'] = ['product_name'];
+        $query['filter'] = ['product_category_name'];
 
         $data = generateListData($this->request->getVar(), $query, $this->db);
 
@@ -56,8 +54,8 @@ class Stock extends AuthController
             'product.product_price' => 'price',
             'product.product_category_id' => 'category_id',
             'product.product_category_name' => 'category_name',
-            'variant.variant_id' => 'variant_id',
-            'variant.variant_name' => 'variant_name',
+            'product.product_variant_id' => 'variant_id',
+            'product.product_variant_name' => 'variant_name',
             'product_stock.product_stock_stock' => 'stock_stock',
             'product_stock.product_stock_in' => 'stock_in',
             'product_stock.product_stock_out' => 'stock_out',
@@ -65,7 +63,6 @@ class Stock extends AuthController
         ];
         $query['join'] = [
             'product_stock' => 'product.product_id = product_stock.product_stock_product_id',
-            'variant' => 'product.product_id = variant.variant_product_id',
         ];
         $query['where_detail'] = [
             "WHERE product_stock_id = $id"
@@ -83,6 +80,18 @@ class Stock extends AuthController
         if (!empty($token)) {
             return $token;
         }
+
+        // set validation 
+        // ---------------------- SET VALIDATION ------------------------ //
+        $rules = [
+            'id' => 'required|numeric',
+            'value' => 'required|numeric'
+        ];
+
+        if (!$this->validate($rules)) {
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
+        }
+
         $id = $this->request->getVar();
         $post = $this->request->getPost();
         $id = $id['id'];
@@ -92,70 +101,35 @@ class Stock extends AuthController
         $query['select'] = [
             'product_variant_id' => 'variant_id',
             'product_category_id' => 'category_id',
-            'product_box_id' => 'box_id',
         ];
         $query['where_detail'] = [
             "WHERE product_id = $id"
         ];
         $data = generateDetailData($this->request->getGet(), $query, $this->db);
         foreach ($data as $key => $value) {
-            $data = $value[0];
+            $data = $value;
         }
-
-        $queryB['data'] = ['product_stock'];
-        $queryB['select'] = [
-            'product_stock_product_name' => 'product_name',
-            'product_stock_stock' => 'stock'
-        ];
-        $queryB['where_detail'] = [
-            "WHERE product_stock_product_id = $id"
-        ];
-
-        $data1 = generateDetailData($this->request->getGet(), $queryB, $this->db);
 
         // get file to insert
         $quantity = htmlspecialchars($post['value']);
         $variant = $data['variant_id'];
         $category = $data['category_id'];
-        $box = $data['box_id'];
 
         $sql = "UPDATE product_stock SET product_stock_stock = product_stock_stock - {$quantity},
         product_stock_out = product_stock_out + {$quantity} WHERE product_stock_product_id = '{$id}'";
         $this->db->query($sql);
 
-        $log = "INSERT INTO log_stock (log_stock_product_id, log_stock_product_name, log_stock_status, log_stock_quantity, log_stock_variant_id, log_stock_variant_name, log_stock_category_id, log_stock_category_name, log_stock_box_id, log_stock_box_value, log_stock_date)
-            SELECT product_id, product_name, 'reduce', {$quantity}, {$variant}, variant_name, {$category}, category_name, {$box}, box_value, NOW()
-            FROM product, category, `variant`, `box`
-            WHERE product_id = '$id' AND variant_id = {$variant} AND category_id = {$category} AND box_id = {$box}";
+        $log = "INSERT INTO log_stock (log_stock_product_id, log_stock_status, log_stock_quantity, log_stock_variant_id, log_stock_category_id, log_stock_date)
+            SELECT {$id}, 'reduce', '{$quantity}', '{$variant}', '{$category}', NOW()
+            FROM `product`, `category`, `variant`
+            WHERE product_id = '$id' AND variant_id = {$variant} AND category_id = {$category};";
         $this->db->query($log);
 
-        $queryA['data'] = ['product_stock'];
-
-        $queryA['select'] = [
-            'product_stock_product_name' => 'product_name',
-            'product_stock_stock' => 'stock',
+        $return = [
+            'data reduced' => $quantity
         ];
 
-        $queryA['where_detail'] = [
-            " WHERE product_stock_product_id = '{$id}'"
-        ];
-
-        $data2 = generateDetailData($this->request->getVar(), $queryA, $this->db);
-
-        foreach ($data1 as $key => $value) {
-            $data1 = $value[0];
-        }
-        foreach ($data2 as $key => $value) {
-            $data2 = $value[0];
-        }
-        $data = [
-            'data' => [
-                'before' => $data1,
-                'after' => $data2,
-            ]
-        ];
-
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Reduced', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Reduced', (object) []);
     }
 
     public function add()
@@ -165,6 +139,17 @@ class Stock extends AuthController
         if (!empty($token)) {
             return $token;
         }
+
+        // ---------------------- SET VALIDATION ------------------------ //
+        $rules = [
+            'id' => 'required|numeric',
+            'value' => 'required|numeric'
+        ];
+
+        if (!$this->validate($rules)) {
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
+        }
+
         $id = $this->request->getVar();
         $post = $this->request->getPost();
         $id = $id['id'];
@@ -174,68 +159,35 @@ class Stock extends AuthController
         $query['select'] = [
             'product_variant_id' => 'variant_id',
             'product_category_id' => 'category_id',
-            'product_box_id' => 'box_id',
         ];
         $query['where_detail'] = [
             "WHERE product_id = $id"
         ];
         $data = generateDetailData($this->request->getGet(), $query, $this->db);
         foreach ($data as $key => $value) {
-            $data = $value[0];
+            $data = $value;
         }
-
-        $queryB['data'] = ['product_stock'];
-        $queryB['select'] = [
-            'product_stock_product_name' => 'product_name',
-            'product_stock_stock' => 'stock'
-        ];
-        $queryB['where_detail'] = [
-            "WHERE product_stock_product_id = $id"
-        ];
-
-        $data1 = generateDetailData($this->request->getGet(), $queryB, $this->db);
 
         // get file to insert
         $quantity = htmlspecialchars($post['value']);
         $variant = $data['variant_id'];
         $category = $data['category_id'];
-        $box = $data['box_id'];
 
         $sql = "UPDATE product_stock SET product_stock_stock = product_stock_stock + {$quantity},
-        product_stock_in = product_stock_in + {$quantity} WHERE product_stock_product_id = '{$id}'";
+        product_stock_out = product_stock_out + {$quantity} WHERE product_stock_product_id = '{$id}'";
         $this->db->query($sql);
 
-        $log = "INSERT INTO log_stock (log_stock_product_id, log_stock_product_name, log_stock_status, log_stock_quantity, log_stock_variant_id, log_stock_variant_name, log_stock_category_id, log_stock_category_name, log_stock_box_id, log_stock_box_value, log_stock_date)
-            SELECT product_id, product_name, 'add', {$quantity}, {$variant}, variant_name, {$category}, category_name, {$box}, box_value, NOW()
-            FROM product, category, `variant`, `box`
-            WHERE product_id = '$id' AND variant_id = {$variant} AND category_id = {$category} AND box_id = {$box}";
+        $log = "INSERT INTO log_stock (log_stock_product_id, log_stock_status, log_stock_quantity, log_stock_variant_id, log_stock_category_id, log_stock_date)
+            SELECT {$id}, 'add', '{$quantity}', '{$variant}', '{$category}', NOW()
+            FROM `product`, `category`, `variant`
+            WHERE product_id = '$id' AND variant_id = {$variant} AND category_id = {$category};";
         $this->db->query($log);
 
-        $queryA['data'] = ['product_stock'];
-        $queryA['select'] = [
-            'product_stock_product_name' => 'product_name',
-            'product_stock_stock' => 'stock',
-        ];
-        $queryA['where_detail'] = [
-            " WHERE product_stock_product_id = '{$id}'"
+        $return = [
+            'data reduced' => $quantity
         ];
 
-        $data2 = generateDetailData($this->request->getVar(), $queryA, $this->db);
-
-        foreach ($data1 as $key => $value) {
-            $data1 = $value[0];
-        }
-        foreach ($data2 as $key => $value) {
-            $data2 = $value[0];
-        }
-        $data = [
-            'data' => [
-                'before' => $data1,
-                'after' => $data2,
-            ]
-        ];
-
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Added', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Added', (object) []);
     }
 
     public function update()
@@ -246,13 +198,28 @@ class Stock extends AuthController
             return $token;
         }
 
-        $id = $this->request->getGet('id');
-        $post = $this->request->getPost();
+        // ---------------------- SET VALIDATION ------------------------ //
+        $rules = [
+            'id' => 'required|numeric',
+            'stock' => 'required|numeric'
+        ];
 
-        $stock = htmlspecialchars($post['stock']);
+        if (!$this->validate($rules)) {
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
+        }
 
-        $sql = "UPDATE product_stock SET product_stock_stock = '{$stock}' WHERE product_stock_id = {$id}";
-        $this->db->query($sql);
+        try {
+            $post = $this->request->getPost();
+            $id = htmlspecialchars($post['id']);
+            $stock = htmlspecialchars($post['stock']);
+
+            $this->db->table('product_stock')
+                ->set('product_stock_stock', $stock)
+                ->where('product_stock_id', $id)
+                ->update();
+        } catch (\Exception $e) {
+            return $this->responseFail(ResponseInterface::HTTP_INTERNAL_SERVER_ERROR, 'Error Update Stock', $e->getMessage());
+        }
 
         $query['data'] = ['product_stock'];
         $query['select'] = [
@@ -260,8 +227,8 @@ class Stock extends AuthController
             'product.product_name' => 'name',
             'product.product_category_id' => 'category_id',
             'product.product_category_name' => 'category_name',
-            'variant.variant_id' => 'variant_id',
-            'variant.variant_name' => 'variant_name',
+            'product.product_variant_id' => 'variant_id',
+            'product.product_variant_name' => 'variant_name',
             'product_stock.product_stock_stock' => 'stock_stock',
             'product_stock.product_stock_in' => 'stock_in',
             'product_stock.product_stock_out' => 'stock_out',
@@ -269,7 +236,6 @@ class Stock extends AuthController
         ];
         $query['join'] = [
             'product' => 'product.product_id = product_stock.product_stock_product_id',
-            'variant' => 'product.product_id = variant.variant_product_id',
         ];
         $query['where_detail'] = ["WHERE product_stock_id = $id"];
         $data = generateDetailData($this->request->getVar(), $query, $this->db);

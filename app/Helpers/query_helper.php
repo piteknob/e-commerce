@@ -52,7 +52,11 @@ if (!function_exists('generateDetailData')) {
         // die;
 
         $sql = $db->query($sql)->getResultArray();
-        $data->data = $sql[0];
+        if (!empty($sql)) {
+            $data->data = $sql[0];
+        } else {
+            $data->data = "";
+        }
 
         return $data;
     }

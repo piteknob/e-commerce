@@ -27,6 +27,9 @@ class Variant extends AuthController
         $query['search_data'] = [
             'variant_name'
         ];
+        $query['where_detail'] = [
+            "WHERE variant_deleted_at IS NULL"
+        ];
         $data = generateListData($this->request->getGet(), $query, $this->db);
         return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List Data Variant', $data);
     }
@@ -53,7 +56,9 @@ class Variant extends AuthController
         $query['where_detail'] = [
             "WHERE variant_id = $id"
         ];
-
+        $query['where_detail'] = [
+            "WHERE variant_deleted_at IS NULL"
+        ];
         $data = generateDetailData($this->request->getVar(), $query, $this->db);
         return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Detail Data Variant', $data);
     }
@@ -120,7 +125,7 @@ class Variant extends AuthController
         // ---------------------- SET VALIDATION ------------------------ //
         $rules = [
             'id' => 'required|numeric',
-            'name' => 'required|is_unique[variant.variant_name]'
+            'name' => 'required|is_unique[variant.variant_name]|max_length[50]'
         ];
 
         if (!$this->validate($rules)) {
@@ -308,10 +313,23 @@ class Variant extends AuthController
         if (!$this->validate($rules)) {
             return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
         }
+        $id = $this->request->getPost('id');
+
+        $query['data'] = ['variant'];
+        $query['select'] = [
+            'variant_name' => 'name',
+        ];
+        $query['where_detail'] = [
+            "WHERE variant_id = $id"
+        ];
+        $data = (array) generateDetailData($this->request->getVar(), $query, $this->db);
+
+        if (empty($data['data'])) {
+            return $this->responseFail(ResponseInterface::HTTP_GONE, 'Data already deleted from database', 'Data already deleted', "");
+        }
+
 
         try {
-            $id = $this->request->getPost('id');
-
             // delete variant
             $db = db_connect();
             $db->table('variant')
@@ -321,6 +339,6 @@ class Variant extends AuthController
             return $this->responseFail(ResponseInterface::HTTP_INTERNAL_SERVER_ERROR, 'Error occurred', $e->getMessage());
         }
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Deleted', "");
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Deleted', (object) []);
     }
 }
