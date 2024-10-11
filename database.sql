@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Waktu pembuatan: 10 Okt 2024 pada 09.53
+-- Waktu pembuatan: 11 Okt 2024 pada 09.23
 -- Versi server: 8.3.0
 -- Versi PHP: 8.2.18
 
@@ -44,8 +44,8 @@ CREATE TABLE IF NOT EXISTS `auth_user` (
 --
 
 INSERT INTO `auth_user` (`auth_user_id`, `auth_user_user_id`, `auth_user_username`, `auth_user_token`, `auth_user_date_login`, `auth_user_date_expired`) VALUES
-(6, 1, 'bakpia', 'YmFrcGlhMTIzNDU2', '2024-10-10 16:50:50', '2024-10-11 16:50:50'),
-(8, 24, 'bakpia2', 'YmFrcGlhMjEyMzQ1Ng==', '2024-10-10 15:59:29', '2024-10-11 15:59:29');
+(6, 1, 'bakpia', 'YmFrcGlhMTIzNDU2', '2024-10-11 16:21:45', '2024-10-12 16:21:45'),
+(8, 24, 'bakpia2', 'YmFrcGlhMjEyMzQ1Ng==', '2024-10-11 14:12:50', '2024-10-12 14:12:50');
 
 -- --------------------------------------------------------
 
@@ -61,7 +61,7 @@ CREATE TABLE IF NOT EXISTS `category` (
   `category_updated_at` datetime DEFAULT NULL,
   `category_deleted_at` datetime DEFAULT NULL,
   PRIMARY KEY (`category_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data untuk tabel `category`
@@ -69,8 +69,7 @@ CREATE TABLE IF NOT EXISTS `category` (
 
 INSERT INTO `category` (`category_id`, `category_name`, `category_created_at`, `category_updated_at`, `category_deleted_at`) VALUES
 (1, 'Basah', '2024-08-02 06:58:12', NULL, NULL),
-(8, 'kering', '2024-09-06 10:20:17', NULL, NULL),
-(24, 'test update', '2024-10-09 13:48:26', '2024-10-09 13:54:29', '2024-10-09 13:54:29');
+(8, 'kering', '2024-09-06 10:20:17', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -113,7 +112,7 @@ CREATE TABLE IF NOT EXISTS `log_stock` (
   KEY `fk_log_stock_product` (`log_stock_product_id`),
   KEY `fk_log_stock_variant` (`log_stock_variant_id`),
   KEY `fk_log_stock_category` (`log_stock_category_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=103 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=115 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data untuk tabel `log_stock`
@@ -131,7 +130,19 @@ INSERT INTO `log_stock` (`log_stock_id`, `log_stock_product_id`, `log_stock_vari
 (99, 139, 131, 1, 'sold', 5, '2024-10-09 11:07:35'),
 (100, 140, 132, 1, 'sold', 5, '2024-10-09 11:07:35'),
 (101, 139, 131, 1, 'sold', 5, '2024-10-09 14:12:22'),
-(102, 140, 132, 1, 'sold', 5, '2024-10-09 14:12:22');
+(102, 140, 132, 1, 'sold', 5, '2024-10-09 14:12:22'),
+(103, 160, 159, 8, 'reduce', 5, '2024-10-11 16:02:48'),
+(104, 160, 159, 8, 'reduce', 5, '2024-10-11 16:04:44'),
+(105, 160, 159, 8, 'reduce', 5, '2024-10-11 16:04:47'),
+(106, 160, 159, 8, 'reduce', 5, '2024-10-11 16:05:17'),
+(107, 160, 159, 8, 'reduce', 5, '2024-10-11 16:05:43'),
+(108, 160, 159, 8, 'reduce', 5, '2024-10-11 16:05:57'),
+(109, 160, 159, 8, 'reduce', 5, '2024-10-11 16:06:06'),
+(110, 160, 159, 8, 'reduce', 5, '2024-10-11 16:06:44'),
+(111, 160, 159, 8, 'reduce', 5, '2024-10-11 16:06:54'),
+(112, 160, 159, 8, 'reduce', 5, '2024-10-11 16:07:16'),
+(113, 160, 159, 8, 'add', 5, '2024-10-11 16:15:08'),
+(114, 160, 159, 8, 'add', 5, '2024-10-11 16:15:45');
 
 -- --------------------------------------------------------
 
@@ -168,20 +179,33 @@ INSERT INTO `outlet` (`outlet_id`, `outlet_title`, `outlet_address`, `outlet_pho
 DROP TABLE IF EXISTS `product`;
 CREATE TABLE IF NOT EXISTS `product` (
   `product_id` int UNSIGNED NOT NULL AUTO_INCREMENT,
-  `product_name` varchar(255) NOT NULL,
+  `product_name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `product_price` int NOT NULL,
   `product_category_id` int UNSIGNED NOT NULL,
-  `product_category_name` varchar(255) NOT NULL,
+  `product_category_name` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `product_variant_id` int UNSIGNED NOT NULL,
   `product_variant_name` varchar(50) NOT NULL,
-  `product_description` varchar(1000) NOT NULL,
-  `product_photo` varchar(255) DEFAULT NULL,
+  `product_description` varchar(500) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `product_photo` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `product_created_at` datetime DEFAULT NULL,
   `product_updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`product_id`),
   KEY `fk_product_category` (`product_category_id`),
   KEY `fk_product_variant` (`product_variant_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=155 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=167 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data untuk tabel `product`
+--
+
+INSERT INTO `product` (`product_id`, `product_name`, `product_price`, `product_category_id`, `product_category_name`, `product_variant_id`, `product_variant_name`, `product_description`, `product_photo`, `product_created_at`, `product_updated_at`) VALUES
+(160, 'Bakpia 465 Kering 20', 24000, 8, 'kering', 159, 'test', '', 'bakpia_465_kering_20_1728629676.png', '2024-10-11 13:51:53', NULL),
+(161, 'Bakpia 465 Kering 20', 24000, 8, 'kering', 159, 'test', '', 'bakpia_465_kering_20_1728630700.png', '2024-10-11 13:51:55', NULL),
+(162, 'Premium', 24000, 8, 'kering', 159, 'test', '', 'premium_1728637680.png', '2024-10-11 15:13:35', NULL),
+(163, 'Premium', 24000, 8, 'kering', 159, 'test', '', 'premium_1728634669.png', '2024-10-11 15:13:37', NULL),
+(164, 'Premium', 24000, 8, 'kering', 159, 'test', '', 'premium_1728635471.png', '2024-10-11 15:13:38', NULL),
+(165, 'Test', 24000, 1, 'Basah', 159, 'test', '', 'test_1728635134.png', '2024-10-11 15:14:08', NULL),
+(166, 'Test', 24000, 1, 'Basah', 159, 'test', '', 'test_1728636057.png', '2024-10-11 15:14:09', NULL);
 
 -- --------------------------------------------------------
 
@@ -202,7 +226,20 @@ CREATE TABLE IF NOT EXISTS `product_stock` (
   KEY `fk_product_stock_product` (`product_stock_product_id`),
   KEY `fk_product_stock_variant` (`product_stock_variant_id`),
   KEY `fk_product_stock_category` (`product_stock_category_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=148 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=161 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data untuk tabel `product_stock`
+--
+
+INSERT INTO `product_stock` (`product_stock_id`, `product_stock_product_id`, `product_stock_variant_id`, `product_stock_category_id`, `product_stock_stock`, `product_stock_in`, `product_stock_out`) VALUES
+(160, 166, 159, 1, 10, 0, 0),
+(159, 165, 159, 1, 50, 0, 0),
+(158, 164, 159, 8, 50, 0, 0),
+(157, 163, 159, 8, 50, 0, 0),
+(156, 162, 159, 8, 50, 0, 0),
+(155, 161, 159, 8, 50, 0, 0),
+(154, 160, 159, 8, 5, 0, 65);
 
 -- --------------------------------------------------------
 
@@ -375,9 +412,7 @@ CREATE TABLE IF NOT EXISTS `variant` (
 INSERT INTO `variant` (`variant_id`, `variant_name`, `variant_created_at`, `variant_updated_at`, `variant_deleted_at`) VALUES
 (158, 'test4', '2024-10-10 09:15:56', NULL, NULL),
 (159, 'test', '2024-10-10 09:16:03', NULL, NULL),
-(160, 'test1', '2024-10-10 09:16:05', NULL, NULL),
-(161, 'test2', '2024-10-10 09:16:06', NULL, NULL),
-(162, 'test3', '2024-10-10 09:16:07', NULL, NULL);
+(160, 'test1', '2024-10-10 09:16:05', NULL, NULL);
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
