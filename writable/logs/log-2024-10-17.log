@@ -1,0 +1,643 @@
+ERROR - 2024-10-17 02:58:50 --> mysqli_sql_exception: Unknown column 'variant_product_id' in 'where clause' in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('SELECT variant_...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT variant_...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT variant_...')
+#3 C:\wamp64\www\e-commerce\app\Helpers\query_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT variant_...')
+#4 C:\wamp64\www\e-commerce\app\Controllers\Admin\Confirmation.php(451): generateDetailData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+#7 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-10-17 02:58:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'variant_product_id' in 'where clause'
+[Method: POST, Route: admin/confirmation/confirm]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Helpers\query_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT variant_id AS id FROM `variant` WHERE variant_product_id = 160')
+ 2 APPPATH\Controllers\Admin\Confirmation.php(451): generateDetailData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 02:58:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'variant_product_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT variant_id AS id FROM `variant` WHERE variant_product_id = 160')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT variant_id AS id FROM `variant` WHERE variant_product_id = 160')
+ 3 APPPATH\Helpers\query_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT variant_id AS id FROM `variant` WHERE variant_product_id = 160')
+ 4 APPPATH\Controllers\Admin\Confirmation.php(451): generateDetailData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 02:58:50 --> [Caused by] mysqli_sql_exception: Unknown column 'variant_product_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('SELECT variant_id AS id FROM `variant` WHERE variant_product_id = 160', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT variant_id AS id FROM `variant` WHERE variant_product_id = 160')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT variant_id AS id FROM `variant` WHERE variant_product_id = 160')
+ 4 APPPATH\Helpers\query_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT variant_id AS id FROM `variant` WHERE variant_product_id = 160')
+ 5 APPPATH\Controllers\Admin\Confirmation.php(451): generateDetailData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-17 03:01:26 --> mysqli_sql_exception: Unknown column 'variant_product_id' in 'where clause' in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('SELECT variant_...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT variant_...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT variant_...')
+#3 C:\wamp64\www\e-commerce\app\Helpers\query_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT variant_...')
+#4 C:\wamp64\www\e-commerce\app\Controllers\Admin\Confirmation.php(451): generateDetailData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+#7 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-10-17 03:01:26 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'variant_product_id' in 'where clause'
+[Method: POST, Route: admin/confirmation/confirm]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Helpers\query_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT variant_id AS id FROM `variant` WHERE variant_product_id = 160')
+ 2 APPPATH\Controllers\Admin\Confirmation.php(451): generateDetailData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 03:01:26 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'variant_product_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT variant_id AS id FROM `variant` WHERE variant_product_id = 160')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT variant_id AS id FROM `variant` WHERE variant_product_id = 160')
+ 3 APPPATH\Helpers\query_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT variant_id AS id FROM `variant` WHERE variant_product_id = 160')
+ 4 APPPATH\Controllers\Admin\Confirmation.php(451): generateDetailData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 03:01:26 --> [Caused by] mysqli_sql_exception: Unknown column 'variant_product_id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('SELECT variant_id AS id FROM `variant` WHERE variant_product_id = 160', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT variant_id AS id FROM `variant` WHERE variant_product_id = 160')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT variant_id AS id FROM `variant` WHERE variant_product_id = 160')
+ 4 APPPATH\Helpers\query_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT variant_id AS id FROM `variant` WHERE variant_product_id = 160')
+ 5 APPPATH\Controllers\Admin\Confirmation.php(451): generateDetailData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-17 03:09:08 --> mysqli_sql_exception: Unknown column 'test' in 'where clause' in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('SELECT variant_...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT variant_...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT variant_...')
+#3 C:\wamp64\www\e-commerce\app\Helpers\query_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT variant_...')
+#4 C:\wamp64\www\e-commerce\app\Controllers\Admin\Confirmation.php(452): generateDetailData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+#7 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-10-17 03:09:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'test' in 'where clause'
+[Method: POST, Route: admin/confirmation/confirm]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Helpers\query_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT variant_id AS id FROM `variant` WHERE variant_name = test')
+ 2 APPPATH\Controllers\Admin\Confirmation.php(452): generateDetailData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 03:09:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'test' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT variant_id AS id FROM `variant` WHERE variant_name = test')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT variant_id AS id FROM `variant` WHERE variant_name = test')
+ 3 APPPATH\Helpers\query_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT variant_id AS id FROM `variant` WHERE variant_name = test')
+ 4 APPPATH\Controllers\Admin\Confirmation.php(452): generateDetailData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 03:09:08 --> [Caused by] mysqli_sql_exception: Unknown column 'test' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('SELECT variant_id AS id FROM `variant` WHERE variant_name = test', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT variant_id AS id FROM `variant` WHERE variant_name = test')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT variant_id AS id FROM `variant` WHERE variant_name = test')
+ 4 APPPATH\Helpers\query_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT variant_id AS id FROM `variant` WHERE variant_name = test')
+ 5 APPPATH\Controllers\Admin\Confirmation.php(452): generateDetailData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 03:10:25 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/confirmation/confirm]
+in APPPATH\Controllers\Admin\Confirmation.php on line 453.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(453): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Confirmation.php', 453)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 03:10:32 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/confirmation/confirm]
+in APPPATH\Controllers\Admin\Confirmation.php on line 453.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(453): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Confirmation.php', 453)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 03:11:11 --> Error: Cannot use object of type stdClass as array
+[Method: POST, Route: admin/confirmation/confirm]
+in APPPATH\Controllers\Admin\Confirmation.php on line 514.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 03:18:51 --> ParseError: Unclosed '(' on line 76 does not match ']'
+[Method: GET, Route: admin/confirmation/list-transaction]
+in APPPATH\Controllers\Admin\Confirmation.php on line 77.
+ 1 SYSTEMPATH\Router\Router.php(562): CodeIgniter\Router\AutoRouter->getRoute('admin/confirmation/list-transaction', 'GET')
+ 2 SYSTEMPATH\Router\Router.php(227): CodeIgniter\Router\Router->autoRoute('admin/confirmation/list-transaction')
+ 3 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('admin/confirmation/list-transaction')
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 03:25:07 --> ErrorException: Undefined array key 0
+[Method: POST, Route: admin/confirmation/confirm]
+in APPPATH\Controllers\Admin\Confirmation.php on line 411.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(411): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Confirmation.php', 411)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->confirm()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 03:54:26 --> ErrorException: Undefined array key "Token"
+[Method: GET, Route: admin/bank/list-bank]
+in APPPATH\Controllers\Core\AuthController.php on line 26.
+ 1 APPPATH\Controllers\Core\AuthController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\AuthController.php', 26)
+ 2 APPPATH\Controllers\Admin\Bank.php(14): App\Controllers\Core\AuthController->before([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Bank->list_bank()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Bank))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 03:54:36 --> ErrorException: Undefined array key "Token"
+[Method: GET, Route: admin/bank/list-bank]
+in APPPATH\Controllers\Core\AuthController.php on line 26.
+ 1 APPPATH\Controllers\Core\AuthController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\AuthController.php', 26)
+ 2 APPPATH\Controllers\Admin\Bank.php(14): App\Controllers\Core\AuthController->before([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Bank->list_bank()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Bank))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 04:09:16 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: transaction/history-customer]
+in APPPATH\Controllers\Transaction.php on line 621.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaction->history_customer()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 04:21:47 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: transaction/history-customer]
+in APPPATH\Controllers\Transaction.php on line 619.
+ 1 APPPATH\Controllers\Transaction.php(619): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Transaction.php', 619)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaction->history_customer()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 04:23:06 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: transaction/history-customer]
+in APPPATH\Controllers\Transaction.php on line 638.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaction->history_customer()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 04:23:46 --> Error: Cannot use object of type stdClass as array
+[Method: GET, Route: transaction/history-customer]
+in APPPATH\Controllers\Transaction.php on line 620.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaction->history_customer()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaction))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 04:26:41 --> ErrorException: Undefined array key "Token"
+[Method: POST, Route: admin/bank/insert]
+in APPPATH\Controllers\Core\AuthController.php on line 26.
+ 1 APPPATH\Controllers\Core\AuthController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\AuthController.php', 26)
+ 2 APPPATH\Controllers\Admin\Bank.php(74): App\Controllers\Core\AuthController->before([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Bank->insert()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Bank))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-17 04:33:29 --> mysqli_sql_exception: Unknown column 'variant_created_at' in 'field list' in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO `ba...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ba...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ba...')
+#3 C:\wamp64\www\e-commerce\system\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ba...', Array, false)
+#4 C:\wamp64\www\e-commerce\app\Controllers\Admin\Bank.php(107): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Bank->insert()
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Bank))
+#7 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-10-17 04:33:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'variant_created_at' in 'field list'
+[Method: POST, Route: admin/bank/insert]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bank` (`bank_name`, `bank_account_name`, `bank_account_number`, `variant_created_at`, `variant_updated_at`, `variant_deleted_at`) VALUES (:bank_name:, :bank_account_name:, :bank_account_number:, :variant_created_at:, :variant_updated_at:, :variant_deleted_at:)', [...], false)
+ 2 APPPATH\Controllers\Admin\Bank.php(107): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Bank->insert()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Bank))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 04:33:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'variant_created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bank` (`bank_name`, `bank_account_name`, `bank_account_number`, `variant_created_at`, `variant_updated_at`, `variant_deleted_at`) VALUES (\'BCA\', \'pitek\', \'6913812381\', \'2024-10-17 04:33:29\', NULL, NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bank` (`bank_name`, `bank_account_name`, `bank_account_number`, `variant_created_at`, `variant_updated_at`, `variant_deleted_at`) VALUES (\'BCA\', \'pitek\', \'6913812381\', \'2024-10-17 04:33:29\', NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bank` (`bank_name`, `bank_account_name`, `bank_account_number`, `variant_created_at`, `variant_updated_at`, `variant_deleted_at`) VALUES (:bank_name:, :bank_account_name:, :bank_account_number:, :variant_created_at:, :variant_updated_at:, :variant_deleted_at:)', [...], false)
+ 4 APPPATH\Controllers\Admin\Bank.php(107): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Bank->insert()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Bank))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 04:33:29 --> [Caused by] mysqli_sql_exception: Unknown column 'variant_created_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('INSERT INTO `bank` (`bank_name`, `bank_account_name`, `bank_account_number`, `variant_created_at`, `variant_updated_at`, `variant_deleted_at`) VALUES (\'BCA\', \'pitek\', \'6913812381\', \'2024-10-17 04:33:29\', NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bank` (`bank_name`, `bank_account_name`, `bank_account_number`, `variant_created_at`, `variant_updated_at`, `variant_deleted_at`) VALUES (\'BCA\', \'pitek\', \'6913812381\', \'2024-10-17 04:33:29\', NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bank` (`bank_name`, `bank_account_name`, `bank_account_number`, `variant_created_at`, `variant_updated_at`, `variant_deleted_at`) VALUES (\'BCA\', \'pitek\', \'6913812381\', \'2024-10-17 04:33:29\', NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2333): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bank` (`bank_name`, `bank_account_name`, `bank_account_number`, `variant_created_at`, `variant_updated_at`, `variant_deleted_at`) VALUES (:bank_name:, :bank_account_name:, :bank_account_number:, :variant_created_at:, :variant_updated_at:, :variant_deleted_at:)', [...], false)
+ 5 APPPATH\Controllers\Admin\Bank.php(107): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Bank->insert()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Bank))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 06:57:41 --> ErrorException: Undefined array key "Token"
+[Method: POST, Route: admin/bank/update]
+in APPPATH\Controllers\Core\AuthController.php on line 26.
+ 1 APPPATH\Controllers\Core\AuthController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\AuthController.php', 26)
+ 2 APPPATH\Controllers\Admin\Bank.php(137): App\Controllers\Core\AuthController->before([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Bank->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Bank))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 06:57:55 --> ErrorException: Undefined array key "Token"
+[Method: POST, Route: admin/bank/update]
+in APPPATH\Controllers\Core\AuthController.php on line 26.
+ 1 APPPATH\Controllers\Core\AuthController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\AuthController.php', 26)
+ 2 APPPATH\Controllers\Admin\Bank.php(137): App\Controllers\Core\AuthController->before([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Bank->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Bank))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 06:59:21 --> ErrorException: Undefined array key "Token"
+[Method: POST, Route: admin/bank/update]
+in APPPATH\Controllers\Core\AuthController.php on line 30.
+ 1 APPPATH\Controllers\Core\AuthController.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\AuthController.php', 30)
+ 2 APPPATH\Controllers\Admin\Bank.php(137): App\Controllers\Core\AuthController->before([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Bank->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Bank))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 06:59:22 --> ErrorException: Undefined array key "Token"
+[Method: POST, Route: admin/bank/update]
+in APPPATH\Controllers\Core\AuthController.php on line 30.
+ 1 APPPATH\Controllers\Core\AuthController.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\AuthController.php', 30)
+ 2 APPPATH\Controllers\Admin\Bank.php(137): App\Controllers\Core\AuthController->before([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Bank->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Bank))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 06:59:33 --> ErrorException: Undefined array key "Token"
+[Method: POST, Route: admin/bank/update]
+in APPPATH\Controllers\Core\AuthController.php on line 27.
+ 1 APPPATH\Controllers\Core\AuthController.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\AuthController.php', 27)
+ 2 APPPATH\Controllers\Admin\Bank.php(137): App\Controllers\Core\AuthController->before([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Bank->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Bank))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 06:59:34 --> ErrorException: Undefined array key "Token"
+[Method: POST, Route: admin/bank/update]
+in APPPATH\Controllers\Core\AuthController.php on line 27.
+ 1 APPPATH\Controllers\Core\AuthController.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\AuthController.php', 27)
+ 2 APPPATH\Controllers\Admin\Bank.php(137): App\Controllers\Core\AuthController->before([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Bank->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Bank))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 07:00:26 --> ErrorException: Undefined array key "Token"
+[Method: POST, Route: admin/bank/update]
+in APPPATH\Controllers\Core\AuthController.php on line 30.
+ 1 APPPATH\Controllers\Core\AuthController.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "Token"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Core\\AuthController.php', 30)
+ 2 APPPATH\Controllers\Admin\Bank.php(137): App\Controllers\Core\AuthController->before([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Bank->update()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Bank))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-17 07:15:51 --> mysqli_sql_exception: Unknown column 'bank_deleted_at' in 'where clause' in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('SELECT bank_id ...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT bank_id ...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT bank_id ...')
+#3 C:\wamp64\www\e-commerce\app\Helpers\query_helper.php(173): CodeIgniter\Database\BaseConnection->query('SELECT bank_id ...')
+#4 C:\wamp64\www\e-commerce\app\Controllers\Admin\Bank.php(35): generateListData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Bank->list_bank()
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Bank))
+#7 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-10-17 07:15:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'bank_deleted_at' in 'where clause'
+[Method: GET, Route: admin/bank/list-bank]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Helpers\query_helper.php(173): CodeIgniter\Database\BaseConnection->query('SELECT bank_id AS id, bank_name AS name, bank_account_name AS account_name, bank_account_number AS account_number, bank_code AS code FROM `bank` WHERE bank_deleted_at IS NULL')
+ 2 APPPATH\Controllers\Admin\Bank.php(35): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Bank->list_bank()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Bank))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 07:15:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'bank_deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT bank_id AS id, bank_name AS name, bank_account_name AS account_name, bank_account_number AS account_number, bank_code AS code FROM `bank` WHERE bank_deleted_at IS NULL')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT bank_id AS id, bank_name AS name, bank_account_name AS account_name, bank_account_number AS account_number, bank_code AS code FROM `bank` WHERE bank_deleted_at IS NULL')
+ 3 APPPATH\Helpers\query_helper.php(173): CodeIgniter\Database\BaseConnection->query('SELECT bank_id AS id, bank_name AS name, bank_account_name AS account_name, bank_account_number AS account_number, bank_code AS code FROM `bank` WHERE bank_deleted_at IS NULL')
+ 4 APPPATH\Controllers\Admin\Bank.php(35): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Bank->list_bank()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Bank))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 07:15:51 --> [Caused by] mysqli_sql_exception: Unknown column 'bank_deleted_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('SELECT bank_id AS id, bank_name AS name, bank_account_name AS account_name, bank_account_number AS account_number, bank_code AS code FROM `bank` WHERE bank_deleted_at IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT bank_id AS id, bank_name AS name, bank_account_name AS account_name, bank_account_number AS account_number, bank_code AS code FROM `bank` WHERE bank_deleted_at IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT bank_id AS id, bank_name AS name, bank_account_name AS account_name, bank_account_number AS account_number, bank_code AS code FROM `bank` WHERE bank_deleted_at IS NULL')
+ 4 APPPATH\Helpers\query_helper.php(173): CodeIgniter\Database\BaseConnection->query('SELECT bank_id AS id, bank_name AS name, bank_account_name AS account_name, bank_account_number AS account_number, bank_code AS code FROM `bank` WHERE bank_deleted_at IS NULL')
+ 5 APPPATH\Controllers\Admin\Bank.php(35): generateListData([], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Bank->list_bank()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Bank))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-17 07:16:54 --> mysqli_sql_exception: Unknown column 'bank_deleted_at' in 'field list' in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('SELECT bank_id ...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT bank_id ...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT bank_id ...')
+#3 C:\wamp64\www\e-commerce\app\Helpers\query_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT bank_id ...')
+#4 C:\wamp64\www\e-commerce\app\Controllers\Admin\Bank.php(64): generateDetailData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Bank->detail()
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Bank))
+#7 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-10-17 07:16:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'bank_deleted_at' in 'field list'
+[Method: GET, Route: admin/bank/detail]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Helpers\query_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT bank_id AS id, bank_name AS name, bank_account_name AS account_name, bank_account_number AS account_number, bank_code AS code, bank_created_at AS created_at, bank_updated_at AS updated_at, bank_deleted_at AS deleted_at FROM `bank` WHERE bank_deleted_at IS NULL')
+ 2 APPPATH\Controllers\Admin\Bank.php(64): generateDetailData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Bank->detail()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Bank))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 07:16:54 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'bank_deleted_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT bank_id AS id, bank_name AS name, bank_account_name AS account_name, bank_account_number AS account_number, bank_code AS code, bank_created_at AS created_at, bank_updated_at AS updated_at, bank_deleted_at AS deleted_at FROM `bank` WHERE bank_deleted_at IS NULL')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT bank_id AS id, bank_name AS name, bank_account_name AS account_name, bank_account_number AS account_number, bank_code AS code, bank_created_at AS created_at, bank_updated_at AS updated_at, bank_deleted_at AS deleted_at FROM `bank` WHERE bank_deleted_at IS NULL')
+ 3 APPPATH\Helpers\query_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT bank_id AS id, bank_name AS name, bank_account_name AS account_name, bank_account_number AS account_number, bank_code AS code, bank_created_at AS created_at, bank_updated_at AS updated_at, bank_deleted_at AS deleted_at FROM `bank` WHERE bank_deleted_at IS NULL')
+ 4 APPPATH\Controllers\Admin\Bank.php(64): generateDetailData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Bank->detail()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Bank))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 07:16:54 --> [Caused by] mysqli_sql_exception: Unknown column 'bank_deleted_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('SELECT bank_id AS id, bank_name AS name, bank_account_name AS account_name, bank_account_number AS account_number, bank_code AS code, bank_created_at AS created_at, bank_updated_at AS updated_at, bank_deleted_at AS deleted_at FROM `bank` WHERE bank_deleted_at IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT bank_id AS id, bank_name AS name, bank_account_name AS account_name, bank_account_number AS account_number, bank_code AS code, bank_created_at AS created_at, bank_updated_at AS updated_at, bank_deleted_at AS deleted_at FROM `bank` WHERE bank_deleted_at IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT bank_id AS id, bank_name AS name, bank_account_name AS account_name, bank_account_number AS account_number, bank_code AS code, bank_created_at AS created_at, bank_updated_at AS updated_at, bank_deleted_at AS deleted_at FROM `bank` WHERE bank_deleted_at IS NULL')
+ 4 APPPATH\Helpers\query_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT bank_id AS id, bank_name AS name, bank_account_name AS account_name, bank_account_number AS account_number, bank_code AS code, bank_created_at AS created_at, bank_updated_at AS updated_at, bank_deleted_at AS deleted_at FROM `bank` WHERE bank_deleted_at IS NULL')
+ 5 APPPATH\Controllers\Admin\Bank.php(64): generateDetailData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Bank->detail()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Bank))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-17 07:35:08 --> mysqli_sql_exception: Unknown column 'bank_deleted_at' in 'field list' in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('SELECT bank_id ...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT bank_id ...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT bank_id ...')
+#3 C:\wamp64\www\e-commerce\app\Helpers\query_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT bank_id ...')
+#4 C:\wamp64\www\e-commerce\app\Controllers\Admin\Bank.php(121): generateDetailData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Bank->insert()
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Bank))
+#7 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-10-17 07:35:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'bank_deleted_at' in 'field list'
+[Method: POST, Route: admin/bank/insert]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Helpers\query_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT bank_id AS id, bank_name AS name, bank_account_name AS account_name, bank_account_number AS account_number, bank_code AS code, bank_created_at AS created_at, bank_updated_at AS updated_at, bank_deleted_at AS deleted_at FROM `bank` WHERE bank_id = 3')
+ 2 APPPATH\Controllers\Admin\Bank.php(121): generateDetailData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Bank->insert()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Bank))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 07:35:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'bank_deleted_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT bank_id AS id, bank_name AS name, bank_account_name AS account_name, bank_account_number AS account_number, bank_code AS code, bank_created_at AS created_at, bank_updated_at AS updated_at, bank_deleted_at AS deleted_at FROM `bank` WHERE bank_id = 3')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT bank_id AS id, bank_name AS name, bank_account_name AS account_name, bank_account_number AS account_number, bank_code AS code, bank_created_at AS created_at, bank_updated_at AS updated_at, bank_deleted_at AS deleted_at FROM `bank` WHERE bank_id = 3')
+ 3 APPPATH\Helpers\query_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT bank_id AS id, bank_name AS name, bank_account_name AS account_name, bank_account_number AS account_number, bank_code AS code, bank_created_at AS created_at, bank_updated_at AS updated_at, bank_deleted_at AS deleted_at FROM `bank` WHERE bank_id = 3')
+ 4 APPPATH\Controllers\Admin\Bank.php(121): generateDetailData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Bank->insert()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Bank))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 07:35:08 --> [Caused by] mysqli_sql_exception: Unknown column 'bank_deleted_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('SELECT bank_id AS id, bank_name AS name, bank_account_name AS account_name, bank_account_number AS account_number, bank_code AS code, bank_created_at AS created_at, bank_updated_at AS updated_at, bank_deleted_at AS deleted_at FROM `bank` WHERE bank_id = 3', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT bank_id AS id, bank_name AS name, bank_account_name AS account_name, bank_account_number AS account_number, bank_code AS code, bank_created_at AS created_at, bank_updated_at AS updated_at, bank_deleted_at AS deleted_at FROM `bank` WHERE bank_id = 3')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT bank_id AS id, bank_name AS name, bank_account_name AS account_name, bank_account_number AS account_number, bank_code AS code, bank_created_at AS created_at, bank_updated_at AS updated_at, bank_deleted_at AS deleted_at FROM `bank` WHERE bank_id = 3')
+ 4 APPPATH\Helpers\query_helper.php(54): CodeIgniter\Database\BaseConnection->query('SELECT bank_id AS id, bank_name AS name, bank_account_name AS account_name, bank_account_number AS account_number, bank_code AS code, bank_created_at AS created_at, bank_updated_at AS updated_at, bank_deleted_at AS deleted_at FROM `bank` WHERE bank_id = 3')
+ 5 APPPATH\Controllers\Admin\Bank.php(121): generateDetailData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Bank->insert()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Bank))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-17 07:36:32 --> mysqli_sql_exception: Unknown column 'variant.variant_product_id' in 'on clause' in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('SELECT product....', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product....')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product....')
+#3 C:\wamp64\www\e-commerce\app\Helpers\query_helper.php(173): CodeIgniter\Database\BaseConnection->query('SELECT product....')
+#4 C:\wamp64\www\e-commerce\app\Controllers\ListPublic.php(47): generateListData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\ListPublic->product()
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListPublic))
+#7 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-10-17 07:36:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'variant.variant_product_id' in 'on clause'
+[Method: GET, Route: listpublic/product]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Helpers\query_helper.php(173): CodeIgniter\Database\BaseConnection->query('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_id AS category_id, product.product_category_name AS category_name, variant.variant_id AS variant_id, variant.variant_name AS variant_name, product_stock.product_stock_stock AS stock_stock, product_stock.product_stock_in AS stock_in, product_stock.product_stock_out AS stock_out, product.product_description AS description, product.product_photo AS photo, product.product_created_at AS created_at, product.product_updated_at AS updated_at FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id JOIN variant ON product.product_id = variant.variant_product_id WHERE (product_category_name = \'basah\')')
+ 2 APPPATH\Controllers\ListPublic.php(47): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ListPublic->product()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListPublic))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 07:36:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'variant.variant_product_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_id AS category_id, product.product_category_name AS category_name, variant.variant_id AS variant_id, variant.variant_name AS variant_name, product_stock.product_stock_stock AS stock_stock, product_stock.product_stock_in AS stock_in, product_stock.product_stock_out AS stock_out, product.product_description AS description, product.product_photo AS photo, product.product_created_at AS created_at, product.product_updated_at AS updated_at FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id JOIN variant ON product.product_id = variant.variant_product_id WHERE (product_category_name = \'basah\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_id AS category_id, product.product_category_name AS category_name, variant.variant_id AS variant_id, variant.variant_name AS variant_name, product_stock.product_stock_stock AS stock_stock, product_stock.product_stock_in AS stock_in, product_stock.product_stock_out AS stock_out, product.product_description AS description, product.product_photo AS photo, product.product_created_at AS created_at, product.product_updated_at AS updated_at FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id JOIN variant ON product.product_id = variant.variant_product_id WHERE (product_category_name = \'basah\')')
+ 3 APPPATH\Helpers\query_helper.php(173): CodeIgniter\Database\BaseConnection->query('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_id AS category_id, product.product_category_name AS category_name, variant.variant_id AS variant_id, variant.variant_name AS variant_name, product_stock.product_stock_stock AS stock_stock, product_stock.product_stock_in AS stock_in, product_stock.product_stock_out AS stock_out, product.product_description AS description, product.product_photo AS photo, product.product_created_at AS created_at, product.product_updated_at AS updated_at FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id JOIN variant ON product.product_id = variant.variant_product_id WHERE (product_category_name = \'basah\')')
+ 4 APPPATH\Controllers\ListPublic.php(47): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ListPublic->product()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListPublic))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 07:36:32 --> [Caused by] mysqli_sql_exception: Unknown column 'variant.variant_product_id' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_id AS category_id, product.product_category_name AS category_name, variant.variant_id AS variant_id, variant.variant_name AS variant_name, product_stock.product_stock_stock AS stock_stock, product_stock.product_stock_in AS stock_in, product_stock.product_stock_out AS stock_out, product.product_description AS description, product.product_photo AS photo, product.product_created_at AS created_at, product.product_updated_at AS updated_at FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id JOIN variant ON product.product_id = variant.variant_product_id WHERE (product_category_name = \'basah\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_id AS category_id, product.product_category_name AS category_name, variant.variant_id AS variant_id, variant.variant_name AS variant_name, product_stock.product_stock_stock AS stock_stock, product_stock.product_stock_in AS stock_in, product_stock.product_stock_out AS stock_out, product.product_description AS description, product.product_photo AS photo, product.product_created_at AS created_at, product.product_updated_at AS updated_at FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id JOIN variant ON product.product_id = variant.variant_product_id WHERE (product_category_name = \'basah\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_id AS category_id, product.product_category_name AS category_name, variant.variant_id AS variant_id, variant.variant_name AS variant_name, product_stock.product_stock_stock AS stock_stock, product_stock.product_stock_in AS stock_in, product_stock.product_stock_out AS stock_out, product.product_description AS description, product.product_photo AS photo, product.product_created_at AS created_at, product.product_updated_at AS updated_at FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id JOIN variant ON product.product_id = variant.variant_product_id WHERE (product_category_name = \'basah\')')
+ 4 APPPATH\Helpers\query_helper.php(173): CodeIgniter\Database\BaseConnection->query('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_id AS category_id, product.product_category_name AS category_name, variant.variant_id AS variant_id, variant.variant_name AS variant_name, product_stock.product_stock_stock AS stock_stock, product_stock.product_stock_in AS stock_in, product_stock.product_stock_out AS stock_out, product.product_description AS description, product.product_photo AS photo, product.product_created_at AS created_at, product.product_updated_at AS updated_at FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id JOIN variant ON product.product_id = variant.variant_product_id WHERE (product_category_name = \'basah\')')
+ 5 APPPATH\Controllers\ListPublic.php(47): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ListPublic->product()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListPublic))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-10-17 08:03:52 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'abis WHERE sales_order_id = '90' AND (sales_order_status = 'pending' OR sales_or' at line 1 in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE sales_or...', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE sales_or...')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE sales_or...')
+#3 C:\wamp64\www\e-commerce\app\Controllers\Admin\Confirmation.php(595): CodeIgniter\Database\BaseConnection->query('UPDATE sales_or...')
+#4 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->cancel()
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#9 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#10 {main}
+CRITICAL - 2024-10-17 08:03:52 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'abis WHERE sales_order_id = '90' AND (sales_order_status = 'pending' OR sales_or' at line 1
+[Method: POST, Route: admin/confirmation/cancel]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Controllers\Admin\Confirmation.php(595): CodeIgniter\Database\BaseConnection->query('UPDATE sales_order SET sales_order_status = \'canceled\', sales_order_reason = stock abis WHERE sales_order_id = \'90\' AND (sales_order_status = \'pending\' OR sales_order_status = \'payed\')')
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->cancel()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 08:03:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'abis WHERE sales_order_id = '90' AND (sales_order_status = 'pending' OR sales_or' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE sales_order SET sales_order_status = \'canceled\', sales_order_reason = stock abis WHERE sales_order_id = \'90\' AND (sales_order_status = \'pending\' OR sales_order_status = \'payed\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE sales_order SET sales_order_status = \'canceled\', sales_order_reason = stock abis WHERE sales_order_id = \'90\' AND (sales_order_status = \'pending\' OR sales_order_status = \'payed\')')
+ 3 APPPATH\Controllers\Admin\Confirmation.php(595): CodeIgniter\Database\BaseConnection->query('UPDATE sales_order SET sales_order_status = \'canceled\', sales_order_reason = stock abis WHERE sales_order_id = \'90\' AND (sales_order_status = \'pending\' OR sales_order_status = \'payed\')')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->cancel()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-17 08:03:52 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'abis WHERE sales_order_id = '90' AND (sales_order_status = 'pending' OR sales_or' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('UPDATE sales_order SET sales_order_status = \'canceled\', sales_order_reason = stock abis WHERE sales_order_id = \'90\' AND (sales_order_status = \'pending\' OR sales_order_status = \'payed\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE sales_order SET sales_order_status = \'canceled\', sales_order_reason = stock abis WHERE sales_order_id = \'90\' AND (sales_order_status = \'pending\' OR sales_order_status = \'payed\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE sales_order SET sales_order_status = \'canceled\', sales_order_reason = stock abis WHERE sales_order_id = \'90\' AND (sales_order_status = \'pending\' OR sales_order_status = \'payed\')')
+ 4 APPPATH\Controllers\Admin\Confirmation.php(595): CodeIgniter\Database\BaseConnection->query('UPDATE sales_order SET sales_order_status = \'canceled\', sales_order_reason = stock abis WHERE sales_order_id = \'90\' AND (sales_order_status = \'pending\' OR sales_order_status = \'payed\')')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Confirmation->cancel()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Confirmation))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

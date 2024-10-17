@@ -114,7 +114,7 @@ class Login extends DataController
 
             $data = generateDetailData($this->request->getGet(), $query, $this->db);
             foreach ($data as $key => $value) {
-                $data = $value[0];
+                $data = $value;
             }
             $response = [
                 'data' => $data,

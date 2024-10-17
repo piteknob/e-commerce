@@ -2,15 +2,12 @@
 
 namespace App\Controllers\Admin;
 
-use Mailtrap\MailtrapClient;
-use Mailtrap\Mime\MailtrapEmail;
-use Symfony\Component\Mime\Address;
 use App\Controllers\Core\AuthController;
 use CodeIgniter\HTTP\ResponseInterface;
 
 class User extends AuthController
 {
-    public function list_user()
+    public function list_user() // super_user
     {
         // Authorization Token
         $token = $this->before(getallheaders());
@@ -27,14 +24,14 @@ class User extends AuthController
             "WHERE auth_user_token = '{$token}'"
         ];
         $data_auth = (array) generateDetailData($this->request->getVar(), $check, $this->db);
-        $id_user = $data_auth['data'][0]['id'];
+        $id_user = $data_auth['data']['id'];
         $user['data'] = ['user'];
         $user['select'] = [
             'user_role' => 'role'
         ];
         $user['where_detail'] = ["WHERE user_id = '{$id_user}'"];
         $role = (array) generateDetailData($this->request->getVar(), $user, $this->db);
-        $role = $role['data'][0]['role'];
+        $role = $role['data']['role'];
         if ($role == 'super_user') {
             $query['data'] = ['user'];
             $query['select'] = [
@@ -56,7 +53,56 @@ class User extends AuthController
         }
     }
 
-    public function register()
+    public function detail() // super_user
+    {
+        // Authorization Token
+        $token = $this->before(getallheaders());
+        if (!empty($token)) {
+            return $token;
+        }
+
+        // check role
+        $token_admin = $this->request->getHeaderLine('Token');
+        $query['data'] = ['auth_user'];
+        $query['select'] = [
+            'auth_user_user_id' => 'user_id',
+        ];
+        $query['where_detail'] = ["WHERE auth_user_token = '$token_admin'"];
+        $id_user = (array) generateDetailData($this->request->getVar(), $query, $this->db);
+        $id_user = $id_user['data']['user_id'];
+
+        $query_role['data'] = ['user'];
+        $query_role['select'] = [
+            'user_role' => 'role'
+        ];
+        $query_role['where_detail'] = [
+            "WHERE user_id = $id_user"
+        ];
+        $role = (array) generateDetailData($this->request->getVar(), $query_role, $this->db);
+        if ($role['data']['role'] != 'super_user') {
+            return $this->responseFail(ResponseInterface::HTTP_UNAUTHORIZED, "You don't have permission to do this action", 'Access denied', (object)[]);
+        }
+        // get id admin
+        $id = $this->request->getGet('id');
+        $query_admin['data'] = ['user'];
+        $query_admin['select'] = [
+            'user_id' => 'id',
+            'user_username' => 'username',
+            'user_password' => 'password',
+            'user_name' => 'name',
+            'user_email' => 'email',
+            'user_no_handphone' => 'no_handphone',
+            'user_role' => 'role',
+            'user_created_at' => 'created_at',
+            'user_updated_at' => 'updated_at',
+        ];
+        $query_admin['where_detail'] = ["WHERE user_id = '$id'"];
+        $data_admin = (array) generateDetailData($this->request->getVar(), $query_admin, $this->db);
+
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, "Detail Account", $data_admin);
+    }
+
+    public function register() // super_user
     {
         // Authorization Token
         $token = $this->before(getallheaders());
@@ -74,13 +120,13 @@ class User extends AuthController
             "WHERE auth_user_token = '{$token}'"
         ];
         $data_check = (array) generateDetailData($this->request->getVar(), $check, $this->db);
-        $id_user = $data_check['data'][0]['user_id'];
+        $id_user = $data_check['data']['user_id'];
 
         $check_role['data'] = ['user'];
         $check_role['select'] = ['user_role' => 'role'];
-        $check_role['where_detail'] = ["WHERE user_role = $id_user"];
+        $check_role['where_detail'] = ["WHERE user_id = $id_user"];
         $data_role = (array) generateDetailData($this->request->getVar(), $check_role, $this->db);
-        $role = $data_role['data'][0]['role'];
+        $role = $data_role['data']['role'];
 
         if ($role == 'super_user') {
             $post = $this->request->getPost();
@@ -92,11 +138,11 @@ class User extends AuthController
                 'password' => 'required|min_length[5]',
                 'confirm' => 'required|matches[password]',
                 'email' => 'required|valid_email|is_unique[user.user_email]',
-                'no_handphone' => 'required|min_length[11]|is_unique[user.user_no_handphone]',
+                'no_handphone' => 'required|numeric|min_length[11]|is_unique[user.user_no_handphone]',
             ];
 
             if (!$this->validate($rules)) {
-                return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
+                return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors(), (object) []);
             }
             // -------------------------- END VALIDATION -------------------------- //
 
@@ -107,7 +153,7 @@ class User extends AuthController
             $email = htmlspecialchars($post['email']);
             $no_handphone = htmlspecialchars($post['no_handphone']);
 
-            $insert = "INSERT INTO user VALUES('', '{$username}', '{$password}', '{$name}', '{$email}', '{$no_handphone}', 'admin', NOW(), NULL)";
+            $insert = "INSERT INTO user VALUES('', '{$username}', '{$password}', '{$name}', '{$email}', '{$no_handphone}', 'admin', NULL, NULL,  NOW(), NULL)";
 
             $this->db->query($insert);
             $id = $this->db->insertID();
@@ -131,7 +177,7 @@ class User extends AuthController
 
             return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Account Successfully Registered', $data);
         } else {
-            return $this->responseSuccess(ResponseInterface::HTTP_UNAUTHORIZED, "You Don't Have Permission To Do This Action", [], 'Access Denied');
+            return $this->responseSuccess(ResponseInterface::HTTP_UNAUTHORIZED, "You Don't Have Permission To Do This Action", (object) [], 'Access Denied');
         }
     }
 
@@ -163,58 +209,7 @@ class User extends AuthController
         $sql = "UPDATE auth_user SET auth_user_token = null WHERE auth_user_token = '{$token}'";
         $this->db->query($sql);
 
-        $data = ['data' => ''];
-
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Log Out Success', $data);
-    }
-
-    public function detail()
-    {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
-
-        // check role
-        $token_admin = $this->request->getHeaderLine('Token');
-        $query['data'] = ['auth_user'];
-        $query['select'] = [
-            'auth_user_user_id' => 'user_id',
-        ];
-        $query['where_detail'] = ["WHERE auth_user_token = '$token_admin'"];
-        $id_user = (array) generateDetailData($this->request->getVar(), $query, $this->db);
-        $id_user = $id_user['data']['user_id'];
-
-        $query_role['data'] = ['user'];
-        $query_role['select'] = [
-            'user_role' => 'role'
-        ];
-        $query_role['where_detail'] = [
-            "WHERE user_id = $id_user"
-        ];
-        $role = (array) generateDetailData($this->request->getVar(), $query_role, $this->db);
-        if ($role['data']['role'] != 'super_user') {
-            return $this->responseFail(ResponseInterface::HTTP_UNAUTHORIZED, "You don't have permission to do this action", 'Access denied', "");
-        }
-        // get id admin
-        $id = $this->request->getGet('id');
-        $query_admin['data'] = ['user'];
-        $query_admin['select'] = [
-            'user_id' => 'id',
-            'user_username' => 'username',
-            'user_password' => 'password',
-            'user_name' => 'name',
-            'user_email' => 'email',
-            'user_no_handphone' => 'no_handphone',
-            'user_role' => 'role',
-            'user_created_at' => 'created_at',
-            'user_updated_at' => 'updated_at',
-        ];
-        $query_admin['where_detail'] = ["WHERE user_id = '$id'"];
-        $data_admin = (array) generateDetailData($this->request->getVar(), $query_admin, $this->db);
-
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, "Detail Account", $data_admin);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Log out success', (object) []);
     }
 
     public function update()
@@ -225,6 +220,20 @@ class User extends AuthController
             return $token;
         }
 
+        // -------------------------- VALIDATION -------------------------- //
+        $rules = [
+            'username' => 'required|is_unique[user.user_username]',
+            'password' => 'required|min_length[5]',
+            'email' => 'required|valid_email|is_unique[user.user_email]',
+            'no_handphone' => 'required|numeric|min_length[11]|is_unique[user.user_no_handphone]',
+        ];
+
+        if (!$this->validate($rules)) {
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors(), (object) []);
+        }
+        // -------------------------- END VALIDATION -------------------------- //
+
+
         $token = $this->request->getHeaderLine('Token');
         $check['data'] = ['auth_user'];
         $check['select'] = [
@@ -234,7 +243,7 @@ class User extends AuthController
             "WHERE auth_user_token = '{$token}'"
         ];
         $data = (array) generateDetailData($this->request->getVar(), $check, $this->db);
-        $id = $data['data'][0]['id'];
+        $id = $data['data']['id'];
 
         $post = $this->request->getPost();
         $username = htmlspecialchars($post['username']);
@@ -265,20 +274,11 @@ class User extends AuthController
             "WHERE user_id = $id"
         ];
         $array2 = (array) generateDetailData($this->request->getVar(), $data_2, $this->db);
-        $result = array_diff($array1, $array2['data'][0]);
+        $result = array_diff($array1, $array2['data']);
+
+        // print_r($result); die;
 
 
-        // VALIDATION
-        $rules = [
-            'password' => 'required|min_length[5]',
-            'email' => 'required|valid_email',
-            'no_handphone' => 'required',
-        ];
-
-        if (!$this->validate($rules)) {
-            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
-        }
-        // END VALIDATION
 
         // VALIDATION FOR USERNAME
         if (!empty($result['username'])) {
@@ -352,13 +352,26 @@ class User extends AuthController
         return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Account Successfully Updated', $data);
     }
 
-    public function update_admin()
+    public function update_admin() // super_user
     {
         // Authorization Token
         $token = $this->before(getallheaders());
         if (!empty($token)) {
             return $token;
         }
+
+        // -------------------------- VALIDATION -------------------------- //
+        $rules = [
+            'username' => 'required',
+            'password' => 'required|min_length[5]',
+            'email' => 'required|valid_email',
+            'no_handphone' => 'required|min_length[11]|numeric',
+        ];
+
+        if (!$this->validate($rules)) {
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors(), (object) []);
+        }
+        // -------------------------- END VALIDATION -------------------------- //
 
         $token = $this->request->getHeaderLine('Token');
 
@@ -369,7 +382,7 @@ class User extends AuthController
         ];
 
         $id = (array) generateDetailData($this->request->getVar(), $query_auth, $this->db);
-        $id = $id['data'][0]['id'];
+        $id = $id['data']['id'];
 
 
         $query_user['data'] = ['user'];
@@ -379,7 +392,7 @@ class User extends AuthController
         ];
 
         $role = (array) generateDetailData($this->request->getVar(), $query_user, $this->db);
-        $role = $role['data'][0]['role'];
+        $role = $role['data']['role'];
 
         if ($role != 'super_user') {
             return $this->responseFail(ResponseInterface::HTTP_UNAUTHORIZED, "You Don't Have Permission To Do This Action", 'Access Denied', ['data' => '']);
@@ -387,9 +400,8 @@ class User extends AuthController
 
 
         // GET DATA POST
-        $id = $this->request->getGet();
-        $id = $id['id'];
         $post = $this->request->getPost();
+        $id = $post['id'];
         $username = $post['username'];
         $password = $post['password'];
         $name = $post['name'];
@@ -418,76 +430,7 @@ class User extends AuthController
             "WHERE user_id = $id"
         ];
         $array2 = (array) generateDetailData($this->request->getVar(), $data_2, $this->db);
-        $result = array_diff($array1, $array2['data'][0]);
-
-        // VALIDATION
-        $rules = [
-            'name' => 'required',
-            'username' => 'required',
-            'password' => 'required|min_length[5]',
-            'email' => 'required|valid_email',
-            'no_handphone' => 'required|min_length[11]',
-        ];
-
-
-        if (!$this->validate($rules)) {
-            $data = $this->validator->getErrors();
-            // print_r($data); die;
-            $message = '';
-            foreach ($data as $key => $value) {
-                $message .= "{$value}\n ";
-            }
-            $data = [
-                'id' => $id,
-                'error' => $this->validator->getErrors()
-            ];
-            $response = [
-                'status' => ResponseInterface::HTTP_PRECONDITION_FAILED,
-                'message' => $message,
-                'error' => 'Error Validation',
-                'result' => [
-                    'data' => $data
-                ]
-            ];
-
-            return $this->response->setJSON($response);
-            // return $this->responseErrorValidation(
-            //     ResponseInterface::HTTP_PRECONDITION_FAILED,
-            //     'Error Validation',
-            //     $this->validator->getErrors()
-            // );
-        }
-        // END VALIDATION
-
-        // VALIDATION FOR USERNAME
-        if (!empty($result['username'])) {
-            $username_data = $result['username'];
-            $check_username['data'] = ['user'];
-            $check_username['select'] = [
-                'user_username' => 'username'
-            ];
-            $check_username['where_detail'] = [
-                "WHERE user_username = '$username_data'"
-            ];
-            $data_check_username = (array) generateDetailData($this->request->getVar(), $check_username, $this->db);
-            $data_check_username = $data_check_username['data'];
-        }
-        // print_r($data_check_username); die;
-        if (!empty($data_check_username)) {
-            $data = [
-                'status' => ResponseInterface::HTTP_PRECONDITION_FAILED,
-                'message' => "The username field must contain a unique value.\n",
-                'error' => 'Error Validation',
-                'result' => [
-                    'data' => [
-                        'id' => $id,
-                        'username' => 'The username field must contain a unique value.'
-                    ]
-                ]
-            ];
-            return $this->response->setJSON($data);
-        }
-        // END VALIDATION FOR USERNAME
+        $result = array_diff($array1, $array2['data']);
 
 
         // update user
@@ -513,7 +456,7 @@ class User extends AuthController
         $query_updated['where_detail'] = ["WHERE auth_user_user_id = $id"];
         $data_updated = (array) generateDetailData($this->request->getVar(), $query_updated, $this->db);
         if (!empty($data_updated['data'])) {
-            $data_updated_token = $data_updated['data'][0]['token'];
+            $data_updated_token = $data_updated['data']['token'];
         }
         // update auth_user
         if (empty($data_updated_token)) {
@@ -550,14 +493,13 @@ class User extends AuthController
         $data = (array) generateDetailData(ResponseInterface::HTTP_OK, $query, $this->db);
         $data = $data['data'];
 
-        $response = ['data' => [
-            'user' => $data,
-            'token' => $auth
-        ]];
+        $response = [
+            'data' =>  $data,
+        ];
         return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Account Successfully Updated', $response);
     }
 
-    public function delete()
+    public function delete() // super_user
     {
         // Authorization Token
         $token = $this->before(getallheaders());
@@ -574,18 +516,18 @@ class User extends AuthController
             "WHERE auth_user_token = '{$token}'"
         ];
         $data_auth = (array) generateDetailData($this->request->getVar(), $check, $this->db);
-        $id_user = $data_auth['data'][0]['id'];
+        $id_user = $data_auth['data']['id'];
         $user['data'] = ['user'];
         $user['select'] = [
             'user_role' => 'role'
         ];
         $user['where_detail'] = ["WHERE user_id = '{$id_user}'"];
         $role = (array) generateDetailData($this->request->getVar(), $user, $this->db);
-        $role = $role['data'][0]['role'];
+        $role = $role['data']['role'];
         if ($role == 'super_user') {
 
             // get ID from params
-            $id = $this->request->getGet();
+            $id = $this->request->getPost();
             $id = $id['id'];
 
             // generate detail data
@@ -605,9 +547,12 @@ class User extends AuthController
                 "WHERE user_id = $id"
             ];
             $data = (array) generateDetailData($this->request->getGet(), $query, $this->db);
-            $data_role = $data['data'][0]['role'];
+            if (empty($data['data'])) {
+                return $this->responseFail(ResponseInterface::HTTP_GONE, 'Data already deleted from database', 'Data deleted', (object) []);
+            }
+            $data_role = $data['data']['role'];
             if ($data_role == 'super_user') {
-                return $this->responseFail(ResponseInterface::HTTP_OK, "You Can't Delete Super User");
+                return $this->responseFail(ResponseInterface::HTTP_OK, "You can't delete super user from database", "Can't deleted super user", (object) []);
             }
 
             // delete data from database
@@ -675,7 +620,7 @@ class User extends AuthController
         return $this->responseSuccess(ResponseInterface::HTTP_OK, "User Detail Login", $result);
     }
 
-    public function send_otp_reset_password()
+    public function send_otp_reset_password() // super_user
     {
         date_default_timezone_set("Asia/Jakarta");
         $no = $this->request->getVar('no_handphone');
@@ -686,7 +631,7 @@ class User extends AuthController
         $query_select = "SELECT user_role FROM `user` WHERE user_no_handphone = '$no'";
         $role = $this->db->query($query_select)->getResultArray();
         if (!empty($role)) {
-            foreach ($role[0] as $key => $value) {
+            foreach ($role as $key => $value) {
                 $role = $value;
             }
         }
@@ -700,21 +645,18 @@ class User extends AuthController
         $query_data['where_detail'] = [
             "WHERE user_no_handphone = '{$no}'"
         ];
-        $data_user = generateDetailData($this->request->getVar(), $query_data, $this->db);
+        $data_user = (array) generateDetailData($this->request->getVar(), $query_data, $this->db);
+        // print_r($role); die;
 
         // check user role
-        if (!empty($role)) {
-            if ($role != 'super_user') {
-                return $this->responseFail(ResponseInterface::HTTP_UNAUTHORIZED, 'Access Denied: You do not have the necessary permissions to perform this action.', 'Unauthorized: User is not a super user.', $data_user);
-            }
-        } else {
-            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'Access Denied: The provided no handphone is not registered.', 'No handphone not found in the system.');
+        if (empty($role)) {
+            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'Access Denied: The provided no handphone is not registered.', 'No handphone not found in the system.', (object) []);
         }
 
         // insert otp to database
         $date = date("Y-m-d H:i:s");
         $currentDate = strtotime($date);
-        $futureDate = $currentDate + (60 * 5);
+        $futureDate = $currentDate + (45 * 2);
         $formatDate = date("Y-m-d H:i:s", $futureDate);
 
         $query = "UPDATE user SET user_otp = $otp, user_otp_expired = '{$formatDate}' WHERE user_no_handphone = '$no'";
@@ -743,10 +685,10 @@ class User extends AuthController
 
         curl_exec($curl);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Message sent', $data_user);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Message sent', (object) []);
     }
 
-    public function reset_password()
+    public function reset_password() // super_user
     {
         date_default_timezone_set("Asia/Jakarta");
         $post = $this->request->getPost();
@@ -785,21 +727,21 @@ class User extends AuthController
         $get_id['where_detail'] = ["WHERE user_otp = $otp"];
         $id = (array) generateDetailData($this->request->getVar(), $get_id, $this->db);
         if (!empty($id['data'])) {
-            foreach ($id['data'][0] as $key => $value) {
+            foreach ($id['data'] as $key => $value) {
                 $id_user = $value;
             }
         }
 
         // check otp valid or not
         if (empty($data_user['data'])) {
-            return $this->responseFail(ResponseInterface::HTTP_UNAUTHORIZED, 'Invalid OTP', 'The OTP provided is incorrect.');
+            return $this->responseFail(ResponseInterface::HTTP_UNAUTHORIZED, 'Invalid OTP', 'The OTP provided is incorrect.', (object) []);
         }
         if (!empty($data_user['data'])) {
-            foreach ($data_user['data'][0] as $key => $value) {
+            foreach ($data_user['data'] as $key => $value) {
                 $expired = strtotime($value);
             }
             if ($expired < strtotime(date('Y-m-d H:i:s'))) {
-                return $this->responseFail(ResponseInterface::HTTP_UNAUTHORIZED, 'The OTP has expired. Please request a new OTP and try again', 'OTP expired');
+                return $this->responseFail(ResponseInterface::HTTP_UNAUTHORIZED, 'The OTP has expired. Please request a new OTP and try again', 'OTP expired', (object) []);
             }
         }
 
@@ -808,6 +750,6 @@ class User extends AuthController
         $query_update_token = "UPDATE auth_user SET auth_user_token = NULL WHERE auth_user_user_id = $id_user";
         $this->db->query($query_update_token);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Password reset success');
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Password reset success', (object) []);
     }
 }

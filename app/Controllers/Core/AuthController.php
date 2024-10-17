@@ -23,6 +23,10 @@ class AuthController extends DataController
         $db = db_connect();
 
         // Authorization Token
+        // print_r($request); die;
+        if (empty($request['Token'])) {
+            return $this->responseFail(ResponseInterface::HTTP_UNAUTHORIZED, 'Token not inputed', "Undefined array key Token", (object)[]);
+        }
         $token = $request['Token'];
         $getResult = "SELECT auth_user_token FROM auth_user WHERE auth_user_token = '{$token}'";
         $getResult = $db->query($getResult);

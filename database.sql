@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Waktu pembuatan: 11 Okt 2024 pada 09.23
+-- Waktu pembuatan: 17 Okt 2024 pada 09.56
 -- Versi server: 8.3.0
 -- Versi PHP: 8.2.18
 
@@ -44,8 +44,35 @@ CREATE TABLE IF NOT EXISTS `auth_user` (
 --
 
 INSERT INTO `auth_user` (`auth_user_id`, `auth_user_user_id`, `auth_user_username`, `auth_user_token`, `auth_user_date_login`, `auth_user_date_expired`) VALUES
-(6, 1, 'bakpia', 'YmFrcGlhMTIzNDU2', '2024-10-11 16:21:45', '2024-10-12 16:21:45'),
-(8, 24, 'bakpia2', 'YmFrcGlhMjEyMzQ1Ng==', '2024-10-11 14:12:50', '2024-10-12 14:12:50');
+(6, 1, 'bakpia', 'YmFrcGlhMTIzNDU2', '2024-10-17 15:12:51', '2024-10-18 15:12:51'),
+(8, 24, 'bakpia211', 'YmFrcGlhMjExMTIzNDU2', '2024-10-16 14:51:24', '2024-10-17 14:51:24');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `bank`
+--
+
+DROP TABLE IF EXISTS `bank`;
+CREATE TABLE IF NOT EXISTS `bank` (
+  `bank_id` int UNSIGNED NOT NULL AUTO_INCREMENT,
+  `bank_name` varchar(50) NOT NULL,
+  `bank_account_name` varchar(50) NOT NULL,
+  `bank_account_number` varchar(20) NOT NULL,
+  `bank_code` varchar(10) NOT NULL,
+  `bank_created_at` datetime DEFAULT NULL,
+  `bank_updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`bank_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data untuk tabel `bank`
+--
+
+INSERT INTO `bank` (`bank_id`, `bank_name`, `bank_account_name`, `bank_account_number`, `bank_code`, `bank_created_at`, `bank_updated_at`) VALUES
+(1, 'BCA', 'pitek', '6913812381', '014', '2024-10-17 04:33:44', NULL),
+(3, 'BBRI', 'pitek', '69138123811', '021', '2024-10-17 07:35:08', NULL),
+(4, 'NIAGA', 'pitek', '123124', '011', '2024-10-17 07:35:36', NULL);
 
 -- --------------------------------------------------------
 
@@ -112,7 +139,7 @@ CREATE TABLE IF NOT EXISTS `log_stock` (
   KEY `fk_log_stock_product` (`log_stock_product_id`),
   KEY `fk_log_stock_variant` (`log_stock_variant_id`),
   KEY `fk_log_stock_category` (`log_stock_category_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=115 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=118 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data untuk tabel `log_stock`
@@ -142,7 +169,10 @@ INSERT INTO `log_stock` (`log_stock_id`, `log_stock_product_id`, `log_stock_vari
 (111, 160, 159, 8, 'reduce', 5, '2024-10-11 16:06:54'),
 (112, 160, 159, 8, 'reduce', 5, '2024-10-11 16:07:16'),
 (113, 160, 159, 8, 'add', 5, '2024-10-11 16:15:08'),
-(114, 160, 159, 8, 'add', 5, '2024-10-11 16:15:45');
+(114, 160, 159, 8, 'add', 5, '2024-10-11 16:15:45'),
+(115, 160, 159, 8, 'sold', 5, '2024-10-17 10:10:45'),
+(116, 160, 159, 8, 'sold', 5, '2024-10-17 10:11:11'),
+(117, 160, 159, 8, 'sold', 5, '2024-10-17 10:11:48');
 
 -- --------------------------------------------------------
 
@@ -239,7 +269,7 @@ INSERT INTO `product_stock` (`product_stock_id`, `product_stock_product_id`, `pr
 (157, 163, 159, 8, 50, 0, 0),
 (156, 162, 159, 8, 50, 0, 0),
 (155, 161, 159, 8, 50, 0, 0),
-(154, 160, 159, 8, 5, 0, 65);
+(154, 160, 159, 8, 10, 0, 160);
 
 -- --------------------------------------------------------
 
@@ -251,6 +281,7 @@ DROP TABLE IF EXISTS `sales_order`;
 CREATE TABLE IF NOT EXISTS `sales_order` (
   `sales_order_id` int UNSIGNED NOT NULL AUTO_INCREMENT,
   `sales_order_status` enum('pending','payed','confirmed','canceled','customer_canceled','break') NOT NULL,
+  `sales_order_reason` varchar(500) NOT NULL,
   `sales_order_price` int NOT NULL,
   `sales_order_customer_id` int UNSIGNED NOT NULL,
   `sales_order_customer_name` varchar(255) NOT NULL,
@@ -260,27 +291,37 @@ CREATE TABLE IF NOT EXISTS `sales_order` (
   `sales_order_proof` varchar(255) NOT NULL,
   PRIMARY KEY (`sales_order_id`),
   KEY `fk_sales_order_customer` (`sales_order_customer_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=53 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=91 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data untuk tabel `sales_order`
 --
 
-INSERT INTO `sales_order` (`sales_order_id`, `sales_order_status`, `sales_order_price`, `sales_order_customer_id`, `sales_order_customer_name`, `sales_order_customer_address`, `sales_order_customer_no_handphone`, `sales_order_date`, `sales_order_proof`) VALUES
-(51, 'customer_canceled', 400000, 1, 'noob', 'jkt', '0123313213', '2024-10-09 10:48:17', ''),
-(52, 'payed', 200000, 1, 'noob', 'jkt', '0123313213', '2024-10-09 14:16:06', 'customer_52_1728458214_6f2cccf230baabe7db3a.png'),
-(50, 'confirmed', 400000, 1, 'noob', 'jkt', '0123313213', '2024-10-09 10:46:58', 'customer_50_1728445670_d5b9fd789930c3146546.png'),
-(49, 'confirmed', 400000, 1, 'noob', 'jkt', '0123313213', '2024-10-09 10:45:33', 'customer_49_1728445563_9040b8089255d23524dc.png'),
-(48, 'confirmed', 740000, 1, 'noob', 'jkt', '0123313213', '2024-08-23 13:40:15', 'customer_48_1724395219_5578f583f8d529610800.png'),
-(47, 'canceled', 740000, 1, 'noob', 'jkt', '0123313213', '2024-08-23 10:53:55', 'customer_47_1724393905_66052ee4b9136ef6bc51.png'),
-(46, 'confirmed', 740000, 1, 'noob', 'jkt', '0123313213', '2024-08-23 10:38:31', 'customer_46_1724384314_298a9687cb43fa89a1d8.png'),
-(45, 'confirmed', 740000, 1, 'noob', 'jkt', '0123313213', '2024-08-23 10:38:00', 'customer_45_1724384284_1265aa609359e70533cf.png'),
-(44, 'confirmed', 740000, 1, 'noob', 'jkt', '0123313213', '2024-08-23 10:35:55', 'customer_44_1724384159_21fc2e0cadf828958b6f.png'),
-(43, 'confirmed', 740000, 1, 'noob', 'jkt', '0123313213', '2024-08-23 10:35:11', 'customer_43_1724384115_1ad1ad41f5a212b08a88.png'),
-(41, 'customer_canceled', 740000, 1, 'noob', 'jkt', '0123313213', '2024-08-23 10:08:03', ''),
-(42, 'confirmed', 740000, 1, 'noob', 'jkt', '0123313213', '2024-08-23 10:34:16', 'customer_42_1724384061_028804fe75c2bbcc7ef7.png'),
-(40, 'confirmed', 740000, 1, 'noob', 'jkt', '0123313213', '2024-08-23 10:07:56', 'customer_40_1724382481_23aa5c03e4df7aee4e04.png'),
-(39, 'confirmed', 740000, 1, 'noob', 'jkt', '0123313213', '2024-08-22 16:38:09', 'customer_39_1724382441_901510cf01b53bf9ac73.png');
+INSERT INTO `sales_order` (`sales_order_id`, `sales_order_status`, `sales_order_reason`, `sales_order_price`, `sales_order_customer_id`, `sales_order_customer_name`, `sales_order_customer_address`, `sales_order_customer_no_handphone`, `sales_order_date`, `sales_order_proof`) VALUES
+(87, 'canceled', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-17 10:32:16', 'customer_87_1729150984_1cb9560e4ed0320f5a66.png'),
+(85, 'canceled', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-17 10:20:10', 'customer_85_1729135214_bbe05e22bbe25032c660.png'),
+(86, 'canceled', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-17 10:24:13', 'customer_86_1729135462_2a0787a5ec08638ff71f.png'),
+(84, 'canceled', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-17 10:20:04', 'customer_84_1729135207_acd4fe6022e2607eec0e.png'),
+(82, 'confirmed', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-17 10:10:14', 'customer_82_1729134616_0dc882a32d5396c9ce16.png'),
+(83, 'confirmed', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-17 10:11:37', 'customer_83_1729134701_8970cdcd745469d658b8.png'),
+(81, 'confirmed', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-17 10:10:08', 'customer_81_1729134612_e416b3efe4c40e73d649.png'),
+(80, 'confirmed', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-17 10:10:03', 'customer_80_1729134604_9d864f4dcb59ea126fb9.png'),
+(79, 'confirmed', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-16 14:51:51', 'customer_79_1729134600_b0aa477be4aeab702325.png'),
+(78, 'confirmed', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-16 14:39:45', 'customer_78_1729064390_34927fde5adb8fcb2f7f.png'),
+(76, 'customer_canceled', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-16 14:34:30', ''),
+(77, 'confirmed', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-16 14:39:14', 'customer_77_1729064361_49734713b2647dd59802.png'),
+(75, 'confirmed', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-16 14:33:19', 'customer_75_1729064033_d5c09fe2fe4546b2f5ae.png'),
+(73, 'customer_canceled', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-16 14:32:28', ''),
+(74, 'customer_canceled', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-16 14:32:50', ''),
+(72, 'customer_canceled', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-16 14:31:58', ''),
+(71, 'customer_canceled', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-16 14:31:27', ''),
+(69, 'customer_canceled', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-16 14:30:20', ''),
+(70, 'customer_canceled', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-16 14:30:53', ''),
+(67, 'customer_canceled', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-16 14:28:09', ''),
+(68, 'customer_canceled', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-16 14:28:59', ''),
+(88, 'customer_canceled', '\'pengen ganti barang\'', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-17 14:43:09', ''),
+(89, 'customer_canceled', 'pengen ganti barang', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-17 14:43:59', ''),
+(90, 'canceled', 'stock abis', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-17 14:44:27', 'customer_90_1729151073_6622d62c6db76381c056.png');
 
 -- --------------------------------------------------------
 
@@ -304,60 +345,37 @@ CREATE TABLE IF NOT EXISTS `sales_product` (
   KEY `fk_sales_product_customer` (`sales_product_customer_id`),
   KEY `fk_sales_product_sales_order` (`sales_product_order_id`),
   KEY `fk_sales_product_product` (`sales_product_product_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=126 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=162 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data untuk tabel `sales_product`
 --
 
 INSERT INTO `sales_product` (`sales_product_id`, `sales_product_status`, `sales_product_product_id`, `sales_product_product_name`, `sales_product_product_variant`, `sales_product_product_category`, `sales_product_quantity`, `sales_product_price`, `sales_product_order_id`, `sales_product_customer_id`) VALUES
-(81, 'confirmed', 36, 'Griya Bakpia Premium 15', 'Mix', 'Basah', 5, 42000, 39, 1),
-(80, 'confirmed', 35, 'Griya Bakpia Premium 15', 'Durian', 'Basah', 5, 40000, 39, 1),
-(79, 'confirmed', 31, 'Griya Bakpia Premium 15', 'Kacang Hijau', 'Basah', 5, 40000, 39, 1),
-(82, 'confirmed', 39, 'Bakpia 465 20', 'Kacang Hijau Rasa Coklat', 'Basah', 5, 26000, 39, 1),
-(83, 'confirmed', 31, 'Griya Bakpia Premium 15', 'Kacang Hijau', 'Basah', 5, 40000, 40, 1),
-(84, 'confirmed', 35, 'Griya Bakpia Premium 15', 'Durian', 'Basah', 5, 40000, 40, 1),
-(85, 'confirmed', 36, 'Griya Bakpia Premium 15', 'Mix', 'Basah', 5, 42000, 40, 1),
-(86, 'confirmed', 39, 'Bakpia 465 20', 'Kacang Hijau Rasa Coklat', 'Basah', 5, 26000, 40, 1),
-(87, 'customer_canceled', 31, 'Griya Bakpia Premium 15', 'Kacang Hijau', 'Basah', 5, 40000, 41, 1),
-(88, 'customer_canceled', 35, 'Griya Bakpia Premium 15', 'Durian', 'Basah', 5, 40000, 41, 1),
-(89, 'customer_canceled', 36, 'Griya Bakpia Premium 15', 'Mix', 'Basah', 5, 42000, 41, 1),
-(90, 'customer_canceled', 39, 'Bakpia 465 20', 'Kacang Hijau Rasa Coklat', 'Basah', 5, 26000, 41, 1),
-(91, 'confirmed', 31, 'Griya Bakpia Premium 15', 'Kacang Hijau', 'Basah', 5, 40000, 42, 1),
-(92, 'confirmed', 35, 'Griya Bakpia Premium 15', 'Durian', 'Basah', 5, 40000, 42, 1),
-(93, 'confirmed', 36, 'Griya Bakpia Premium 15', 'Mix', 'Basah', 5, 42000, 42, 1),
-(94, 'confirmed', 39, 'Bakpia 465 20', 'Kacang Hijau Rasa Coklat', 'Basah', 5, 26000, 42, 1),
-(95, 'confirmed', 31, 'Griya Bakpia Premium 15', 'Kacang Hijau', 'Basah', 5, 40000, 43, 1),
-(96, 'confirmed', 35, 'Griya Bakpia Premium 15', 'Durian', 'Basah', 5, 40000, 43, 1),
-(97, 'confirmed', 36, 'Griya Bakpia Premium 15', 'Mix', 'Basah', 5, 42000, 43, 1),
-(98, 'confirmed', 39, 'Bakpia 465 20', 'Kacang Hijau Rasa Coklat', 'Basah', 5, 26000, 43, 1),
-(99, 'confirmed', 31, 'Griya Bakpia Premium 15', 'Kacang Hijau', 'Basah', 5, 40000, 44, 1),
-(100, 'confirmed', 35, 'Griya Bakpia Premium 15', 'Durian', 'Basah', 5, 40000, 44, 1),
-(101, 'confirmed', 36, 'Griya Bakpia Premium 15', 'Mix', 'Basah', 5, 42000, 44, 1),
-(102, 'confirmed', 39, 'Bakpia 465 20', 'Kacang Hijau Rasa Coklat', 'Basah', 5, 26000, 44, 1),
-(103, 'confirmed', 31, 'Griya Bakpia Premium 15', 'Kacang Hijau', 'Basah', 5, 40000, 45, 1),
-(104, 'confirmed', 35, 'Griya Bakpia Premium 15', 'Durian', 'Basah', 5, 40000, 45, 1),
-(105, 'confirmed', 36, 'Griya Bakpia Premium 15', 'Mix', 'Basah', 5, 42000, 45, 1),
-(106, 'confirmed', 39, 'Bakpia 465 20', 'Kacang Hijau Rasa Coklat', 'Basah', 5, 26000, 45, 1),
-(107, 'confirmed', 31, 'Griya Bakpia Premium 15', 'Kacang Hijau', 'Basah', 5, 40000, 46, 1),
-(108, 'confirmed', 35, 'Griya Bakpia Premium 15', 'Durian', 'Basah', 5, 40000, 46, 1),
-(109, 'confirmed', 36, 'Griya Bakpia Premium 15', 'Mix', 'Basah', 5, 42000, 46, 1),
-(110, 'confirmed', 39, 'Bakpia 465 20', 'Kacang Hijau Rasa Coklat', 'Basah', 5, 26000, 46, 1),
-(111, 'canceled', 31, 'Griya Bakpia Premium 15', 'Kacang Hijau', 'Basah', 5, 40000, 47, 1),
-(112, 'canceled', 35, 'Griya Bakpia Premium 15', 'Durian', 'Basah', 5, 40000, 47, 1),
-(113, 'canceled', 36, 'Griya Bakpia Premium 15', 'Mix', 'Basah', 5, 42000, 47, 1),
-(114, 'canceled', 39, 'Bakpia 465 20', 'Kacang Hijau Rasa Coklat', 'Basah', 5, 26000, 47, 1),
-(115, 'confirmed', 31, 'Griya Bakpia Premium 15', 'Kacang Hijau', 'Basah', 5, 40000, 48, 1),
-(116, 'confirmed', 35, 'Griya Bakpia Premium 15', 'Durian', 'Basah', 5, 40000, 48, 1),
-(117, 'confirmed', 36, 'Griya Bakpia Premium 15', 'Mix', 'Basah', 5, 42000, 48, 1),
-(118, 'confirmed', 39, 'Bakpia 465 20', 'Kacang Hijau Rasa Coklat', 'Basah', 5, 26000, 48, 1),
-(119, 'confirmed', 139, 'Griya Bakpia Premium 15', 'Kacang Hijau', 'Basah', 5, 40000, 49, 1),
-(120, 'confirmed', 140, 'Griya Bakpia Premium 15', 'Keju', 'Basah', 5, 40000, 49, 1),
-(121, 'confirmed', 139, 'Griya Bakpia Premium 15', 'Kacang Hijau', 'Basah', 5, 40000, 50, 1),
-(122, 'confirmed', 140, 'Griya Bakpia Premium 15', 'Keju', 'Basah', 5, 40000, 50, 1),
-(123, 'customer_canceled', 139, 'Griya Bakpia Premium 15', 'Kacang Hijau', 'Basah', 5, 40000, 51, 1),
-(124, 'customer_canceled', 140, 'Griya Bakpia Premium 15', 'Keju', 'Basah', 5, 40000, 51, 1),
-(125, 'payed', 139, 'Griya Bakpia Premium 15', 'Kacang Hijau', 'Basah', 5, 40000, 52, 1);
+(161, 'canceled', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 90, 1),
+(160, 'customer_canceled', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 89, 1),
+(159, 'customer_canceled', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 88, 1),
+(158, 'canceled', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 87, 1),
+(157, 'canceled', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 86, 1),
+(156, 'canceled', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 85, 1),
+(155, 'canceled', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 84, 1),
+(154, 'confirmed', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 83, 1),
+(153, 'confirmed', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 82, 1),
+(152, 'confirmed', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 81, 1),
+(151, 'confirmed', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 80, 1),
+(150, 'confirmed', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 79, 1),
+(149, 'confirmed', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 78, 1),
+(148, 'confirmed', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 77, 1),
+(147, 'customer_canceled', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 76, 1),
+(146, 'confirmed', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 75, 1),
+(145, 'customer_canceled', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 74, 1),
+(144, 'customer_canceled', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 73, 1),
+(143, 'customer_canceled', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 72, 1),
+(142, 'customer_canceled', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 71, 1),
+(141, 'customer_canceled', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 70, 1),
+(140, 'customer_canceled', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 69, 1),
+(139, 'customer_canceled', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 68, 1),
+(138, 'customer_canceled', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 67, 1);
 
 -- --------------------------------------------------------
 
@@ -379,15 +397,15 @@ CREATE TABLE IF NOT EXISTS `user` (
   `user_created_at` datetime DEFAULT NULL,
   `user_updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `user`
 --
 
 INSERT INTO `user` (`user_id`, `user_username`, `user_password`, `user_name`, `user_email`, `user_no_handphone`, `user_role`, `user_otp`, `user_otp_expired`, `user_created_at`, `user_updated_at`) VALUES
-(1, 'bakpia', '123456', 'lol', 'piteknoob@gmail.com', '6285600077410', 'super_user', 444307, '2024-10-09 14:38:40', '2024-07-25 10:52:24', '2024-09-02 09:07:11'),
-(24, 'bakpia2', '123456', 'tes', 'pitek@gmail.com', '1', 'admin', NULL, NULL, '2024-08-29 11:47:22', '2024-09-09 15:56:55');
+(1, 'bakpia', '123456', 'lol', 'piteknoob@gmail.com', '6285600077410', 'super_user', NULL, NULL, '2024-07-25 10:52:24', '2024-09-02 09:07:11'),
+(24, 'bakpia211', '123456', 'tes', 'pitek@gmail.com', '1231212111111', 'admin', NULL, NULL, '2024-08-29 11:47:22', '2024-10-16 10:12:40');
 
 -- --------------------------------------------------------
 

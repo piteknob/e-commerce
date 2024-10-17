@@ -115,7 +115,7 @@ class Transaction extends AuthController
             'pagination' => false
         ];
 
-        $gas = generateListData($this->request->getPost(), $gas, $db);
+        $gas = (array) generateDetailData($this->request->getPost(), $gas, $db);
 
 
         // check id customer 
@@ -132,7 +132,7 @@ class Transaction extends AuthController
         $id_customer = generateDetailData($this->request->getGet(), $query_id_customer, $this->db);
 
         foreach ($id_customer as $key => $value) {
-            $id_customer = $value[0]['id'];
+            $id_customer = $value['id'];
         }
 
         $product_pending['data'] = ['sales_product'];
@@ -157,9 +157,7 @@ class Transaction extends AuthController
         }
 
         $comeplete = (object) [];
-        $comeplete->customer_data = [
-            $gas
-        ];
+        $comeplete->customer_data = $gas['data'];
         $comeplete->product = [
             $product_pending
         ];
@@ -208,7 +206,7 @@ class Transaction extends AuthController
             ];
             $price = generateDetailData($this->request->getGet(), $detail_price, $this->db);
             foreach ($price as $key => $value) {
-                $price = $value[0]['price'];
+                $price = $value['price'];
             }
 
             $price = $price * $quantity;
@@ -248,8 +246,8 @@ class Transaction extends AuthController
                 'product.product_price' => 'price',
                 'product.product_category_id' => 'category_id',
                 'product.product_category_name' => 'category_name',
-                'variant.variant_id' => 'variant_id',
-                'variant.variant_name' => 'variant_name',
+                'product.product_variant_id' => 'variant_id',
+                'product.product_variant_name' => 'variant_name',
                 'product_stock.product_stock_stock' => 'stock_stock',
                 'product_stock.product_stock_in' => 'stock_in',
                 'product_stock.product_stock_out' => 'stock_out',
@@ -257,7 +255,6 @@ class Transaction extends AuthController
             ];
             $detail_data['join'] = [
                 'product_stock' => 'product.product_id = product_stock.product_stock_product_id',
-                'variant' => 'product.product_id = variant.variant_product_id',
             ];
             $detail_data['where_detail'] = [
                 "WHERE product_id = $key"
@@ -269,11 +266,11 @@ class Transaction extends AuthController
                 $id = $json->product_id;
                 $quantity = $json->product_quantity;
                 // from databasa detail
-                $product_detail = $value[0]['name'];
-                $category_detail = $value[0]['category_name'];
-                $variant_detail = $value[0]['variant_name'];
-                $price_detail = $value[0]['price'];
-                $product_id = $value[0]['product_id'];
+                $product_detail = $value['name'];
+                $category_detail = $value['category_name'];
+                $variant_detail = $value['variant_name'];
+                $price_detail = $value['price'];
+                $product_id = $value['product_id'];
 
                 $query_insert_sales_product = "INSERT INTO sales_product (
                 sales_product_status,
@@ -338,8 +335,7 @@ class Transaction extends AuthController
         $data_success = [
             'data' => [
                 'customer_data' => $return_order['data'],
-                'product' => $return_product['data'],
-                'pagination' => $return_product['pagination']
+                'product' => $return_product['data']
             ]
         ];
 
@@ -349,268 +345,263 @@ class Transaction extends AuthController
     public function payment()
     {
         // ------------------- GET ID ------------------- //
-        $id = $this->request->getVar();
-        $id = $id['id'];
+        $id = $this->request->getVar('id');
 
         // ------------------- GET FILE -------------------- //
         $photo = $this->request->getFile('upload');
         $db = db_connect();
 
-        // --------------------- CHECK ORDER EXIST ------------------------ //
+        try {
+            // Mulai transaksi
+            $this->db->transBegin();
 
-        // pending
-        $query_exist_pending['data'] = ['sales_order'];
-        $query_exist_pending['select'] = [
-            'sales_order_price' => 'price'
-        ];
-        $query_exist_pending['where_detail'] = [
-            "WHERE sales_order_id = {$id} AND sales_order_status = 'pending'"
-        ];
-        $query_exist_pending['pagination'] = [false];
+            // --------------------- CHECK ORDER EXIST ------------------------ //
 
-        $query_exist_pending = generateListData($this->request->getVar(), $query_exist_pending, $this->db);
+            // Check pending order
+            $query_exist_pending = $this->db->table('sales_order')
+                ->select('sales_order_price as price')
+                ->where('sales_order_id', $id)
+                ->where('sales_order_status', 'pending')
+                ->get()
+                ->getResultArray();
 
-        // payed
-        $query_exist_payed['data'] = ['sales_order'];
-        $query_exist_payed['select'] = [
-            'sales_order_price' => 'price'
-        ];
-        $query_exist_payed['where_detail'] = [
-            "WHERE sales_order_id = {$id} AND sales_order_status = 'payed'"
-        ];
-        $query_exist_payed['pagination'] = [false];
+            // Check payed order
+            $query_exist_payed = $this->db->table('sales_order')
+                ->select('sales_order_price as price')
+                ->where('sales_order_id', $id)
+                ->where('sales_order_status', 'payed')
+                ->get()
+                ->getResultArray();
 
-        $query_exist_payed = generateListData($this->request->getVar(), $query_exist_payed, $this->db);
-
-        if (empty($query_exist_pending) && empty($query_exist_payed)) {
-            $data_exist = [
-                'data' => [
-                    'message' => 'Order Not Found',
-                ]
-            ];
-            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'Order Not Found', '', $data_exist);
-        }
-        // -------------------------------- GET TOTAL HARGA --------------------------------- //
-
-        $query['data'] = ['sales_order'];
-
-        $query['select'] = [
-            'sales_order_price' => 'price',
-        ];
-
-        $query['where_detail'] = [
-            "WHERE sales_order_id = {$id} AND sales_order_status = 'pending'"
-        ];
-
-        $query['pagination'] = [
-            'pagination' => false
-        ];
-
-        $price = generateListData($this->request->getVar(), $query, $db);
-        $totalHarga = 0;
-        foreach ($price as $key => $value) {
-            $totalHarga += $value['price'];
-        }
-
-        // --------------------- CHECK STATUS ORDER ------------------------ // 
-
-        $sql = "SELECT sales_order_status FROM sales_order WHERE sales_order_id = {$id}";
-        $data_check = $db->query($sql);
-        $data_check = $data_check->getResultArray();
-
-        $sql = "SELECT sales_product_status FROM sales_product WHERE sales_product_order_id = {$id}";
-        $data_product = $db->query($sql);
-        $data_product = $data_product->getResultArray();
-
-        $data_check_real = 'payed';
-        $data_product_real = 'payed';
-        foreach ($data_check as $key => $value) {
-            $data_check = $value['sales_order_status'];
-            if ($data_check == 'pending') {
-                $data_check_real = 'pending';
+            if (empty($query_exist_pending) && empty($query_exist_payed)) {
+                return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'Order not found in database', 'Order not found', (object) []);
             }
-        }
 
-        foreach ($data_product as $key => $value) {
-            $data_product = $value['sales_product_status'];
-            if ($data_product == 'pending') {
-                $data_product_real = 'pending';
+            // -------------------------------- GET TOTAL HARGA --------------------------------- //
+
+            $price = $this->db->table('sales_order')
+                ->select('sales_order_price as price')
+                ->where('sales_order_id', $id)
+                ->where('sales_order_status', 'pending')
+                ->get()
+                ->getResultArray();
+
+            $totalHarga = 0;
+            foreach ($price as $value) {
+                $totalHarga += $value['price'];
             }
-        }
 
+            // --------------------- CHECK STATUS ORDER ------------------------ //
 
-        if ($data_check_real == 'payed' && $data_product_real == 'payed') {
-            $data = [
-                'data' => [
-                    'message' => 'Order has been paid',
-                ]
-            ];
-            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Payment Already Done', $data);
-        }
+            // Check order status
+            $data_check = $this->db->table('sales_order')
+                ->select('sales_order_status')
+                ->where('sales_order_id', $id)
+                ->get()
+                ->getResultArray();
 
-        // --------------------- SET VALIDATION ------------------------ //
-        $validator = \Config\Services::validation();
-        $validator->setRules([
-            'upload' => 'uploaded[upload]|max_size[upload, 2048]|is_image[upload]|mime_in[upload,image/jpg,image/jpeg,image/png]',
-        ]);
+            // Check product status
+            $data_product = $this->db->table('sales_product')
+                ->select('sales_product_status')
+                ->where('sales_product_order_id', $id)
+                ->get()
+                ->getResultArray();
 
-        if (!$validator->run((array)$photo)) {
-            $error = $validator->getErrors();
-            if ($error) {
-                return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'error validation', $error);
+            $data_check_real = 'payed';
+            $data_product_real = 'payed';
+
+            foreach ($data_check as $value) {
+                if ($value['sales_order_status'] == 'pending') {
+                    $data_check_real = 'pending';
+                }
             }
+
+            foreach ($data_product as $value) {
+                if ($value['sales_product_status'] == 'pending') {
+                    $data_product_real = 'pending';
+                }
+            }
+
+            if ($data_check_real == 'payed' && $data_product_real == 'payed') {
+                return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Payment alreadt done',  (object) [], 'Order has been paid');
+            }
+
+            // --------------------- SET VALIDATION ------------------------ //
+            $validator = \Config\Services::validation();
+            $validator->setRules([
+                'upload' => 'uploaded[upload]|max_size[upload,2048]|is_image[upload]|mime_in[upload,image/jpg,image/jpeg,image/png]',
+            ]);
+
+            if (!$validator->run((array)$photo)) {
+                $error = $validator->getErrors();
+                if ($error) {
+                    return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error validation', $error);
+                }
+            }
+
+            $pure_photo_name = $photo->getName();
+            $photo_name = "customer_" . $id . "_" . $photo->getRandomName();
+            $photo->move('./upload/photo', $photo_name);
+
+            // ---------------------------------- UPDATE FROM 'PENDING' TO 'PAYED' ---------------------------------- //
+
+            // Update sales_order to set proof and status
+            $this->db->table('sales_order')
+                ->where('sales_order_id', $id)
+                ->where('sales_order_status', 'pending')
+                ->update([
+                    'sales_order_proof' => $photo_name,
+                    'sales_order_status' => 'payed'
+                ]);
+
+            // Update sales_product to set status to 'payed'
+            $this->db->table('sales_product')
+                ->where('sales_product_order_id', $id)
+                ->update(['sales_product_status' => 'payed']);
+
+            // Commit transaksi
+            if ($this->db->transStatus() === false) {
+                // Rollback jika ada error
+                $this->db->transRollback();
+                return $this->responseFail(ResponseInterface::HTTP_INTERNAL_SERVER_ERROR, 'Failed to complete payment', 'Transaction failed', (object) []);
+            } else {
+                // Commit transaksi
+                $this->db->transCommit();
+                $data = [
+                    'data' => [
+                        'total Payment' => $totalHarga,
+                        'image' => $pure_photo_name
+                    ]
+
+                ];
+                return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Paid', $data);
+            }
+        } catch (\Exception $e) {
+            // Rollback jika terjadi exception
+            $this->db->transRollback();
+            return $this->responseFail(ResponseInterface::HTTP_INTERNAL_SERVER_ERROR, 'An error occurred during the payment process', $e->getMessage(), (object) []);
         }
-        $pure_photo_name = $photo->getName();
-        $photo_name = "customer_" . "$id" . "_";
-        $photo_name .= $photo->getRandomName();
-        $photo->move('./upload/photo', $photo_name);
-
-
-
-
-        // ---------------------------------- UPDATE FROM 'PENDING' TO 'PAYED' ---------------------------------- //
-
-        $sql_sales_order = "UPDATE sales_order 
-        SET sales_order_proof = '{$photo_name}',
-        sales_order_status = 'payed'
-        WHERE sales_order_id = {$id} AND sales_order_status = 'pending'";
-        $db->query($sql_sales_order);
-
-        $sql_sales_product = "UPDATE sales_product
-        SET sales_product_status = 'payed'
-        WHERE sales_product_order_id = {$id}";
-        $db->query($sql_sales_product);
-
-        $data = [
-            'total Payment' => $totalHarga,
-            'image' => $pure_photo_name,
-        ];
-
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Payed', $data);
     }
+
 
     public function customer_cancel()
     {
         $post = $this->request->getPost();
         $id = $post['id'];
+        $reason = $post['reason'];
 
-        $break_order = "UPDATE sales_order SET sales_order_status = 'break' WHERE sales_order_id = {$id} AND sales_order_status = 'pending'";
-        $break_product = "UPDATE sales_product SET sales_product_status = 'break' WHERE sales_product_order_id = {$id} AND sales_product_status = 'pending'";
+        try {
+            $this->db->transBegin();
 
-        $this->db->query($break_order);
-        $this->db->query($break_product);
+            $this->db->table('sales_order')
+                ->where('sales_order_id', $id)
+                ->where('sales_order_status', 'pending')
+                ->update(['sales_order_status' => 'break']);
 
-        $check_payed['data'] = ['sales_order'];
-        $check_payed['select'] = [
-            'sales_order_id' => 'id',
-            'sales_order_status' => 'status',
-            'sales_order_price' => 'price',
-            'sales_order_customer_id' => 'customer_id',
-            'sales_order_customer_name' => 'customer_name',
-            'sales_order_customer_address' => 'customer_address',
-            'sales_order_customer_no_handphone' => 'customer_no_handphone',
-            'sales_order_date' => 'date',
-            'sales_order_proof' => 'proof',
-        ];
-        $check_payed['where_detail'] = [
-            "WHERE sales_order_id = '{$id}'"
-        ];
-        $check_payed = (array) generateDetailData($this->request->getVar(), $check_payed, $this->db);
-        
-        foreach ($check_payed as $key => $value) {
-            $status_payed = $value[0];
-        }
+            $this->db->table('sales_product')
+                ->where('sales_product_order_id', $id)
+                ->where('sales_product_status', 'pending')
+                ->update(['sales_product_status' => 'break']);
 
-        if ($status_payed['status'] === 'payed') {
-            return $this->responseFail(ResponseInterface::HTTP_OK, 'You Can Not Cancel This Order, Contact Admin To Cancel This Order', '', $status_payed);
-        }
-        if ($status_payed['status'] === 'confirmed') {
-            return $this->responseFail(ResponseInterface::HTTP_OK, 'You Can Not Cancel This Order, Contact Admin To Cancel This Order', '', $status_payed);
-        }
+            $check_payed = $this->db->table('sales_order')
+                ->select('sales_order_status as status')
+                ->where('sales_order_id', $id)
+                ->get()
+                ->getRowArray();
 
-        // ----------------- RESTORE STOCK ---------------- //
+            if ($check_payed['status'] === 'payed' || $check_payed['status'] === 'confirmed') {
+                return $this->responseFail(ResponseInterface::HTTP_OK, 'You Can Not Cancel This Order, Contact Admin To Cancel This Order', '', $check_payed);
+            }
 
-        $data_order['data'] = ['sales_order'];
+            // ----------------- RESTORE STOCK ---------------- //
 
-        $data_order['select'] = [
-            'sales_order_id' => 'id',
-            'sales_order_price' => 'price',
-            'sales_order_customer_id' => 'customer_id',
-            'sales_order_customer_name' => 'customer_name',
-            'sales_order_customer_address' => 'customer_address',
-            'sales_order_customer_no_handphone' => 'customer_no_handphone',
-            'sales_order_date' => 'date',
-            'sales_order_proof' => 'proof',
-        ];
-
-        $data_order['where_detail'] = [
-            "WHERE sales_order_id = {$id} AND sales_order_status = 'break'"
-        ];
-
-        $data_order['pagination'] = [
-            'pagination' => false
-        ];
-
-        $data_order = generateListData($this->request->getPost(), $data_order, $this->db);
-
-        $data_product['data'] = ['sales_product'];
-        $data_product['select'] = [
-            'sales_product_id' => 'id',
-            'sales_product_product_id' => 'product_id',
-            'sales_product_status' => 'status',
-            'sales_product_product_name' => 'product_name',
-            'sales_product_product_variant' => 'product_variant',
-            'sales_product_product_category' => 'product_category',
-            'sales_product_quantity' => 'quantity',
-            'sales_product_price' => 'price',
-            'sales_product_order_id' => 'order_id',
-            'sales_product_customer_id' => 'customer_id',
-        ];
-        $data_product['where_detail'] = [
-            "WHERE sales_product_order_id = {$id} AND sales_product_status = 'break'"
-        ];
-        $data_product['pagination'] = [false];
-
-        $data_product = generateListData($this->request->getPost(), $data_product, $this->db);
-
-        $sql_order = "UPDATE sales_order SET sales_order_status = 'customer_canceled' WHERE sales_order_id = {$id} AND sales_order_status = 'break'";
-        $this->db->query($sql_order);
-
-        $sql_product = "UPDATE sales_product SET sales_product_status = 'customer_canceled' WHERE sales_product_order_id = {$id} AND sales_product_status = 'break'";
-        $this->db->query($sql_product);
-
-        // ------------------ RESTORE STOCK --------------- //
-        foreach ($data_product as $value) {
-            $quantity_stock = $value['quantity'];
-            $product_id = $value['product_id'];
-
-            $sql_stock = "UPDATE product_stock SET product_stock_stock = product_stock_stock + {$quantity_stock}, product_stock_out = product_stock_out - {$quantity_stock} WHERE product_stock_product_id = {$product_id}";
-            $this->db->query($sql_stock);
-        }
-
-
-        if (!empty($data_order) && !empty($data_product)) {
-            $data = [
-                'data' => [
-                    'order' => $data_order,
-                    'product' => $data_product
-                ]
+            // Get order data where status is 'break'
+            $query_data_order['data'] = ['sales_order'];
+            $query_data_order['select'] = [
+                'sales_order_id' => 'id',
+                'sales_order_price' => 'price',
+                'sales_order_customer_id' => 'customer_id',
+                'sales_order_customer_name' => 'customer_name',
+                'sales_order_customer_address' => 'customer_address',
+                'sales_order_customer_no_handphone' => 'customer_no_handphone',
+                'sales_order_date' => 'date',
+                'sales_order_proof' => 'proof',
             ];
-            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Successfully Canceled', $data);
-        } else {
-            $data = [
-                'data' => [
-                    'message' => 'Data Already Canceled'
-                ]
+            $query_data_order['where_detail'] = ["WHERE sales_order_status = 'break'"];
+            $data_order = (array) generateDetailData($this->request->getVar(), $query_data_order, $this->db);
+            // print_r($data_order); die;
+
+            $query_data_product['data'] = ['sales_product'];
+            $query_data_product['select'] = [
+                'sales_product_id' => 'id',
+                'sales_product_product_id' => 'product_id',
+                'sales_product_product_name' => 'product_name',
+                'sales_product_product_variant' => 'product_variant',
+                'sales_product_product_category' => 'product_category',
+                'sales_product_quantity' => 'quantity',
+                'sales_product_price' => 'price',
+                'sales_product_order_id' => 'order_id',
+                'sales_product_customer_id' => 'customer_id',
             ];
-            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Already Canceled', $data);
+            $query_data_product['where_detail'] = ["WHERE sales_product_status = 'break'"];
+            $query_data_product['pagination'] = [false];
+            $data_product = (array) generateListData($this->request->getVar(), $query_data_product, $this->db);
+
+            $this->db->table('sales_order')
+                ->where('sales_order_id', $id)
+                ->where('sales_order_status', 'break')
+                ->update(['sales_order_status' => 'customer_canceled',
+                          'sales_order_reason' => "$reason"]);
+
+            $this->db->table('sales_product')
+                ->where('sales_product_order_id', $id)
+                ->where('sales_product_status', 'break')
+                ->update(['sales_product_status' => 'customer_canceled']);
+
+            // print_r($data_product); die;
+            if (empty($data_product)) {
+                return $this->responseFail(ResponseInterface::HTTP_GONE, 'Order already canceled by customer / admin', 'Order already canceled', (object) []);
+            }
+
+            // Restore stock
+            // print_r($data_product); die;
+            foreach ($data_product as $key => $value) {
+                $quantity_stock = $value['quantity'];
+                $product_id = $value['product_id'];
+
+                // Update stock
+                $this->db->table('product_stock')
+                    ->where('product_stock_product_id', $product_id)
+                    ->set('product_stock_stock', "product_stock_stock + {$quantity_stock}", false)
+                    ->set('product_stock_out', "product_stock_out - {$quantity_stock}", false)
+                    ->update();
+            }
+
+            // Commit transaction error or not
+            if ($this->db->transStatus() === false) {
+                $this->db->transRollback();
+                return $this->responseFail(ResponseInterface::HTTP_INTERNAL_SERVER_ERROR, 'Failed to cancel the order', 'Transaction failed', (object) []);
+            } else {
+                $this->db->transCommit();
+                $data = [
+                    'data' => [
+                        'order' => $data_order['data'],
+                        'product' => $data_product,
+                        'reason' => $reason
+                    ]
+                ];
+                return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Successfully Canceled', $data);
+            }
+        } catch (\Exception $e) {
+            $this->db->transRollback();
+            return $this->responseFail(ResponseInterface::HTTP_INTERNAL_SERVER_ERROR, 'An error occurred while canceling the order', $e->getMessage(), (object) []);
         }
     }
 
     public function history_customer()
     {
         $id = $this->request->getVar();
-        $id = $id['id'];
+        $id = $id['no_handphone'];
 
 
         $query['data'] = ['sales_order'];
@@ -626,25 +617,27 @@ class Transaction extends AuthController
             'sales_order_proof' => 'proof',
         ];
         $query['where_detail'] = [
-            "WHERE sales_order_customer_id = {$id}"
+            "WHERE sales_order_customer_no_handphone = {$id}"
         ];
-        $data = generateListData($this->request->getVar(), $query, $this->db);
+        $data = (array) generateListData($this->request->getVar(), $query, $this->db);
+        if (empty($data['data'])) {
+            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'Data customer not found in database', 'Data not found', (object)[]);
+        }
         return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List Data Customer', $data);
     }
 
     public function history_detail_customer()
     {
-        $id = $this->request->getVar();
-        $id = $id['id'];
+        $id = $this->request->getVar('id');
 
         $query['data'] = ['sales_product'];
         $query['select'] = [
             'sales_product_id' => 'id',
             'sales_product_status' => 'status',
+            'sales_product_product_id' => 'product_id',
             'sales_product_product_name' => 'product_name',
             'sales_product_product_variant' => 'product_variant',
             'sales_product_product_category' => 'product_category',
-            'sales_product_product_box' => 'product_box',
             'sales_product_quantity' => 'quantity',
             'sales_product_price' => 'price',
             'sales_product_order_id' => 'order_id',
@@ -654,7 +647,11 @@ class Transaction extends AuthController
             "WHERE sales_product_order_id = {$id}"
         ];
 
-        $data = generateListData($this->request->getGet(), $query, $this->db);
+        $data = (array) generateDetailData($this->request->getGet(), $query, $this->db);
+
+        if (empty($data['data'])) {
+            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'Data customer not found in database', 'Data not found', (object)[]);
+        }
         return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Detail Order', $data);
     }
 }

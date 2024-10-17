@@ -78,15 +78,15 @@ if (!function_exists('generateListData')) {
         $filterQuery = isset($query['filter']) ? $query['filter'] : '';
         $filterBetweenQuery = isset($query['filter_between']) ? $query['filter_between'] : '';
         $groupByQuery = isset($query['group_by']) ? $query['group_by'] : '';
-        $orderByQuery = isset($query['order_by']) ? $query['order_by'] : '';
         $paginationResult = isset($query['pagination']) ? $query['pagination'] : '';
 
         // --------------- set params --------------- //
         $paginationPage = isset($params['page']) ? $params['page'] : 1;
         $search = isset($params['search']) ? $params['search'] : '';
         $filter = isset($params['filter']) ? $params['filter'] : '';
-        $start = isset($params['start']) ? $params['start'] : '';
-        $end = isset($params['end']) ? $params['end'] : '';
+        $start = isset($params['start_price']) ? $params['start_price'] : '';
+        $end = isset($params['end_price']) ? $params['end_price'] : '';
+        $orderByQuery = isset($params['sort']) ? $params['sort'] : '';
         $paginationParams = isset($params['pagination']) ? $params['pagination'] : '';
         $limitPage = isset($params['limit']) ? $params['limit'] : '';
 
@@ -165,8 +165,8 @@ if (!function_exists('generateListData')) {
             $sql .= groupBy($groupByQuery);
         }
 
-        if (!empty($orderByQuery)) {
-            $sql .= orderBy($orderByQuery);
+        if (!empty($orderByQuery && $dataQuery)) {
+            $sql .= orderBy($orderByQuery, $dataQuery);
         }
 
 
@@ -808,10 +808,11 @@ if (!function_exists('groupBy')) {
 
 // Generate query order by
 if (!function_exists('orderBy')) {
-    function orderBy($data)
+    function orderBy($data, $table)
     {
-        foreach ($data as $key => $row) {
-            $query = " ORDER BY {$row},";
+        foreach ($table as $key => $row) {
+            $field = ''.$row.'_'.$data.'';
+            $query = " ORDER BY {$field},";
         }
         $query = rtrim($query, ', ');
         return $query;

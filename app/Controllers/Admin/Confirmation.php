@@ -73,9 +73,8 @@ class Confirmation extends AuthController
             return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List Transaction', $data_result);
         }
 
-        return $this->responseSuccess(ResponseInterface::HTTP_NOT_FOUND, 'Data Not Found', $data = [
-            'data' => []
-        ]);
+        return $this->responseSuccess(ResponseInterface::HTTP_NOT_FOUND, 'Data transaction not found', (object) [], 'Data not found'
+        );
     }
 
     public function list_order_product()
@@ -105,7 +104,11 @@ class Confirmation extends AuthController
             "WHERE sales_product_order_id = $id"
         ];
         $query['pagination'] = [true];
-        $data = generateListData($this->request->getVar(), $query, $this->db);
+        $data = (array) generateListData($this->request->getVar(), $query, $this->db);
+
+        if (empty($data['data'])) {
+            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'List product transaction not found', 'Error not found', (object) []);
+        }
 
         return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List Order Product', $data);
     }
@@ -145,7 +148,7 @@ class Confirmation extends AuthController
         } else {
             return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Empty', ['data' => []]);
         }
-        
+
         $query_product['data'] = ['sales_product'];
         $query_product['select'] = [
             'sales_product_id' => 'id',
@@ -194,7 +197,7 @@ class Confirmation extends AuthController
             // ------------- HITUNG TOTAL BOX -------------- //
             $photo = $value['proof'];
             if (empty($photo)) {
-                $photo = 'Belum di Bayar';
+                $photo = 'Belum di bayar';
             } else {
                 $photo = 'upload/photo/' . $photo . '';
             }
@@ -206,9 +209,8 @@ class Confirmation extends AuthController
             $customer_address = $value['customer_address'];
             $customer_no_handphone = $value['customer_no_handphone'];
             $date = $value['date'];
-
-            $result[] = [
-                'order' => [
+            $result_order = (object) [];
+            $result_order = [
                     'id' => $id,
                     'status' => $status,
                     'price' => $price,
@@ -219,12 +221,15 @@ class Confirmation extends AuthController
                     'total_quantity' => (string) $total_quantity,
                     'date' => $date,
                     'proof' => $photo,
-                ],
-                'product' => $data_product['data']
             ];
+            
         }
         $final = [
-            'data' => $result
+            'data' => [
+                'order' => $result_order,
+                'product' => $data_product['data']
+
+            ]
         ];
 
         return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Detail', $final);
@@ -265,7 +270,7 @@ class Confirmation extends AuthController
         } else {
             return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Empty', ['data' => []]);
         }
-        
+
         $query_product['data'] = ['sales_product'];
         $query_product['select'] = [
             'sales_product_id' => 'id',
@@ -357,7 +362,7 @@ class Confirmation extends AuthController
         if (!empty($token)) {
             return $token;
         }
-        $post = $this->request->getVar();
+        $post = $this->request->getPost();
         $id = $post['id'];
 
         $query_sales_order['data'] = ['sales_order'];
@@ -403,12 +408,16 @@ class Confirmation extends AuthController
         $query_sales_product['pagination'] = [false];
 
         $data_product = generateListData($this->request->getVar(), $query_sales_product, $this->db);
+        
+        if (empty($data_product['data'])) {
+            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'Data transaction not found', 'Data not found', (object)[]);
+        }
 
         // -------------------- CHECK PRODUCT ALREADY CONFIRMED -------------------------- //
         if ($data_order[0]['status'] == 'confirmed') {
             $result_confirmed = [
                 'data' => [
-                    'order' => $data_order,
+                    'order' => $data_order[0],
                     'product' => $data_product
                 ]
             ];
@@ -416,19 +425,20 @@ class Confirmation extends AuthController
             return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Order Already Confirmed', $result_confirmed);
         }
 
-        // -------------------- UPDATE FROM 'PAYED' TO 'CONFIRMED' ------------------------- //
+        // ------------------------- UPDATE FROM PAYED TO CONFIRMED ------------------------- //
+        try {
+            $this->db->table('sales_order')
+                ->where('sales_order_status', 'payed')
+                ->where('sales_order_id', $id)
+                ->update(['sales_order_status' => 'confirmed']);
 
-        $sql_sales_order = "UPDATE sales_order SET 
-                sales_order_status = 'confirmed'
-                WHERE sales_order_status = 'payed' AND sales_order_id = {$id}";
-
-        $this->db->query($sql_sales_order);
-
-        $sql_sales_product = "UPDATE sales_product SET
-                sales_product_status = 'confirmed'
-                WHERE sales_product_status = 'payed' AND sales_product_order_id = {$id}";
-
-        $this->db->query($sql_sales_product);
+            $this->db->table('sales_product')
+                ->where('sales_product_status', 'payed')
+                ->where('sales_product_order_id', $id)
+                ->update(['sales_product_status' => 'confirmed']);
+        } catch (\Exception $e) {
+            return $this->responseFail(ResponseInterface::HTTP_INTERNAL_SERVER_ERROR, 'Error occurred', $e->getMessage());
+        }
 
 
         foreach ($data_product as $key => $value) {
@@ -443,9 +453,9 @@ class Confirmation extends AuthController
             $query_select_data['select'] = [
                 'variant_id' => 'id'
             ];
-            $query_select_data['where_detail'] = ["WHERE variant_product_id = {$id_product}"];
+            $query_select_data['where_detail'] = ["WHERE variant_name = '{$variant}'"];
             $id_variant = (array) generateDetailData($this->request->getVar(), $query_select_data, $this->db);
-            $id_variant = $id_variant['data'][0]['id'];
+            $id_variant = $id_variant['data']['id'];
 
             // --------- INSERT INTO log_stock --------- //
             $log = "INSERT INTO log_stock (
@@ -501,12 +511,11 @@ class Confirmation extends AuthController
             "WHERE sales_product_order_id = {$id} AND sales_product_status = 'confirmed'"
         ];
 
-        $data_confirm_product = generateListData($this->request->getVar(), $query_confirm_product, $this->db);
-
+        $data_confirm_product = (array) generateListData($this->request->getVar(), $query_confirm_product, $this->db);
         $result = [
             'data' => [
                 'order' => $data_confirm_order,
-                'product' => $data_confirm_product
+                'product' => $data_confirm_product['data']
             ]
         ];
 
@@ -522,9 +531,10 @@ class Confirmation extends AuthController
         }
 
         // get id
-        $post = $this->request->getVar();
+        $post = $this->request->getPost();
         $db = db_connect();
         $id = $post['id'];
+        $reason = $post['reason'];
 
 
         // CHECK ALREADY CANCELED 
@@ -532,6 +542,7 @@ class Confirmation extends AuthController
         $query_check_canceled['select'] = [
             'sales_order_id' => 'id',
             'sales_order_status' => 'status',
+            'sales_order_reason' => 'reason',
             'sales_order_price' => 'price',
             'sales_order_customer_id' => 'customer_id',
             'sales_order_customer_name' => 'customer_name',
@@ -560,14 +571,15 @@ class Confirmation extends AuthController
         $query_check_product['where_detail'] = [
             "WHERE sales_product_order_id = '{$id}' AND sales_product_status = 'canceled'"
         ];
-
+        
         $data_check_order = (array) generateDetailData($this->request->getVar(), $query_check_canceled, $this->db);
-        $data_check_product = (array) generateListData($this->request->getVar(), $query_check_product, $db);
-        if (!empty($data_check_order && $data_check_product)) {
+        $data_check_product = (array) generateListData($this->request->getVar(), $query_check_product, $this->db);
+        // print_r($data_check_product); die;
+        if (!empty($data_check_order['data'] && $data_check_product['data'])) {
             $data = [
                 'data' => [
-                    'order' => $data_check_order,
-                    'product' => $data_check_product
+                    'order' => $data_check_order['data'],
+                    'product' => $data_check_product['data']
                 ]
             ];
 
@@ -578,13 +590,13 @@ class Confirmation extends AuthController
 
 
         // ---------------------------- SQl UPADTE FROM 'PAYED' OR 'PENDING' TO 'CANCELED' ------------------------------ //
-        $sql = "UPDATE sales_order SET sales_order_status = 'canceled' WHERE sales_order_id = '{$id}' AND (sales_order_status = 'pending' OR sales_order_status = 'payed')";
+        $sql = "UPDATE sales_order SET sales_order_status = 'canceled', sales_order_reason = '{$reason}' WHERE sales_order_id = '{$id}' AND (sales_order_status = 'pending' OR sales_order_status = 'payed')";
 
         $db->query($sql);
 
         $sql_product = "UPDATE sales_product SET sales_product_status = 'canceled' WHERE sales_product_order_id = '{$id}' AND (sales_product_status = 'pending' OR sales_product_status = 'payed')";
 
-        $db->query($sql_product);
+        $db->query($sql_product); // NI DI BUAT TRY CATCH
 
         $query_order['data'] = ['sales_order'];
         $query_order['select'] = [
@@ -634,11 +646,14 @@ class Confirmation extends AuthController
             $this->db->query($sql_add_stock);
         }
 
-
+        if (!$data_order) {
+            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'Data transaction not found', 'Data not found', (object)[]);
+        }
         $data = [
             'data' => [
                 'order' => $data_order,
-                'product' => $data_product_canceled
+                'product' => $data_product_canceled['data'],
+                'reason' => $reason
             ]
         ];
 
