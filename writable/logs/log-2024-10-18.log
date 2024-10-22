@@ -1,0 +1,20 @@
+CRITICAL - 2024-10-18 03:09:44 --> ErrorException: Undefined array key "sales_order_product_name"
+[Method: GET, Route: admin/export/export-pdf]
+in APPPATH\Controllers\Admin\Export.php on line 49.
+ 1 APPPATH\Controllers\Admin\Export.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sales_order_product_name"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Export.php', 49)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Export->export_pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Export))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-10-18 03:19:54 --> ErrorException: Undefined array key "sales_order_product_name"
+[Method: GET, Route: admin/export/export-pdf]
+in APPPATH\Controllers\Admin\Export.php on line 49.
+ 1 APPPATH\Controllers\Admin\Export.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sales_order_product_name"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Export.php', 49)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Export->export_pdf()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Export))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

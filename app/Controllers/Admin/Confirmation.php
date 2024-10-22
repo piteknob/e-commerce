@@ -73,7 +73,11 @@ class Confirmation extends AuthController
             return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List Transaction', $data_result);
         }
 
-        return $this->responseSuccess(ResponseInterface::HTTP_NOT_FOUND, 'Data transaction not found', (object) [], 'Data not found'
+        return $this->responseSuccess(
+            ResponseInterface::HTTP_NOT_FOUND,
+            'Data transaction not found',
+            (object) [],
+            'Data not found'
         );
     }
 
@@ -211,18 +215,17 @@ class Confirmation extends AuthController
             $date = $value['date'];
             $result_order = (object) [];
             $result_order = [
-                    'id' => $id,
-                    'status' => $status,
-                    'price' => $price,
-                    'customer_id' => $customer_id,
-                    'customer_name' => $customer_name,
-                    'customer_address' => $customer_address,
-                    'customer_no_handphone' => $customer_no_handphone,
-                    'total_quantity' => (string) $total_quantity,
-                    'date' => $date,
-                    'proof' => $photo,
+                'id' => $id,
+                'status' => $status,
+                'price' => $price,
+                'customer_id' => $customer_id,
+                'customer_name' => $customer_name,
+                'customer_address' => $customer_address,
+                'customer_no_handphone' => $customer_no_handphone,
+                'total_quantity' => (string) $total_quantity,
+                'date' => $date,
+                'proof' => $photo,
             ];
-            
         }
         $final = [
             'data' => [
@@ -408,7 +411,7 @@ class Confirmation extends AuthController
         $query_sales_product['pagination'] = [false];
 
         $data_product = generateListData($this->request->getVar(), $query_sales_product, $this->db);
-        
+
         if (empty($data_product['data'])) {
             return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'Data transaction not found', 'Data not found', (object)[]);
         }
@@ -571,7 +574,7 @@ class Confirmation extends AuthController
         $query_check_product['where_detail'] = [
             "WHERE sales_product_order_id = '{$id}' AND sales_product_status = 'canceled'"
         ];
-        
+
         $data_check_order = (array) generateDetailData($this->request->getVar(), $query_check_canceled, $this->db);
         $data_check_product = (array) generateListData($this->request->getVar(), $query_check_product, $this->db);
         // print_r($data_check_product); die;
@@ -590,13 +593,34 @@ class Confirmation extends AuthController
 
 
         // ---------------------------- SQl UPADTE FROM 'PAYED' OR 'PENDING' TO 'CANCELED' ------------------------------ //
-        $sql = "UPDATE sales_order SET sales_order_status = 'canceled', sales_order_reason = '{$reason}' WHERE sales_order_id = '{$id}' AND (sales_order_status = 'pending' OR sales_order_status = 'payed')";
+        try {
+            $db = db_connect();
 
-        $db->query($sql);
+            $db->table('sales_order')
+                ->set([
+                    'sales_order_status' => 'canceled',
+                    'sales_order_reason' => $reason
+                ])
+                ->where('sales_order_id', $id)
+                ->groupStart() 
+                ->where('sales_order_status', 'pending')
+                ->orWhere('sales_order_status', 'payed')
+                ->groupEnd()
+                ->update();
 
-        $sql_product = "UPDATE sales_product SET sales_product_status = 'canceled' WHERE sales_product_order_id = '{$id}' AND (sales_product_status = 'pending' OR sales_product_status = 'payed')";
-
-        $db->query($sql_product); // NI DI BUAT TRY CATCH
+            $db->table('sales_product')
+                ->set([
+                    'sales_product_status' => 'canceled'
+                ])
+                ->where('sales_product_order_id', $id)
+                ->groupStart() 
+                ->where('sales_product_status', 'pending')
+                ->orWhere('sales_product_status', 'payed')
+                ->groupEnd()
+                ->update();
+        } catch (\Exception $e) {
+            echo "Error Occured" . $e->getMessage();
+        }
 
         $query_order['data'] = ['sales_order'];
         $query_order['select'] = [
