@@ -10,12 +10,6 @@ class Variant extends AuthController
 {
     public function list_variant()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
-
         $query['data'] = ['variant'];
         $query['select'] = [
             'variant_id' => 'id',
@@ -36,12 +30,6 @@ class Variant extends AuthController
 
     public function detail()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
-
         $id = $this->request->getGet();
         $id = $id['id'];
 
@@ -65,12 +53,6 @@ class Variant extends AuthController
 
     public function insert()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
-
         $db = db_connect();
 
         // ---------------------- SET VALIDATION ------------------------ //
@@ -116,12 +98,6 @@ class Variant extends AuthController
 
     public function update()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
-
         // ---------------------- SET VALIDATION ------------------------ //
         $rules = [
             'id' => 'required|numeric',
@@ -169,12 +145,6 @@ class Variant extends AuthController
 
     public function soft_delete()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
-
         // ---------------------- SET VALIDATION ------------------------ //
         $rules = [
             'id' => 'required|numeric'
@@ -232,13 +202,6 @@ class Variant extends AuthController
 
     public function deleted_variant()
     {
-
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
-
         $query['data'] = ['variant'];
         $query['select'] = [
             'variant_id' => 'id',
@@ -257,12 +220,6 @@ class Variant extends AuthController
 
     public function restore()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
-
         // ---------------------- SET VALIDATION ------------------------ //
         $rules = [
             'id' => 'required|numeric'
@@ -299,12 +256,6 @@ class Variant extends AuthController
 
     public function delete()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
-
         // ---------------------- SET VALIDATION ------------------------ //
         $rules = [
             'id' => 'required|numeric'

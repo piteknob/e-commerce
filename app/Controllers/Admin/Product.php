@@ -10,17 +10,12 @@ class Product extends AuthController
 {
     public function list_product() //done
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
 
         $query['data'] = ['product'];
         $query['select'] = [
             'product.product_id' => 'id'
-        ];
+        ];  
         $query['pagination'] = [false];
         $data = (array) generateListData($this->request->getGet(), $query, $this->db);
         // print_r($data); die;
@@ -107,11 +102,6 @@ class Product extends AuthController
 
     public function list_product_pagination()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         $query['data'] = ['product'];
         $query['select'] = [
@@ -212,11 +202,6 @@ class Product extends AuthController
 
     public function detail() //done
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
         $id = $this->request->getVar('id');
 
         $query['data'] = ['product'];
@@ -252,6 +237,9 @@ class Product extends AuthController
             $photo = 'upload/product/' . $product_data['photo'];
         }
         $return = (object) [];
+        if (empty($product_data)) {
+            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'Data from this id is empty', 'Not found', (object)[]);
+        }
         $return->data = [
             'id' => $product_data['id'],
             'name' => $product_data['name'],
@@ -274,11 +262,6 @@ class Product extends AuthController
 
     public function insert() //done
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         // ---------------------- SET VALIDATION ------------------------ //
 
@@ -403,11 +386,6 @@ class Product extends AuthController
 
     public function update() //done
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         $rules = [
             'id' => 'required|numeric',
@@ -526,11 +504,6 @@ class Product extends AuthController
 
     public function delete() //done
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         // set validation
         $rules = [

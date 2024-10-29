@@ -9,6 +9,8 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\Response;
 use CodeIgniter\HTTP\ResponseInterface;
 use Psr\Log\LoggerInterface;
+use Config\Services;
+
 
 /**
  * Class BaseController
@@ -105,8 +107,9 @@ abstract class BaseController extends Controller
             'status' => $statusCode,
             'message' => $message,
             'error' => $error,
-            'result' => $data,
+            'result' => $data
         ];
-        return $this->response->setJSON($response);
+        // print_r($response); die;
+        return Services::response()->setJSON($response);
     }
 }

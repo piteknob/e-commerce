@@ -9,11 +9,6 @@ class Outlet extends AuthController
 {
     public function list_outlet()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         $query['data'] = ['outlet'];
         $query['select'] = [
@@ -66,11 +61,6 @@ class Outlet extends AuthController
 
     public function detail_outlet()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
 
         $id = $this->request->getGet();
@@ -112,11 +102,6 @@ class Outlet extends AuthController
 
     public function insert()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         $post = $this->request->getPost();
 
@@ -188,11 +173,6 @@ class Outlet extends AuthController
 
     public function update()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         $id = $this->request->getGet();
         $id = $id['id'];
@@ -279,11 +259,6 @@ class Outlet extends AuthController
 
     public function delete()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         $id = $this->request->getGet();
         $id = $id['id'];
@@ -327,11 +302,6 @@ class Outlet extends AuthController
 
     public function test_update_core() // test update core DONE
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
         $id = $this->request->getGet(); 
         $id = $id['id'];
         $query['table'] = ['outlet'];

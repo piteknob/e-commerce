@@ -10,11 +10,6 @@ class Category extends AuthController
 {
     public function list_category()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         $query['data'] = ['category'];
         $query['select'] = [
@@ -34,11 +29,6 @@ class Category extends AuthController
 
     public function detail()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         $id = $this->request->getGet();
         $id = $id['id'];
@@ -61,11 +51,6 @@ class Category extends AuthController
     public function insert()
     {
 
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         // ---------------------- SET VALIDATION ------------------------ //
         $rules = [
@@ -109,11 +94,6 @@ class Category extends AuthController
 
     public function update()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         // ---------------------- SET VALIDATION ------------------------ //
         $rules = [
@@ -159,11 +139,6 @@ class Category extends AuthController
 
     public function soft_delete()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         // ---------------------- SET VALIDATION ------------------------ //
         $rules = [
@@ -223,11 +198,6 @@ class Category extends AuthController
     public function deleted_category()
     {
 
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         $query['data'] = ['category'];
         $query['select'] = [
@@ -247,11 +217,6 @@ class Category extends AuthController
 
     public function restore()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         // ---------------------- SET VALIDATION ------------------------ //
         $rules = [
@@ -289,11 +254,6 @@ class Category extends AuthController
 
     public function delete()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         // ---------------------- SET VALIDATION ------------------------ //
         $rules = [

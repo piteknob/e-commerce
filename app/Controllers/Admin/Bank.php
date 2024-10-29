@@ -10,11 +10,6 @@ class Bank extends AuthController
 {
     public function list_bank()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         $query['data'] = ['bank'];
         $query['select'] = [
@@ -35,11 +30,6 @@ class Bank extends AuthController
 
     public function detail()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         $id = $this->request->getGet();
         $id = $id['id'];
@@ -63,11 +53,6 @@ class Bank extends AuthController
 
     public function insert()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         $db = db_connect();
 
@@ -124,11 +109,6 @@ class Bank extends AuthController
 
     public function update()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         // ---------------------- SET VALIDATION ------------------------ //
         $rules = [
@@ -188,11 +168,6 @@ class Bank extends AuthController
 
     public function delete()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         // ---------------------- SET VALIDATION ------------------------ //
         $rules = [

@@ -9,11 +9,6 @@ class User extends AuthController
 {
     public function list_user() // super_user
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         $token = $this->request->getHeaderLine('Token');
         $check['data'] = ['auth_user'];
@@ -55,11 +50,6 @@ class User extends AuthController
 
     public function detail() // super_user
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         // check role
         $token_admin = $this->request->getHeaderLine('Token');
@@ -104,11 +94,6 @@ class User extends AuthController
 
     public function register() // super_user
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         // check super user
         $token = $this->request->getHeaderLine('Token');
@@ -183,11 +168,6 @@ class User extends AuthController
 
     public function logout()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         $token = getallheaders();
         $token = $token['Token'];
@@ -214,11 +194,6 @@ class User extends AuthController
 
     public function update()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         // -------------------------- VALIDATION -------------------------- //
         $rules = [
@@ -354,11 +329,6 @@ class User extends AuthController
 
     public function update_admin() // super_user
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         // -------------------------- VALIDATION -------------------------- //
         $rules = [
@@ -501,11 +471,6 @@ class User extends AuthController
 
     public function delete() // super_user
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         $token = $this->request->getHeaderLine('Token');
         $check['data'] = ['auth_user'];
@@ -583,11 +548,6 @@ class User extends AuthController
 
     public function user_logged_in()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         $token = $this->request->getHeaderLine('Token');
 

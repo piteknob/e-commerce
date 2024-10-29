@@ -9,12 +9,6 @@ class Selected extends AuthController
 {
     public function category_selected()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
-
         // GET CATEGORY ID FROM PRODUCT
         $id = $this->request->getGet();
         $id = $id['id'];

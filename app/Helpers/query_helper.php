@@ -169,6 +169,8 @@ if (!function_exists('generateListData')) {
             $sql .= orderBy($orderByQuery, $dataQuery);
         }
 
+        // print_r($sql); die;
+
 
         $data_check = $db->query($sql);
         $data_check = $data_check->getResultArray();

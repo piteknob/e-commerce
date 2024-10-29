@@ -35,6 +35,7 @@ class Filters extends BaseFilters
         'pagecache'     => PageCache::class,
         'performance'   => PerformanceMetrics::class,
         'cors'          => \App\Filters\CorsFilter::class,
+        'auth'          => \App\Filters\AuthFilter::class,
     ];
 
     /**
@@ -74,6 +75,7 @@ class Filters extends BaseFilters
             // 'csrf',
             // 'invalidchars',
             'cors',
+            // 'auth',
         ],
         'after' => [
             // 'honeypot',
@@ -105,5 +107,9 @@ class Filters extends BaseFilters
      *
      * @var array<string, array<string, list<string>>>
      */
-    public array $filters = [];
+    public array $filters = [
+        'auth' => ['before' => [
+            'admin/*',
+        ]]
+    ];
 }

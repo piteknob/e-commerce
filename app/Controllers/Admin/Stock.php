@@ -9,11 +9,6 @@ class Stock extends AuthController
 {
     public function list_stock()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         $query['data'] = ['product'];
         $query['select'] = [
@@ -40,11 +35,6 @@ class Stock extends AuthController
 
     public function detail_stock()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
         $id = $this->request->getVar('id');
 
         $query['data'] = ['product'];
@@ -75,11 +65,6 @@ class Stock extends AuthController
 
     public function reduce()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         // set validation 
         // ---------------------- SET VALIDATION ------------------------ //
@@ -134,11 +119,6 @@ class Stock extends AuthController
 
     public function add()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         // ---------------------- SET VALIDATION ------------------------ //
         $rules = [
@@ -192,11 +172,6 @@ class Stock extends AuthController
 
     public function update()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         // ---------------------- SET VALIDATION ------------------------ //
         $rules = [

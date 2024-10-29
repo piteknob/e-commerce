@@ -10,11 +10,6 @@ class Confirmation extends AuthController
 
     public function list_transaction() //done
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         $query['data'] = ['sales_order'];
         $query['select'] = [
@@ -83,11 +78,6 @@ class Confirmation extends AuthController
 
     public function list_order_product()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         $id = $this->request->getVar();
         $id = $id['id'];
@@ -119,11 +109,6 @@ class Confirmation extends AuthController
 
     public function detail()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
         // $id = $this->request->getGet();
         // $id = $id['id'];
 
@@ -240,11 +225,6 @@ class Confirmation extends AuthController
 
     public function history()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
         // $id = $this->request->getGet();
         // $id = $id['id'];
 
@@ -360,11 +340,6 @@ class Confirmation extends AuthController
 
     public function confirm()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
         $post = $this->request->getPost();
         $id = $post['id'];
 
@@ -527,11 +502,6 @@ class Confirmation extends AuthController
 
     public function cancel()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
 
         // get id
         $post = $this->request->getPost();
@@ -686,13 +656,6 @@ class Confirmation extends AuthController
 
     public function report()
     {
-        // Authorization Token
-        $token = $this->before(getallheaders());
-        if (!empty($token)) {
-            return $token;
-        }
-
-
         $query['data'] = ['customer'];
 
         $query['select'] = [
