@@ -114,7 +114,7 @@ class Stock extends AuthController
             'data reduced' => $quantity
         ];
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Reduced', (object) []);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Reduced', ['data' => (object) []]);
     }
 
     public function add()
@@ -167,7 +167,7 @@ class Stock extends AuthController
             'data reduced' => $quantity
         ];
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Added', (object) []);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Added', ['data' => (object) []]);
     }
 
     public function update()

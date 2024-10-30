@@ -318,6 +318,5 @@ class Outlet extends AuthController
 
         $data = (array) update($query, $this->db);
         return $this->responseSuccess(ResponseInterface::HTTP_OK, 'test', $data);
-
     }
 }

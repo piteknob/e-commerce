@@ -18,7 +18,7 @@ class Login extends DataController
         ];
 
         if (!$this->validate($rules)) {
-            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error validasi', $this->validator->getErrors());
         }
 
         $username = $post['username'];
@@ -32,17 +32,14 @@ class Login extends DataController
 
         if (!$user) {
             $user = [
-                'data' => 'Username not registered'
+                'data' => 'Username tidak sesuai'
             ];
-            return $this->responseFail(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Username Not Found', 'Username not registered', $user);
+            return $this->responseFail(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Username tidak ditemukan', 'Username tidak terdaftar', $user);
         }
         $pwsql = "SELECT user_password FROM user WHERE user_password = '{$password}'";
         $pwsql = $db->query($pwsql)->getFirstRow('array');
         if (!$pwsql) {
-            $user = [
-                'data' => 'Password not match'
-            ];
-            return $this->responseFail(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Password Not Match', 'Wrong Password', $user);
+            return $this->responseFail(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Password tidak sesuai', 'Password salah', ['data' => 'Password tidak sesuai']);
         }
 
         $payload = [
@@ -76,7 +73,7 @@ class Login extends DataController
                     FROM user
                     WHERE user_username = '{$username}'";
             $db->query($insertAuth);
-            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Login Success', $token);
+            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Login berhasil', $token);
         }
         if ($id) {
             $updateAuth = "UPDATE auth_user SET
@@ -120,7 +117,7 @@ class Login extends DataController
                 'data' => $data,
                 'token' => $token
             ];
-            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Login Success', $response);
+            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Login berhasil', $response);
         }
     }
 }

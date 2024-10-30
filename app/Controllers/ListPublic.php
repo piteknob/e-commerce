@@ -45,7 +45,7 @@ class ListPublic extends AuthController
 
         $data = (array) generateListData($this->request->getVar(), $query, $this->db);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List Data Product', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List data produk', $data);
     }
 
     public function category()
@@ -61,7 +61,7 @@ class ListPublic extends AuthController
 
         $data = generateListData($this->request->getGet(), $query, $this->db);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List Data Category', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List data kategori', $data);
     }
 
     public function variant()
@@ -77,6 +77,6 @@ class ListPublic extends AuthController
 
         $data = generateListData($this->request->getGet(), $query, $this->db);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List Data Variant', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List data varian', $data);
     }
 }

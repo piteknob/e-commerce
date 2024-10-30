@@ -71,7 +71,7 @@ class Confirmation extends AuthController
         return $this->responseSuccess(
             ResponseInterface::HTTP_NOT_FOUND,
             'Data transaction not found',
-            (object) [],
+            ['data' => (object) []],
             'Data not found'
         );
     }
@@ -101,7 +101,7 @@ class Confirmation extends AuthController
         $data = (array) generateListData($this->request->getVar(), $query, $this->db);
 
         if (empty($data['data'])) {
-            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'List product transaction not found', 'Error not found', (object) []);
+            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'List product transaction not found', 'Error not found', ['data' => (object) []]);
         }
 
         return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List Order Product', $data);
@@ -198,7 +198,7 @@ class Confirmation extends AuthController
             $customer_address = $value['customer_address'];
             $customer_no_handphone = $value['customer_no_handphone'];
             $date = $value['date'];
-            $result_order = (object) [];
+            $result_order = ['data' => (object) []];
             $result_order = [
                 'id' => $id,
                 'status' => $status,

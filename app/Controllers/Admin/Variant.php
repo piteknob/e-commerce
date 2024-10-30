@@ -290,6 +290,6 @@ class Variant extends AuthController
             return $this->responseFail(ResponseInterface::HTTP_INTERNAL_SERVER_ERROR, 'Error occurred', $e->getMessage());
         }
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Deleted', (object) []);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Deleted', ['data' => (object) []]);
     }
 }

@@ -238,7 +238,7 @@ class Product extends AuthController
         }
         $return = (object) [];
         if (empty($product_data)) {
-            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'Data from this id is empty', 'Not found', (object)[]);
+            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'Data from this id is empty', 'Not found', ['data' => (object) []]);
         }
         $return->data = [
             'id' => $product_data['id'],
@@ -546,6 +546,6 @@ class Product extends AuthController
             return $this->responseFail(ResponseInterface::HTTP_INTERNAL_SERVER_ERROR, 'Error Delete Data', $e->getMessage());
         }
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Deleted', (object) []);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Deleted', ['data' => (object) []]);
     }
 }

@@ -70,7 +70,7 @@ class User extends AuthController
         ];
         $role = (array) generateDetailData($this->request->getVar(), $query_role, $this->db);
         if ($role['data']['role'] != 'super_user') {
-            return $this->responseFail(ResponseInterface::HTTP_UNAUTHORIZED, "You don't have permission to do this action", 'Access denied', (object)[]);
+            return $this->responseFail(ResponseInterface::HTTP_UNAUTHORIZED, "You don't have permission to do this action", 'Access denied', ['data' => (object) []]);
         }
         // get id admin
         $id = $this->request->getGet('id');
@@ -127,7 +127,7 @@ class User extends AuthController
             ];
 
             if (!$this->validate($rules)) {
-                return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors(), (object) []);
+                return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors(), ['data' => (object) []]);
             }
             // -------------------------- END VALIDATION -------------------------- //
 
@@ -162,7 +162,7 @@ class User extends AuthController
 
             return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Account Successfully Registered', $data);
         } else {
-            return $this->responseSuccess(ResponseInterface::HTTP_UNAUTHORIZED, "You Don't Have Permission To Do This Action", (object) [], 'Access Denied');
+            return $this->responseSuccess(ResponseInterface::HTTP_UNAUTHORIZED, "You Don't Have Permission To Do This Action", ['data' => (object) []], 'Access Denied');
         }
     }
 
@@ -189,7 +189,7 @@ class User extends AuthController
         $sql = "UPDATE auth_user SET auth_user_token = null WHERE auth_user_token = '{$token}'";
         $this->db->query($sql);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Log out success', (object) []);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Log out success', ['data' => (object) []]);
     }
 
     public function update()
@@ -204,7 +204,7 @@ class User extends AuthController
         ];
 
         if (!$this->validate($rules)) {
-            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors(), (object) []);
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors(), ['data' => (object) []]);
         }
         // -------------------------- END VALIDATION -------------------------- //
 
@@ -339,7 +339,7 @@ class User extends AuthController
         ];
 
         if (!$this->validate($rules)) {
-            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors(), (object) []);
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors(), ['data' => (object) []]);
         }
         // -------------------------- END VALIDATION -------------------------- //
 
@@ -513,11 +513,11 @@ class User extends AuthController
             ];
             $data = (array) generateDetailData($this->request->getGet(), $query, $this->db);
             if (empty($data['data'])) {
-                return $this->responseFail(ResponseInterface::HTTP_GONE, 'Data already deleted from database', 'Data deleted', (object) []);
+                return $this->responseFail(ResponseInterface::HTTP_GONE, 'Data already deleted from database', 'Data deleted', ['data' => (object) []]);
             }
             $data_role = $data['data']['role'];
             if ($data_role == 'super_user') {
-                return $this->responseFail(ResponseInterface::HTTP_OK, "You can't delete super user from database", "Can't deleted super user", (object) []);
+                return $this->responseFail(ResponseInterface::HTTP_OK, "You can't delete super user from database", "Can't deleted super user", ['data' => (object) []]);
             }
 
             // delete data from database
@@ -578,138 +578,5 @@ class User extends AuthController
             ]
         ];
         return $this->responseSuccess(ResponseInterface::HTTP_OK, "User Detail Login", $result);
-    }
-
-    public function send_otp_reset_password() // super_user
-    {
-        date_default_timezone_set("Asia/Jakarta");
-        $no = $this->request->getVar('no_handphone');
-        $token = "YZ+iWZ+so_x!_eK#aZ9c";
-        $otp = mt_rand(100000, 999999);
-
-        // Get user role
-        $query_select = "SELECT user_role FROM `user` WHERE user_no_handphone = '$no'";
-        $role = $this->db->query($query_select)->getResultArray();
-        if (!empty($role)) {
-            foreach ($role as $key => $value) {
-                $role = $value;
-            }
-        }
-
-        // Get detail data user
-        $query_data['data'] = ['user'];
-        $query_data['select'] = [
-            'user_role' => 'role',
-            'user_no_handphone' => 'no_handphone',
-        ];
-        $query_data['where_detail'] = [
-            "WHERE user_no_handphone = '{$no}'"
-        ];
-        $data_user = (array) generateDetailData($this->request->getVar(), $query_data, $this->db);
-        // print_r($role); die;
-
-        // check user role
-        if (empty($role)) {
-            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'Access Denied: The provided no handphone is not registered.', 'No handphone not found in the system.', (object) []);
-        }
-
-        // insert otp to database
-        $date = date("Y-m-d H:i:s");
-        $currentDate = strtotime($date);
-        $futureDate = $currentDate + (45 * 2);
-        $formatDate = date("Y-m-d H:i:s", $futureDate);
-
-        $query = "UPDATE user SET user_otp = $otp, user_otp_expired = '{$formatDate}' WHERE user_no_handphone = '$no'";
-        $this->db->query($query);
-
-        $curl = curl_init();
-
-        curl_setopt_array($curl, array(
-            CURLOPT_URL => 'https://api.fonnte.com/send',
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => '',
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 0,
-            CURLOPT_FOLLOWLOCATION => true,
-            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => 'POST',
-            CURLOPT_POSTFIELDS => array(
-                'target' => "'$no'",
-                'message' => "ini kode otp anda: $otp",
-            ),
-            CURLOPT_HTTPHEADER => array(
-                "Authorization: $token"
-            ),
-            CURLOPT_SSL_VERIFYPEER => false, // Disable SSL verification (not recommended for production)
-        ));
-
-        curl_exec($curl);
-
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Message sent', (object) []);
-    }
-
-    public function reset_password() // super_user
-    {
-        date_default_timezone_set("Asia/Jakarta");
-        $post = $this->request->getPost();
-
-        // -------------------------- VALIDATION -------------------------- //
-        $rules = [
-            'otp' => 'required|numeric',
-            'password' => 'required|min_length[5]',
-            'confirm' => 'required|matches[password]',
-        ];
-
-        if (!$this->validate($rules)) {
-            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
-        }
-
-        // get data from post
-        $otp = $post['otp'];
-        $password = $post['password'];
-
-        // check OTP 
-        $query['data'] = ['user'];
-        $query['select'] = [
-            'user_otp_expired' => 'expired'
-        ];
-        $query['where_detail'] = [
-            "WHERE user_otp = '{$otp}'"
-        ];
-        $data_user = (array) generateDetailData($this->request->getVar(), $query, $this->db);
-
-
-        // get id from OTP
-        $get_id['data'] = ['user'];
-        $get_id['select'] = [
-            'user_id' => 'id',
-        ];
-        $get_id['where_detail'] = ["WHERE user_otp = $otp"];
-        $id = (array) generateDetailData($this->request->getVar(), $get_id, $this->db);
-        if (!empty($id['data'])) {
-            foreach ($id['data'] as $key => $value) {
-                $id_user = $value;
-            }
-        }
-
-        // check otp valid or not
-        if (empty($data_user['data'])) {
-            return $this->responseFail(ResponseInterface::HTTP_UNAUTHORIZED, 'Invalid OTP', 'The OTP provided is incorrect.', (object) []);
-        }
-        if (!empty($data_user['data'])) {
-            foreach ($data_user['data'] as $key => $value) {
-                $expired = strtotime($value);
-            }
-            if ($expired < strtotime(date('Y-m-d H:i:s'))) {
-                return $this->responseFail(ResponseInterface::HTTP_UNAUTHORIZED, 'The OTP has expired. Please request a new OTP and try again', 'OTP expired', (object) []);
-            }
-        }
-
-        $query_update_user = "UPDATE `user` SET user_password = '{$password}', user_otp = null, user_otp_expired = null WHERE user_otp = $otp";
-        $this->db->query($query_update_user);
-        $query_update_token = "UPDATE auth_user SET auth_user_token = NULL WHERE auth_user_user_id = $id_user";
-        $this->db->query($query_update_token);
-
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Password reset success', (object) []);
     }
 }

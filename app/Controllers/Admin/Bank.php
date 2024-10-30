@@ -65,7 +65,7 @@ class Bank extends AuthController
         ];
 
         if (!$this->validate($rules)) {
-            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error validasi', $this->validator->getErrors());
         }
 
         try {
@@ -104,7 +104,7 @@ class Bank extends AuthController
         ];
         $return = generateDetailData($this->request->getVar(), $query, $this->db);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Added', $return);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data berhasil ditambahkan', $return);
     }
 
     public function update()
@@ -119,7 +119,7 @@ class Bank extends AuthController
         ];
 
         if (!$this->validate($rules)) {
-            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error validasi', $this->validator->getErrors());
         }
 
         try {
@@ -163,7 +163,7 @@ class Bank extends AuthController
         ];
         $return = generateDetailData($this->request->getVar(), $query, $this->db);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data successfully updated', $return);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data berhasil diubah', $return);
     }
 
     public function delete()
@@ -175,7 +175,7 @@ class Bank extends AuthController
         ];
 
         if (!$this->validate($rules)) {
-            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error validasi', $this->validator->getErrors());
         }
         $id = $this->request->getPost('id');
 
@@ -189,7 +189,7 @@ class Bank extends AuthController
         $data = (array) generateDetailData($this->request->getVar(), $query, $this->db);
 
         if (empty($data['data'])) {
-            return $this->responseFail(ResponseInterface::HTTP_GONE, 'Data already deleted from database', 'Data already deleted', "");
+            return $this->responseFail(ResponseInterface::HTTP_GONE, 'Data sudah di hapus dari database', 'Data sudah terhapus', "");
         }
 
 
@@ -203,6 +203,6 @@ class Bank extends AuthController
             return $this->responseFail(ResponseInterface::HTTP_INTERNAL_SERVER_ERROR, 'Error occurred', $e->getMessage());
         }
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Deleted', (object) []);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data berhasil di hapus', ['data' => (object) []]);
     }
 }

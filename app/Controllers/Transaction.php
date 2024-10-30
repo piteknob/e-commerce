@@ -26,7 +26,7 @@ class Transaction extends AuthController
             if (!$validator->run((array)$key)) {
                 $error = $validator->getErrors();
                 if ($error) {
-                    return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'error validation', $error);
+                    return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error validasi', $error);
                 }
             }
         }
@@ -44,7 +44,7 @@ class Transaction extends AuthController
         if (!$validator->run($customer)) {
             $error = $validator->getErrors();
             if ($error) {
-                return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'error validation', $error);
+                return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error validasi', $error);
             }
         }
 
@@ -171,7 +171,7 @@ class Transaction extends AuthController
         ];
 
         if ($status == 'pending') {
-            return $this->responseFail(ResponseInterface::HTTP_FAILED_DEPENDENCY, 'please complete ur last order', '', $data_pending);
+            return $this->responseFail(ResponseInterface::HTTP_FAILED_DEPENDENCY, 'Mohon selesaikan transaksi anda', '', $data_pending);
         }
 
 
@@ -339,7 +339,7 @@ class Transaction extends AuthController
             ]
         ];
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Order Result', $data_success);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Hasil order', $data_success);
     }
 
     public function payment()
@@ -374,7 +374,7 @@ class Transaction extends AuthController
                 ->getResultArray();
 
             if (empty($query_exist_pending) && empty($query_exist_payed)) {
-                return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'Order not found in database', 'Order not found', (object) []);
+                return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'Order tidak di temukan di database', 'Order tidak ditemukan', ['data' => (object) []]);
             }
 
             // -------------------------------- GET TOTAL HARGA --------------------------------- //
@@ -423,7 +423,7 @@ class Transaction extends AuthController
             }
 
             if ($data_check_real == 'payed' && $data_product_real == 'payed') {
-                return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Payment alreadt done',  (object) [], 'Order has been paid');
+                return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Pembayaran sudah dibayar',  ['data' => (object) []], 'Pembayaran sudah berhasil');
             }
 
             // --------------------- SET VALIDATION ------------------------ //
@@ -435,7 +435,7 @@ class Transaction extends AuthController
             if (!$validator->run((array)$photo)) {
                 $error = $validator->getErrors();
                 if ($error) {
-                    return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error validation', $error);
+                    return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error validasi', $error);
                 }
             }
 
@@ -463,7 +463,7 @@ class Transaction extends AuthController
             if ($this->db->transStatus() === false) {
                 // Rollback jika ada error
                 $this->db->transRollback();
-                return $this->responseFail(ResponseInterface::HTTP_INTERNAL_SERVER_ERROR, 'Failed to complete payment', 'Transaction failed', (object) []);
+                return $this->responseFail(ResponseInterface::HTTP_INTERNAL_SERVER_ERROR, 'Gagal menyelesaikan pembayaran', 'Transaksi gagal', ['data' => (object) []]);
             } else {
                 // Commit transaksi
                 $this->db->transCommit();
@@ -474,12 +474,12 @@ class Transaction extends AuthController
                     ]
 
                 ];
-                return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Paid', $data);
+                return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data sudah berhasil di bayar', $data);
             }
         } catch (\Exception $e) {
             // Rollback jika terjadi exception
             $this->db->transRollback();
-            return $this->responseFail(ResponseInterface::HTTP_INTERNAL_SERVER_ERROR, 'An error occurred during the payment process', $e->getMessage(), (object) []);
+            return $this->responseFail(ResponseInterface::HTTP_INTERNAL_SERVER_ERROR, 'An error occurred during the payment process', $e->getMessage(), ['data' => (object) []]);
         }
     }
 
@@ -510,7 +510,7 @@ class Transaction extends AuthController
                 ->getRowArray();
 
             if ($check_payed['status'] === 'payed' || $check_payed['status'] === 'confirmed') {
-                return $this->responseFail(ResponseInterface::HTTP_OK, 'You Can Not Cancel This Order, Contact Admin To Cancel This Order', '', $check_payed);
+                return $this->responseFail(ResponseInterface::HTTP_OK, 'Anda tidak bisa membatalkan transaksi ini, Hubungi admin untuk membatalkan', '', $check_payed);
             }
 
             // ----------------- RESTORE STOCK ---------------- //
@@ -560,7 +560,7 @@ class Transaction extends AuthController
 
             // print_r($data_product); die;
             if (empty($data_product)) {
-                return $this->responseFail(ResponseInterface::HTTP_GONE, 'Order already canceled by customer / admin', 'Order already canceled', (object) []);
+                return $this->responseFail(ResponseInterface::HTTP_GONE, 'Transaksi sudah di batalkan oleh customer / admin', 'Order telah di batalkan', ['data' => (object) []]);
             }
 
             // Restore stock
@@ -580,7 +580,7 @@ class Transaction extends AuthController
             // Commit transaction error or not
             if ($this->db->transStatus() === false) {
                 $this->db->transRollback();
-                return $this->responseFail(ResponseInterface::HTTP_INTERNAL_SERVER_ERROR, 'Failed to cancel the order', 'Transaction failed', (object) []);
+                return $this->responseFail(ResponseInterface::HTTP_INTERNAL_SERVER_ERROR, 'Gagal membatalkan transaksi', 'Transaksi gagal', ['data' => (object) []]);
             } else {
                 $this->db->transCommit();
                 $data = [
@@ -590,11 +590,11 @@ class Transaction extends AuthController
                         'reason' => $reason
                     ]
                 ];
-                return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Successfully Canceled', $data);
+                return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Berhasil dibatalkan', $data);
             }
         } catch (\Exception $e) {
             $this->db->transRollback();
-            return $this->responseFail(ResponseInterface::HTTP_INTERNAL_SERVER_ERROR, 'An error occurred while canceling the order', $e->getMessage(), (object) []);
+            return $this->responseFail(ResponseInterface::HTTP_INTERNAL_SERVER_ERROR, 'An error occurred while canceling the order', $e->getMessage(), ['data' => (object) []]);
         }
     }
 
@@ -621,9 +621,9 @@ class Transaction extends AuthController
         ];
         $data = (array) generateListData($this->request->getVar(), $query, $this->db);
         if (empty($data['data'])) {
-            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'Data customer not found in database', 'Data not found', (object)[]);
+            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'Data customer tidak ditemukan di dalam database', 'Data tidak ditemukan', ['data' => (object) []]);
         }
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List Data Customer', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List data customer', $data);
     }
 
     public function history_detail_customer()
@@ -650,8 +650,8 @@ class Transaction extends AuthController
         $data = (array) generateDetailData($this->request->getGet(), $query, $this->db);
 
         if (empty($data['data'])) {
-            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'Data customer not found in database', 'Data not found', (object)[]);
+            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'Data customer tidak ditemukan di database', 'Data tidak ditemukan', ['data' => (object) []]);
         }
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Detail Order', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Detail order', $data);
     }
 }
