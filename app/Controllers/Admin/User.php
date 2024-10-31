@@ -42,9 +42,10 @@ class User extends AuthController
             ];
 
             $data = (array) generateListData($this->request->getVar(), $query, $this->db);
-            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List User', $data);
+            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List user', $data);
         } else {
-            return $this->responseFail(ResponseInterface::HTTP_UNAUTHORIZED, "You Don't Have Permission To Do This Action", 'Access Denied', ['data' => '']);
+            return $this->responseFail(ResponseInterface::HTTP_UNAUTHORIZED, 'Anda tidak memiliki izin untuk melakukan tindakan ini', 'Akses ditolak', ['data' => '']);
+
         }
     }
 
@@ -70,7 +71,7 @@ class User extends AuthController
         ];
         $role = (array) generateDetailData($this->request->getVar(), $query_role, $this->db);
         if ($role['data']['role'] != 'super_user') {
-            return $this->responseFail(ResponseInterface::HTTP_UNAUTHORIZED, "You don't have permission to do this action", 'Access denied', ['data' => (object) []]);
+            return $this->responseFail(ResponseInterface::HTTP_UNAUTHORIZED, 'Anda Tidak Memiliki Izin Untuk Melakukan Tindakan Ini', 'Akses Ditolak', ['data' => '']);
         }
         // get id admin
         $id = $this->request->getGet('id');
@@ -89,7 +90,7 @@ class User extends AuthController
         $query_admin['where_detail'] = ["WHERE user_id = '$id'"];
         $data_admin = (array) generateDetailData($this->request->getVar(), $query_admin, $this->db);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, "Detail Account", $data_admin);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, "Detail akun", $data_admin);
     }
 
     public function register() // super_user
@@ -127,7 +128,7 @@ class User extends AuthController
             ];
 
             if (!$this->validate($rules)) {
-                return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors(), ['data' => (object) []]);
+                return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error validasi', $this->validator->getErrors(), ['data' => (object) []]);
             }
             // -------------------------- END VALIDATION -------------------------- //
 
@@ -160,9 +161,9 @@ class User extends AuthController
 
             $data = generateDetailData($this->request->getGet(), $query, $this->db);
 
-            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Account Successfully Registered', $data);
+            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Akun berhasil ditambahkan', $data);
         } else {
-            return $this->responseSuccess(ResponseInterface::HTTP_UNAUTHORIZED, "You Don't Have Permission To Do This Action", ['data' => (object) []], 'Access Denied');
+            return $this->responseFail(ResponseInterface::HTTP_UNAUTHORIZED, 'Anda Tidak Memiliki Izin Untuk Melakukan Tindakan Ini', 'Akses Ditolak', ['data' => '']);
         }
     }
 
@@ -189,7 +190,7 @@ class User extends AuthController
         $sql = "UPDATE auth_user SET auth_user_token = null WHERE auth_user_token = '{$token}'";
         $this->db->query($sql);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Log out success', ['data' => (object) []]);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Logout berhasil', ['data' => (object) []]);
     }
 
     public function update()
@@ -204,7 +205,7 @@ class User extends AuthController
         ];
 
         if (!$this->validate($rules)) {
-            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors(), ['data' => (object) []]);
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error validasi', $this->validator->getErrors(), ['data' => (object) []]);
         }
         // -------------------------- END VALIDATION -------------------------- //
 
@@ -270,7 +271,7 @@ class User extends AuthController
         }
         // print_r($data_check_username); die;
         if (!empty($data_check_username)) {
-            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', ['username' => 'The username field must contain a unique value.']);
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error validasi', ['username' => 'Username harus memiliki value yang unik.']);
         }
         // END VALIDATION FOR USERNAME
 
@@ -324,7 +325,7 @@ class User extends AuthController
 
         $data = generateDetailData(ResponseInterface::HTTP_OK, $query, $this->db);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Account Successfully Updated', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Akun berhasil di update', $data);
     }
 
     public function update_admin() // super_user
@@ -339,7 +340,7 @@ class User extends AuthController
         ];
 
         if (!$this->validate($rules)) {
-            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors(), ['data' => (object) []]);
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error validasi', $this->validator->getErrors(), ['data' => (object) []]);
         }
         // -------------------------- END VALIDATION -------------------------- //
 
@@ -365,7 +366,8 @@ class User extends AuthController
         $role = $role['data']['role'];
 
         if ($role != 'super_user') {
-            return $this->responseFail(ResponseInterface::HTTP_UNAUTHORIZED, "You Don't Have Permission To Do This Action", 'Access Denied', ['data' => '']);
+            return $this->responseFail(ResponseInterface::HTTP_UNAUTHORIZED, 'Anda Tidak Memiliki Izin Untuk Melakukan Tindakan Ini', 'Akses Ditolak', ['data' => '']);
+
         }
 
 
@@ -466,7 +468,7 @@ class User extends AuthController
         $response = [
             'data' =>  $data,
         ];
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Account Successfully Updated', $response);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Akun berhasil diubah', $response);
     }
 
     public function delete() // super_user
@@ -513,11 +515,11 @@ class User extends AuthController
             ];
             $data = (array) generateDetailData($this->request->getGet(), $query, $this->db);
             if (empty($data['data'])) {
-                return $this->responseFail(ResponseInterface::HTTP_GONE, 'Data already deleted from database', 'Data deleted', ['data' => (object) []]);
+                return $this->responseFail(ResponseInterface::HTTP_GONE, 'Data sudah dihapus dari database', 'Data sudah dihapus', ['data' => (object) []]);
             }
             $data_role = $data['data']['role'];
             if ($data_role == 'super_user') {
-                return $this->responseFail(ResponseInterface::HTTP_OK, "You can't delete super user from database", "Can't deleted super user", ['data' => (object) []]);
+                return $this->responseFail(ResponseInterface::HTTP_OK, 'Anda tidak bisa menghapus super user dari database', 'Tidak dapat menghapus super user', ['data' => (object) []]);
             }
 
             // delete data from database
@@ -542,7 +544,7 @@ class User extends AuthController
             // check super user
 
 
-            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Deleted', $data);
+            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data berhasil diubah', $data);
         }
     }
 
@@ -577,6 +579,6 @@ class User extends AuthController
                 'date' => $date
             ]
         ];
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, "User Detail Login", $result);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, "Detail user login", $result);
     }
 }

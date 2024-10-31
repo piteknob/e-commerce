@@ -24,7 +24,7 @@ class Category extends AuthController
         ];
         $data = generateListData($this->request->getVar(), $query, $this->db);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List Category', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List category', $data);
     }
 
     public function detail()
@@ -45,12 +45,11 @@ class Category extends AuthController
 
         $data = generateDetailData($this->request->getGet(), $query, $this->db);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Detail Category', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Detail category', $data);
     }
 
     public function insert()
     {
-
 
         // ---------------------- SET VALIDATION ------------------------ //
         $rules = [
@@ -58,7 +57,7 @@ class Category extends AuthController
         ];
 
         if (!$this->validate($rules)) {
-            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error validasi', $this->validator->getErrors());
         }
 
         try {
@@ -89,7 +88,7 @@ class Category extends AuthController
 
         $data = generateDetailData($this->request->getPost(), $query, $this->db);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Added', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data berhasil ditambahkan', $data);
     }
 
     public function update()
@@ -102,7 +101,7 @@ class Category extends AuthController
         ];
 
         if (!$this->validate($rules)) {
-            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error validasi', $this->validator->getErrors());
         }
 
         try {
@@ -134,7 +133,7 @@ class Category extends AuthController
 
         $data = generateDetailData($this->request->getVar(), $query, $this->db);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Updated', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data berhasil diperbarui', $data);
     }
 
     public function soft_delete()
@@ -146,7 +145,7 @@ class Category extends AuthController
         ];
 
         if (!$this->validate($rules)) {
-            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error validasi', $this->validator->getErrors());
         }
 
         $post = $this->request->getPost();
@@ -183,7 +182,7 @@ class Category extends AuthController
             $data = (array) generateDetailData($this->request->getGet(), $query, $this->db);
 
 
-            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND,  'The requested data has already been deleted', 'The data you are trying to access has been deleted and is no longer available.', $data);
+            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'Data yang diminta telah dihapus', 'Data yang Anda coba akses sudah dihapus dan tidak lagi tersedia.', $data);
         }
         $sql = "UPDATE `category` 
         SET category_updated_at = NOW(),
@@ -192,7 +191,7 @@ class Category extends AuthController
 
         $this->db->query($sql);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Soft Deleted', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data behasil dihapus sementara', $data);
     }
 
     public function deleted_category()
@@ -212,7 +211,7 @@ class Category extends AuthController
         ];
 
         $data = generateListData($this->request->getGet(), $query, $this->db);
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List Data Value', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List data category', $data);
     }
 
     public function restore()
@@ -224,7 +223,7 @@ class Category extends AuthController
         ];
 
         if (!$this->validate($rules)) {
-            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error validasi', $this->validator->getErrors());
         }
 
         $post = $this->request->getPost();
@@ -249,7 +248,7 @@ class Category extends AuthController
 
         $data = generateDetailData($this->request->getGet(), $query, $this->db);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Restored', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data berhasil direstore', $data);
     }
 
     public function delete()
@@ -261,7 +260,7 @@ class Category extends AuthController
         ];
 
         if (!$this->validate($rules)) {
-            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error validasi', $this->validator->getErrors());
         }
         $id = $this->request->getPost('id');
 
@@ -275,7 +274,7 @@ class Category extends AuthController
         $data = (array) generateDetailData($this->request->getVar(), $query, $this->db);
 
         if (empty($data['data'])) {
-            return $this->responseFail(ResponseInterface::HTTP_GONE, 'Data already deleted from database', 'Data already deleted', "");
+            return $this->responseFail(ResponseInterface::HTTP_GONE, 'Data sudah dihapus dari database', 'Data sudah dihapus', "");
         }
 
 
@@ -289,6 +288,6 @@ class Category extends AuthController
             return $this->responseFail(ResponseInterface::HTTP_INTERNAL_SERVER_ERROR, 'Error occurred', $e->getMessage());
         }
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data berhasil di hapus', ['data' => (object) []]);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data berhasil dihapus', ['data' => (object) []]);
     }
 }

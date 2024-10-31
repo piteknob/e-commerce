@@ -116,7 +116,7 @@ class Reset extends DataController
             foreach ($data_user['data'] as $key => $value) {
                 $date = new \DateTime(date('Y-m-d H:i:s'));
                 $date->add(new \DateInterval('PT7H'));
-                $now = $date->format('Y-m-d H:i:s');           
+                $now = $date->format('Y-m-d H:i:s');
                 $now = strtotime($now);
                 $time = strtotime($value);
             }
@@ -127,7 +127,7 @@ class Reset extends DataController
         return $this->responseSuccess(ResponseInterface::HTTP_OK, 'OTP valid', ['data' => $id['data']]);
     }
 
-    public function reset_password() // super_user
+    public function reset_password()
     {
         date_default_timezone_set("Asia/Jakarta");
         $post = $this->request->getPost();
@@ -158,11 +158,22 @@ class Reset extends DataController
             return $this->responseFail(ResponseInterface::HTTP_UNAUTHORIZED, 'Invalid OTP', 'OTP tidak valid', ['data' => (object) []]);
         }
 
-        $query_update_user = "UPDATE `user` SET user_password = '{$password}', user_otp = null, user_otp_expired = null WHERE user_id = {$id_user}";
-        $this->db->query($query_update_user);
-        $query_update_token = "UPDATE auth_user SET auth_user_token = NULL WHERE auth_user_user_id = $id_user";
-        $this->db->query($query_update_token);
+        try {
+            $this->db->table('user')
+                ->where(['user_id' => $id_user, 'user_otp' => $otp])
+                ->update([
+                    'user_password' => $password,
+                    'user_otp' => null,
+                    'user_otp_expired' => null
+                ]);
+            $this->db->table('auth_user')
+                ->where('auth_user_user_id', $id_user)
+                ->update(['auth_user_token' => null]);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Reset password berhasil', ['data' => (object) []]);
+            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Reset password berhasil', ['data' => (object) []]);
+        } catch (\Exception $e) {
+            // Penanganan kesalahan
+            return $this->responseFail(ResponseInterface::HTTP_INTERNAL_SERVER_ERROR, 'Gagal mengubah password', 'Terjadi error pada saat ingin mengubah password', ['error' => $e->getMessage()]);
+        }
     }
 }

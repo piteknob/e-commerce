@@ -25,7 +25,7 @@ class Variant extends AuthController
             "WHERE variant_deleted_at IS NULL"
         ];
         $data = generateListData($this->request->getGet(), $query, $this->db);
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List Data Variant', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List data varian', $data);
     }
 
     public function detail()
@@ -48,7 +48,7 @@ class Variant extends AuthController
             "WHERE variant_deleted_at IS NULL"
         ];
         $data = generateDetailData($this->request->getVar(), $query, $this->db);
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Detail Data Variant', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Detail data varian', $data);
     }
 
     public function insert()
@@ -61,7 +61,7 @@ class Variant extends AuthController
         ];
 
         if (!$this->validate($rules)) {
-            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error validasi', $this->validator->getErrors());
         }
 
         try {
@@ -93,7 +93,7 @@ class Variant extends AuthController
         ];
         $return = generateDetailData($this->request->getVar(), $query, $this->db);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Added', $return);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data berhasil ditambah', $return);
     }
 
     public function update()
@@ -105,7 +105,7 @@ class Variant extends AuthController
         ];
 
         if (!$this->validate($rules)) {
-            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error validasi', $this->validator->getErrors());
         }
 
         try {
@@ -140,7 +140,7 @@ class Variant extends AuthController
         ];
         $return = generateDetailData($this->request->getVar(), $query, $this->db);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Updated', $return);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data berhasil diubah', $return);
     }
 
     public function soft_delete()
@@ -151,7 +151,7 @@ class Variant extends AuthController
         ];
 
         if (!$this->validate($rules)) {
-            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error validasi', $this->validator->getErrors());
         }
 
         $post = $this->request->getPost();
@@ -188,7 +188,7 @@ class Variant extends AuthController
             $data = (array) generateDetailData($this->request->getGet(), $query, $this->db);
 
 
-            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND,  'The requested data has already been deleted', 'The data you are trying to access has been deleted and is no longer available.', $data);
+            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'Data yang diminta telah dihapus', 'Data yang Anda coba akses sudah dihapus dan tidak lagi tersedia.', $data);
         }
         $sql = "UPDATE `variant` 
         SET variant_updated_at = NOW(),
@@ -197,7 +197,7 @@ class Variant extends AuthController
 
         $this->db->query($sql);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Soft Deleted', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data berhasil dihapus sementara', $data);
     }
 
     public function deleted_variant()
@@ -215,7 +215,7 @@ class Variant extends AuthController
         ];
 
         $data = generateListData($this->request->getGet(), $query, $this->db);
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List Data Value', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List data varian', $data);
     }
 
     public function restore()
@@ -226,7 +226,7 @@ class Variant extends AuthController
         ];
 
         if (!$this->validate($rules)) {
-            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error validasi', $this->validator->getErrors());
         }
 
         $post = $this->request->getPost();
@@ -251,7 +251,7 @@ class Variant extends AuthController
 
         $data = generateDetailData($this->request->getGet(), $query, $this->db);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Restored', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data berhasil direstore', $data);
     }
 
     public function delete()
@@ -262,7 +262,7 @@ class Variant extends AuthController
         ];
 
         if (!$this->validate($rules)) {
-            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error validasi', $this->validator->getErrors());
         }
         $id = $this->request->getPost('id');
 
@@ -276,7 +276,7 @@ class Variant extends AuthController
         $data = (array) generateDetailData($this->request->getVar(), $query, $this->db);
 
         if (empty($data['data'])) {
-            return $this->responseFail(ResponseInterface::HTTP_GONE, 'Data already deleted from database', 'Data already deleted', "");
+            return $this->responseFail(ResponseInterface::HTTP_GONE, 'Data sudah dihapus dari database', 'Data sudah dihapus', "");
         }
 
 
@@ -290,6 +290,6 @@ class Variant extends AuthController
             return $this->responseFail(ResponseInterface::HTTP_INTERNAL_SERVER_ERROR, 'Error occurred', $e->getMessage());
         }
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Deleted', ['data' => (object) []]);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data berhasil dihapus', ['data' => (object) []]);
     }
 }

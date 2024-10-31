@@ -56,7 +56,7 @@ class Outlet extends AuthController
             ];
         }
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List Outlet', $return);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List outlet', $return);
     }
 
     public function detail_outlet()
@@ -97,7 +97,7 @@ class Outlet extends AuthController
             'updated_at' => $data_outlet['updated_at'],
         ];
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Detail Outlet', $return);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Detail outlet', $return);
     }
 
     public function insert()
@@ -168,7 +168,7 @@ class Outlet extends AuthController
 
         $data = (array) generateDetailData($this->request->getVar(), $query, $this->db);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Added', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data berhasil ditambahkan', $data);
     }
 
     public function update()
@@ -254,7 +254,7 @@ class Outlet extends AuthController
         ];
 
         $data = (array) generateDetailData($this->request->getVar(), $query, $this->db);
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Updated', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data berhasil diubah', $data);
     }
 
     public function delete()
@@ -297,7 +297,7 @@ class Outlet extends AuthController
         $sql = "DELETE FROM outlet WHERE outlet_id = $id";
         $this->db->query($sql);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfull Deleted', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data berhasil dihapus', $data);
     }
 
     public function test_update_core() // test update core DONE

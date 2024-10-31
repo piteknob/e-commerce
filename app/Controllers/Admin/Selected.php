@@ -46,6 +46,6 @@ class Selected extends AuthController
             ]
         ];
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List Category Selected', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List kategori yang di pilih', $data);
     }
 }

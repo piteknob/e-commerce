@@ -30,7 +30,7 @@ class Stock extends AuthController
 
         $data = generateListData($this->request->getVar(), $query, $this->db);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List Stock', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List stok', $data);
     }
 
     public function detail_stock()
@@ -60,7 +60,7 @@ class Stock extends AuthController
 
         $data = generateDetailData($this->request->getVar(), $query, $this->db);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Detail Data', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Detail stok', $data);
     }
 
     public function reduce()
@@ -74,7 +74,7 @@ class Stock extends AuthController
         ];
 
         if (!$this->validate($rules)) {
-            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error validasi', $this->validator->getErrors());
         }
 
         $id = $this->request->getVar();
@@ -114,7 +114,7 @@ class Stock extends AuthController
             'data reduced' => $quantity
         ];
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Reduced', ['data' => (object) []]);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data berhasil dikurangi', ['data' => (object) []]);
     }
 
     public function add()
@@ -127,7 +127,7 @@ class Stock extends AuthController
         ];
 
         if (!$this->validate($rules)) {
-            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error validasi', $this->validator->getErrors());
         }
 
         $id = $this->request->getVar();
@@ -167,7 +167,7 @@ class Stock extends AuthController
             'data reduced' => $quantity
         ];
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Added', ['data' => (object) []]);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data berhasil ditambahkan', ['data' => (object) []]);
     }
 
     public function update()
@@ -180,7 +180,7 @@ class Stock extends AuthController
         ];
 
         if (!$this->validate($rules)) {
-            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error validasi', $this->validator->getErrors());
         }
 
         try {
@@ -193,7 +193,7 @@ class Stock extends AuthController
                 ->where('product_stock_id', $id)
                 ->update();
         } catch (\Exception $e) {
-            return $this->responseFail(ResponseInterface::HTTP_INTERNAL_SERVER_ERROR, 'Error Update Stock', $e->getMessage());
+            return $this->responseFail(ResponseInterface::HTTP_INTERNAL_SERVER_ERROR, 'Error mengubah stok', $e->getMessage());
         }
 
         $query['data'] = ['product_stock'];
@@ -215,6 +215,6 @@ class Stock extends AuthController
         $query['where_detail'] = ["WHERE product_stock_id = $id"];
         $data = generateDetailData($this->request->getVar(), $query, $this->db);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Updated', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data berhasil diubah', $data);
     }
 }

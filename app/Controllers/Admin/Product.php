@@ -20,7 +20,7 @@ class Product extends AuthController
         $data = (array) generateListData($this->request->getGet(), $query, $this->db);
         // print_r($data); die;
         if (empty($data)) {
-            return $this->responseFail(ResponseInterface::HTTP_INTERNAL_SERVER_ERROR, 'Error occurred', 'Error Data Not Found', "");
+            return $this->responseFail(ResponseInterface::HTTP_INTERNAL_SERVER_ERROR, 'Error occurred', 'Error data tidak ditemukan', "");
         }
 
         // GET CATEGORY ID FROM PRODUCT
@@ -97,7 +97,7 @@ class Product extends AuthController
             // $result = ['data' => $return];
         }
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List Product', $return);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List produk', $return);
     }
 
     public function list_product_pagination()
@@ -120,7 +120,7 @@ class Product extends AuthController
         $data = (array) generateListData($this->request->getGet(), $query, $this->db);
 
         if (empty($data)) {
-            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List Product', $data);
+            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List produk', $data);
         }
 
         // GET CATEGORY ID FROM PRODUCT
@@ -197,7 +197,7 @@ class Product extends AuthController
         $paginationResult = paginate($return, $page, $limit);
 
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List Product', $paginationResult);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List produk', $paginationResult);
     }
 
     public function detail() //done
@@ -238,7 +238,7 @@ class Product extends AuthController
         }
         $return = (object) [];
         if (empty($product_data)) {
-            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'Data from this id is empty', 'Not found', ['data' => (object) []]);
+            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'Data dari id ini tidak ditemukan', 'Tidak ditemukan', ['data' => (object) []]);
         }
         $return->data = [
             'id' => $product_data['id'],
@@ -257,7 +257,7 @@ class Product extends AuthController
             'updated_at' => $product_data['updated_at'],
         ];
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Detail Data', $return);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Detail data', $return);
     }
 
     public function insert() //done
@@ -274,7 +274,7 @@ class Product extends AuthController
         ];
 
         if (!$this->validate($rules)) {
-            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error validasi', $this->validator->getErrors());
         }
 
 
@@ -381,7 +381,7 @@ class Product extends AuthController
         ];
 
         $data = generateDetailData($this->request->getGet(), $query, $this->db);
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Added', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data berhasil ditambahkan', $data);
     }
 
     public function update() //done
@@ -397,7 +397,7 @@ class Product extends AuthController
         ];
 
         if (!$this->validate($rules)) {
-            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error validasi', $this->validator->getErrors());
         }
 
         $post = $this->request->getPost();
@@ -499,7 +499,7 @@ class Product extends AuthController
 
         $data = generateDetailData($this->request->getPost(), $query, $this->db);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfull Updated', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data berhasil diupdate', $data);
     }
 
     public function delete() //done
@@ -511,7 +511,7 @@ class Product extends AuthController
         ];
 
         if (!$this->validate($rules)) {
-            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error Validation', $this->validator->getErrors());
+            return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error validasi', $this->validator->getErrors());
         }
 
         // --------------------- DELETE PHOTO  ------------------------ //
@@ -527,7 +527,7 @@ class Product extends AuthController
         $data_photo = (array) generateDetailData($this->request->getGet(), $query, $this->db);
 
         if (empty($data_photo['data']['id'])) {
-            return $this->responseFail(ResponseInterface::HTTP_GONE, 'Data already deleted from database', 'Data already deleted', "");
+            return $this->responseFail(ResponseInterface::HTTP_GONE, 'Data sudah dihapus dari database', 'Data sudah dihapus', "");
         }
 
         $data_photo = $data_photo['data']['photo'];
@@ -543,9 +543,9 @@ class Product extends AuthController
             $this->db->table('product')->delete(['product_id' => $id]);
             $this->db->table('product_stock')->delete(['product_stock_product_id' => $id]);
         } catch (\Exception $e) {
-            return $this->responseFail(ResponseInterface::HTTP_INTERNAL_SERVER_ERROR, 'Error Delete Data', $e->getMessage());
+            return $this->responseFail(ResponseInterface::HTTP_INTERNAL_SERVER_ERROR, 'Error hapus data', $e->getMessage());
         }
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Deleted', ['data' => (object) []]);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data berhasil dihapus', ['data' => (object) []]);
     }
 }

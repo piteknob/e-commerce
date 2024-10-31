@@ -65,14 +65,14 @@ class Confirmation extends AuthController
                 'data' => $data_array,
                 'pagination' => $data['pagination']
             ];
-            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List Transaction', $data_result);
+            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List transaksi', $data_result);
         }
 
         return $this->responseSuccess(
             ResponseInterface::HTTP_NOT_FOUND,
-            'Data transaction not found',
+            'Data transaksi tidak ditemukan',
             ['data' => (object) []],
-            'Data not found'
+            'Data tidak ditemukan'
         );
     }
 
@@ -101,10 +101,10 @@ class Confirmation extends AuthController
         $data = (array) generateListData($this->request->getVar(), $query, $this->db);
 
         if (empty($data['data'])) {
-            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'List product transaction not found', 'Error not found', ['data' => (object) []]);
+            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'List transaksi produk tidak ditemukan', 'error tidak ditemukan', ['data' => (object) []]);
         }
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List Order Product', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List order produk', $data);
     }
 
     public function detail()
@@ -135,7 +135,7 @@ class Confirmation extends AuthController
         if (!empty($data_order['data'])) {
             $id = $data_order['data'][0]['id'];
         } else {
-            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Empty', ['data' => []]);
+            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data kosong', ['data' => []]);
         }
 
         $query_product['data'] = ['sales_product'];
@@ -251,7 +251,7 @@ class Confirmation extends AuthController
         if (!empty($data_order['data'])) {
             $id = $data_order['data'][0]['id'];
         } else {
-            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Empty', ['data' => []]);
+            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data kosong', ['data' => []]);
         }
 
         $query_product['data'] = ['sales_product'];
@@ -388,7 +388,7 @@ class Confirmation extends AuthController
         $data_product = generateListData($this->request->getVar(), $query_sales_product, $this->db);
 
         if (empty($data_product['data'])) {
-            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'Data transaction not found', 'Data not found', (object)[]);
+            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'Data transaksi tidak ditemukan', 'Data tidak ditemukan', (object)[]);
         }
 
         // -------------------- CHECK PRODUCT ALREADY CONFIRMED -------------------------- //
@@ -400,7 +400,7 @@ class Confirmation extends AuthController
                 ]
             ];
 
-            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Order Already Confirmed', $result_confirmed);
+            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Order sudah di setujui', $result_confirmed);
         }
 
         // ------------------------- UPDATE FROM PAYED TO CONFIRMED ------------------------- //
@@ -497,7 +497,7 @@ class Confirmation extends AuthController
             ]
         ];
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Order Successfully Confirmed', $result);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Order berhasil disetujui', $result);
     }
 
     public function cancel()
@@ -556,7 +556,7 @@ class Confirmation extends AuthController
                 ]
             ];
 
-            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Already Canceled', $data);
+            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data sudah dibatalkan', $data);
         }
 
 
@@ -641,7 +641,7 @@ class Confirmation extends AuthController
         }
 
         if (!$data_order) {
-            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'Data transaction not found', 'Data not found', (object)[]);
+            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'Data transaksi tidak ditemukan', 'Data tidak ditemukan', (object)[]);
         }
         $data = [
             'data' => [
@@ -651,7 +651,7 @@ class Confirmation extends AuthController
             ]
         ];
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data Successfully Canceled', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data berhasil dibatalkan', $data);
     }
 
     public function report()
@@ -694,6 +694,6 @@ class Confirmation extends AuthController
         $data = generateListData($this->request->getVar(), $query, $this->db);
 
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Report Order', $data);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Report order', $data);
     }
 }
