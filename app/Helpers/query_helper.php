@@ -200,7 +200,8 @@ if (!function_exists('generateListData')) {
         // Set Pagination from Params
 
         if ($paginationParams == 'false') {
-            return $db->query($sql)->getResultArray();
+            $data = $db->query($sql)->getResultArray();
+            return ['data' => $data];
         }
 
         if ($paginationParams == 'true') {
@@ -258,6 +259,7 @@ if (!function_exists('generateListData')) {
                     'start' => $pageStartEnd[2],
                     'end' => $pageStartEnd[3],
                 ];
+
                 return $data;
             }
         }
@@ -398,41 +400,46 @@ if (!function_exists('update')) {
 
 // pagination 
 if (!function_exists('paginate')) {
-    function paginate($data, $page = 1, $itemsPerPage = 5)
+    function paginate($data, $page = 1, $itemsPerPage = 5, $paginationParams = true)
     {
-        $totalItems = count($data);
-        $totalPages = ceil($totalItems / $itemsPerPage);
+        if ($paginationParams = 0) {
+            echo 'lol'; die;
+            $totalItems = count($data);
+            $totalPages = ceil($totalItems / $itemsPerPage);
 
-        // Validation for PAges 
-        if ($page < 1) {
-            $page = 1;
-        } elseif ($page > $totalPages) {
-            $page = $totalPages;
+            // Validation for PAges 
+            if ($page < 1) {
+                $page = 1;
+            } elseif ($page > $totalPages) {
+                $page = $totalPages;
+            }
+
+            $startIndex = ($page - 1) * $itemsPerPage;
+            $pagedData = array_slice($data, $startIndex, $itemsPerPage);
+            $detailPage = detailPage($totalPages, $page, $totalItems, $itemsPerPage);
+            $pageSebelumnya = ($page - 1 > 0) ? ($page - 1) : null;
+            $pageSelanjutnya = ($page + 1 <= $totalPages) ? ($page + 1) : null;
+            foreach ($detailPage as $key => $value) {
+                $pageStartEnd[] = $value;
+            }
+            $detailPage = range($pageStartEnd[0], $pageStartEnd[1]);
+
+            return [
+                'data' => $pagedData,
+                'pagination' => [
+                    'total_data' => $totalItems,
+                    'total_page' => $totalPages,
+                    'prev' => $pageSebelumnya,
+                    'page' => $page,
+                    'next' => $pageSelanjutnya,
+                    'detail' => $detailPage,
+                    'start' => $pageStartEnd[2],
+                    'end' => $pageStartEnd[3],
+                ]
+            ];
+        } else {
+            return $data;
         }
-
-        $startIndex = ($page - 1) * $itemsPerPage;
-        $pagedData = array_slice($data, $startIndex, $itemsPerPage);
-        $detailPage = detailPage($totalPages, $page, $totalItems, $itemsPerPage);
-        $pageSebelumnya = ($page - 1 > 0) ? ($page - 1) : null;
-        $pageSelanjutnya = ($page + 1 <= $totalPages) ? ($page + 1) : null;
-        foreach ($detailPage as $key => $value) {
-            $pageStartEnd[] = $value;
-        }
-        $detailPage = range($pageStartEnd[0], $pageStartEnd[1]);
-
-        return [
-            'data' => $pagedData,
-            'pagination' => [
-                'total_data' => $totalItems,
-                'total_page' => $totalPages,
-                'prev' => $pageSebelumnya,
-                'page' => $page,
-                'next' => $pageSelanjutnya,
-                'detail' => $detailPage,
-                'start' => $pageStartEnd[2],
-                'end' => $pageStartEnd[3],
-            ]
-        ];
     }
 }
 
@@ -813,7 +820,7 @@ if (!function_exists('orderBy')) {
     function orderBy($data, $table)
     {
         foreach ($table as $key => $row) {
-            $field = ''.$row.'_'.$data.'';
+            $field = '' . $row . '_' . $data . '';
             $query = " ORDER BY {$field},";
         }
         $query = rtrim($query, ', ');

@@ -15,7 +15,7 @@ class Product extends AuthController
         $query['data'] = ['product'];
         $query['select'] = [
             'product.product_id' => 'id'
-        ];  
+        ];
         $query['pagination'] = [false];
         $data = (array) generateListData($this->request->getGet(), $query, $this->db);
         // print_r($data); die;
@@ -122,8 +122,8 @@ class Product extends AuthController
         if (empty($data)) {
             return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List produk', $data);
         }
-
         // GET CATEGORY ID FROM PRODUCT
+
         $return = [];
         foreach ($data as $key => $value) {
             $id = $value['id'];
@@ -193,11 +193,54 @@ class Product extends AuthController
         }
         $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
         $limit = isset($_GET['limit']) ? (int)$_GET['limit'] : 5;
+        $pagination = isset($_GET['pagination']) ? (int)$_GET['pagination'] : true;
 
-        $paginationResult = paginate($return, $page, $limit);
+        $paginationResult = paginate($return, $page, $limit, $pagination);
 
 
         return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List produk', $paginationResult);
+    }
+
+    public function list_product_sesuai()
+    {
+        $query['data'] = ['product'];
+        $query['select'] = [
+            'product_id' => 'id',
+            'product_name' => 'name',
+            'product_price' => 'price',
+            'product_category_id' => 'category_id',
+            'product_category_name' => 'category_name',
+            'product_variant_id' => 'variant_id',
+            'product_variant_name' => 'variant_name',
+            'product_description' => 'description',
+            'product_photo' => 'photo',
+            'product_created_at' => 'created_at',
+            'product_updated_at' => 'updated_at',
+        ];
+        $query['search_data'] = [
+            'product_name',
+            'product_variant_name'
+        ];
+        $query['filter'] = [
+            "product_category_name",
+        ];
+        $query['filter_between'] = [
+            'product_price'
+        ];
+
+        $result = (array) generateListData($this->request->getVar(), $query, $this->db);
+
+        if (isset($result['data']) && is_array($result['data'])) {
+            foreach ($result['data'] as &$data) {
+                if (isset($data['photo']) && $data['photo']) {
+                    $data['photo'] = 'upload/product/' . $data['photo'];
+                } else {
+                    $data['photo'] = 'upload/default/default_photo1.webp';
+                }
+            }
+        }
+
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'List produk', $result);
     }
 
     public function detail() //done
@@ -270,7 +313,7 @@ class Product extends AuthController
             'variant_id' => 'required|numeric',
             'category_id' => 'required|numeric',
             'description' => 'max_length[500]',
-            'photo' => 'uploaded[photo]|mime_in[photo,image/jpg,image/jpeg,image/png]|max_size[photo,2048]'
+            // 'photo' => 'uploaded[photo]|mime_in[photo,image/jpg,image/jpeg,image/png]|max_size[photo,2048]'
         ];
 
         if (!$this->validate($rules)) {
@@ -295,19 +338,16 @@ class Product extends AuthController
 
         // --------------------- UPLOAD GET POST PHOTO ------------------------ //
 
-
-        $photo = $this->request->getFile('photo');
-        if (empty($photo)) {
-            $photo_name = '';
-        } else {
+        $photo = $this->request->getFile('upload');
+        if ($photo && $photo->isValid()) {
             $extension = $photo->getExtension();
-            $photo_name = "$product" . "_" . "$random" . "." . "$extension";
-            $photo_name = $photo_name;
-            $photo_name = strtolower($photo_name);
+            $photo_name = strtolower($product . "_" . $random . "." . $extension);
             $photo_name = str_replace(' ', '_', $photo_name);
-            // move file to directory
             $photo->move('./upload/product', $photo_name);
+        } else {
+            $photo_name = '';
         }
+
         $sql = "INSERT INTO product
             (
                 product_name,
@@ -330,14 +370,13 @@ class Product extends AuthController
                 variant_name, 
                 '{$desc}', 
                 CASE 
-                    WHEN '{$photo_name}' = '' THEN ''
+                    WHEN '{$photo_name}' = '' THEN NULL
                     ELSE '{$photo_name}'
                 END, 
                 NOW(), 
                 NULL
             FROM category, variant
             WHERE category_id = '{$category}' AND variant_id = '{$variant}';";
-
 
         $this->db->query($sql);
         // Get Inserted Id
@@ -365,9 +404,7 @@ class Product extends AuthController
             'product.product_category_name' => 'category_name',
             'product.product_variant_id' => 'variant_id',
             'product.product_variant_name' => 'variant_name',
-            'product_stock.product_stock_stock' => 'stock_stock',
-            'product_stock.product_stock_in' => 'stock_in',
-            'product_stock.product_stock_out' => 'stock_out',
+            'product_stock.product_stock_stock' => 'stock',
             'product.product_description' => 'description',
             'product.product_photo' => 'photo',
             'product.product_created_at' => 'created_at',
@@ -381,6 +418,7 @@ class Product extends AuthController
         ];
 
         $data = generateDetailData($this->request->getGet(), $query, $this->db);
+        // print_r($data); die;
         return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data berhasil ditambahkan', $data);
     }
 
@@ -393,7 +431,7 @@ class Product extends AuthController
             'variant_id' => 'required|numeric',
             'category_id' => 'required|numeric',
             'description' => 'max_length[500]',
-            'photo' => 'uploaded[photo]|mime_in[photo,image/jpg,image/jpeg,image/png]|max_size[photo,2048]'
+            // 'photo' => 'uploaded[photo]|mime_in[photo,image/jpg,image/jpeg,image/png]|max_size[photo,2048]'
         ];
 
         if (!$this->validate($rules)) {
@@ -407,7 +445,6 @@ class Product extends AuthController
         $variant = htmlspecialchars($post['variant_id']);
         $category = htmlspecialchars($post['category_id']);
         $price = htmlspecialchars($post['price']);
-        $stock = htmlspecialchars($post['stock']);
         $desc = htmlspecialchars($post['description']);
 
         // --------------------- SET VALIDATION && UPLOAD GET POST PHOTO ------------------------ //
@@ -527,7 +564,7 @@ class Product extends AuthController
         $data_photo = (array) generateDetailData($this->request->getGet(), $query, $this->db);
 
         if (empty($data_photo['data']['id'])) {
-            return $this->responseFail(ResponseInterface::HTTP_GONE, 'Data sudah dihapus dari database', 'Data sudah dihapus', "");
+            return $this->responseFail(ResponseInterface::HTTP_GONE, 'Data sudah dihapus dari database', 'Data sudah dihapus', ['data' => (object) []]);
         }
 
         $data_photo = $data_photo['data']['photo'];

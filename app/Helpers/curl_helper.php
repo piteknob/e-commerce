@@ -201,7 +201,7 @@ function pagination($pagination, $paramStatus)
             return $curl;
         } else {
             $curl = "?pagination=true";
-   
+
             return $curl;
         }
     } else {
@@ -213,8 +213,6 @@ function pagination($pagination, $paramStatus)
             return $curl;
         }
     }
-
-
 }
 
 

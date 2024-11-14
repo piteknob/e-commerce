@@ -37,7 +37,7 @@ class Reset extends DataController
 
         // check user role
         if (empty($role)) {
-            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'Akses ditolak: Nomor handphone tidak terdaftar', 'Nomor handphone tidak terdaftar.', ['data' => (object) []]);
+            return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'Nomor handphone tidak terdaftar', 'Nomor handphone tidak terdaftar.', ['data' => (object) []]);
         }
 
         // insert otp to database
@@ -72,7 +72,7 @@ class Reset extends DataController
 
         curl_exec($curl);
 
-        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Pesan terkirim', ['data' => (object) []]);
+        return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Pesan terkirim', ['data' => ['expired' => $formatDate]]);
     }
 
     public function check_otp()
@@ -103,7 +103,7 @@ class Reset extends DataController
         $get_id['select'] = [
             'user_id' => 'id',
             'user_name' => 'name',
-            'user_otp' => 'otp'
+            'user_otp' => 'otp',
         ];
         $get_id['where_detail'] = ["WHERE user_otp = $otp"];
         $id = (array) generateDetailData($this->request->getVar(), $get_id, $this->db);
@@ -135,7 +135,7 @@ class Reset extends DataController
 
         // -------------------------- VALIDATION -------------------------- //
         $rules = [
-            'password' => 'required|min_length[5]',
+            'password' => 'required|min_length[5]|',
             'confirm' => 'required|matches[password]',
         ];
 
@@ -143,9 +143,26 @@ class Reset extends DataController
             return $this->responseErrorValidation(ResponseInterface::HTTP_PRECONDITION_FAILED, 'Error validasi', $this->validator->getErrors());
         }
 
+
         $otp = $post['otp'];
         $password = $post['password'];
         $id_user = $post['id'];
+
+
+        $hasNumber = preg_match('/\d/', $password);
+        $hasSymbol = preg_match('/[\W_]/', $password);
+        
+        if (!$hasNumber || !$hasSymbol) {
+            return $this->responseFail(
+                ResponseInterface::HTTP_PRECONDITION_FAILED,
+                "Password harus mengandung minimal satu angka dan satu simbol khusus.\n ",
+                'Error validasi',
+                ['data' => [
+                    'password' => 'Password harus mengandung minimal satu angka dan satu simbol khusus.'
+                ]]
+            );
+        }
+        
 
         // check OTP 
         $query['data'] = ['user'];

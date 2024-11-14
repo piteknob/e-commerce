@@ -14,17 +14,11 @@ class ListPublic extends AuthController
             'product.product_id' => 'id',
             'product.product_name' => 'name',
             'product.product_price' => 'price',
-            'product.product_category_id' => 'category_id',
             'product.product_category_name' => 'category_name',
-            'product.product_variant_id' => 'variant_id',
             'product.product_variant_name' => 'variant_name',
-            'product_stock.product_stock_stock' => 'stock_stock',
-            'product_stock.product_stock_in' => 'stock_in',
-            'product_stock.product_stock_out' => 'stock_out',
+            'product_stock.product_stock_stock' => 'stock',
             'product.product_description' => 'description',
             'product.product_photo' => 'photo',
-            'product.product_created_at' => 'created_at',
-            'product.product_updated_at' => 'updated_at',
         ];
         $query['join'] = [
             'product_stock' => 'product.product_id = product_stock.product_stock_product_id',

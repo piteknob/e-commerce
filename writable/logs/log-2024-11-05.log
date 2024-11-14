@@ -1,0 +1,130 @@
+CRITICAL - 2024-11-05 02:47:07 --> ErrorException: Undefined array key "expired"
+[Method: POST, Route: reset/check-otp]
+in APPPATH\Controllers\Reset.php on line 114.
+ 1 APPPATH\Controllers\Reset.php(114): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "expired"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Reset.php', 114)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Reset->check_otp()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reset))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-05 02:47:26 --> ErrorException: Undefined array key "expired"
+[Method: POST, Route: reset/check-otp]
+in APPPATH\Controllers\Reset.php on line 114.
+ 1 APPPATH\Controllers\Reset.php(114): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "expired"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Reset.php', 114)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Reset->check_otp()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reset))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-05 02:47:38 --> ErrorException: Undefined array key "expired"
+[Method: POST, Route: reset/check_otp]
+in APPPATH\Controllers\Reset.php on line 114.
+ 1 APPPATH\Controllers\Reset.php(114): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "expired"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Reset.php', 114)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Reset->check_otp()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reset))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-05 02:47:41 --> ErrorException: Undefined array key "expired"
+[Method: POST, Route: reset/check-otp]
+in APPPATH\Controllers\Reset.php on line 114.
+ 1 APPPATH\Controllers\Reset.php(114): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "expired"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Reset.php', 114)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Reset->check_otp()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reset))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-05 02:48:00 --> ErrorException: Undefined array key "expired"
+[Method: POST, Route: reset/check-otp]
+in APPPATH\Controllers\Reset.php on line 114.
+ 1 APPPATH\Controllers\Reset.php(114): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "expired"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Reset.php', 114)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Reset->check_otp()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reset))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-05 02:48:02 --> ErrorException: Undefined array key "expired"
+[Method: POST, Route: reset/check-otp]
+in APPPATH\Controllers\Reset.php on line 114.
+ 1 APPPATH\Controllers\Reset.php(114): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "expired"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Reset.php', 114)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Reset->check_otp()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reset))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-05 02:48:10 --> ErrorException: Undefined array key "expired"
+[Method: POST, Route: reset/check-otp]
+in APPPATH\Controllers\Reset.php on line 115.
+ 1 APPPATH\Controllers\Reset.php(115): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "expired"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Reset.php', 115)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Reset->check_otp()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reset))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-05 02:48:17 --> ErrorException: Undefined array key "expired"
+[Method: POST, Route: reset/check-otp]
+in APPPATH\Controllers\Reset.php on line 115.
+ 1 APPPATH\Controllers\Reset.php(115): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "expired"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Reset.php', 115)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Reset->check_otp()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reset))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-05 03:01:14 --> ErrorException: Undefined array key "expired"
+[Method: POST, Route: reset/check-otp]
+in APPPATH\Controllers\Reset.php on line 115.
+ 1 APPPATH\Controllers\Reset.php(115): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "expired"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Reset.php', 115)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Reset->check_otp()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reset))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-05 03:01:57 --> ErrorException: Undefined array key "expired"
+[Method: POST, Route: reset/check-otp]
+in APPPATH\Controllers\Reset.php on line 115.
+ 1 APPPATH\Controllers\Reset.php(115): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "expired"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Reset.php', 115)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Reset->check_otp()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reset))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-05 03:10:17 --> ErrorException: Undefined array key "expired"
+[Method: POST, Route: reset/check-otp]
+in APPPATH\Controllers\Reset.php on line 114.
+ 1 APPPATH\Controllers\Reset.php(114): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "expired"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Reset.php', 114)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Reset->check_otp()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reset))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-05 03:10:18 --> ErrorException: Undefined array key "expired"
+[Method: POST, Route: reset/check-otp]
+in APPPATH\Controllers\Reset.php on line 114.
+ 1 APPPATH\Controllers\Reset.php(114): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "expired"', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Reset.php', 114)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Reset->check_otp()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reset))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-05 16:58:09 --> ErrorException: Undefined variable $password2
+[Method: POST, Route: reset/reset-password]
+in APPPATH\Controllers\Reset.php on line 155.
+ 1 APPPATH\Controllers\Reset.php(155): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $password2', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Reset.php', 155)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Reset->reset_password()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reset))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
