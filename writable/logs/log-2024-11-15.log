@@ -1,0 +1,257 @@
+WARNING - 2024-11-15 01:58:23 --> [DEPRECATED] Function strftime() is deprecated in APPPATH\Controllers\Admin\User.php on line 575.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\User->user_logged_in()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\User))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-11-15 08:57:16 --> mysqli_sql_exception: Unknown column 'variant_name' in 'where clause' in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('SELECT product....', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product....')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product....')
+#3 C:\wamp64\www\e-commerce\app\Helpers\query_helper.php(175): CodeIgniter\Database\BaseConnection->query('SELECT product....')
+#4 C:\wamp64\www\e-commerce\app\Controllers\ListPublic.php(40): generateListData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\ListPublic->product()
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListPublic))
+#7 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-11-15 08:57:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'variant_name' in 'where clause'
+[Method: GET, Route: listpublic/product]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Helpers\query_helper.php(175): CodeIgniter\Database\BaseConnection->query('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%${category}%\' OR variant_name LIKE \'%${category}%\')')
+ 2 APPPATH\Controllers\ListPublic.php(40): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ListPublic->product()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListPublic))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-15 08:57:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'variant_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%${category}%\' OR variant_name LIKE \'%${category}%\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%${category}%\' OR variant_name LIKE \'%${category}%\')')
+ 3 APPPATH\Helpers\query_helper.php(175): CodeIgniter\Database\BaseConnection->query('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%${category}%\' OR variant_name LIKE \'%${category}%\')')
+ 4 APPPATH\Controllers\ListPublic.php(40): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ListPublic->product()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListPublic))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-15 08:57:16 --> [Caused by] mysqli_sql_exception: Unknown column 'variant_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%${category}%\' OR variant_name LIKE \'%${category}%\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%${category}%\' OR variant_name LIKE \'%${category}%\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%${category}%\' OR variant_name LIKE \'%${category}%\')')
+ 4 APPPATH\Helpers\query_helper.php(175): CodeIgniter\Database\BaseConnection->query('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%${category}%\' OR variant_name LIKE \'%${category}%\')')
+ 5 APPPATH\Controllers\ListPublic.php(40): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ListPublic->product()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListPublic))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-11-15 08:57:17 --> mysqli_sql_exception: Unknown column 'variant_name' in 'where clause' in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('SELECT product....', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product....')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product....')
+#3 C:\wamp64\www\e-commerce\app\Helpers\query_helper.php(175): CodeIgniter\Database\BaseConnection->query('SELECT product....')
+#4 C:\wamp64\www\e-commerce\app\Controllers\ListPublic.php(40): generateListData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\ListPublic->product()
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListPublic))
+#7 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-11-15 08:57:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'variant_name' in 'where clause'
+[Method: GET, Route: listpublic/product]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Helpers\query_helper.php(175): CodeIgniter\Database\BaseConnection->query('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%${category}%\' OR variant_name LIKE \'%${category}%\')')
+ 2 APPPATH\Controllers\ListPublic.php(40): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ListPublic->product()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListPublic))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-15 08:57:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'variant_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%${category}%\' OR variant_name LIKE \'%${category}%\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%${category}%\' OR variant_name LIKE \'%${category}%\')')
+ 3 APPPATH\Helpers\query_helper.php(175): CodeIgniter\Database\BaseConnection->query('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%${category}%\' OR variant_name LIKE \'%${category}%\')')
+ 4 APPPATH\Controllers\ListPublic.php(40): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ListPublic->product()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListPublic))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-15 08:57:17 --> [Caused by] mysqli_sql_exception: Unknown column 'variant_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%${category}%\' OR variant_name LIKE \'%${category}%\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%${category}%\' OR variant_name LIKE \'%${category}%\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%${category}%\' OR variant_name LIKE \'%${category}%\')')
+ 4 APPPATH\Helpers\query_helper.php(175): CodeIgniter\Database\BaseConnection->query('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%${category}%\' OR variant_name LIKE \'%${category}%\')')
+ 5 APPPATH\Controllers\ListPublic.php(40): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ListPublic->product()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListPublic))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-11-15 09:13:19 --> mysqli_sql_exception: Unknown column 'variant_name' in 'where clause' in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('SELECT product....', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product....')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product....')
+#3 C:\wamp64\www\e-commerce\app\Helpers\query_helper.php(175): CodeIgniter\Database\BaseConnection->query('SELECT product....')
+#4 C:\wamp64\www\e-commerce\app\Controllers\ListPublic.php(40): generateListData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\ListPublic->product()
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListPublic))
+#7 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-11-15 09:13:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'variant_name' in 'where clause'
+[Method: GET, Route: listpublic/product]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Helpers\query_helper.php(175): CodeIgniter\Database\BaseConnection->query('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%Griya%\' OR variant_name LIKE \'%Griya%\')')
+ 2 APPPATH\Controllers\ListPublic.php(40): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ListPublic->product()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListPublic))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-15 09:13:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'variant_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%Griya%\' OR variant_name LIKE \'%Griya%\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%Griya%\' OR variant_name LIKE \'%Griya%\')')
+ 3 APPPATH\Helpers\query_helper.php(175): CodeIgniter\Database\BaseConnection->query('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%Griya%\' OR variant_name LIKE \'%Griya%\')')
+ 4 APPPATH\Controllers\ListPublic.php(40): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ListPublic->product()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListPublic))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-15 09:13:19 --> [Caused by] mysqli_sql_exception: Unknown column 'variant_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%Griya%\' OR variant_name LIKE \'%Griya%\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%Griya%\' OR variant_name LIKE \'%Griya%\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%Griya%\' OR variant_name LIKE \'%Griya%\')')
+ 4 APPPATH\Helpers\query_helper.php(175): CodeIgniter\Database\BaseConnection->query('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%Griya%\' OR variant_name LIKE \'%Griya%\')')
+ 5 APPPATH\Controllers\ListPublic.php(40): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ListPublic->product()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListPublic))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-11-15 09:13:33 --> mysqli_sql_exception: Unknown column 'variant_name' in 'where clause' in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('SELECT product....', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product....')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product....')
+#3 C:\wamp64\www\e-commerce\app\Helpers\query_helper.php(175): CodeIgniter\Database\BaseConnection->query('SELECT product....')
+#4 C:\wamp64\www\e-commerce\app\Controllers\ListPublic.php(40): generateListData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\ListPublic->product()
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListPublic))
+#7 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-11-15 09:13:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'variant_name' in 'where clause'
+[Method: GET, Route: listpublic/product]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Helpers\query_helper.php(175): CodeIgniter\Database\BaseConnection->query('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%bakpia%\' OR variant_name LIKE \'%bakpia%\')')
+ 2 APPPATH\Controllers\ListPublic.php(40): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ListPublic->product()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListPublic))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-15 09:13:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'variant_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%bakpia%\' OR variant_name LIKE \'%bakpia%\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%bakpia%\' OR variant_name LIKE \'%bakpia%\')')
+ 3 APPPATH\Helpers\query_helper.php(175): CodeIgniter\Database\BaseConnection->query('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%bakpia%\' OR variant_name LIKE \'%bakpia%\')')
+ 4 APPPATH\Controllers\ListPublic.php(40): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ListPublic->product()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListPublic))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-15 09:13:33 --> [Caused by] mysqli_sql_exception: Unknown column 'variant_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%bakpia%\' OR variant_name LIKE \'%bakpia%\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%bakpia%\' OR variant_name LIKE \'%bakpia%\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%bakpia%\' OR variant_name LIKE \'%bakpia%\')')
+ 4 APPPATH\Helpers\query_helper.php(175): CodeIgniter\Database\BaseConnection->query('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%bakpia%\' OR variant_name LIKE \'%bakpia%\')')
+ 5 APPPATH\Controllers\ListPublic.php(40): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ListPublic->product()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListPublic))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-11-15 09:13:49 --> mysqli_sql_exception: Unknown column 'variant_name' in 'where clause' in C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php:310
+Stack trace:
+#0 C:\wamp64\www\e-commerce\system\Database\MySQLi\Connection.php(310): mysqli->query('SELECT product....', 0)
+#1 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product....')
+#2 C:\wamp64\www\e-commerce\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product....')
+#3 C:\wamp64\www\e-commerce\app\Helpers\query_helper.php(175): CodeIgniter\Database\BaseConnection->query('SELECT product....')
+#4 C:\wamp64\www\e-commerce\app\Controllers\ListPublic.php(40): generateListData(Array, Array, Object(CodeIgniter\Database\MySQLi\Connection))
+#5 C:\wamp64\www\e-commerce\system\CodeIgniter.php(933): App\Controllers\ListPublic->product()
+#6 C:\wamp64\www\e-commerce\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListPublic))
+#7 C:\wamp64\www\e-commerce\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\e-commerce\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\e-commerce\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\wamp64\www\e-commerce\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2024-11-15 09:13:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'variant_name' in 'where clause'
+[Method: GET, Route: listpublic/product]
+in SYSTEMPATH\Database\BaseConnection.php on line 686.
+ 1 APPPATH\Helpers\query_helper.php(175): CodeIgniter\Database\BaseConnection->query('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%Kacang Hijau%\' OR variant_name LIKE \'%Kacang Hijau%\') ORDER BY product_name')
+ 2 APPPATH\Controllers\ListPublic.php(40): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ListPublic->product()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListPublic))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-15 09:13:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'variant_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 315.
+ 1 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%Kacang Hijau%\' OR variant_name LIKE \'%Kacang Hijau%\') ORDER BY product_name')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%Kacang Hijau%\' OR variant_name LIKE \'%Kacang Hijau%\') ORDER BY product_name')
+ 3 APPPATH\Helpers\query_helper.php(175): CodeIgniter\Database\BaseConnection->query('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%Kacang Hijau%\' OR variant_name LIKE \'%Kacang Hijau%\') ORDER BY product_name')
+ 4 APPPATH\Controllers\ListPublic.php(40): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ListPublic->product()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListPublic))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-15 09:13:49 --> [Caused by] mysqli_sql_exception: Unknown column 'variant_name' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(310): mysqli->query('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%Kacang Hijau%\' OR variant_name LIKE \'%Kacang Hijau%\') ORDER BY product_name', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(732): CodeIgniter\Database\MySQLi\Connection->execute('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%Kacang Hijau%\' OR variant_name LIKE \'%Kacang Hijau%\') ORDER BY product_name')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%Kacang Hijau%\' OR variant_name LIKE \'%Kacang Hijau%\') ORDER BY product_name')
+ 4 APPPATH\Helpers\query_helper.php(175): CodeIgniter\Database\BaseConnection->query('SELECT product.product_id AS id, product.product_name AS name, product.product_price AS price, product.product_category_name AS category_name, product.product_variant_name AS variant_name, product_stock.product_stock_stock AS stock, product.product_description AS description, product.product_photo AS photo FROM `product` JOIN product_stock ON product.product_id = product_stock.product_stock_product_id WHERE (product_name LIKE \'%Kacang Hijau%\' OR variant_name LIKE \'%Kacang Hijau%\') ORDER BY product_name')
+ 5 APPPATH\Controllers\ListPublic.php(40): generateListData([...], [...], Object(CodeIgniter\Database\MySQLi\Connection))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ListPublic->product()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ListPublic))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

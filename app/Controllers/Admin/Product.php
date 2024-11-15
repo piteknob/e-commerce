@@ -477,7 +477,6 @@ class Product extends AuthController
         $photo = $this->request->getFile('upload');
 
 
-
         if (empty($photo)) {
             $photo_name = '';
         } else {

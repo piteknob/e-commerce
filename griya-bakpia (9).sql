@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Waktu pembuatan: 17 Okt 2024 pada 09.56
+-- Waktu pembuatan: 15 Nov 2024 pada 09.41
 -- Versi server: 8.3.0
 -- Versi PHP: 8.2.18
 
@@ -37,15 +37,14 @@ CREATE TABLE IF NOT EXISTS `auth_user` (
   `auth_user_date_expired` datetime DEFAULT NULL,
   PRIMARY KEY (`auth_user_id`),
   KEY `FK_auth_user_user` (`auth_user_user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `auth_user`
 --
 
 INSERT INTO `auth_user` (`auth_user_id`, `auth_user_user_id`, `auth_user_username`, `auth_user_token`, `auth_user_date_login`, `auth_user_date_expired`) VALUES
-(6, 1, 'bakpia', 'YmFrcGlhMTIzNDU2', '2024-10-17 15:12:51', '2024-10-18 15:12:51'),
-(8, 24, 'bakpia211', 'YmFrcGlhMjExMTIzNDU2', '2024-10-16 14:51:24', '2024-10-17 14:51:24');
+(6, 1, 'bakpia', 'YmFrcGlhMTIzNDU2', '2024-11-15 15:20:16', '2024-11-16 15:20:16');
 
 -- --------------------------------------------------------
 
@@ -88,7 +87,7 @@ CREATE TABLE IF NOT EXISTS `category` (
   `category_updated_at` datetime DEFAULT NULL,
   `category_deleted_at` datetime DEFAULT NULL,
   PRIMARY KEY (`category_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data untuk tabel `category`
@@ -96,7 +95,7 @@ CREATE TABLE IF NOT EXISTS `category` (
 
 INSERT INTO `category` (`category_id`, `category_name`, `category_created_at`, `category_updated_at`, `category_deleted_at`) VALUES
 (1, 'Basah', '2024-08-02 06:58:12', NULL, NULL),
-(8, 'kering', '2024-09-06 10:20:17', NULL, NULL);
+(8, 'Kering', '2024-09-06 10:20:17', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -222,20 +221,31 @@ CREATE TABLE IF NOT EXISTS `product` (
   PRIMARY KEY (`product_id`),
   KEY `fk_product_category` (`product_category_id`),
   KEY `fk_product_variant` (`product_variant_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=167 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=233 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data untuk tabel `product`
 --
 
 INSERT INTO `product` (`product_id`, `product_name`, `product_price`, `product_category_id`, `product_category_name`, `product_variant_id`, `product_variant_name`, `product_description`, `product_photo`, `product_created_at`, `product_updated_at`) VALUES
-(160, 'Bakpia 465 Kering 20', 24000, 8, 'kering', 159, 'test', '', 'bakpia_465_kering_20_1728629676.png', '2024-10-11 13:51:53', NULL),
-(161, 'Bakpia 465 Kering 20', 24000, 8, 'kering', 159, 'test', '', 'bakpia_465_kering_20_1728630700.png', '2024-10-11 13:51:55', NULL),
-(162, 'Premium', 24000, 8, 'kering', 159, 'test', '', 'premium_1728637680.png', '2024-10-11 15:13:35', NULL),
-(163, 'Premium', 24000, 8, 'kering', 159, 'test', '', 'premium_1728634669.png', '2024-10-11 15:13:37', NULL),
-(164, 'Premium', 24000, 8, 'kering', 159, 'test', '', 'premium_1728635471.png', '2024-10-11 15:13:38', NULL),
-(165, 'Test', 24000, 1, 'Basah', 159, 'test', '', 'test_1728635134.png', '2024-10-11 15:14:08', NULL),
-(166, 'Test', 24000, 1, 'Basah', 159, 'test', '', 'test_1728636057.png', '2024-10-11 15:14:09', NULL);
+(230, '123', 123, 1, 'Basah', 158, 'test4', 'dwadawdawdawdawd', '123_1731576644.jpg', '2024-11-14 15:40:01', '2024-11-14 15:43:42'),
+(232, 'Griya Bakpia', 24000, 1, 'Basah', 159, 'test', 'dwadawdawdawd', 'griya_bakpia_1731660227.png', '2024-11-15 15:20:16', NULL),
+(231, 'griya bakpia', 24000, 1, 'Basah', 159, 'test', 'dwadawdawdawd', 'griya_bakpia_1731662073.png', '2024-11-15 15:20:12', NULL),
+(212, 'dwad', 231412, 1, 'Basah', 158, 'test4', 'dwa', 'dwad_1731570571.png', '2024-11-14 13:55:47', '2024-11-14 14:12:32'),
+(213, 'dwada', 21414, 1, 'Basah', 158, 'test4', 'dwadas', 'dwada_1731569406.png', '2024-11-14 14:03:53', '2024-11-14 14:12:58'),
+(214, 'wdawda', 214, 1, 'Basah', 158, 'test4', '214124', NULL, '2024-11-14 14:07:17', NULL),
+(215, 'hitam', 42141421, 1, 'Basah', 158, 'test4', 'asd', NULL, '2024-11-14 14:08:46', NULL),
+(209, '12344556546467', 2147483647, 1, 'Basah', 160, 'test1', 'wesdbndhndnfbndssdgsfd ssvfs sf sfg', '12344556546467_1731562944.png', '2024-11-14 11:52:52', '2024-11-14 12:08:13'),
+(207, 'Basah', 24000, 1, 'Basah', 159, 'test', 'dwadawdawdawd', 'basah_1731562846.png', '2024-11-14 11:45:51', NULL),
+(206, 'Kering', 24000, 8, 'Kering', 159, 'test', 'dwadawdawdawd', 'kering_1731562470.png', '2024-11-14 11:45:47', NULL),
+(228, 'hitam', 412, 1, 'Basah', 158, 'test4', 'dwadwad', 'hitam_1731570038.png', '2024-11-14 14:33:16', NULL),
+(194, 'test insert', 24000, 1, 'Basah', 159, 'test', 'dwadawdawdawd', NULL, '2024-11-14 11:42:39', NULL),
+(195, 'Bakpia', 24000, 1, 'Basah', 159, 'test', 'dwadawdawdawd', NULL, '2024-11-14 11:42:44', NULL),
+(196, 'Coba', 24000, 1, 'Basah', 159, 'test', 'dwadawdawdawd', NULL, '2024-11-14 11:42:46', NULL),
+(205, 'Test', 24000, 8, 'Kering', 159, 'test', 'dwadawdawdawd', 'test_1731562170.png', '2024-11-14 11:45:43', NULL),
+(204, 'Kering', 24000, 8, 'Kering', 159, 'test', 'dwadawdawdawd', 'kering_1731561767.png', '2024-11-14 11:45:42', NULL),
+(225, 'hitam', 124, 1, 'Basah', 158, 'test4', 'dwa', NULL, '2024-11-14 14:30:41', NULL),
+(226, 'hitam', 41241, 1, 'Basah', 158, 'test4', 'dwadwa', 'hitam_1731573054.png', '2024-11-14 14:31:35', NULL);
 
 -- --------------------------------------------------------
 
@@ -256,20 +266,54 @@ CREATE TABLE IF NOT EXISTS `product_stock` (
   KEY `fk_product_stock_product` (`product_stock_product_id`),
   KEY `fk_product_stock_variant` (`product_stock_variant_id`),
   KEY `fk_product_stock_category` (`product_stock_category_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=161 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=231 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data untuk tabel `product_stock`
 --
 
 INSERT INTO `product_stock` (`product_stock_id`, `product_stock_product_id`, `product_stock_variant_id`, `product_stock_category_id`, `product_stock_stock`, `product_stock_in`, `product_stock_out`) VALUES
-(160, 166, 159, 1, 10, 0, 0),
-(159, 165, 159, 1, 50, 0, 0),
-(158, 164, 159, 8, 50, 0, 0),
-(157, 163, 159, 8, 50, 0, 0),
-(156, 162, 159, 8, 50, 0, 0),
-(155, 161, 159, 8, 50, 0, 0),
-(154, 160, 159, 8, 10, 0, 160);
+(194, 198, 159, 1, 50, 0, 0),
+(193, 0, 159, 2, 50, 0, 0),
+(198, 200, 159, 8, 50, 0, 0),
+(199, 201, 159, 8, 50, 0, 0),
+(200, 202, 159, 8, 50, 0, 0),
+(196, 0, 159, 2, 50, 0, 0),
+(195, 0, 159, 2, 50, 0, 0),
+(192, 0, 159, 2, 50, 0, 0),
+(230, 232, 159, 1, 50, 0, 0),
+(202, 204, 159, 8, 50, 0, 0),
+(203, 205, 159, 8, 50, 0, 0),
+(204, 206, 159, 8, 50, 0, 0),
+(226, 228, 158, 1, 241, 0, 0),
+(205, 207, 159, 1, 50, 0, 0),
+(191, 197, 159, 1, 50, 0, 0),
+(190, 196, 159, 1, 50, 0, 0),
+(182, 188, 159, 1, 50, 0, 0),
+(183, 189, 159, 1, 50, 0, 0),
+(184, 190, 159, 1, 50, 0, 0),
+(185, 191, 159, 1, 50, 0, 0),
+(186, 192, 159, 1, 50, 0, 0),
+(223, 225, 158, 1, 2414, 0, 0),
+(224, 226, 158, 1, 241421, 0, 0),
+(188, 194, 159, 1, 50, 0, 0),
+(171, 177, 159, 1, 50, 0, 0),
+(169, 175, 159, 1, 50, 0, 0),
+(167, 173, 159, 1, 50, 0, 0),
+(166, 172, 159, 1, 50, 0, 0),
+(165, 171, 159, 1, 50, 0, 0),
+(170, 176, 159, 1, 50, 0, 0),
+(154, 160, 159, 8, 10, 0, 160),
+(181, 187, 159, 1, 50, 0, 0),
+(172, 178, 159, 1, 50, 0, 0),
+(207, 209, 160, 1, 123123123, 0, 0),
+(189, 195, 159, 1, 50, 0, 0),
+(211, 213, 158, 1, 124, 0, 0),
+(210, 212, 158, 1, 4124124, 0, 0),
+(212, 214, 158, 1, 214124, 0, 0),
+(213, 215, 158, 1, 21441, 0, 0),
+(228, 230, 158, 1, 123, 0, 0),
+(229, 231, 159, 1, 50, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -404,8 +448,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`user_id`, `user_username`, `user_password`, `user_name`, `user_email`, `user_no_handphone`, `user_role`, `user_otp`, `user_otp_expired`, `user_created_at`, `user_updated_at`) VALUES
-(1, 'bakpia', '123456', 'lol', 'piteknoob@gmail.com', '6285600077410', 'super_user', NULL, NULL, '2024-07-25 10:52:24', '2024-09-02 09:07:11'),
-(24, 'bakpia211', '123456', 'tes', 'pitek@gmail.com', '1231212111111', 'admin', NULL, NULL, '2024-08-29 11:47:22', '2024-10-16 10:12:40');
+(1, 'bakpia', '123456', 'lol', 'piteknoob@gmail.com', '6285600077410', 'super_user', NULL, NULL, '2024-07-25 10:52:24', '2024-09-02 09:07:11');
 
 -- --------------------------------------------------------
 
@@ -421,7 +464,7 @@ CREATE TABLE IF NOT EXISTS `variant` (
   `variant_updated_at` datetime DEFAULT NULL,
   `variant_deleted_at` datetime DEFAULT NULL,
   PRIMARY KEY (`variant_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=163 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=164 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data untuk tabel `variant`
@@ -430,7 +473,8 @@ CREATE TABLE IF NOT EXISTS `variant` (
 INSERT INTO `variant` (`variant_id`, `variant_name`, `variant_created_at`, `variant_updated_at`, `variant_deleted_at`) VALUES
 (158, 'test4', '2024-10-10 09:15:56', NULL, NULL),
 (159, 'test', '2024-10-10 09:16:03', NULL, NULL),
-(160, 'test1', '2024-10-10 09:16:05', NULL, NULL);
+(160, 'test1', '2024-10-10 09:16:05', NULL, NULL),
+(163, 'Basah', '2024-11-14 07:16:04', NULL, NULL);
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)

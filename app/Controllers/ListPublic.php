@@ -25,7 +25,7 @@ class ListPublic extends AuthController
         ];
         $query['search_data'] = [
             'product_name',
-            'variant_name'
+            'product_variant_name'
         ];
         $query['filter'] = [
             "product_category_name",
