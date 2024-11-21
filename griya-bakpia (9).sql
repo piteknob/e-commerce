@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Waktu pembuatan: 15 Nov 2024 pada 09.41
+-- Waktu pembuatan: 21 Nov 2024 pada 09.47
 -- Versi server: 8.3.0
 -- Versi PHP: 8.2.18
 
@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `auth_user` (
 --
 
 INSERT INTO `auth_user` (`auth_user_id`, `auth_user_user_id`, `auth_user_username`, `auth_user_token`, `auth_user_date_login`, `auth_user_date_expired`) VALUES
-(6, 1, 'bakpia', 'YmFrcGlhMTIzNDU2', '2024-11-15 15:20:16', '2024-11-16 15:20:16');
+(6, 1, 'bakpia', 'YmFrcGlhMTIzNDU2', '2024-11-21 16:40:31', '2024-11-22 16:40:31');
 
 -- --------------------------------------------------------
 
@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `bank` (
   `bank_created_at` datetime DEFAULT NULL,
   `bank_updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`bank_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data untuk tabel `bank`
@@ -70,8 +70,10 @@ CREATE TABLE IF NOT EXISTS `bank` (
 
 INSERT INTO `bank` (`bank_id`, `bank_name`, `bank_account_name`, `bank_account_number`, `bank_code`, `bank_created_at`, `bank_updated_at`) VALUES
 (1, 'BCA', 'pitek', '6913812381', '014', '2024-10-17 04:33:44', NULL),
-(3, 'BBRI', 'pitek', '69138123811', '021', '2024-10-17 07:35:08', NULL),
-(4, 'NIAGA', 'pitek', '123124', '011', '2024-10-17 07:35:36', NULL);
+(3, 'BRI', 'pitek', '69138123811', '021', '2024-10-17 07:35:08', NULL),
+(4, 'NIAGA', 'pitek', '123124', '011', '2024-10-17 07:35:36', NULL),
+(5, 'MANDIRI', 'pitek', '69138123', '51512', '2024-11-21 09:40:21', NULL),
+(6, 'BNI', 'pitek', '6913812342142', '511', '2024-11-21 09:40:31', NULL);
 
 -- --------------------------------------------------------
 
@@ -110,14 +112,36 @@ CREATE TABLE IF NOT EXISTS `customer` (
   `customer_address` varchar(255) NOT NULL,
   `customer_no_handphone` varchar(21) NOT NULL,
   PRIMARY KEY (`customer_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data untuk tabel `customer`
 --
 
 INSERT INTO `customer` (`customer_id`, `customer_name`, `customer_address`, `customer_no_handphone`) VALUES
-(1, 'noob', 'jkt', '0123313213');
+(1, 'noob', 'jkt', '0123313213'),
+(2, 'asdfasdf', 'dsasfds', '12312312312'),
+(3, 'hfdsfnmcbcvz', 'ewqrwasgdhey54ythhj,gj,n', '1345675516768965'),
+(4, 'hfdsfnmcbcvz', 'vscdfagnfgfsdfagfbd', '12312312312'),
+(5, 'dawdwa', 'jkt', '0123313213'),
+(6, 'dwadawdawdawdawdawdawdwadadwdawdadwadwadwwdwwdaawwdawwdadwawddawdawdawadwdawdawwad', 'dwadawdawdawdsdwadwadawdawdawdadawdadawwadadawdasdw', '421422141214'),
+(7, 'dwadaw', 'dwwadwadawdawdawda', '2141421412'),
+(8, 'dwa', 'dwadawdwa', '21412421414'),
+(9, 'dwdawdwad', 'dawdawdadaw', '241241412412'),
+(10, 'dwadaw', 'asd', '12412513551'),
+(11, 'dwadawda', 'dwadwadaw', '214214214214'),
+(12, 'dawda', 'dwadawdawa', '124124124124'),
+(13, 'dawdaw', 'dwadawdawd', '214214124214'),
+(14, 'waddaw', 'dawdawd', '24124124124124'),
+(15, '214dwadwa', 'dwadawdwadaw', '21421424214'),
+(16, 'dwadaw', 'dwadawdawdawdsdwadwadawdawdawdadawdadawwadadawdasdw', '421422141214'),
+(17, 'dwada', 'dwa', '124124124124'),
+(18, 'dawad', 'dwadada', '2414124124124'),
+(19, 'dwadaw', 'dwadwad', '2414124212142'),
+(20, 'dwadaw', 'dadawd', '4214141241412'),
+(21, 'dwadaw', 'dwadasdwa', '111111111111111'),
+(22, 'dawda', 'dwa', '24141241241'),
+(23, 'dwadaw', 'dawdawdad', '41242124421');
 
 -- --------------------------------------------------------
 
@@ -189,15 +213,20 @@ CREATE TABLE IF NOT EXISTS `outlet` (
   `outlet_created_at` datetime DEFAULT NULL,
   `outlet_updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`outlet_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data untuk tabel `outlet`
 --
 
 INSERT INTO `outlet` (`outlet_id`, `outlet_title`, `outlet_address`, `outlet_photo`, `outlet_link`, `outlet_created_at`, `outlet_updated_at`) VALUES
-(3, 'tes', 'tes', 'tes_1726040201.png', 'tes', '2024-09-11 14:13:13', NULL),
-(4, 'tes', 'tes', 'tes_1726118062.png', 'tes', '2024-09-11 14:17:28', '2024-09-12 11:42:28');
+(3, 'tes', 'tes', 'tes_1732073094.webp', 'linkpohmax', '2024-09-11 14:13:13', '2024-11-20 09:28:44'),
+(4, 'tes', 'tes', 'tes_1732070513.jpeg', 'linkpohmax', '2024-09-11 14:17:28', '2024-11-20 09:28:34'),
+(5, 'tes', 'tes', 'tes_1732072569.webp', 'tes', '2024-11-20 09:31:08', NULL),
+(6, 'warung', 'bantul', 'warung_1732070282.webp', 'tes', '2024-11-20 09:31:30', NULL),
+(7, 'warung', 'bantul', 'warung_1732072907.webp', 'link', '2024-11-20 09:31:34', NULL),
+(8, 'warung', 'bantul', 'warung_1732071278.webp', 'tes', '2024-11-20 09:31:38', NULL),
+(9, 'esoda', 'poh', 'esoda_1732070604.webp', 'tes', '2024-11-20 09:31:44', NULL);
 
 -- --------------------------------------------------------
 
@@ -221,13 +250,16 @@ CREATE TABLE IF NOT EXISTS `product` (
   PRIMARY KEY (`product_id`),
   KEY `fk_product_category` (`product_category_id`),
   KEY `fk_product_variant` (`product_variant_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=233 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=245 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data untuk tabel `product`
 --
 
 INSERT INTO `product` (`product_id`, `product_name`, `product_price`, `product_category_id`, `product_category_name`, `product_variant_id`, `product_variant_name`, `product_description`, `product_photo`, `product_created_at`, `product_updated_at`) VALUES
+(237, 'Bakpia 465', 24000, 1, 'Basah', 159, 'test', 'dwadawdawdawd', 'bakpia_465_1731901078.png', '2024-11-18 10:14:51', NULL),
+(236, 'Bakpia 465', 24000, 1, 'Basah', 159, 'test', 'dwadawdawdawd', 'bakpia_465_1731900236.png', '2024-11-18 10:14:48', NULL),
+(235, 'Bakpia 465', 24000, 1, 'Basah', 159, 'test', 'dwadawdawdawd', NULL, '2024-11-18 10:13:48', NULL),
 (230, '123', 123, 1, 'Basah', 158, 'test4', 'dwadawdawdawdawd', '123_1731576644.jpg', '2024-11-14 15:40:01', '2024-11-14 15:43:42'),
 (232, 'Griya Bakpia', 24000, 1, 'Basah', 159, 'test', 'dwadawdawdawd', 'griya_bakpia_1731660227.png', '2024-11-15 15:20:16', NULL),
 (231, 'griya bakpia', 24000, 1, 'Basah', 159, 'test', 'dwadawdawdawd', 'griya_bakpia_1731662073.png', '2024-11-15 15:20:12', NULL),
@@ -236,8 +268,10 @@ INSERT INTO `product` (`product_id`, `product_name`, `product_price`, `product_c
 (214, 'wdawda', 214, 1, 'Basah', 158, 'test4', '214124', NULL, '2024-11-14 14:07:17', NULL),
 (215, 'hitam', 42141421, 1, 'Basah', 158, 'test4', 'asd', NULL, '2024-11-14 14:08:46', NULL),
 (209, '12344556546467', 2147483647, 1, 'Basah', 160, 'test1', 'wesdbndhndnfbndssdgsfd ssvfs sf sfg', '12344556546467_1731562944.png', '2024-11-14 11:52:52', '2024-11-14 12:08:13'),
+(234, 'Bakpia 465', 24000, 1, 'Basah', 159, 'test', 'dwadawdawdawd', NULL, '2024-11-18 10:13:44', NULL),
 (207, 'Basah', 24000, 1, 'Basah', 159, 'test', 'dwadawdawdawd', 'basah_1731562846.png', '2024-11-14 11:45:51', NULL),
 (206, 'Kering', 24000, 8, 'Kering', 159, 'test', 'dwadawdawdawd', 'kering_1731562470.png', '2024-11-14 11:45:47', NULL),
+(233, 'Bakpia 465', 24000, 1, 'Basah', 159, 'test', 'dwadawdawdawd', NULL, '2024-11-18 10:13:20', NULL),
 (228, 'hitam', 412, 1, 'Basah', 158, 'test4', 'dwadwad', 'hitam_1731570038.png', '2024-11-14 14:33:16', NULL),
 (194, 'test insert', 24000, 1, 'Basah', 159, 'test', 'dwadawdawdawd', NULL, '2024-11-14 11:42:39', NULL),
 (195, 'Bakpia', 24000, 1, 'Basah', 159, 'test', 'dwadawdawdawd', NULL, '2024-11-14 11:42:44', NULL),
@@ -245,7 +279,14 @@ INSERT INTO `product` (`product_id`, `product_name`, `product_price`, `product_c
 (205, 'Test', 24000, 8, 'Kering', 159, 'test', 'dwadawdawdawd', 'test_1731562170.png', '2024-11-14 11:45:43', NULL),
 (204, 'Kering', 24000, 8, 'Kering', 159, 'test', 'dwadawdawdawd', 'kering_1731561767.png', '2024-11-14 11:45:42', NULL),
 (225, 'hitam', 124, 1, 'Basah', 158, 'test4', 'dwa', NULL, '2024-11-14 14:30:41', NULL),
-(226, 'hitam', 41241, 1, 'Basah', 158, 'test4', 'dwadwa', 'hitam_1731573054.png', '2024-11-14 14:31:35', NULL);
+(226, 'hitam', 41241, 1, 'Basah', 158, 'test4', 'dwadwa', 'hitam_1731573054.png', '2024-11-14 14:31:35', NULL),
+(238, 'Bakpia 465', 24000, 1, 'Basah', 159, 'test', 'dwadawdawdawd', NULL, '2024-11-18 10:14:58', NULL),
+(239, 'Bakpia 465 Kering', 24000, 1, 'Basah', 159, 'test', 'dwadawdawdawd', 'bakpia_465_kering_1731901941.png', '2024-11-18 10:15:10', NULL),
+(240, 'Bakpia 465 Kering', 24000, 1, 'Basah', 159, 'test', 'dwadawdawdawd', NULL, '2024-11-18 10:15:14', NULL),
+(241, 'Bakpia 465 Kering', 24000, 1, 'Basah', 159, 'test', 'dwadawdawdawd', 'bakpia_465_kering_1731901823.png', '2024-11-18 10:15:24', NULL),
+(242, 'Bakpia 465 Kering', 50000, 1, 'Basah', 159, 'test', 'dwadawdawdawd', 'bakpia_465_kering_1731918829.png', '2024-11-18 14:35:17', NULL),
+(243, 'Bakpia 465 Kering', 50000, 1, 'Basah', 159, 'test', 'dwadawdawdawd', 'bakpia_465_kering_1731918021.png', '2024-11-18 14:35:20', NULL),
+(244, 'Bakpia 465 Kering', 50000, 1, 'Basah', 159, 'test', 'dwadawdawdawd', 'bakpia_465_kering_1731917632.png', '2024-11-18 14:35:21', NULL);
 
 -- --------------------------------------------------------
 
@@ -266,7 +307,7 @@ CREATE TABLE IF NOT EXISTS `product_stock` (
   KEY `fk_product_stock_product` (`product_stock_product_id`),
   KEY `fk_product_stock_variant` (`product_stock_variant_id`),
   KEY `fk_product_stock_category` (`product_stock_category_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=231 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=243 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data untuk tabel `product_stock`
@@ -275,17 +316,18 @@ CREATE TABLE IF NOT EXISTS `product_stock` (
 INSERT INTO `product_stock` (`product_stock_id`, `product_stock_product_id`, `product_stock_variant_id`, `product_stock_category_id`, `product_stock_stock`, `product_stock_in`, `product_stock_out`) VALUES
 (194, 198, 159, 1, 50, 0, 0),
 (193, 0, 159, 2, 50, 0, 0),
+(232, 234, 159, 1, 32, 0, 18),
 (198, 200, 159, 8, 50, 0, 0),
 (199, 201, 159, 8, 50, 0, 0),
 (200, 202, 159, 8, 50, 0, 0),
 (196, 0, 159, 2, 50, 0, 0),
 (195, 0, 159, 2, 50, 0, 0),
 (192, 0, 159, 2, 50, 0, 0),
-(230, 232, 159, 1, 50, 0, 0),
-(202, 204, 159, 8, 50, 0, 0),
+(230, 232, 159, 1, 35, 0, 15),
+(202, 204, 159, 8, 47, 0, 3),
 (203, 205, 159, 8, 50, 0, 0),
 (204, 206, 159, 8, 50, 0, 0),
-(226, 228, 158, 1, 241, 0, 0),
+(226, 228, 158, 1, 240, 0, 1),
 (205, 207, 159, 1, 50, 0, 0),
 (191, 197, 159, 1, 50, 0, 0),
 (190, 196, 159, 1, 50, 0, 0),
@@ -303,9 +345,17 @@ INSERT INTO `product_stock` (`product_stock_id`, `product_stock_product_id`, `pr
 (166, 172, 159, 1, 50, 0, 0),
 (165, 171, 159, 1, 50, 0, 0),
 (170, 176, 159, 1, 50, 0, 0),
-(154, 160, 159, 8, 10, 0, 160),
+(240, 242, 159, 1, 50, 0, 0),
+(239, 241, 159, 1, 50, 0, 0),
+(154, 160, 159, 8, -10, 0, 180),
+(234, 236, 159, 1, 45, 0, 5),
+(236, 238, 159, 1, 50, 0, 0),
+(235, 237, 159, 1, 45, 0, 5),
 (181, 187, 159, 1, 50, 0, 0),
 (172, 178, 159, 1, 50, 0, 0),
+(238, 240, 159, 1, 50, 0, 0),
+(231, 233, 159, 1, 50, 0, 0),
+(237, 239, 159, 1, 25, 0, 25),
 (207, 209, 160, 1, 123123123, 0, 0),
 (189, 195, 159, 1, 50, 0, 0),
 (211, 213, 158, 1, 124, 0, 0),
@@ -313,7 +363,10 @@ INSERT INTO `product_stock` (`product_stock_id`, `product_stock_product_id`, `pr
 (212, 214, 158, 1, 214124, 0, 0),
 (213, 215, 158, 1, 21441, 0, 0),
 (228, 230, 158, 1, 123, 0, 0),
-(229, 231, 159, 1, 50, 0, 0);
+(233, 235, 159, 1, 50, 0, 0),
+(229, 231, 159, 1, 50, 0, 0),
+(241, 243, 159, 1, 50, 0, 0),
+(242, 244, 159, 1, 50, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -335,37 +388,31 @@ CREATE TABLE IF NOT EXISTS `sales_order` (
   `sales_order_proof` varchar(255) NOT NULL,
   PRIMARY KEY (`sales_order_id`),
   KEY `fk_sales_order_customer` (`sales_order_customer_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=91 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=116 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data untuk tabel `sales_order`
 --
 
 INSERT INTO `sales_order` (`sales_order_id`, `sales_order_status`, `sales_order_reason`, `sales_order_price`, `sales_order_customer_id`, `sales_order_customer_name`, `sales_order_customer_address`, `sales_order_customer_no_handphone`, `sales_order_date`, `sales_order_proof`) VALUES
-(87, 'canceled', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-17 10:32:16', 'customer_87_1729150984_1cb9560e4ed0320f5a66.png'),
-(85, 'canceled', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-17 10:20:10', 'customer_85_1729135214_bbe05e22bbe25032c660.png'),
-(86, 'canceled', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-17 10:24:13', 'customer_86_1729135462_2a0787a5ec08638ff71f.png'),
-(84, 'canceled', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-17 10:20:04', 'customer_84_1729135207_acd4fe6022e2607eec0e.png'),
-(82, 'confirmed', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-17 10:10:14', 'customer_82_1729134616_0dc882a32d5396c9ce16.png'),
-(83, 'confirmed', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-17 10:11:37', 'customer_83_1729134701_8970cdcd745469d658b8.png'),
-(81, 'confirmed', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-17 10:10:08', 'customer_81_1729134612_e416b3efe4c40e73d649.png'),
-(80, 'confirmed', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-17 10:10:03', 'customer_80_1729134604_9d864f4dcb59ea126fb9.png'),
-(79, 'confirmed', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-16 14:51:51', 'customer_79_1729134600_b0aa477be4aeab702325.png'),
-(78, 'confirmed', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-16 14:39:45', 'customer_78_1729064390_34927fde5adb8fcb2f7f.png'),
-(76, 'customer_canceled', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-16 14:34:30', ''),
-(77, 'confirmed', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-16 14:39:14', 'customer_77_1729064361_49734713b2647dd59802.png'),
-(75, 'confirmed', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-16 14:33:19', 'customer_75_1729064033_d5c09fe2fe4546b2f5ae.png'),
-(73, 'customer_canceled', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-16 14:32:28', ''),
-(74, 'customer_canceled', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-16 14:32:50', ''),
-(72, 'customer_canceled', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-16 14:31:58', ''),
-(71, 'customer_canceled', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-16 14:31:27', ''),
-(69, 'customer_canceled', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-16 14:30:20', ''),
-(70, 'customer_canceled', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-16 14:30:53', ''),
-(67, 'customer_canceled', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-16 14:28:09', ''),
-(68, 'customer_canceled', '', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-16 14:28:59', ''),
-(88, 'customer_canceled', '\'pengen ganti barang\'', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-17 14:43:09', ''),
-(89, 'customer_canceled', 'pengen ganti barang', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-17 14:43:59', ''),
-(90, 'canceled', 'stock abis', 120000, 1, 'noob', 'jkt', '0123313213', '2024-10-17 14:44:27', 'customer_90_1729151073_6622d62c6db76381c056.png');
+(98, 'pending', '', 48000, 7, 'dwadaw', 'dwwadwadawdawdawda', '2141421412', '2024-11-21 15:00:23', ''),
+(99, 'pending', '', 48000, 8, 'dwa', 'dwadawdwa', '21412421414', '2024-11-21 15:02:39', ''),
+(100, 'pending', '', 48000, 9, 'dwdawdwad', 'dawdawdadaw', '241241412412', '2024-11-21 15:04:58', ''),
+(101, 'pending', '', 48000, 10, 'dwadaw', 'asd', '12412513551', '2024-11-21 15:13:23', ''),
+(102, 'pending', '', 48000, 11, 'dwadawda', 'dwadwadaw', '214214214214', '2024-11-21 15:14:22', ''),
+(103, 'pending', '', 48000, 12, 'dawda', 'dwadawdawa', '124124124124', '2024-11-21 15:14:51', ''),
+(104, 'pending', '', 48000, 13, 'dawdaw', 'dwadawdawd', '214214124214', '2024-11-21 15:15:24', ''),
+(105, 'pending', '', 48000, 14, 'waddaw', 'dawdawd', '24124124124124', '2024-11-21 15:15:36', ''),
+(106, 'pending', '', 48000, 15, '214dwadwa', 'dwadawdwadaw', '21421424214', '2024-11-21 15:16:09', ''),
+(107, 'pending', '', 120000, 16, 'dwadaw', 'dwadawdawdawdsdwadwadawdawdawdadawdadawwadadawdasdw', '421422141214', '2024-11-21 15:17:57', ''),
+(108, 'pending', '', 48000, 17, 'dwada', 'dwa', '124124124124', '2024-11-21 15:20:53', ''),
+(109, 'pending', '', 24412, 18, 'dawad', 'dwadada', '2414124124124', '2024-11-21 15:21:30', ''),
+(110, 'pending', '', 48000, 19, 'dwadaw', 'dwadwad', '2414124212142', '2024-11-21 15:25:34', ''),
+(111, 'pending', '', 0, 20, 'dwadaw', 'dadawd', '4214141241412', '2024-11-21 15:48:17', ''),
+(112, 'pending', '', 0, 21, 'dwadaw', 'dwadasdwa', '111111111111111', '2024-11-21 15:48:37', ''),
+(113, 'pending', '', 48000, 22, 'dawda', 'dwa', '24141241241', '2024-11-21 15:57:57', ''),
+(114, 'pending', '', 240000, 1, 'noob', 'jkt', '0123313213', '2024-11-21 16:01:57', ''),
+(115, 'pending', '', 48000, 23, 'dwadaw', 'dawdawdad', '41242124421', '2024-11-21 16:08:07', '');
 
 -- --------------------------------------------------------
 
@@ -389,37 +436,44 @@ CREATE TABLE IF NOT EXISTS `sales_product` (
   KEY `fk_sales_product_customer` (`sales_product_customer_id`),
   KEY `fk_sales_product_sales_order` (`sales_product_order_id`),
   KEY `fk_sales_product_product` (`sales_product_product_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=162 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=204 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Dumping data untuk tabel `sales_product`
 --
 
 INSERT INTO `sales_product` (`sales_product_id`, `sales_product_status`, `sales_product_product_id`, `sales_product_product_name`, `sales_product_product_variant`, `sales_product_product_category`, `sales_product_quantity`, `sales_product_price`, `sales_product_order_id`, `sales_product_customer_id`) VALUES
-(161, 'canceled', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 90, 1),
-(160, 'customer_canceled', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 89, 1),
-(159, 'customer_canceled', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 88, 1),
-(158, 'canceled', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 87, 1),
-(157, 'canceled', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 86, 1),
-(156, 'canceled', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 85, 1),
-(155, 'canceled', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 84, 1),
-(154, 'confirmed', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 83, 1),
-(153, 'confirmed', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 82, 1),
-(152, 'confirmed', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 81, 1),
-(151, 'confirmed', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 80, 1),
-(150, 'confirmed', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 79, 1),
-(149, 'confirmed', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 78, 1),
-(148, 'confirmed', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 77, 1),
-(147, 'customer_canceled', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 76, 1),
-(146, 'confirmed', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 75, 1),
-(145, 'customer_canceled', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 74, 1),
-(144, 'customer_canceled', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 73, 1),
-(143, 'customer_canceled', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 72, 1),
-(142, 'customer_canceled', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 71, 1),
-(141, 'customer_canceled', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 70, 1),
-(140, 'customer_canceled', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 69, 1),
-(139, 'customer_canceled', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 68, 1),
-(138, 'customer_canceled', 160, 'Bakpia 465 Kering 20', 'test', 'kering', 5, 24000, 67, 1);
+(203, 'pending', 232, 'Griya Bakpia', 'test', 'Basah', 1, 24000, 115, 23),
+(202, 'pending', 234, 'Bakpia 465', 'test', 'Basah', 1, 24000, 115, 23),
+(201, 'pending', 236, 'Bakpia 465', 'test', 'Basah', 5, 24000, 114, 1),
+(200, 'pending', 237, 'Bakpia 465', 'test', 'Basah', 5, 24000, 114, 1),
+(199, 'pending', 232, 'Griya Bakpia', 'test', 'Basah', 1, 24000, 113, 22),
+(198, 'pending', 234, 'Bakpia 465', 'test', 'Basah', 1, 24000, 113, 22),
+(197, 'pending', 232, 'Griya Bakpia', 'test', 'Basah', 1, 24000, 110, 19),
+(196, 'pending', 234, 'Bakpia 465', 'test', 'Basah', 1, 24000, 110, 19),
+(195, 'pending', 228, 'hitam', 'test4', 'Basah', 1, 412, 109, 18),
+(194, 'pending', 234, 'Bakpia 465', 'test', 'Basah', 1, 24000, 109, 18),
+(193, 'pending', 232, 'Griya Bakpia', 'test', 'Basah', 1, 24000, 108, 17),
+(192, 'pending', 234, 'Bakpia 465', 'test', 'Basah', 1, 24000, 108, 17),
+(191, 'pending', 239, 'Bakpia 465 Kering', 'test', 'Basah', 5, 24000, 107, 16),
+(190, 'pending', 232, 'Griya Bakpia', 'test', 'Basah', 1, 24000, 106, 15),
+(189, 'pending', 234, 'Bakpia 465', 'test', 'Basah', 1, 24000, 106, 15),
+(188, 'pending', 232, 'Griya Bakpia', 'test', 'Basah', 1, 24000, 105, 14),
+(187, 'pending', 234, 'Bakpia 465', 'test', 'Basah', 1, 24000, 105, 14),
+(186, 'pending', 232, 'Griya Bakpia', 'test', 'Basah', 1, 24000, 104, 13),
+(185, 'pending', 234, 'Bakpia 465', 'test', 'Basah', 1, 24000, 104, 13),
+(184, 'pending', 232, 'Griya Bakpia', 'test', 'Basah', 1, 24000, 103, 12),
+(183, 'pending', 234, 'Bakpia 465', 'test', 'Basah', 1, 24000, 103, 12),
+(182, 'pending', 232, 'Griya Bakpia', 'test', 'Basah', 1, 24000, 102, 11),
+(181, 'pending', 234, 'Bakpia 465', 'test', 'Basah', 1, 24000, 102, 11),
+(180, 'pending', 232, 'Griya Bakpia', 'test', 'Basah', 1, 24000, 101, 10),
+(179, 'pending', 234, 'Bakpia 465', 'test', 'Basah', 1, 24000, 101, 10),
+(178, 'pending', 204, 'Kering', 'test', 'Kering', 1, 24000, 100, 9),
+(177, 'pending', 234, 'Bakpia 465', 'test', 'Basah', 1, 24000, 100, 9),
+(176, 'pending', 204, 'Kering', 'test', 'Kering', 1, 24000, 99, 8),
+(175, 'pending', 234, 'Bakpia 465', 'test', 'Basah', 1, 24000, 99, 8),
+(174, 'pending', 232, 'Griya Bakpia', 'test', 'Basah', 1, 24000, 98, 7),
+(173, 'pending', 234, 'Bakpia 465', 'test', 'Basah', 1, 24000, 98, 7);
 
 -- --------------------------------------------------------
 
@@ -448,7 +502,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`user_id`, `user_username`, `user_password`, `user_name`, `user_email`, `user_no_handphone`, `user_role`, `user_otp`, `user_otp_expired`, `user_created_at`, `user_updated_at`) VALUES
-(1, 'bakpia', '123456', 'lol', 'piteknoob@gmail.com', '6285600077410', 'super_user', NULL, NULL, '2024-07-25 10:52:24', '2024-09-02 09:07:11');
+(1, 'bakpia', '123456', 'lol', 'piteknoob@gmail.com', '6285600077410', 'super_user', 913497, '2024-11-21 14:41:39', '2024-07-25 10:52:24', '2024-09-02 09:07:11');
 
 -- --------------------------------------------------------
 
