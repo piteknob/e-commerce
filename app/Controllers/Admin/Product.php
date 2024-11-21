@@ -313,7 +313,7 @@ class Product extends AuthController
             'variant_id' => 'required|numeric',
             'category_id' => 'required|numeric',
             'description' => 'max_length[500]',
-            // 'photo' => 'uploaded[photo]|mime_in[photo,image/jpg,image/jpeg,image/png]|max_size[photo,2048]'
+            'upload' => 'mime_in[upload,image/jpg,image/jpeg,image/png]|max_size[upload,2048]'
         ];
 
         if (!$this->validate($rules)) {

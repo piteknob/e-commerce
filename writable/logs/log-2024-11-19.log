@@ -1,0 +1,40 @@
+CRITICAL - 2024-11-19 07:36:33 --> ErrorException: Undefined array key 0
+[Method: GET, Route: admin/outlet/list-outlet]
+in APPPATH\Controllers\Admin\Outlet.php on line 47.
+ 1 APPPATH\Controllers\Admin\Outlet.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Outlet.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->list_outlet()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-19 07:37:00 --> ErrorException: Undefined array key 0
+[Method: GET, Route: admin/outlet/list-outlet]
+in APPPATH\Controllers\Admin\Outlet.php on line 45.
+ 1 APPPATH\Controllers\Admin\Outlet.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Outlet.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->list_outlet()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-19 07:37:11 --> ErrorException: Undefined array key 0
+[Method: GET, Route: admin/outlet/list-outlet]
+in APPPATH\Controllers\Admin\Outlet.php on line 47.
+ 1 APPPATH\Controllers\Admin\Outlet.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Outlet.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->list_outlet()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-19 07:37:13 --> ErrorException: Undefined array key 0
+[Method: GET, Route: admin/outlet/list-outlet]
+in APPPATH\Controllers\Admin\Outlet.php on line 47.
+ 1 APPPATH\Controllers\Admin\Outlet.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'C:\\wamp64\\www\\e-commerce\\app\\Controllers\\Admin\\Outlet.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Outlet->list_outlet()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Outlet))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

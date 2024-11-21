@@ -39,12 +39,12 @@ class Outlet extends AuthController
             ];
             $data_outlet = (array) generateDetailData($this->request->getVar(), $query, $this->db);
             // print_r($data_outlet); die;
-            if (empty($data_outlet['data'][0]['photo'])) {
+            if (empty($data_outlet['data']['photo'])) {
                 $photo = 'upload/default/default_photo.webp';
             } else {
-                $photo = 'upload/photo/' . $data_outlet['data'][0]['photo'];
+                $photo = 'upload/outlet/' . $data_outlet['data']['photo'];
             }
-            $data_outlet = $data_outlet['data'][0];
+            $data_outlet = $data_outlet['data'];
             $return[] = [
                 'id' => $data_outlet['id'],
                 'title' => $data_outlet['title'],
@@ -126,7 +126,7 @@ class Outlet extends AuthController
             $photo_name = strtolower($photo_name);
             $photo_name = str_replace(' ', '_', $photo_name);
             // move file to directory
-            $photo->move('./upload/photo', $photo_name);
+            $photo->move('./upload/outlet', $photo_name);
         }
 
         $sql = "INSERT INTO outlet (
@@ -174,10 +174,9 @@ class Outlet extends AuthController
     public function update()
     {
 
-        $id = $this->request->getGet();
-        $id = $id['id'];
         $post = $this->request->getPost();
 
+        $id = $post['id'];
         $title = $post['title'];
         $address = $post['address'];
         $link = $post['link'];
@@ -192,13 +191,13 @@ class Outlet extends AuthController
             "WHERE outlet_id = '{$id}'"
         ];
         $data_photo = (array) generateDetailData($this->request->getGet(), $query, $this->db);
-        $data_photo = $data_photo['data'][0]['photo'];
+        $data_photo = $data_photo['data']['photo'];
 
         if (empty($data_photo)) {
             $data_photo = 'empty';
         }
-        if (file_exists("upload/photo/" . $data_photo)) {
-            unlink("upload/photo/" . $data_photo);
+        if (file_exists("upload/outlet/" . $data_photo)) {
+            unlink("upload/outlet/" . $data_photo);
         }
 
         // ----------------------- RANDOM DATE --------------------------- //
@@ -222,7 +221,7 @@ class Outlet extends AuthController
             $photo_name = strtolower($photo_name);
             $photo_name = str_replace(' ', '_', $photo_name);
             // move file to directory
-            $photo->move('./upload/photo', $photo_name);
+            $photo->move('./upload/outlet', $photo_name);
         }
 
         $sql = "UPDATE outlet
@@ -274,8 +273,8 @@ class Outlet extends AuthController
         $data_photo = (array) generateDetailData($this->request->getGet(), $query, $this->db);
         $data_photo = $data_photo['data'][0]['photo'];
         if (!empty($data_photo)) {
-            if (file_exists("upload/photo/" . $data_photo)) {
-                unlink("upload/photo/" . $data_photo);
+            if (file_exists("upload/outlet/" . $data_photo)) {
+                unlink("upload/outlet/" . $data_photo);
             }
         }
 
@@ -302,7 +301,7 @@ class Outlet extends AuthController
 
     public function test_update_core() // test update core DONE
     {
-        $id = $this->request->getGet(); 
+        $id = $this->request->getGet();
         $id = $id['id'];
         $query['table'] = ['outlet'];
         $query['update'] = [
