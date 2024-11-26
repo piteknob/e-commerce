@@ -23,18 +23,6 @@ class Reset extends DataController
             }
         }
 
-        // Get detail data user
-        $query_data['data'] = ['user'];
-        $query_data['select'] = [
-            'user_role' => 'role',
-            'user_no_handphone' => 'no_handphone',
-        ];
-        $query_data['where_detail'] = [
-            "WHERE user_no_handphone = '{$no}'"
-        ];
-        $data_user = (array) generateDetailData($this->request->getVar(), $query_data, $this->db);
-        // print_r($role); die;
-
         // check user role
         if (empty($role)) {
             return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'Nomor handphone tidak terdaftar', 'Nomor handphone tidak terdaftar.', ['data' => (object) []]);
@@ -71,7 +59,7 @@ class Reset extends DataController
         ));
 
         curl_exec($curl);
-
+        
         return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Pesan terkirim', ['data' => ['expired' => $formatDate]]);
     }
 

@@ -9,7 +9,6 @@ class User extends AuthController
 {
     public function list_user() // super_user
     {
-
         $token = $this->request->getHeaderLine('Token');
         $check['data'] = ['auth_user'];
         $check['select'] = [
@@ -89,6 +88,7 @@ class User extends AuthController
         ];
         $query_admin['where_detail'] = ["WHERE user_id = '$id'"];
         $data_admin = (array) generateDetailData($this->request->getVar(), $query_admin, $this->db);
+
 
         return $this->responseSuccess(ResponseInterface::HTTP_OK, "Detail akun", $data_admin);
     }

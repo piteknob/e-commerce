@@ -475,18 +475,13 @@ class Product extends AuthController
         // --------------------- SET VALIDATION && UPLOAD GET POST PHOTO ------------------------ //
 
         $photo = $this->request->getFile('upload');
-
-
-        if (empty($photo)) {
-            $photo_name = '';
-        } else {
+        if ($photo && $photo->isValid()) {
             $extension = $photo->getExtension();
-            $photo_name = "$product" . "_" . "$random" . "." . "$extension";
-            $photo_name = $photo_name;
-            $photo_name = strtolower($photo_name);
+            $photo_name = strtolower($product . "_" . $random . "." . $extension);
             $photo_name = str_replace(' ', '_', $photo_name);
-            // move file to directory
             $photo->move('./upload/product', $photo_name);
+        } else {
+            $photo_name = '';
         }
 
 

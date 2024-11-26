@@ -23,8 +23,13 @@ class Confirmation extends AuthController
             'sales_order_date' => 'date',
             'sales_order_proof' => 'proof',
         ];
-        $query['where_detail'] = [
-            "WHERE sales_order_status = 'payed' OR sales_order_status = 'pending'"
+        // $query['where_detail'] = [
+        //     "WHERE sales_order_status = 'payed' OR sales_order_status = 'pending'"
+        // ];
+        $query['search_data'] = [
+            'sales_order_customer_no_handphone',
+            'sales_order_customer_name',
+            'sales_order_status'
         ];
         $query['pagination'] = [true];
 
@@ -35,7 +40,7 @@ class Confirmation extends AuthController
             foreach ($dataProduct as $key => $value) {
                 $photo = $value['proof'];
                 if (empty($photo)) {
-                    $photo = 'upload/default/default.jpg';
+                    $photo = 'upload/default/default_photo1.webp';
                 } else {
                     $photo = 'upload/photo/' . $photo . '';
                 }
@@ -75,6 +80,7 @@ class Confirmation extends AuthController
             'Data tidak ditemukan'
         );
     }
+
 
     public function list_order_product()
     {
@@ -386,21 +392,55 @@ class Confirmation extends AuthController
         $query_sales_product['pagination'] = [false];
 
         $data_product = generateListData($this->request->getVar(), $query_sales_product, $this->db);
+        // print_r($data_product); die;
 
-        if (empty($data_product['data'])) {
+        if (empty($data_product)) {
             return $this->responseFail(ResponseInterface::HTTP_NOT_FOUND, 'Data transaksi tidak ditemukan', 'Data tidak ditemukan', (object)[]);
         }
-
         // -------------------- CHECK PRODUCT ALREADY CONFIRMED -------------------------- //
-        if ($data_order[0]['status'] == 'confirmed') {
+
+        if ($data_order[0]['status'] === 'confirmed') {
             $result_confirmed = [
                 'data' => [
-                    'order' => $data_order[0],
+                    'order' => $data_order,
                     'product' => $data_product
                 ]
             ];
 
-            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Order sudah di setujui', $result_confirmed);
+            return $this->responseFail(ResponseInterface::HTTP_OK, 'Order sudah di setujui', 'Error Occured', $result_confirmed);
+        }
+
+        if ($data_order[0]['status'] === 'canceled') {
+            $result_confirmed = [
+                'data' => [
+                    'order' => $data_order,
+                    'product' => $data_product
+                ]
+            ];
+
+            return $this->responseFail(ResponseInterface::HTTP_OK, 'Order sudah di batalkan', 'Error Occured', $result_confirmed);
+        }
+
+        if ($data_order[0]['status'] === 'pending') {
+            $result_confirmed = [
+                'data' => [
+                    'order' => $data_order,
+                    'product' => $data_product
+                ]
+            ];
+
+            return $this->responseFail(ResponseInterface::HTTP_OK, 'Order belom di bayar', 'Error Occured', $result_confirmed);
+        }
+
+        if ($data_order[0]['status'] === 'customer_canceled') {
+            $result_confirmed = [
+                'data' => [
+                    'order' => $data_order,
+                    'product' => $data_product
+                ]
+            ];
+
+            return $this->responseFail(ResponseInterface::HTTP_OK, 'Order sudah di batalkan pelanggan', 'Error Occured', $result_confirmed);
         }
 
         // ------------------------- UPDATE FROM PAYED TO CONFIRMED ------------------------- //
@@ -417,6 +457,7 @@ class Confirmation extends AuthController
         } catch (\Exception $e) {
             return $this->responseFail(ResponseInterface::HTTP_INTERNAL_SERVER_ERROR, 'Error occurred', $e->getMessage());
         }
+
 
 
         foreach ($data_product as $key => $value) {
@@ -525,11 +566,13 @@ class Confirmation extends AuthController
             'sales_order_proof' => 'proof',
         ];
         $query_check_canceled['where_detail'] = [
-            "WHERE sales_order_id = '{$id}' AND sales_order_status = 'canceled' AND sales_order_status = 'canceled'"
+            "WHERE sales_order_id = {$id}"
         ];
 
-        $query_check_product['data'] = ['sales_product'];
-        $query_check_product['select'] = [
+        $data_check_order = (array) generateDetailData($this->request->getVar(), $query_check_canceled, $this->db);
+
+        $query_sales_product['data'] = ['sales_product'];
+        $query_sales_product['select'] = [
             'sales_product_id' => 'id',
             'sales_product_status' => 'status',
             'sales_product_product_id' => 'product_id',
@@ -541,25 +584,44 @@ class Confirmation extends AuthController
             'sales_product_order_id' => 'order_id',
             'sales_product_customer_id' => 'customer_id',
         ];
-        $query_check_product['where_detail'] = [
-            "WHERE sales_product_order_id = '{$id}' AND sales_product_status = 'canceled'"
+        $query_sales_product['where_detail'] = [
+            "WHERE sales_product_order_id = {$id}"
         ];
+        $query_sales_product['pagination'] = [false];
 
-        $data_check_order = (array) generateDetailData($this->request->getVar(), $query_check_canceled, $this->db);
-        $data_check_product = (array) generateListData($this->request->getVar(), $query_check_product, $this->db);
-        // print_r($data_check_product); die;
-        if (!empty($data_check_order['data'] && $data_check_product['data'])) {
+        $data_product = generateListData($this->request->getVar(), $query_sales_product, $this->db);
+
+        // ---------------------------- CHECK ORDER --------------------------- //
+
+        if (!empty($data_check_order['data']['status'] === 'confirmed')) {
             $data = [
                 'data' => [
                     'order' => $data_check_order['data'],
-                    'product' => $data_check_product['data']
+                    'product' => $data_product
                 ]
             ];
-
-            return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Data sudah dibatalkan', $data);
+            return $this->responseFail(ResponseInterface::HTTP_OK, 'Order sudah di terima', 'Error Occured', $data);
         }
 
+        if (!empty($data_check_order['data']['status'] === 'canceled')) {
+            $data = [
+                'data' => [
+                    'order' => $data_check_order['data'],
+                    'product' => $data_product
+                ]
+            ];
+            return $this->responseFail(ResponseInterface::HTTP_OK, 'Order sudah di batalkan', 'Error Occured', $data);
+        }
 
+        if (!empty($data_check_order['data']['status'] === 'customer_canceled')) {
+            $data = [
+                'data' => [
+                    'order' => $data_check_order['data'],
+                    'product' => $data_product
+                ]
+            ];
+            return $this->responseFail(ResponseInterface::HTTP_OK, 'Order sudah di batalkan pelanggan', 'Error Occured', $data);
+        }
 
 
         // ---------------------------- SQl UPADTE FROM 'PAYED' OR 'PENDING' TO 'CANCELED' ------------------------------ //
@@ -572,7 +634,7 @@ class Confirmation extends AuthController
                     'sales_order_reason' => $reason
                 ])
                 ->where('sales_order_id', $id)
-                ->groupStart() 
+                ->groupStart()
                 ->where('sales_order_status', 'pending')
                 ->orWhere('sales_order_status', 'payed')
                 ->groupEnd()
@@ -583,7 +645,7 @@ class Confirmation extends AuthController
                     'sales_product_status' => 'canceled'
                 ])
                 ->where('sales_product_order_id', $id)
-                ->groupStart() 
+                ->groupStart()
                 ->where('sales_product_status', 'pending')
                 ->orWhere('sales_product_status', 'payed')
                 ->groupEnd()

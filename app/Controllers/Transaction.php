@@ -127,9 +127,10 @@ class Transaction extends AuthController
             'customer_id' => 'id'
         ];
         $query_id_customer['where_detail'] = [
-            "WHERE customer_name = '{$cust_name}' AND customer_address = '{$cust_address}' AND customer_no_handphone = {$cust_hp}"
+            "WHERE customer_name = '{$cust_name}' OR customer_no_handphone = {$cust_hp}"
         ];
         $id_customer = generateDetailData($this->request->getGet(), $query_id_customer, $this->db);
+        // print_r($id_customer); die;
 
         foreach ($id_customer as $key => $value) {
             $id_customer = $value['id'];
@@ -654,4 +655,5 @@ class Transaction extends AuthController
         }
         return $this->responseSuccess(ResponseInterface::HTTP_OK, 'Detail order', $data);
     }
+
 }

@@ -85,7 +85,6 @@ class ListPublic extends AuthController
 
     public function bank()
     {
-
         $query['data'] = ['bank'];
         $query['select'] = [
             'bank_id' => 'id',

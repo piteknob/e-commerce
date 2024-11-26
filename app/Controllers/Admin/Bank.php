@@ -156,7 +156,6 @@ class Bank extends AuthController
             'bank_code' => 'code',
             'bank_created_at' => 'created_at',
             'bank_updated_at' => 'updated_at',
-            'bank_deleted_at' => 'deleted_at',
         ];
         $query['where_detail'] = [
             "WHERE bank_id = $id"

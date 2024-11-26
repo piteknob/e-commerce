@@ -12,7 +12,7 @@ class Stock extends AuthController
 
         $query['data'] = ['product'];
         $query['select'] = [
-            'product_stock.product_stock_id' => 'id',
+            'product_stock.product_stock_product_id' => 'id',
             'product.product_name' => 'name',
             'product.product_category_id' => 'category_id',
             'product.product_category_name' => 'category_name',
@@ -69,7 +69,7 @@ class Stock extends AuthController
         // set validation 
         // ---------------------- SET VALIDATION ------------------------ //
         $rules = [
-            'id' => 'required|numeric',
+            'id' => 'required|is_natural_no_zero',
             'value' => 'required|numeric'
         ];
 
@@ -122,7 +122,7 @@ class Stock extends AuthController
 
         // ---------------------- SET VALIDATION ------------------------ //
         $rules = [
-            'id' => 'required|numeric',
+            'id' => 'required|is_natural_no_zero',
             'value' => 'required|numeric'
         ];
 
@@ -154,7 +154,7 @@ class Stock extends AuthController
         $category = $data['category_id'];
 
         $sql = "UPDATE product_stock SET product_stock_stock = product_stock_stock + {$quantity},
-        product_stock_out = product_stock_out + {$quantity} WHERE product_stock_product_id = '{$id}'";
+        product_stock_in = product_stock_in + {$quantity} WHERE product_stock_product_id = '{$id}'";
         $this->db->query($sql);
 
         $log = "INSERT INTO log_stock (log_stock_product_id, log_stock_status, log_stock_quantity, log_stock_variant_id, log_stock_category_id, log_stock_date)

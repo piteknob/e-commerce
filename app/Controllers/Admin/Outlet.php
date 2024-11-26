@@ -271,7 +271,7 @@ class Outlet extends AuthController
             "WHERE outlet_id = '{$id}'"
         ];
         $data_photo = (array) generateDetailData($this->request->getGet(), $query, $this->db);
-        $data_photo = $data_photo['data'][0]['photo'];
+        $data_photo = $data_photo['data']['photo'];
         if (!empty($data_photo)) {
             if (file_exists("upload/outlet/" . $data_photo)) {
                 unlink("upload/outlet/" . $data_photo);
